@@ -1,93 +1,109 @@
-
 <!doctype html>
 <html lang="ko">
+
 <head>
-<title>쇼핑엔T</title>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
-<meta name="format-detection" content="telephone=no">
-<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
-<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css"><!-- 공통 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/main.css"><!-- 메인 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"><!-- 로그인,회원가입 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/goods.css"><!-- 상품목록및상세 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/order.css"><!-- 주문결제 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"><!-- 마이페이지 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"><!-- 고객센터 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"><!-- 기타(푸터메뉴) -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css"><!-- 기타(푸터메뉴) -->
-<!--[if lt IE 9]>
+  <title>쇼핑엔T</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" />
+  <!-- iOS계열 아이콘 -->
+  <link rel="shortcut icon" href="../../img/favicon_32x32.ico">
+  <!-- 웹용 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/layout.css">
+  <!-- 공통 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
+  <!-- 메인 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/member.css">
+  <!-- 로그인,회원가입 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/goods.css">
+  <!-- 상품목록및상세 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/order.css">
+  <!-- 주문결제 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css">
+  <!-- 마이페이지 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/customer.css">
+  <!-- 고객센터 -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/etc.css">
+  <!-- 기타(푸터메뉴) -->
+  <link rel="stylesheet" type="text/css" href="../../resources/css/popup.css">
+  <!-- 기타(푸터메뉴) -->
+  <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<!-- html 화면 확인용 임시 스크립트 : 개발 미적용 -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-	//$(".order_wrap .order_goods:nth-of-type(2)").hide();
-	//$("#contactinfoh3").hide();
-	//$(".receive_area.nomember").hide();
-	//$(".counselask").hide();
-	//$(".coupon_goods li:nth-of-type(2)").hide();
-	//$(".nomempw").hide();
-	//$(".btns_wrap+.btns_wrap").hide();
-	
-	$(".type2").click(function () {
-		$(".order_wrap .order_goods:nth-of-type(2)").toggle();
-	});
-	
-}); 
-</script>
-<!-- /html 화면 확인용 임시 스크립트 : 개발 미적용 -->
+  <!-- html 화면 확인용 임시 스크립트 : 개발 미적용 -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      //$(".order_wrap .order_goods:nth-of-type(2)").hide();
+      //$("#contactinfoh3").hide();
+      //$(".receive_area.nomember").hide();
+      //$(".counselask").hide();
+      //$(".coupon_goods li:nth-of-type(2)").hide();
+      //$(".nomempw").hide();
+      //$(".btns_wrap+.btns_wrap").hide();
+
+      $(".type2").click(function() {
+        $(".order_wrap .order_goods:nth-of-type(2)").toggle();
+      });
+
+    });
+  </script>
+  <!-- /html 화면 확인용 임시 스크립트 : 개발 미적용 -->
 </head>
+
 <body>
-<!-- skipnavi -->
-<div class="skip_nav">
-	<a href="#contents">본문 바로가기</a>
-</div>
-<!-- /skipnavi -->
-<div class="container">
-	<div class="wrap">
-		<div class="nav_sideBar">
-  <p class="sideClose"><span><em>X</em></span></p>
-  <div class="nav_side">
-  
-           <!-- member info -->
-           <div class="info">
-              <div class="box login">
-                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->								
-        <p class="t"><strong class="name">홍길동님</strong></p>
-                  <div class="myShop">
-                      <ul class="btnMy">
-                          <!-- <li><a>회원가입</a></li>
-                          <li><a>로그인</a></li> --><!-- 비로그인 --> 
-            <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
-                      </ul>
-                  </div>
+  <!-- skipnavi -->
+  <div class="skip_nav">
+    <a href="#contents">본문 바로가기</a>
+  </div>
+  <!-- /skipnavi -->
+  <div class="container">
+    <div class="wrap">
+      <div class="nav_sideBar">
+        <p class="sideClose"><span><em>X</em></span></p>
+        <div class="nav_side">
+
+          <!-- member info -->
+          <div class="info">
+            <div class="box login">
+              <!-- <p class="t">로그인 해주세요</p> -->
+              <!-- 비로그인 -->
+              <p class="t"><strong class="name">홍길동님</strong></p>
+              <div class="myShop">
+                <ul class="btnMy">
+                  <!-- <li><a>회원가입</a></li>
+                          <li><a>로그인</a></li> -->
+                  <!-- 비로그인 -->
+                  <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
+                </ul>
               </div>
+            </div>
           </div>
-          <!-- /member info -->  
+          <!-- /member info -->
           <!-- link -->
           <nav class="mynav">
             <ul>
-                  <li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
-                <li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
-                  <li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
-                  <li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
-              </ul>
+              <li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
+              <li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
+              <li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
+              <li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
+            </ul>
           </nav>
           <!-- /link -->
           <!-- inquiry(비로그인시) -->
           <nav class="inquiry">
-              <div class="btns_wrap">
-                  <span class="btn fullwidth"><a>주문/배송 조회<span></span></a></span>
-              </div>
+            <div class="btns_wrap">
+              <span class="btn fullwidth"><a>주문/배송 조회<span></span></a>
+              </span>
+            </div>
           </nav>
           <!-- /inquiry(비로그인시) -->
           <!-- eventimg -->
-          <nav class="eventimg"><!-- 2015-06-08 : 이벤트이미지영역 추가 -->
-              <p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
+          <nav class="eventimg">
+            <!-- 2015-06-08 : 이벤트이미지영역 추가 -->
+            <p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
           </nav>
           <!-- /eventimg -->
           <!-- quicklink : 이전소스
@@ -98,109 +114,110 @@ $(document).ready(function(){
       </ul>
     </nav>
     /quicklink -->
-    
-    <!-- category depth추가 2018-03-21-->
-    <nav class="category">
-      <ul id="categoryList">
-        <li>
-          <a href="#sublist01" class="depth_01">패션/잡화</a>
-          <ul class="cate_depth_sublist" id="sublist01">
-            <li><a href="#">패션/잡화1-1</a></li>
-            <li><a href="#">패션/잡화2-1</a></li>
-            <li><a href="#">패션/잡화3-1</a></li>
-            <li><a href="#">패션/잡화4-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist02" class="depth_01">이미용</a>
-                    <ul class="cate_depth_sublist" id="sublist02">
-            <li><a href="#">이미용1-2</a></li>
-            <li><a href="#">이미용2-2</a></li>
-          </ul>
-                  </li>
-                  <li>
-          <a href="#sublist03" class="depth_01">쥬얼리/시계</a>
-          <ul class="cate_depth_sublist" id="sublist03">
-            <li><a href="#">쥬얼리/시계1-1</a></li>
-            <li><a href="#">쥬얼리/시계2-1</a></li>
-            <li><a href="#">쥬얼리/시계3-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist04" class="depth_01">식품</a>
-                    <ul class="cate_depth_sublist" id="sublist04">
-            <li><a href="#">식품1-2</a></li>
-            <li><a href="#">식품2-2</a></li>
-            <li><a href="#">식품2-3</a></li>
-          </ul>
-                  </li>
-        <li>
-          <a href="#sublist05" class="depth_01">생활</a>
-          <ul class="cate_depth_sublist" id="sublist05">
-            <li><a href="#">생활1-1</a></li>
-            <li><a href="#">생활2-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist06" class="depth_01">주방</a>
-                    <ul class="cate_depth_sublist" id="sublist06">
-            <li><a href="#">주방1-2</a></li>
-            <li><a href="#">주방1-2</a></li>
-            <li><a href="#">주방1-3</a></li>
-            <li><a href="#">주방1-4</a></li>
-            <li><a href="#">주방1-5</a></li>
-          </ul>
-                  </li>
-                  <li>
-                    <a href="#sublist07" class="depth_01">가구/인테리어</a>
-                    <ul class="cate_depth_sublist" id="sublist07">
-            <li><a href="#">중카테고리1-2</a></li>
-            <li><a href="#">중카테고리2-2</a></li>
-            <li><a href="#">중카테고리2-3</a></li>
-            <li><a href="#">중카테고리2-4</a></li>
-            <li><a href="#">중카테고리2-5</a></li>
-          </ul>
-                  </li>
-                  <li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
-                  <li><a href="#" class="depth_01">주방가전</a></li>
-                  <li><a href="#" class="depth_01">디지털</a></li>
-                  <li>
-                    <a href="#sublist09" class="depth_01">헬스/케어</a>
-                    <ul class="cate_depth_sublist" id="sublist09">
-            <li><a href="#">중카테고리1-2</a></li>
-            <li><a href="#">중카테고리2-2</a></li>
-            <li><a href="#">중카테고리2-3</a></li>
-            <li><a href="#">중카테고리2-4</a></li>
-            <li><a href="#">중카테고리2-5</a></li>
-          </ul>
-                  </li>
-      </ul>
-    </nav>
-    <!--// category depth추가 2018-03-21 -->
+
+          <!-- category depth추가 2018-03-21-->
+          <nav class="category">
+            <ul id="categoryList">
+              <li>
+                <a href="#sublist01" class="depth_01">패션/잡화</a>
+                <ul class="cate_depth_sublist" id="sublist01">
+                  <li><a href="#">패션/잡화1-1</a></li>
+                  <li><a href="#">패션/잡화2-1</a></li>
+                  <li><a href="#">패션/잡화3-1</a></li>
+                  <li><a href="#">패션/잡화4-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist02" class="depth_01">이미용</a>
+                <ul class="cate_depth_sublist" id="sublist02">
+                  <li><a href="#">이미용1-2</a></li>
+                  <li><a href="#">이미용2-2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist03" class="depth_01">쥬얼리/시계</a>
+                <ul class="cate_depth_sublist" id="sublist03">
+                  <li><a href="#">쥬얼리/시계1-1</a></li>
+                  <li><a href="#">쥬얼리/시계2-1</a></li>
+                  <li><a href="#">쥬얼리/시계3-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist04" class="depth_01">식품</a>
+                <ul class="cate_depth_sublist" id="sublist04">
+                  <li><a href="#">식품1-2</a></li>
+                  <li><a href="#">식품2-2</a></li>
+                  <li><a href="#">식품2-3</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist05" class="depth_01">생활</a>
+                <ul class="cate_depth_sublist" id="sublist05">
+                  <li><a href="#">생활1-1</a></li>
+                  <li><a href="#">생활2-1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist06" class="depth_01">주방</a>
+                <ul class="cate_depth_sublist" id="sublist06">
+                  <li><a href="#">주방1-2</a></li>
+                  <li><a href="#">주방1-2</a></li>
+                  <li><a href="#">주방1-3</a></li>
+                  <li><a href="#">주방1-4</a></li>
+                  <li><a href="#">주방1-5</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sublist07" class="depth_01">가구/인테리어</a>
+                <ul class="cate_depth_sublist" id="sublist07">
+                  <li><a href="#">중카테고리1-2</a></li>
+                  <li><a href="#">중카테고리2-2</a></li>
+                  <li><a href="#">중카테고리2-3</a></li>
+                  <li><a href="#">중카테고리2-4</a></li>
+                  <li><a href="#">중카테고리2-5</a></li>
+                </ul>
+              </li>
+              <li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
+              <li><a href="#" class="depth_01">주방가전</a></li>
+              <li><a href="#" class="depth_01">디지털</a></li>
+              <li>
+                <a href="#sublist09" class="depth_01">헬스/케어</a>
+                <ul class="cate_depth_sublist" id="sublist09">
+                  <li><a href="#">중카테고리1-2</a></li>
+                  <li><a href="#">중카테고리2-2</a></li>
+                  <li><a href="#">중카테고리2-3</a></li>
+                  <li><a href="#">중카테고리2-4</a></li>
+                  <li><a href="#">중카테고리2-5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!--// category depth추가 2018-03-21 -->
 
           <!-- service -->
-          <nav class="service"><!-- 2016-06-08 : 서비스영역 추가 -->
-              <ul>
-                  <li><a class="log" href="#"><span></span>로그아웃</a></li>
-                  <li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
-                  <li><a class="set" href="#"><span></span>설정</a></li>
-                  <li><a class="app" href="#"><span></span>App 다운로드</a></li>
-              </ul>
+          <nav class="service">
+            <!-- 2016-06-08 : 서비스영역 추가 -->
+            <ul>
+              <li><a class="log" href="#"><span></span>로그아웃</a></li>
+              <li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
+              <li><a class="set" href="#"><span></span>설정</a></li>
+              <li><a class="app" href="#"><span></span>App 다운로드</a></li>
+            </ul>
           </nav>
           <!-- /service -->
-    <!-- today's view -->
+          <!-- today's view -->
           <div class="history">
             <h2>오늘 본 상품</h2>
-              <p class="his_all"><a href="">전체보기</a></p>
+            <p class="his_all"><a href="">전체보기</a></p>
 
-      <div class="my_goods_wrap">					
-        <ul class="goods_list">
-          <li>
-            <div class="goods">
-              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+            <div class="my_goods_wrap">
+              <ul class="goods_list">
+                <li>
+                  <div class="goods">
+                    <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+                    <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격 
+                    <!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -211,24 +228,24 @@ $(document).ready(function(){
               </div>
               <!-- //상품가격 -->
 
-              <!-- 201806 가격정책 start -->
-              <div class="price_info02">
-                <i class="blind">할인율</i><span class="discount">10%</span>
-                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
-                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
-              </div>
-              <!-- //201806 가격정책 end -->
-            </div>
-          </li>						
-          <li>
-            <div class="goods">
-              <!-- 일시품절 상품 표시 -->
-              <p class="soldout"><span><em>일시품절</em></span></p>
-              <!-- //일시품절 상품 표시 -->
-              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+                    <!-- 201806 가격정책 start -->
+                    <div class="price_info02">
+                      <i class="blind">할인율</i><span class="discount">10%</span>
+                      <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                      <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+                    </div>
+                    <!-- //201806 가격정책 end -->
+                  </div>
+                </li>
+                <li>
+                  <div class="goods">
+                    <!-- 일시품절 상품 표시 -->
+                    <p class="soldout"><span><em>일시품절</em></span></p>
+                    <!-- //일시품절 상품 표시 -->
+                    <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+                    <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격 
+                    <!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -239,133 +256,114 @@ $(document).ready(function(){
                  <p class="counsel">상담 전용 상품입니다.</p>
               </div>
               <!-- //상품가격 -->
-              
-              <!-- 201806 가격정책 start -->
-              <div class="price_info02">
-                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
-                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
-              </div>
-              <!-- //201806 가격정책 end -->
+
+                    <!-- 201806 가격정책 start -->
+                    <div class="price_info02">
+                      <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                      <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+                    </div>
+                    <!-- //201806 가격정책 end -->
+                  </div>
+                </li>
+              </ul>
+              <!-- no data-->
+              <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p>
+              <!-- //no data-->
             </div>
-          </li>
-        </ul>
-        <!-- no data-->
-                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p> 
-        <!-- //no data-->
-      </div>
-             
+
           </div>
           <!-- /today's view -->
-  </div>
-</div>
+        </div>
+      </div>
 
-		<div class="wrap_inner">
-			<!--header S-->
-			<header class="header">
-  <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
-  <a class="nav_aside"><span>메뉴</span></a>
-  <a class="search"><span>검색</span></a>			
-</header>
+      <div class="wrap_inner">
+        <!--header S-->
+        <header class="header">
+          <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
+          <a class="nav_aside"><span>메뉴</span></a>
+          <a class="search"><span>검색</span></a>
+        </header>
 
-<div class="searchZone"><!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
-  <fieldset>
-    <legend>검색어 입력</legend>
-    <form>
-      <p>
-        <span>
+        <div class="searchZone">
+          <!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
+          <fieldset>
+            <legend>검색어 입력</legend>
+            <form>
+              <p>
+                <span>
           <input type="text" placeholder="요즘 유행하는 핫 아이템이 궁금하다면?!" name="" id="" />
           <a class="bt"><em></em></a>
         </span>
-      </p>
-    </form>
-  </fieldset>
-  <div class="search_list"> 
-    <dl>
-      <dt>최근검색어</dt>
-      <dd><a href="">침대</a></dd>
-      <dd><a href="">간이침대</a></dd>
-      <dd><a href="">이층침대</a></dd>
-      <dd><a href="">매트리스</a></dd>
-      <dd><a href="">쇼파형침대</a></dd>
-      <dd><a href="">침대 커버</a></dd>
-      <!-- 최근 검색어 없을 경우 -->
-      <!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
-      <!-- 최근 검색어 없을 경우 //-->
-      <dd>
-        <span class="btn size2 bgcolor8"><a>닫기</a></span>
-      </dd>
-    </dl>
-  </div>
-</div>
-			<!--header E-->
-			<!--main S-->
-			<main id="contents">
-				<section class="contents">
-					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
-					<h2><span>주문/결제하기</span></h2><!-- 2016-06-24 --> 
-					<!-- <nav class="gnb sub" id="topNav">
+              </p>
+            </form>
+          </fieldset>
+          <div class="search_list">
+            <dl>
+              <dt>최근검색어</dt>
+              <dd><a href="">침대</a></dd>
+              <dd><a href="">간이침대</a></dd>
+              <dd><a href="">이층침대</a></dd>
+              <dd><a href="">매트리스</a></dd>
+              <dd><a href="">쇼파형침대</a></dd>
+              <dd><a href="">침대 커버</a></dd>
+              <!-- 최근 검색어 없을 경우 -->
+              <!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
+              <!-- 최근 검색어 없을 경우 //-->
+              <dd>
+                <span class="btn size2 bgcolor8"><a>닫기</a></span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!--header E-->
+        <!--main S-->
+        <main id="contents">
+          <section class="contents">
+            <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+            <h2><span>주문/결제하기</span></h2>
+            <!-- 2016-06-24 -->
+            <!-- <nav class="gnb sub" id="topNav">
 						<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
 						<h2><span>주문/결제하기</span></h2>
-					</nav> --><!-- 2016-06-24 -->
-					<!-- html 화면 확인용 임시 소스 : 개발 미적용
+					</nav> -->
+            <!-- 2016-06-24 -->
+            <!-- html 화면 확인용 임시 소스 : 개발 미적용
 					<a href="#" class="type1">단수</a>
 					<a href="#" class="type2">복수</a>
 					<a href="#" class="type3">무형(가격)</a>
 					<a href="#" class="type4">무형(가격X)</a>
 					<a href="#" class="type5">비회원</a>
 					-->
-					<div class="orderZone">
-						<!-- 주문상품확인 -->
-						<h3 class="order_tit" id="goodsinfoh3">1. 주문 상품 확인</h3><!-- 2015-05-02 수정 -->
-						<div class="order_wrap ordergoods"><!-- 2015-05-02 class 추가 -->
-							<ul class="order_goods">
-								<li>
-									<div class="goods">
-										<p class="goods_img"><img src="../../img/tmp/005_1.jpg" alt="" /></p>
-										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-										<div class="goods_price">
-											<del><em>287,100</em>원</del>
-											<span><em>139,700</em>원</span>
-										</div>
-									</div>
-									<!-- 2015-04-30 수정 -->
-									<div class="goods_append">
-										<p>
-											<em>옵션</em>
-											<span>바다를 품은 육포 2BOX</span>
-										</p>
-										<p>
-											<em>수량</em>
-											<span>1개</span>
-										</p>
-										<p>
-											<em>사은품</em>
-											<span>강화유리 접시 5P 화이트/1개</span>
-											<span class="gift_option">[사은품 옵션 : 꽃무늬 유리]<span>
-										</p>
-									</div>
-									<!-- /2015-04-30 수정 -->
-								</li>
-							</ul>
-							<ul class="order_goods">
-								<li>
-									<div class="goods">
-										<p class="goods_img"><img src="../../img/tmp/002.jpg" alt="" /></p>
-										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-										<div class="goods_price">
-											<del><em>287,100</em>원</del>
-											<span><em>139,700</em>원</span>
-										</div>
-									</div>
-									<!-- 2015-04-30 수정 -->
-									<div class="goods_append">
-										<p>
-											<em>옵션</em>
-											<span>바다를 품은 육포 2BOX</span>
-										</p>
-										<p>
-											<em>수량</em>
-											<span>1개</span>
+            <div class="orderZone">
+              <!-- 주문상품확인 -->
+              <h3 class="order_tit" id="goodsinfoh3">1. 주문 상품 확인</h3>
+              <!-- 2015-05-02 수정 -->
+              <div class="order_wrap ordergoods">
+                <!-- 2015-05-02 class 추가 -->
+                <ul class="order_goods">
+                  <li>
+                    <div class="goods">
+                      <p class="goods_img"><img src="../../img/tmp/005_1.jpg" alt="" /></p>
+                      <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+                      <div class="goods_price">
+                        <del><em>287,100</em>원</del>
+                        <span><em>139,700</em>원</span>
+                      </div>
+                    </div>
+                    <!-- 2015-04-30 수정 -->
+                    <div class="goods_append">
+                      <p>
+                        <em>옵션</em>
+                        <span>바다를 품은 육포 2BOX</span>
+                      </p>
+                      <p>
+                        <em>수량</em>
+                        <span>1개</span>
+                      </p>
+                      <p>
+                        <em>사은품</em>
+                        <span>강화유리 접시 5P 화이트/1개</span>
+                        <span class="gift_option">[사은품 옵션 : 꽃무늬 유리]<span>
 										</p>
 									</div>
 									<!-- /2015-04-30 수정 -->
@@ -376,396 +374,466 @@ $(document).ready(function(){
 									<div class="goods">
 										<p class="goods_img"><img src="../../img/tmp/002.jpg" alt="" /></p>
 										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-										<p class="goods_counsel">상담 전용 상품입니다.</p>
-									</div>
-								</li>
-							</ul>
-							<!-- 2015-04-30 총주문금액 삭제 -->
-						</div>
-						<!-- //주문상품확인 -->
-						<!-- 주문고객정보 -->
-						<h3 class="order_tit" id="ordererinfoh3">2. 주문 고객 정보</h3><!-- 2015-04-30 띄어쓰기 수정 -->
-						<div class="order_wrap ordererinfo"><!-- 2015-05-02 class 추가 -->
-							<div class="order_info">
-								<dl>
-									<dt>이름</dt>
-									<dd>홍길동</dd>
-								</dl>
-								<dl>
-									<dt>휴대전화</dt>
-									<dd>000-0000-0000</dd>
-								</dl>
-							</div>
-						</div>
-						<!-- //주문고객정보 -->
-						<!-- 받는 고객정보 -->
-						<h3 class="order_tit" id="receiverinfoh3">3. 받는 고객 정보</h3><!-- 2015-04-30 띄어쓰기 수정 -->
-						<!-- 연락받는 고객정보 -->
-						<h3 class="order_tit" id="contactinfoh3">3. 연락받는 고객 정보</h3><!-- 2015-05-03 수정 -->						
-						<!-- /연락받는 고객정보 -->
-						<div class="order_wrap rcvcustomer"><!-- 2015-05-02 class 추가 -->
-							<div class="same">
-								<p class="check">
-									<input type="checkbox" id="same" />
-									<label for="same">주문 고객 정보와 동일(이름, 휴대폰 동일 호출)</label><!-- 2015-04-30 수정 -->
-								</p>
-							</div>
-							<ul class="tab_group tab_address">
-								<li><a class="current">기본 주소</a></li>
-								<li><a class="">최근 주소</a></li>
-								<li><a class="">신규 주소</a></li>
-							</ul>							
-							<!-- 2015-04-30 수정 -->
-							<dl class="form_input2 receiverinfo">
-								<dt>받으시는 분</dt>
-								<dd>
-									<div class="receive_area">
-										<span class="inputBox"><input type="text" placeholder="이름을 입력해 주세요." name="id" tabindex="1" autocapitalize="off" readonly="readonly" /></span>
-										<p class="delivery"><span class="btn size2 bgcolor1 adresslist"><a>배송지 목록</a></span><!-- 2015-05-04 class 추가 -->
-									</div>
-									<!-- 비회원 주문인 경우 : 2015-05-02 class 추가 
+										<div class="goods_price">
+											<del><em>287,100</em>원</del>
+											<span><em>139,700</em>원</span>
+                    </div>
+              </div>
+              <!-- 2015-04-30 수정 -->
+              <div class="goods_append">
+                <p>
+                  <em>옵션</em>
+                  <span>바다를 품은 육포 2BOX</span>
+                </p>
+                <p>
+                  <em>수량</em>
+                  <span>1개</span>
+                </p>
+              </div>
+              <!-- /2015-04-30 수정 -->
+              </li>
+              </ul>
+              <ul class="order_goods">
+                <li>
+                  <div class="goods">
+                    <p class="goods_img"><img src="../../img/tmp/002.jpg" alt="" /></p>
+                    <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+                    <p class="goods_counsel">상담 전용 상품입니다.</p>
+                  </div>
+                </li>
+              </ul>
+              <!-- 2015-04-30 총주문금액 삭제 -->
+            </div>
+            <!-- //주문상품확인 -->
+            <!-- 주문고객정보 -->
+            <h3 class="order_tit" id="ordererinfoh3">2. 주문 고객 정보</h3>
+            <!-- 2015-04-30 띄어쓰기 수정 -->
+            <div class="order_wrap ordererinfo">
+              <!-- 2015-05-02 class 추가 -->
+              <div class="order_info">
+                <dl>
+                  <dt>이름</dt>
+                  <dd>홍길동</dd>
+                </dl>
+                <dl>
+                  <dt>휴대전화</dt>
+                  <dd>000-0000-0000</dd>
+                </dl>
+              </div>
+            </div>
+            <!-- //주문고객정보 -->
+            <!-- 받는 고객정보 -->
+            <h3 class="order_tit" id="receiverinfoh3">3. 받는 고객 정보</h3>
+            <!-- 2015-04-30 띄어쓰기 수정 -->
+            <!-- 연락받는 고객정보 -->
+            <h3 class="order_tit" id="contactinfoh3">3. 연락받는 고객 정보</h3>
+            <!-- 2015-05-03 수정 -->
+            <!-- /연락받는 고객정보 -->
+            <div class="order_wrap rcvcustomer">
+              <!-- 2015-05-02 class 추가 -->
+              <div class="same">
+                <p class="check">
+                  <input type="checkbox" id="same" />
+                  <label for="same">주문 고객 정보와 동일(이름, 휴대폰 동일 호출)</label>
+                  <!-- 2015-04-30 수정 -->
+                </p>
+              </div>
+              <ul class="tab_group tab_address">
+                <li><a class="current">기본 주소</a></li>
+                <li><a class="">최근 주소</a></li>
+                <li><a class="">신규 주소</a></li>
+              </ul>
+              <!-- 2015-04-30 수정 -->
+              <dl class="form_input2 receiverinfo">
+                <dt>받으시는 분</dt>
+                <dd>
+                  <div class="receive_area">
+                    <span class="inputBox"><input type="text" placeholder="이름을 입력해 주세요." name="id" tabindex="1" autocapitalize="off" readonly="readonly" /></span>
+                    <p class="delivery"><span class="btn size2 bgcolor1 adresslist"><a>배송지 목록</a></span>
+                      <!-- 2015-05-04 class 추가 -->
+                  </div>
+                  <!-- 비회원 주문인 경우 : 2015-05-02 class 추가
 									<div class="receive_area nobtn">
 										<span class="inputBox"><input type="text" placeholder="" name="id" tabindex="1" autocapitalize="off" /></span>
 									</div>
 									-->
-									<div class="delivery_list">
-										<!-- 첫구매 and 기본주소 선택시
+                  <div class="delivery_list">
+                    <!-- 첫구매 and 기본주소 선택시
 										<p class="nodata">등록하신 기본 주소가 없습니다.</p>
 										<p class="nodata">최근 주문하신 주소가 없습니다.</p>
 										 -->
-										<!-- 배송지 목록 있을 경우 -->
-										<ul>
-											<li>
-												<div>
-													<p>홍길동 집</p>
-													<p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
-												</div>
-												<p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
-											</li>
-											<li>
-												<div>
-													<p>홍길동 집</p>
-													<p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
-												</div>
-												<p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
-											</li>
-											<li>
-												<div>
-													<p>홍길동 집</p>
-													<p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
-												</div>
-												<p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
-											</li>
-										</ul>
-										<!-- /배송지 목록 있을 경우 -->
-									</div>
-								</dd>
-							</dl>
-							<!-- /2015-04-30 수정 -->
-							<dl class="form_input">
-								<dt>주소</dt>
-								<dd>
-									<div class="address_area">
-										<p>
-											<span>
+                    <!-- 배송지 목록 있을 경우 -->
+                    <ul>
+                      <li>
+                        <div>
+                          <p>홍길동 집</p>
+                          <p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
+                        </div>
+                        <p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
+                      </li>
+                      <li>
+                        <div>
+                          <p>홍길동 집</p>
+                          <p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
+                        </div>
+                        <p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
+                      </li>
+                      <li>
+                        <div>
+                          <p>홍길동 집</p>
+                          <p>서울특별시 중구 퇴계로 24 SK남산그린빌딩</p>
+                        </div>
+                        <p class="select"><span class="btn size1 bgcolor1"><a href="#">선택</a></span></p>
+                      </li>
+                    </ul>
+                    <!-- /배송지 목록 있을 경우 -->
+                  </div>
+                </dd>
+              </dl>
+              <!-- /2015-04-30 수정 -->
+              <dl class="form_input">
+                <dt>주소</dt>
+                <dd>
+                  <div class="address_area">
+                    <p>
+                      <span>
 												<span class="inputBox"><input type="text" name="addr" tabindex="2" autocapitalize="off" readonly="readonly" /></span>
-											</span>
-										</p>
-										<p>
-											<span>
+                      </span>
+                    </p>
+                    <p>
+                      <span>
 												<em>-</em>
 												<span class="inputBox"><input type="text" name="addr" tabindex="2" autocapitalize="off" readonly="readonly" /></span>
-											</span>
-										</p>
-										<span class="post"><span class="btn size2 bgcolor1"><a href="#">우편번호찾기</a></span></span>
-									</div>
-									<p class="address_area2"><span class="inputBox"><input type="text" name="addr" tabindex="3" autocapitalize="off" readonly="readonly" /></span></p>
-									<p class="address_area2"><span class="inputBox"><input type="text" name="addr" tabindex="4" autocapitalize="off" /></span></p>
-									<p class="check address_area3"><input type="checkbox" id="myAddr" /><label for="myAddr">이 주소를 내 기본주소로 지정하기</label></p>
-								</dd>
-							</dl>
-							<p class="refer"><span class="emp2">* 상담받으실 전화번호 변경은 주문결제 이후에 주문상세보기 페이지에서 가능합니다.</span></p>
-							<dl class="form_input">
-								<dt>휴대전화</dt>
-								<dd>
-									<div class="phone_area">
-										<p>
-											<span>
+                      </span>
+                    </p>
+                    <span class="post"><span class="btn size2 bgcolor1"><a href="#">우편번호찾기</a></span></span>
+                  </div>
+                  <p class="address_area2"><span class="inputBox"><input type="text" name="addr" tabindex="3" autocapitalize="off" readonly="readonly" /></span></p>
+                  <p class="address_area2"><span class="inputBox"><input type="text" name="addr" tabindex="4" autocapitalize="off" /></span></p>
+                  <p class="check address_area3"><input type="checkbox" id="myAddr" /><label for="myAddr">이 주소를 내 기본주소로 지정하기</label></p>
+                </dd>
+              </dl>
+              <p class="refer"><span class="emp2">* 상담받으실 전화번호 변경은 주문결제 이후에 주문상세보기 페이지에서 가능합니다.</span></p>
+              <dl class="form_input">
+                <dt>휴대전화</dt>
+                <dd>
+                  <div class="phone_area">
+                    <p>
+                      <span>
 												<select name="" tabindex="5">
-	                                                  <option value="">010</option>
-	                                                  <option value="">011</option>
-	                                                  <option value="">016</option>
-	                                                  <option value="">017</option>
-	                                                  <option value="">018</option>
-	                                                  <option value="">019</option>
-	                                            </select>
+                          <option value="">010</option>
+                          <option value="">011</option>
+                          <option value="">016</option>
+                          <option value="">017</option>
+                          <option value="">018</option>
+                          <option value="">019</option>
+                        </select>
 											</span>
-										</p>
-										<p>
-											<span>
+                    </p>
+                    <p>
+                      <span>
 												<em>-</em>
 												<span class="inputBox"><input type="tel" placeholder="" name="tel1" tabindex="6" autocapitalize="off" /></span>
-											</span>
-										</p>
-										<p>
-											<span>
+                      </span>
+                    </p>
+                    <p>
+                      <span>
 												<em>-</em>
 												<span class="inputBox"><input type="tel" placeholder="" name="tel2" tabindex="7" autocapitalize="off" /></span>
-											</span>
-										</p>
-									</div>
-								</dd>
-							</dl>
-							<dl class="form_input">
-								<dt><span class="emp0">전화번호(선택사항)</span></dt><!-- 2015-04-30 수정 -->
-								<dd>
-									<div class="phone_area">
-										<p>
-											<span>
+                      </span>
+                    </p>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="form_input">
+                <dt><span class="emp0">전화번호(선택사항)</span></dt>
+                <!-- 2015-04-30 수정 -->
+                <dd>
+                  <div class="phone_area">
+                    <p>
+                      <span>
 												<select name="" tabindex="8">
-	                                                  <option value="">010</option>
-	                                                  <option value="">011</option>
-	                                                  <option value="">016</option>
-	                                                  <option value="">017</option>
-	                                                  <option value="">018</option>
-	                                                  <option value="">019</option>
-	                                            </select>
+                          <option value="">010</option>
+                          <option value="">011</option>
+                          <option value="">016</option>
+                          <option value="">017</option>
+                          <option value="">018</option>
+                          <option value="">019</option>
+                        </select>
 											</span>
-										</p>
-										<p>
-											<span>
+                    </p>
+                    <p>
+                      <span>
 												<em>-</em>
 												<span class="inputBox"><input type="tel" placeholder="" name="tel1" tabindex="9" autocapitalize="off" /></span>
-											</span>
-										</p>
-										<p>
-											<span>
+                      </span>
+                    </p>
+                    <p>
+                      <span>
 												<em>-</em>
 												<span class="inputBox"><input type="tel" placeholder="" name="tel2" tabindex="10" autocapitalize="off" /></span>
-											</span>
-										</p>
-									</div>
-								</dd>
-							</dl>
-							<dl class="form_input">
-								<dt><span class="emp0">배송메모(선택사항)</span></dt><!-- 2015-04-30 수정 -->
-								<dd>
-									<select name="" tabindex="11">
+                      </span>
+                    </p>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="form_input">
+                <dt><span class="emp0">배송메모(선택사항)</span></dt>
+                <!-- 2015-04-30 수정 -->
+                <dd>
+                  <select name="" tabindex="11">
 										<option value="">배송메모를 선택해 주세요.</option>
 										<option value="">빠른 배송 부탁드립니다.</option>
 										<option value="">부재 시 경비실(관리실)에 맡겨주세요.</option>
 										<option value="">부재 시 핸드폰으로 연락바랍니다.</option>
 										<option value="">배송 전 연락바랍니다.</option>
-	                                </select>
-									<p class="delivery_area">
-										<span class="textarea"><!-- 2015-05-02 수정 -->
+	                </select>
+                  <p class="delivery_area">
+                    <span class="textarea"><!-- 2015-05-02 수정 -->
 											<textarea tabindex="12">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</textarea>
 										</span>
-									</p>
-								</dd>
-							</dl>
-							<!-- 2015-05-02 수정 -->
-							<dl class="form_input counselask">
-								<dt><span class="emp0">상담하실 내용(선택사항)</span></dt>
-								<dd>
-									<!-- 2015-06-10 수정 -->
-									<span class="textarea1">
+                  </p>
+                </dd>
+              </dl>
+              <!-- 2015-05-02 수정 -->
+              <dl class="form_input counselask">
+                <dt><span class="emp0">상담하실 내용(선택사항)</span></dt>
+                <dd>
+                  <!-- 2015-06-10 수정 -->
+                  <span class="textarea1">
 										<textarea cols="10" rows="5" placeholder=""></textarea>
 										<p class="placeholder ui-placeholder" style="display:block;">
 											<span>200자 이내로 작성해 주시기 바랍니다.</span>
-										</p>
-									</span>
-									<!-- /2015-06-10 수정 -->
-								</dd>
-								<dd class="counsel">
-									<div class="boxtype1">
-										<p>상담상품은 결제수단 선택없이 “상담신청” 버튼을 누르시면 구매가 완료됩니다.</p>										
-									</div>
-								</dd>
-							</dl>
-							<!-- /2015-05-02 수정 -->
-						</div>
-						<!-- //받는 고객정보 -->
-						
-						<!-- 할인정보 -->
-						<h3 class="order_tit" id="saveinfoh3">4. 할인 정보</h3><!-- 2015-05-03 수정 -->
-						<div class="discount_wrap">
-							<ul>
-								<!-- 2015-04-30 수정 -->
-								<li class="area_trbl basic">
-									<h4>상품 할인(총합)</h4>
-									<p class="price"><em>100</em>원</p>
-								</li>
-								<li class="area_trbl tv"><!-- 2015-06-11 추가 -->
-									<h4>스마트폰 할인</h4><!-- 2015-06-12 명칭 변경 -->
-									<p class="price"><em>0</em>원</p>
-								</li>
-								<!--
+                  </p>
+                  </span>
+                  <!-- /2015-06-10 수정 -->
+                </dd>
+                <dd class="counsel">
+                  <div class="boxtype1">
+                    <p>상담상품은 결제수단 선택없이 “상담신청” 버튼을 누르시면 구매가 완료됩니다.</p>
+                  </div>
+                </dd>
+              </dl>
+              <!-- /2015-05-02 수정 -->
+            </div>
+            <!-- //받는 고객정보 -->
+
+            <!-- 할인정보 -->
+            <h3 class="order_tit" id="saveinfoh3">4. 할인 정보</h3>
+            <!-- 2015-05-03 수정 -->
+            <div class="discount_wrap">
+              <ul>
+                <!-- 2015-04-30 수정 -->
+                <li class="area_trbl basic">
+                  <h4>상품 할인(총합)</h4>
+                  <p class="price"><em>100</em>원</p>
+                </li>
+                <li class="area_trbl tv">
+                  <!-- 2015-06-11 추가 -->
+                  <h4>스마트폰 할인</h4>
+                  <!-- 2015-06-12 명칭 변경 -->
+                  <p class="price"><em>0</em>원</p>
+                </li>
+                <!--
 								<li class="area_trbl tv hidden" style="display:none;">
 									<h4>스마트폰 할인</h4>
 									<p class="price"><em>0</em>원</p>
 								</li>
 								-->
-								<!-- /2015-04-30 수정 -->
-								<li class="area_trbl coupon">
-									<h4>쿠폰 사용</h4>
-									<ul class="coupon_goods">
-										<li>
-											<p><span>&bull;</span>무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</p>
-											<select tabindex="11">
+                <!-- /2015-04-30 수정 -->
+                <li class="area_trbl coupon">
+                  <h4>쿠폰 사용</h4>
+                  <ul class="coupon_goods">
+                    <li>
+                      <p><span>&bull;</span>무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</p>
+                      <select tabindex="11">
 			                                      <option value="">쿠폰을 선택해주세요.</option>
 			                                </select>
-			                            </li>
-										<li>
-											<p><span>&bull;</span>무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</p>
-											<select tabindex="11">
+                    </li>
+                    <li>
+                      <p><span>&bull;</span>무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</p>
+                      <select tabindex="11">
 			                                      <option value="">쿠폰을 선택해주세요.</option>
 			                                </select>
-			                            </li>
-									</ul>
-									<div class="coupon_acount">
-										<p class="price"><span>쿠폰사용 할인금액</span> <span><em>900</em>원</span></p><!-- 2015-04-30 수정 -->
-									</div>
-								</li>
-								<li class="area_trbl lump">
-									<h4><input type="checkbox" id="" name="" /><label for="">일시불 할인</label></h4>
-									<p class="price"><em>100</em>원</p>
-									<p class="refer">※ 일시불 할인 선택 시 신용카드 할부 결제 불가</p><!-- 2015-04-30 수정 -->
-								</li>
-								<!-- 2015-04-30 수정 -->
-								<li class="area_trbl savemoney">
-									<h4>적립금 사용</h4>									
-									<div class="save_use">
-										<p>(<em>12,500</em>원)</p>
-										<span class="inputBox"><input type="tel" class="input_price" placeholder="0" name="price" tabindex="2" autocapitalize="off" /></span>
-										<em>원</em>										
-									</div>									
-									<span class="unit">* 100원 단위로 사용</span>
-									<div class="btns_wrap btn2">
-										<span class="btn size2 bgcolor2"><a href="#">사용</a></span>
-										<span class="btn size2 bgcolor2"><a href="#">모두사용</a></span>
-									</div>
-									<div class="save_acount">
-										<p class="price"><span>적립금 사용금액</span> <span><em>900</em>원</span></p><!-- 2015-04-30 수정 -->
-									</div>
-								</li>
-								<!-- /2015-04-30 수정 -->
-							</ul>
-							<!-- 2015-04-30 캐시백,멤버십 삭제 -->
-						</div>
-						<div class="total_wrap">
-							<ul class="goods">
-								<li>
-									<dl>
-										<dt>총 상품가격</dt><!-- 2015-06-15 수정 -->
-										<dd>
-											<span class="price"><em>328,700</em>원</span>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<!-- 2015-04-30 수정 -->
-									<div class="discount">								
-										<dl>
-											<dt>상품 할인</dt>
-											<dd><span class="price minus"><em>100</em>원</span></dd>
-										</dl>
-										<dl>
-											<dt>스마트폰 할인</dt><!-- 2015-06-12 명칭 변경 -->
-											<dd><span class="price minus"><em>100</em>원</span></dd>
-										</dl>										
-										<dl>
-											<dt>쿠폰 사용</dt>
-											<dd><span class="price minus"><em>900</em>원</span></dd>
-										</dl>										
-										<dl>
-											<dt>일시불 할인</dt>
-											<dd><span class="price minus"><em>100</em>원</span></dd>
-										</dl>
-										<dl>
-											<dt>적립금 사용</dt>
-											<dd><span class="price minus"><em>2,500</em>원</span></dd>
-										</dl>
-										<dl>
-											<dt>배송비</dt>
-											<dd><span class="price plus"><em>2,500</em>원</span></dd>
-										</dl>
-									</div>
-									<!-- /2015-04-30 수정 -->
-								</li>
-							</ul>
-							<div class="payment">
-								<dl>
-									<dt>총 결제금액<span>(할인적용, 배송비 포함)</span></dt><!-- 2015-04-30 수정 -->
-									<dd>
-										<span class="price"><em>276,500</em>원</span>
-									</dd>
-								</dl>
-							</div>
-							<div class="benefit">								
-								<div class="save">
-									<!-- 2015-05-02 수정 -->
-									<dl>
-										<dt>적립혜택<span>(적립금)</span></dt>										
-										<dd><span class="price"><em>30</em>원</span></dd>
-									</dl>
-									<!-- /2015-05-02 수정 -->
-								</div>
-							</div>
-							<!-- 결제금액이 0원일 경우
+                    </li>
+                  </ul>
+                  <div class="coupon_acount">
+                    <p class="price"><span>쿠폰사용 할인금액</span> <span><em>900</em>원</span></p>
+                    <!-- 2015-04-30 수정 -->
+                  </div>
+                </li>
+                <li class="area_trbl lump">
+                  <h4><input type="checkbox" id="" name="" /><label for="">일시불 할인</label></h4>
+                  <p class="price"><em>100</em>원</p>
+                  <p class="refer">※ 일시불 할인 선택 시 신용카드 할부 결제 불가</p>
+                  <!-- 2015-04-30 수정 -->
+                </li>
+                <!-- 2018-06-22 도서문화상품권 start -->
+                <li class="area_trbl bnlife">
+                  <h4>도서문화상품권 사용</h4>
+                  <div class="btns_wrap">
+                    <span class="btn fullwidth bgcolor2"><a href="#none" class="ui-pop-btn" data-pop-id="pop_bnlife">도서문화상품권 사용하기</a></span>
+                  </div>
+                </li>
+                <li class="area_trbl bnlife">
+                  <h4>도서문화상품권 사용</h4>
+                  <div class="save_use">
+                    <p>(<em>12,500</em>원)</p>
+                    <span class="inputBox"><input type="number" class="input_price" placeholder="0" name="price" tabindex="2" autocapitalize="off" /></span>
+                    <em>원</em>
+                  </div>
+                  <span class="unit">* 100원 단위로 사용</span>
+                  <div class="btns_wrap btn3">
+                    <span class="btn size2 bgcolor2"><a href="#">사용</a></span>
+                    <span class="btn size2 bgcolor2"><a href="#">모두사용</a></span>
+                    <span class="btn size2 bgcolor2"><a href="#">금액초기화</a></span>
+                  </div>
+                  <div class="save_acount">
+                    <p class="price"><span>도서문화상품권 사용금액</span> <span><em>900</em>원</span></p>
+                  </div>
+                </li>
+                <!-- 2018-06-22 도서문화상품권 end -->
+                <!-- 2015-04-30 수정 -->
+                <li class="area_trbl savemoney">
+                  <h4>적립금 사용</h4>
+                  <div class="save_use">
+                    <p>(<em>12,500</em>원)</p>
+                    <span class="inputBox"><input type="tel" class="input_price" placeholder="0" name="price" tabindex="2" autocapitalize="off" /></span>
+                    <em>원</em>
+                  </div>
+                  <span class="unit">* 100원 단위로 사용</span>
+                  <div class="btns_wrap btn2">
+                    <span class="btn size2 bgcolor2"><a href="#">사용</a></span>
+                    <span class="btn size2 bgcolor2"><a href="#">모두사용</a></span>
+                  </div>
+                  <div class="save_acount">
+                    <p class="price"><span>적립금 사용금액</span> <span><em>900</em>원</span></p>
+                    <!-- 2015-04-30 수정 -->
+                  </div>
+                </li>
+                <!-- /2015-04-30 수정 -->
+              </ul>
+              <!-- 2015-04-30 캐시백,멤버십 삭제 -->
+            </div>
+            <div class="total_wrap">
+              <ul class="goods">
+                <li>
+                  <dl>
+                    <dt>총 상품가격</dt>
+                    <!-- 2015-06-15 수정 -->
+                    <dd>
+                      <span class="price"><em>328,700</em>원</span>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <!-- 2015-04-30 수정 -->
+                  <div class="discount">
+                    <dl>
+                      <dt>상품 할인</dt>
+                      <dd><span class="price minus"><em>100</em>원</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>스마트폰 할인</dt>
+                      <!-- 2015-06-12 명칭 변경 -->
+                      <dd><span class="price minus"><em>100</em>원</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>쿠폰 사용</dt>
+                      <dd><span class="price minus"><em>900</em>원</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>일시불 할인</dt>
+                      <dd><span class="price minus"><em>100</em>원</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>적립금 사용</dt>
+                      <dd><span class="price minus"><em>2,500</em>원</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>배송비</dt>
+                      <dd><span class="price plus"><em>2,500</em>원</span></dd>
+                    </dl>
+                  </div>
+                  <!-- /2015-04-30 수정 -->
+                </li>
+              </ul>
+              <div class="payment">
+                <dl>
+                  <dt>총 결제금액<span>(할인적용, 배송비 포함)</span></dt>
+                  <!-- 2015-04-30 수정 -->
+                  <dd>
+                    <span class="price"><em>276,500</em>원</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class="benefit">
+                <div class="save">
+                  <!-- 2015-05-02 수정 -->
+                  <dl>
+                    <dt>적립혜택<span>(적립금)</span></dt>
+                    <dd><span class="price"><em>30</em>원</span></dd>
+                  </dl>
+                  <!-- /2015-05-02 수정 -->
+                </div>
+              </div>
+              <!-- 결제금액이 0원일 경우
 							<div class="payment_zero">
 								<p>고객님께서는 할인혜택을 받으셔서<br />결제하실 금액이 없습니다.</p>
 							</div>
 							 -->
-						</div>
-						
-						<!-- 결제정보 --><!-- 2015-04-30 위치 변경, 수정 -->
-						<h3 class="order_tit" id="payinfoh3">5. 결제 정보</h3><!-- 2015-05-04 텍스트수정 -->
-						<div class="order_wrap payinfo"><!-- 2015-05-02 수정 -->
-							<dl class="pay_method ui-tab-btns">
-								<dt>결제 수단 선택</dt><!-- 2015-05-04 텍스트수정 -->
-								<dd>
-									<!-- 2015-05-02 수정 -->
-									<div class="btns_wrap btn2">
-										<span class="btn size2 bgcolor5 card"><a data-tab-target="pm_card" class="current">신용카드</a></span>
-										<span class="btn size2 bgcolor5 bank2"><a data-tab-target="pm_bank2">무통장 입금</a></span>
-									</div>
-									<!-- /2015-05-02 수정 -->
-								</dd>
-							</dl>
-							
-							<!-- 신용카드 선택시 -->
-							<div id="pm_card" class="pay_method_con ui-tab-content" style="display:block;">
-								<!-- 2015-05-02 수정 -->
-								<h4>결제 정보 입력</h4>
-								<div class="card_select">
-									<dl>
-										<dt>카드종류</dt>
-										<dd>
-											<select name="" tabindex="13">
+            </div>
+
+            <!-- 결제정보 -->
+            <!-- 2015-04-30 위치 변경, 수정 -->
+            <h3 class="order_tit" id="payinfoh3">5. 결제 정보</h3>
+            <!-- 2015-05-04 텍스트수정 -->
+            <div class="order_wrap payinfo">
+              <!-- 2015-05-02 수정 -->
+              <dl class="pay_method ui-tab-btns">
+                <dt>결제 수단 선택</dt>
+                <!-- 2015-05-04 텍스트수정 -->
+                <dd>
+                  <!-- 2015-05-02 수정 -->
+                  <div class="btns_wrap btn2">
+                    <span class="btn size2 bgcolor5 card"><a data-tab-target="pm_card" class="current">신용카드</a></span>
+                    <span class="btn size2 bgcolor5 bank2"><a data-tab-target="pm_bank2">무통장 입금</a></span>
+                  </div>
+                  <!-- /2015-05-02 수정 -->
+                </dd>
+              </dl>
+
+              <!-- 신용카드 선택시 -->
+              <div id="pm_card" class="pay_method_con ui-tab-content" style="display:block;">
+                <!-- 2015-05-02 수정 -->
+                <h4>결제 정보 입력</h4>
+                <div class="card_select">
+                  <dl>
+                    <dt>카드종류</dt>
+                    <dd>
+                      <select name="" tabindex="13">
 												<option value="" selected="selected">카드선택</option>
 												<option value="">국민카드</option>
 			                                </select>
-										</dd>
-									</dl>
-									<dl>
-										<dt>할부선택</dt>
-										<dd>
-											<div class="pay_terms">
-												<select name="" tabindex="14">
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>할부선택</dt>
+                    <dd>
+                      <div class="pay_terms">
+                        <select name="" tabindex="14">
 													<option value="" selected="selected">할부선택</option>
 													<option value="">일시불</option>
-				                                </select>			                                
-											</div>
-										</dd>
-									</dl>
-								</div>
-								<div class="boxtype1 card_discount">
-									<p><span>신한카드</span>7% 청구 할인</p>
-									<p><span>국민카드</span>5% 청구 할인</p>
-									<p>국민카드 최대 6개월 무이자(60,000 x 6개월)<br />(6.14~6.15 <em>/</em> 50,000원 이상 결제 시)</p>
-								</div>
-								<!--
+				                                </select>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="boxtype1 card_discount">
+                  <p><span>신한카드</span>7% 청구 할인</p>
+                  <p><span>국민카드</span>5% 청구 할인</p>
+                  <p>국민카드 최대 6개월 무이자(60,000 x 6개월)<br />(6.14~6.15 <em>/</em> 50,000원 이상 결제 시)</p>
+                </div>
 								<div class="card_point_area">
 									<dl class="form_input">
 										<dt>카드 포인트사용</dt>
@@ -775,30 +843,33 @@ $(document).ready(function(){
 										</dd>
 									</dl>
 								</div>
-								-->
-								<!-- /2015-05-02 수정 -->
-							</div>
-							<!-- //신용카드 선택시 -->
-														
-							<!-- 무통장입금 선택시 -->
-							<div id="pm_bank2" class="pay_method_con ui-tab-content" style="display:none;">
-								<h4>결제 정보 입력</h4>
-                                <ul class="mark">
-                                	<li class="refer"><em>※</em>주문 후 영업일 기준 7일 이내 입금확인이 되지 않으면 주문이 자동 취소될 수 있습니다.</li>
-                                	<li class="refer"><em>※</em>현금영수증은 1원 이상 현금결제한 경우에 회원 명의로 자동 발행됩니다.</li>
-                                </ul>								
-								<div class="taxsave_area">
-									<div class="selectrcpt">
-										<ul>
-											<li><p class="radio"><input type="radio" id="taxsave11" name="taxsave1" checked="checked" /><label for="taxsave1">현금영수증 발행</label></p></li>
-											<li><p class="radio"><input type="radio" id="taxsave12" name="taxsave1" /><label for="taxsave2">미발행</label></p></li>
-										</ul>
-									</div>
-									<div class="taxsave_print" style="display:block;">
-										<p class="radio"><input type="radio" id="individual" name="taxsave2" checked="checked"/><label for="individual">소득공제용 휴대폰번호로 발행</label></p>
-										<div class="phone_area" style="display:block;">
-											<p>
-												<span>
+                <!-- /2015-05-02 수정 -->
+              </div>
+              <!-- //신용카드 선택시 -->
+
+              <!-- 무통장입금 선택시 -->
+              <div id="pm_bank2" class="pay_method_con ui-tab-content" style="display:none;">
+                <h4>결제 정보 입력</h4>
+                <ul class="mark">
+                  <li class="refer"><em>※</em>주문 후 영업일 기준 7일 이내 입금확인이 되지 않으면 주문이 자동 취소될 수 있습니다.</li>
+                  <li class="refer"><em>※</em>현금영수증은 1원 이상 현금결제한 경우에 회원 명의로 자동 발행됩니다.</li>
+                </ul>
+                <div class="taxsave_area">
+                  <div class="selectrcpt">
+                    <ul>
+                      <li>
+                        <p class="radio"><input type="radio" id="taxsave11" name="taxsave1" checked="checked" /><label for="taxsave1">현금영수증 발행</label></p>
+                      </li>
+                      <li>
+                        <p class="radio"><input type="radio" id="taxsave12" name="taxsave1" /><label for="taxsave2">미발행</label></p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="taxsave_print" style="display:block;">
+                    <p class="radio"><input type="radio" id="individual" name="taxsave2" checked="checked" /><label for="individual">소득공제용 휴대폰번호로 발행</label></p>
+                    <div class="phone_area" style="display:block;">
+                      <p>
+                        <span>
 													<select disabled="disabled">
 			                                              <option value="">010</option>
 			                                              <option value="">011</option>
@@ -808,149 +879,231 @@ $(document).ready(function(){
 			                                              <option value="">019</option>
 			                                        </select>
 												</span>
-											</p>
-											<p>
-												<span>
+                      </p>
+                      <p>
+                        <span>
 													<em>-</em>
 													<span class="inputBox"><input type="tel" value="0000" name="tel1" tabindex="18" autocapitalize="off" disabled="disabled" /></span>
-												</span>
-											</p>
-											<p>
-												<span>
+                        </span>
+                      </p>
+                      <p>
+                        <span>
 													<em>-</em>
 													<span class="inputBox"><input type="tel" value="0000" name="tel2" tabindex="19" autocapitalize="off" disabled="disabled" /></span>
-												</span>
-											</p>
-										</div>
-										<div class="jumin_area" style="display:none;">
-											<p>
-												<span>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="jumin_area" style="display:none;">
+                      <p>
+                        <span>
 													<span class="inputBox"><input type="tel" placeholder="" name="tel1" tabindex="20" autocapitalize="off" /></span>
-												</span>
-											</p>
-											<p>
-												<span>
+                        </span>
+                      </p>
+                      <p>
+                        <span>
 													<em>-</em>
 													<span class="inputBox"><input type="tel" placeholder="" name="tel2" tabindex="21" autocapitalize="off" /></span>
-												</span>
-											</p>
-										</div>
-										<p class="radio"><input type="radio" id="business" name="taxsave2" /><label for="business">지출증빙용(사업자)</label></p>
-										<div class="business_area" style="display:block;">
-											<p>
-												<span>
+                        </span>
+                      </p>
+                    </div>
+                    <p class="radio"><input type="radio" id="business" name="taxsave2" /><label for="business">지출증빙용(사업자)</label></p>
+                    <div class="business_area" style="display:block;">
+                      <p>
+                        <span>
 													<span class="inputBox"><input type="tel" placeholder="" name="tel1" tabindex="23" autocapitalize="off" /></span>
-												</span>
-											</p>
-											<p>
-												<span>
+                        </span>
+                      </p>
+                      <p>
+                        <span>
 													<em>-</em>
 													<span class="inputBox"><input type="tel" placeholder="" name="tel1" tabindex="24" autocapitalize="off" /></span>
-												</span>
-											</p>
-											<p>
-												<span>
+                        </span>
+                      </p>
+                      <p>
+                        <span>
 													<em>-</em>
 													<span class="inputBox"><input type="tel" placeholder="" name="tel2" tabindex="25" autocapitalize="off" /></span>
-												</span>
-											</p>
-										</div>
-		                                <ul class="mark">
-		                                	<li class="refer"><em>※</em>부가세 신고 등을 위한 제출 증빙 사용시 반드시 세금계산서를 신청하기 바랍니다.</li>
-		                                </ul>
-									</div>
-								</div>
-							</div>
-							<!-- /무통장입금 선택시 -->	
-													
-							<div class="payinfo"><!-- 2015-05-02 위치 변경, 수정 -->
-								<p class="check agree"><input type="checkbox" id="order_agree" /><label for="order_agree">주문내용을 확인하였으며, 구매 진행에 동의합니다.</label></p>
-							</div>
-							<!--  비회원 주문시 --><!-- 2015-05-02 수정 -->
-							<div class="nomempw">
-								<dl class="form_input">
-									<dt>비회원 주문 비밀번호 입력</dt>
-									<dd>
-										<span class="inputBox"><input type="text" placeholder="숫자 6~12자리 입력해 주세요." name="noMemberPW" tabindex="25" autocapitalize="off" /></span>
-									</dd>
-								</dl>
-								<p class="refer">* 추후, 비회원 주문/배송 조회 때 필요로 합니다.</p>
-							</div>
-							<!--  /비회원 주문시 -->
-							
-							<!-- 2015-05-02 수정 -->
-							<div class="btns_wrap">
-								<span class="btn fullwidth bgcolor4"><a>결제하기</a></span>
-							</div>
-							<div class="btns_wrap btn2">
-								<span class="btn size2 bgcolor2"><a>취소</a></span>
-								<span class="btn size2 bgcolor4"><a>상담신청</a></span>
-							</div>
-							<!-- /2015-05-02 수정 -->
-						
-						</div>
-					</div>
-				</section>
-				
-			</main>
-			<!--main E-->
-			<!--footer S-->
-			<footer class="footer">
-  <nav class="fmu">
-    <ul>
-      <li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
-      <li><a>고객센터</a></li>
-      <li><a href="tel:0801301003">상담전화</a></li>
-    </ul>
-  </nav>				
-  <nav class="fmu2">
-    <ul>
-      <li><a href="../views/common/service.jsp">회사소개</a></li>
-      <li><a href="../views/common/provision1.jsp">이용약관</a></li>
-      <li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
-      <li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
-    </ul>
-  </nav>
-  <address>
+                        </span>
+                      </p>
+                    </div>
+                    <ul class="mark">
+                      <li class="refer"><em>※</em>부가세 신고 등을 위한 제출 증빙 사용시 반드시 세금계산서를 신청하기 바랍니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /무통장입금 선택시 -->
+
+              <div class="payinfo">
+                <!-- 2015-05-02 위치 변경, 수정 -->
+                <p class="check agree"><input type="checkbox" id="order_agree" /><label for="order_agree">주문내용을 확인하였으며, 구매 진행에 동의합니다.</label></p>
+              </div>
+              <!--  비회원 주문시 -->
+              <!-- 2015-05-02 수정 -->
+              <div class="nomempw">
+                <dl class="form_input">
+                  <dt>비회원 주문 비밀번호 입력</dt>
+                  <dd>
+                    <span class="inputBox"><input type="text" placeholder="숫자 6~12자리 입력해 주세요." name="noMemberPW" tabindex="25" autocapitalize="off" /></span>
+                  </dd>
+                </dl>
+                <p class="refer">* 추후, 비회원 주문/배송 조회 때 필요로 합니다.</p>
+              </div>
+              <!--  /비회원 주문시 -->
+
+              <!-- 2015-05-02 수정 -->
+              <div class="btns_wrap">
+                <span class="btn fullwidth bgcolor4"><a>결제하기</a></span>
+              </div>
+              <div class="btns_wrap btn2">
+                <span class="btn size2 bgcolor2"><a>취소</a></span>
+                <span class="btn size2 bgcolor4"><a>상담신청</a></span>
+              </div>
+              <!-- /2015-05-02 수정 -->
+
+            </div>
+      </div>
+      </section>
+
+      </main>
+      <!--main E-->
+      <!--footer S-->
+      <footer class="footer">
+        <nav class="fmu">
+          <ul>
+            <li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
+            <li><a>고객센터</a></li>
+            <li><a href="tel:0801301003">상담전화</a></li>
+          </ul>
+        </nav>
+        <nav class="fmu2">
+          <ul>
+            <li><a href="../views/common/service.jsp">회사소개</a></li>
+            <li><a href="../views/common/provision1.jsp">이용약관</a></li>
+            <li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
+            <li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
+          </ul>
+        </nav>
+        <address>
     <p>주식회사 티알엔 대표이사 : 민택근</p>
     <p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
     <p>사업자등록번호 : 116-81-50973</p>
     <p>통신판매업 신고 서울중구 1670호</p>
     <p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
     <p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
-    
+
     <p class="bt">
       <span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2010301010030201670" target="_blank">사업자정보확인</a></span>
       <span><a href="../views/common/credit_bank.jsp">신한은행 채무지급 보증안내</a></span>
-    </p>		
+    </p>
     <p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
   </address>
-</footer>
-<!-- dimmed-->
-<div class="dim" style="display:none;"></div>
-<!-- //dimmed -->
-			<!--footer E-->
-		</div><!-- end wrap_inner -->
-	</div><!-- end wrap -->
-	
-	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
-</div><!-- end container -->
-<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../resources/js/touch.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
-<script type="text/javascript" src="../../resources/js/overflow.js"></script>
-<script type="text/javascript" src="../../resources/js/swipe.js"></script>
-<script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../../resources/js/swiper.js"></script>
-<script type="text/javascript" src="../../resources/js/slick.js"></script>
-<script type="text/javascript" src="../../resources/js/iscroll.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script> <!--2018-04-16 추가-->
-<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
-<script type="text/javascript" src="../../resources/js/loading.js"></script>
-<script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
-<script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
-<script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
+      </footer>
+      <!-- dimmed-->
+      <div class="dim" style="display:none;"></div>
+      <!-- //dimmed -->
+      <!--footer E-->
+    </div>
+    <!-- end wrap_inner -->
+  </div>
+  <!-- end wrap -->
+
+  <span class="floating_btn_top"><a>페이지 맨위로</a></span>
+
+  <!-- 2018-06-22 도서문화상품권 팝업 start -->
+	<div class="popup_wrap" style="display:none;">
+		<div class="dim"></div>
+		<div id="pop_bnlife" class="layerPop">
+			<a class="layClose"><em>닫기</em></a>
+			<div class="layerCont">
+				<dl>
+					<dt>장바구니 이용안내</dt>
+					<dd>
+						<ul class="mark">
+							<li>주문서를 작성하시기 전에 선택하신 상품후기, 수량 및 가격 등이 정확한지 확인하세요.</li><!-- 2015-06-02 수정 -->
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>무이자할부 이용안내</dt>
+					<dd>
+						<ul class="mark">
+							<!-- 2015-06-02 수정 -->
+							<li>무이자 할부 개월 수가 다른 상품들을 동시에 주문하시면 상품 중에서 가장 낮은 할부 개월 수로 일괄 조정됩니다.</li>
+							<li>(예시) 무이자 할부 개월 수가 3개월, 6개월인 상품을 함께 주문하실 경우, 모두 3개월로 주문이 됩니다.</li>
+							<li>상품별 무이자 할부 개월 수 적용을 하시려면 상품을 개별로 주문하여 주십시오.</li>
+							<!-- /2015-06-02 수정 -->
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>배송비 유료상품 배송안내</dt>
+					<dd>
+						<ul class="mark">
+							<li>유료배송 상품의 경우, 지정 금액 이상을 구매하실 경우 배송비가 절약될 수 있습니다.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+
+    <div id="pop_point_use" class="layerPop">
+      <a class="layClose"><em>닫기</em></a>
+      <div class="layerCont">
+        <dl>
+          <dt>장바구니 이용안내</dt>
+          <dd>
+            <ul class="mark">
+              <li>주문서를 작성하시기 전에 선택하신 상품후기, 수량 및 가격 등이 정확한지 확인하세요.</li><!-- 2015-06-02 수정 -->
+            </ul>
+          </dd>
+        </dl>
+        <dl>
+          <dt>무이자할부 이용안내</dt>
+          <dd>
+            <ul class="mark">
+              <!-- 2015-06-02 수정 -->
+              <li>무이자 할부 개월 수가 다른 상품들을 동시에 주문하시면 상품 중에서 가장 낮은 할부 개월 수로 일괄 조정됩니다.</li>
+              <li>(예시) 무이자 할부 개월 수가 3개월, 6개월인 상품을 함께 주문하실 경우, 모두 3개월로 주문이 됩니다.</li>
+              <li>상품별 무이자 할부 개월 수 적용을 하시려면 상품을 개별로 주문하여 주십시오.</li>
+              <!-- /2015-06-02 수정 -->
+            </ul>
+          </dd>
+        </dl>
+        <dl>
+          <dt>배송비 유료상품 배송안내</dt>
+          <dd>
+            <ul class="mark">
+              <li>유료배송 상품의 경우, 지정 금액 이상을 구매하실 경우 배송비가 절약될 수 있습니다.</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+	</div>
+  <!-- //2018-06-22 도서문화상품권 팝업 end -->
+
+  </div>
+  <!-- end container -->
+  <script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../../resources/js/touch.js"></script>
+  <script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
+  <script type="text/javascript" src="../../resources/js/overflow.js"></script>
+  <script type="text/javascript" src="../../resources/js/swipe.js"></script>
+  <script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
+  <script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../../resources/js/swiper.js"></script>
+  <script type="text/javascript" src="../../resources/js/slick.js"></script>
+  <script type="text/javascript" src="../../resources/js/iscroll.js"></script>
+  <script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script>
+  <!--2018-04-16 추가-->
+  <script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
+  <script type="text/javascript" src="../../resources/js/loading.js"></script>
+  <script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
+  <script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
+  <script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
 </body>
+
 </html>

@@ -99,7 +99,7 @@ ul.tab_address li {width:33.3%;}
 .discount_wrap ul li.area_trbl.hidden {height:0;font-size:0;line-height:0;}
 .discount_wrap ul li.coupon {padding-bottom:0;}
 .discount_wrap ul li h4 {color:#444;font-size:14px;}
-.discount_wrap ul li .price em {font-weight:bold;}
+.discount_wrap ul li .price em {font-weight:bold;font-size:13px;}
 .discount_wrap ul li ul.mark {margin-top:0;padding-top:5px;}
 .discount_topline {border-top:0;}
 
@@ -126,19 +126,19 @@ ul.tab_address li {width:33.3%;}
 .coupon_goods li:first-child {padding-top:5px;border-top:0;}
 .coupon_goods li p {position:relative;margin-bottom:10px;padding-left:10px;font-size:13px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;}
 .coupon_goods li p span {position:absolute;top:0;left:-1px;font-size:14px;line-height:17px;}
-.coupon_acount .price, .save_acount .price {position:relative;color:#444;font-weight:bold;}
-.coupon_acount span:nth-of-type(2), .save_acount span:nth-of-type(2) {position:absolute;top:0;right:0;}
+.coupon_acount .price, .save_acount .price {position:relative;color:#1a1a1a;font-size:11px;font-weight:bold;text-align:right;}
 /*할인정보-적립금사용*/
 .discount_wrap ul li.savemoney {position:relative;margin-top:15px;padding-top:15px;border-top:1px solid #ddd;}
 .discount_wrap ul li.savemoney:first-child {margin-top:0;border-top:none;}
-.discount_wrap ul li.savemoney .save_use p:first-child {position:absolute;top:7px;left:0;}
-.discount_wrap ul li.savemoney .save_use p:first-child:before {content:"적립금";display:inline-block;margin-right:3px;vertical-align:top;}
-.discount_wrap ul li.savemoney .save_use p:first-child:after {content:"중";display:inline-block;margin-left:3px;vertical-align:top;}
+.discount_wrap ul li.savemoney .save_use p:first-child {position:absolute;top:7px;left:0;color:#1761ae;}
+.discount_wrap ul li.savemoney .save_use p:first-child:before {content:"적립금";display:inline-block;margin-right:3px;vertical-align:top;color:#434343;}
+.discount_wrap ul li.savemoney .save_use p:first-child:after {content:"중";display:inline-block;margin-left:3px;vertical-align:top;color:#434343;}
 .discount_wrap ul li.savemoney .save_use p:first-child em {vertical-align:top;}
+.discount_wrap ul li.savemoney .inputBox input{color:#434343;font-size:15px;font-weight:bold;}
 .save_use {position:relative;padding-left:140px;padding-right:15px;}
 .save_use .inputBox+em {position:absolute;top:6px;right:0;}
 .save_use .inputBox input[type="text"] {text-align:right;color:#444}
-.discount_wrap ul li.savemoney .unit {display:block;margin:0;margin-top:5px;text-align:right}
+.discount_wrap ul li.savemoney .unit {display:block;margin:0;margin-top:15px;text-align:right;position:absolute;top:0;right:15px;font-size:11px;color:#434343;}
 .save_use span.inputBox input[type="tel"] {text-align:right;padding-left:5px;padding-right:5px;}
 .save_use p.use {position:absolute;top:0;right:65px;}
 .save_acount {position:relative;}
@@ -434,3 +434,12 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .cardinfo_area p:nth-child(1) > span {padding-left:0;}
 .cardinfo_area p span em {position:absolute;top:6px;left:11px;width:15px;color:#666;font-size:14px;text-align:center;}
 .cardinfo_area p span em.monthyear { position:absolute;top:6px;left:0;width:50px;color:#666;font-size:14px;text-align:center;}
+
+/* 2018-06-22 도서문화상품권 */
+.discount_wrap ul li.bnlife{position:relative;padding-top:15px;margin-top:15px;border-top:1px solid #ddd;}
+.discount_wrap ul li.bnlife .save_use p:first-child {position:absolute;top:7px;left:0;}
+.discount_wrap ul li.bnlife .save_use p:first-child:before {content:"상품권";display:inline-block;margin-right:3px;vertical-align:top;color:#434343;}
+.discount_wrap ul li.bnlife .save_use p:first-child:after {content:"중";display:inline-block;margin-left:3px;vertical-align:top;color:#434343;}
+.discount_wrap ul li.bnlife .save_use p:first-child {position:absolute;top:7px;left:0;color:#1761ae;}
+.discount_wrap ul li.bnlife .inputBox input{text-align:right;padding:0 5px;color:#434343;font-size:15px;font-weight:bold;}
+.discount_wrap ul li.bnlife .unit {display:block;margin:0;margin-top:15px;text-align:right;position:absolute;top:0;right:15px;font-size:11px;color:#434343;}
