@@ -1,18 +1,282 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!doctype html>
 <html lang="ko">
 <head>
-<%@ include file="/contents/2015_t/views/includefile/declare.jsp"%>
+<title>쇼핑엔T</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
+<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css"><!-- 공통 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/main.css"><!-- 메인 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"><!-- 로그인,회원가입 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/goods.css"><!-- 상품목록및상세 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/order.css"><!-- 주문결제 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"><!-- 마이페이지 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"><!-- 고객센터 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"><!-- 기타(푸터메뉴) -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css"><!-- 기타(푸터메뉴) -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </head>
 <body>
-<%@ include file="/contents/2015_t/views/includefile/skipNavi.jsp"%>
+<!-- skipnavi -->
+<div class="skip_nav">
+	<a href="#contents">본문 바로가기</a>
+</div>
+<!-- /skipnavi -->
 <div class="container">
 	<div class="wrap">
-		<%@ include file="/contents/2015_t/views/includefile/ctgr_sideBar.jsp"%>
+		<div class="nav_sideBar">
+  <p class="sideClose"><span><em>X</em></span></p>
+  <div class="nav_side">
+  
+           <!-- member info -->
+           <div class="info">
+              <div class="box login">
+                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->								
+        <p class="t"><strong class="name">홍길동님</strong></p>
+                  <div class="myShop">
+                      <ul class="btnMy">
+                          <!-- <li><a>회원가입</a></li>
+                          <li><a>로그인</a></li> --><!-- 비로그인 --> 
+            <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- /member info -->  
+          <!-- link -->
+          <nav class="mynav">
+            <ul>
+                  <li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
+                <li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
+                  <li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
+                  <li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
+              </ul>
+          </nav>
+          <!-- /link -->
+          <!-- inquiry(비로그인시) -->
+          <nav class="inquiry">
+              <div class="btns_wrap">
+                  <span class="btn fullwidth"><a>주문/배송 조회<span></span></a></span>
+              </div>
+          </nav>
+          <!-- /inquiry(비로그인시) -->
+          <!-- eventimg -->
+          <nav class="eventimg"><!-- 2015-06-08 : 이벤트이미지영역 추가 -->
+              <p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
+          </nav>
+          <!-- /eventimg -->
+          <!-- quicklink : 이전소스
+    <nav class="quicklink">
+      <ul>
+        <li><a href="../mypage/level.jsp">할인쿠폰/혜택 모아보기</a></li>
+        <li><a href="../customer/submain.jsp">고객만족센터</a></li>
+      </ul>
+    </nav>
+    /quicklink -->
+    
+    <!-- category depth추가 2018-03-21-->
+    <nav class="category">
+      <ul id="categoryList">
+        <li>
+          <a href="#sublist01" class="depth_01">패션/잡화</a>
+          <ul class="cate_depth_sublist" id="sublist01">
+            <li><a href="#">패션/잡화1-1</a></li>
+            <li><a href="#">패션/잡화2-1</a></li>
+            <li><a href="#">패션/잡화3-1</a></li>
+            <li><a href="#">패션/잡화4-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist02" class="depth_01">이미용</a>
+                    <ul class="cate_depth_sublist" id="sublist02">
+            <li><a href="#">이미용1-2</a></li>
+            <li><a href="#">이미용2-2</a></li>
+          </ul>
+                  </li>
+                  <li>
+          <a href="#sublist03" class="depth_01">쥬얼리/시계</a>
+          <ul class="cate_depth_sublist" id="sublist03">
+            <li><a href="#">쥬얼리/시계1-1</a></li>
+            <li><a href="#">쥬얼리/시계2-1</a></li>
+            <li><a href="#">쥬얼리/시계3-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist04" class="depth_01">식품</a>
+                    <ul class="cate_depth_sublist" id="sublist04">
+            <li><a href="#">식품1-2</a></li>
+            <li><a href="#">식품2-2</a></li>
+            <li><a href="#">식품2-3</a></li>
+          </ul>
+                  </li>
+        <li>
+          <a href="#sublist05" class="depth_01">생활</a>
+          <ul class="cate_depth_sublist" id="sublist05">
+            <li><a href="#">생활1-1</a></li>
+            <li><a href="#">생활2-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist06" class="depth_01">주방</a>
+                    <ul class="cate_depth_sublist" id="sublist06">
+            <li><a href="#">주방1-2</a></li>
+            <li><a href="#">주방1-2</a></li>
+            <li><a href="#">주방1-3</a></li>
+            <li><a href="#">주방1-4</a></li>
+            <li><a href="#">주방1-5</a></li>
+          </ul>
+                  </li>
+                  <li>
+                    <a href="#sublist07" class="depth_01">가구/인테리어</a>
+                    <ul class="cate_depth_sublist" id="sublist07">
+            <li><a href="#">중카테고리1-2</a></li>
+            <li><a href="#">중카테고리2-2</a></li>
+            <li><a href="#">중카테고리2-3</a></li>
+            <li><a href="#">중카테고리2-4</a></li>
+            <li><a href="#">중카테고리2-5</a></li>
+          </ul>
+                  </li>
+                  <li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
+                  <li><a href="#" class="depth_01">주방가전</a></li>
+                  <li><a href="#" class="depth_01">디지털</a></li>
+                  <li>
+                    <a href="#sublist09" class="depth_01">헬스/케어</a>
+                    <ul class="cate_depth_sublist" id="sublist09">
+            <li><a href="#">중카테고리1-2</a></li>
+            <li><a href="#">중카테고리2-2</a></li>
+            <li><a href="#">중카테고리2-3</a></li>
+            <li><a href="#">중카테고리2-4</a></li>
+            <li><a href="#">중카테고리2-5</a></li>
+          </ul>
+                  </li>
+      </ul>
+    </nav>
+    <!--// category depth추가 2018-03-21 -->
+
+          <!-- service -->
+          <nav class="service"><!-- 2016-06-08 : 서비스영역 추가 -->
+              <ul>
+                  <li><a class="log" href="#"><span></span>로그아웃</a></li>
+                  <li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
+                  <li><a class="set" href="#"><span></span>설정</a></li>
+                  <li><a class="app" href="#"><span></span>App 다운로드</a></li>
+              </ul>
+          </nav>
+          <!-- /service -->
+    <!-- today's view -->
+          <div class="history">
+            <h2>오늘 본 상품</h2>
+              <p class="his_all"><a href="">전체보기</a></p>
+
+      <div class="my_goods_wrap">					
+        <ul class="goods_list">
+          <li>
+            <div class="goods">
+              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+              <!-- 상품가격 
+              <div class="goods_price">
+                <p class="sell">
+                  판매가 <em>76,200</em>원
+                </p>
+                <p class="sale">
+                  <i>쇼핑엔T가</i> <em>43,800</em>원
+                </p>
+              </div>
+              <!-- //상품가격 -->
+
+              <!-- 201806 가격정책 start -->
+              <div class="price_info02">
+                <i class="blind">할인율</i><span class="discount">10%</span>
+                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+              </div>
+              <!-- //201806 가격정책 end -->
+            </div>
+          </li>						
+          <li>
+            <div class="goods">
+              <!-- 일시품절 상품 표시 -->
+              <p class="soldout"><span><em>일시품절</em></span></p>
+              <!-- //일시품절 상품 표시 -->
+              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+              <!-- 상품가격 
+              <div class="goods_price">
+                <p class="sell">
+                  판매가 <em>76,200</em>원
+                </p>
+                <p class="sale">
+                  <i>쇼핑엔T가</i> <em>43,800</em>원
+                </p>
+                 <p class="counsel">상담 전용 상품입니다.</p>
+              </div>
+              <!-- //상품가격 -->
+              
+              <!-- 201806 가격정책 start -->
+              <div class="price_info02">
+                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+              </div>
+              <!-- //201806 가격정책 end -->
+            </div>
+          </li>
+        </ul>
+        <!-- no data-->
+                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p> 
+        <!-- //no data-->
+      </div>
+             
+          </div>
+          <!-- /today's view -->
+  </div>
+</div>
 
 		<div class="wrap_inner">
 			<!--header S-->
-			<%@ include file="/contents/2015_t/views/includefile/header.jsp"%>
+			<header class="header">
+  <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
+  <a class="nav_aside"><span>메뉴</span></a>
+  <a class="search"><span>검색</span></a>			
+</header>
+
+<div class="searchZone"><!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
+  <fieldset>
+    <legend>검색어 입력</legend>
+    <form>
+      <p>
+        <span>
+          <input type="text" placeholder="요즘 유행하는 핫 아이템이 궁금하다면?!" name="" id="" />
+          <a class="bt"><em></em></a>
+        </span>
+      </p>
+    </form>
+  </fieldset>
+  <div class="search_list"> 
+    <dl>
+      <dt>최근검색어</dt>
+      <dd><a href="">침대</a></dd>
+      <dd><a href="">간이침대</a></dd>
+      <dd><a href="">이층침대</a></dd>
+      <dd><a href="">매트리스</a></dd>
+      <dd><a href="">쇼파형침대</a></dd>
+      <dd><a href="">침대 커버</a></dd>
+      <!-- 최근 검색어 없을 경우 -->
+      <!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
+      <!-- 최근 검색어 없을 경우 //-->
+      <dd>
+        <span class="btn size2 bgcolor8"><a>닫기</a></span>
+      </dd>
+    </dl>
+  </div>
+</div>
 			<!--header E-->
 			<!--main S-->
 			<main id="contents">
@@ -509,13 +773,62 @@
 			</main>
 			<!--main E-->
 			<!--footer S-->
-			<%@ include file="/contents/2015_t/views/includefile/footer.jsp"%>
+			<footer class="footer">
+  <nav class="fmu">
+    <ul>
+      <li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
+      <li><a>고객센터</a></li>
+      <li><a href="tel:0801301003">상담전화</a></li>
+    </ul>
+  </nav>				
+  <nav class="fmu2">
+    <ul>
+      <li><a href="../views/common/service.jsp">회사소개</a></li>
+      <li><a href="../views/common/provision1.jsp">이용약관</a></li>
+      <li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
+      <li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
+    </ul>
+  </nav>
+  <address>
+    <p>주식회사 티알엔 대표이사 : 민택근</p>
+    <p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
+    <p>사업자등록번호 : 116-81-50973</p>
+    <p>통신판매업 신고 서울중구 1670호</p>
+    <p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
+    <p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
+    
+    <p class="bt">
+      <span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2010301010030201670" target="_blank">사업자정보확인</a></span>
+      <span><a href="../views/common/credit_bank.jsp">신한은행 채무지급 보증안내</a></span>
+    </p>		
+    <p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
+  </address>
+</footer>
+<!-- dimmed-->
+<div class="dim" style="display:none;"></div>
+<!-- //dimmed -->
 			<!--footer E-->
 		</div><!-- end wrap_inner -->
 	</div><!-- end wrap -->
 
-	<%@ include file="/contents/2015_t/views/includefile/page_top.jsp"%>
+	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
 </div><!-- end container -->
-<%@ include file="/contents/2015_t/views/includefile/scriptlink.jsp"%>
+<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../resources/js/touch.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="../../resources/js/overflow.js"></script>
+<script type="text/javascript" src="../../resources/js/swipe.js"></script>
+<script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../resources/js/swiper.js"></script>
+<script type="text/javascript" src="../../resources/js/slick.js"></script>
+<script type="text/javascript" src="../../resources/js/iscroll.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script> <!--2018-04-16 추가-->
+<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
+<script type="text/javascript" src="../../resources/js/loading.js"></script>
+<script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
+<script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
+<script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
 </body>
 </html>

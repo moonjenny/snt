@@ -1,19 +1,283 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!doctype html>
 <html lang="ko">
 <head>
-<%@ include file="/contents/2015_t/views/includefile/declare.jsp"%>
+<title>쇼핑엔T</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
+<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css"><!-- 공통 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/main.css"><!-- 메인 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"><!-- 로그인,회원가입 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/goods.css"><!-- 상품목록및상세 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/order.css"><!-- 주문결제 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"><!-- 마이페이지 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"><!-- 고객센터 -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"><!-- 기타(푸터메뉴) -->
+<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css"><!-- 기타(푸터메뉴) -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </head>
 <body>
-<%@ include file="/contents/2015_t/views/includefile/skipNavi.jsp"%>
+<!-- skipnavi -->
+<div class="skip_nav">
+	<a href="#contents">본문 바로가기</a>
+</div>
+<!-- /skipnavi -->
 <div class="container">
 	<div class="wrap">
-		<%@ include file="/contents/2015_t/views/includefile/ctgr_sideBar.jsp"%>
+		<div class="nav_sideBar">
+  <p class="sideClose"><span><em>X</em></span></p>
+  <div class="nav_side">
 
-		<div class="wrap_inner">			
+           <!-- member info -->
+           <div class="info">
+              <div class="box login">
+                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->
+        <p class="t"><strong class="name">홍길동님</strong></p>
+                  <div class="myShop">
+                      <ul class="btnMy">
+                          <!-- <li><a>회원가입</a></li>
+                          <li><a>로그인</a></li> --><!-- 비로그인 -->
+            <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- /member info -->
+          <!-- link -->
+          <nav class="mynav">
+            <ul>
+                  <li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
+                <li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
+                  <li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
+                  <li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
+              </ul>
+          </nav>
+          <!-- /link -->
+          <!-- inquiry(비로그인시) -->
+          <nav class="inquiry">
+              <div class="btns_wrap">
+                  <span class="btn fullwidth"><a>주문/배송 조회<span></span></a></span>
+              </div>
+          </nav>
+          <!-- /inquiry(비로그인시) -->
+          <!-- eventimg -->
+          <nav class="eventimg"><!-- 2015-06-08 : 이벤트이미지영역 추가 -->
+              <p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
+          </nav>
+          <!-- /eventimg -->
+          <!-- quicklink : 이전소스
+    <nav class="quicklink">
+      <ul>
+        <li><a href="../mypage/level.jsp">할인쿠폰/혜택 모아보기</a></li>
+        <li><a href="../customer/submain.jsp">고객만족센터</a></li>
+      </ul>
+    </nav>
+    /quicklink -->
+
+    <!-- category depth추가 2018-03-21-->
+    <nav class="category">
+      <ul id="categoryList">
+        <li>
+          <a href="#sublist01" class="depth_01">패션/잡화</a>
+          <ul class="cate_depth_sublist" id="sublist01">
+            <li><a href="#">패션/잡화1-1</a></li>
+            <li><a href="#">패션/잡화2-1</a></li>
+            <li><a href="#">패션/잡화3-1</a></li>
+            <li><a href="#">패션/잡화4-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist02" class="depth_01">이미용</a>
+                    <ul class="cate_depth_sublist" id="sublist02">
+            <li><a href="#">이미용1-2</a></li>
+            <li><a href="#">이미용2-2</a></li>
+          </ul>
+                  </li>
+                  <li>
+          <a href="#sublist03" class="depth_01">쥬얼리/시계</a>
+          <ul class="cate_depth_sublist" id="sublist03">
+            <li><a href="#">쥬얼리/시계1-1</a></li>
+            <li><a href="#">쥬얼리/시계2-1</a></li>
+            <li><a href="#">쥬얼리/시계3-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist04" class="depth_01">식품</a>
+                    <ul class="cate_depth_sublist" id="sublist04">
+            <li><a href="#">식품1-2</a></li>
+            <li><a href="#">식품2-2</a></li>
+            <li><a href="#">식품2-3</a></li>
+          </ul>
+                  </li>
+        <li>
+          <a href="#sublist05" class="depth_01">생활</a>
+          <ul class="cate_depth_sublist" id="sublist05">
+            <li><a href="#">생활1-1</a></li>
+            <li><a href="#">생활2-1</a></li>
+          </ul>
+        </li>
+                  <li>
+                    <a href="#sublist06" class="depth_01">주방</a>
+                    <ul class="cate_depth_sublist" id="sublist06">
+            <li><a href="#">주방1-2</a></li>
+            <li><a href="#">주방1-2</a></li>
+            <li><a href="#">주방1-3</a></li>
+            <li><a href="#">주방1-4</a></li>
+            <li><a href="#">주방1-5</a></li>
+          </ul>
+                  </li>
+                  <li>
+                    <a href="#sublist07" class="depth_01">가구/인테리어</a>
+                    <ul class="cate_depth_sublist" id="sublist07">
+            <li><a href="#">중카테고리1-2</a></li>
+            <li><a href="#">중카테고리2-2</a></li>
+            <li><a href="#">중카테고리2-3</a></li>
+            <li><a href="#">중카테고리2-4</a></li>
+            <li><a href="#">중카테고리2-5</a></li>
+          </ul>
+                  </li>
+                  <li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
+                  <li><a href="#" class="depth_01">주방가전</a></li>
+                  <li><a href="#" class="depth_01">디지털</a></li>
+                  <li>
+                    <a href="#sublist09" class="depth_01">헬스/케어</a>
+                    <ul class="cate_depth_sublist" id="sublist09">
+            <li><a href="#">중카테고리1-2</a></li>
+            <li><a href="#">중카테고리2-2</a></li>
+            <li><a href="#">중카테고리2-3</a></li>
+            <li><a href="#">중카테고리2-4</a></li>
+            <li><a href="#">중카테고리2-5</a></li>
+          </ul>
+                  </li>
+      </ul>
+    </nav>
+    <!--// category depth추가 2018-03-21 -->
+
+          <!-- service -->
+          <nav class="service"><!-- 2016-06-08 : 서비스영역 추가 -->
+              <ul>
+                  <li><a class="log" href="#"><span></span>로그아웃</a></li>
+                  <li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
+                  <li><a class="set" href="#"><span></span>설정</a></li>
+                  <li><a class="app" href="#"><span></span>App 다운로드</a></li>
+              </ul>
+          </nav>
+          <!-- /service -->
+    <!-- today's view -->
+          <div class="history">
+            <h2>오늘 본 상품</h2>
+              <p class="his_all"><a href="">전체보기</a></p>
+
+      <div class="my_goods_wrap">
+        <ul class="goods_list">
+          <li>
+            <div class="goods">
+              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+              <!-- 상품가격
+              <div class="goods_price">
+                <p class="sell">
+                  판매가 <em>76,200</em>원
+                </p>
+                <p class="sale">
+                  <i>쇼핑엔T가</i> <em>43,800</em>원
+                </p>
+              </div>
+              <!-- //상품가격 -->
+
+              <!-- 201806 가격정책 start -->
+              <div class="price_info02">
+                <i class="blind">할인율</i><span class="discount">10%</span>
+                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+              </div>
+              <!-- //201806 가격정책 end -->
+            </div>
+          </li>
+          <li>
+            <div class="goods">
+              <!-- 일시품절 상품 표시 -->
+              <p class="soldout"><span><em>일시품절</em></span></p>
+              <!-- //일시품절 상품 표시 -->
+              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+              <!-- 상품가격
+              <div class="goods_price">
+                <p class="sell">
+                  판매가 <em>76,200</em>원
+                </p>
+                <p class="sale">
+                  <i>쇼핑엔T가</i> <em>43,800</em>원
+                </p>
+                 <p class="counsel">상담 전용 상품입니다.</p>
+              </div>
+              <!-- //상품가격 -->
+
+              <!-- 201806 가격정책 start -->
+              <div class="price_info02">
+                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+              </div>
+              <!-- //201806 가격정책 end -->
+            </div>
+          </li>
+        </ul>
+        <!-- no data-->
+                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p>
+        <!-- //no data-->
+      </div>
+
+          </div>
+          <!-- /today's view -->
+  </div>
+</div>
+
+		<div class="wrap_inner">
 			<!--header S-->
-			<%@ include file="/contents/2015_t/views/includefile/header.jsp"%>
-			<!--header E-->			
+			<header class="header">
+  <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
+  <a class="nav_aside"><span>메뉴</span></a>
+  <a class="search"><span>검색</span></a>
+</header>
+
+<div class="searchZone"><!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
+  <fieldset>
+    <legend>검색어 입력</legend>
+    <form>
+      <p>
+        <span>
+          <input type="text" placeholder="요즘 유행하는 핫 아이템이 궁금하다면?!" name="" id="" />
+          <a class="bt"><em></em></a>
+        </span>
+      </p>
+    </form>
+  </fieldset>
+  <div class="search_list">
+    <dl>
+      <dt>최근검색어</dt>
+      <dd><a href="">침대</a></dd>
+      <dd><a href="">간이침대</a></dd>
+      <dd><a href="">이층침대</a></dd>
+      <dd><a href="">매트리스</a></dd>
+      <dd><a href="">쇼파형침대</a></dd>
+      <dd><a href="">침대 커버</a></dd>
+      <!-- 최근 검색어 없을 경우 -->
+      <!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
+      <!-- 최근 검색어 없을 경우 //-->
+      <dd>
+        <span class="btn size2 bgcolor8"><a>닫기</a></span>
+      </dd>
+    </dl>
+  </div>
+</div>
+			<!--header E-->
 			<!--main S-->
 			<main id="contents">
 				<nav class="gnb main" id="topNav">
@@ -40,8 +304,8 @@
 							</div>
 							<!-- /top banner -->
 							<!-- 실시간방송상품 -->
-							<div class="onairGoods">	
-								<!-- 동영상 --><!-- 2016-06-17 -->	
+							<div class="onairGoods">
+								<!-- 동영상 --><!-- 2016-06-17 -->
 								<div class="vod_wrap" style="display:none"><!-- 클래스 추가 : 기본모드 vod_wrap, 가로모드 vod_wrap full, 하단 축소 모드 vod_wrap small -->
 									<p class="ctr">
 										<span></span>
@@ -53,10 +317,10 @@
 									<span class="blank pic"><img src="../../img/blank_vod.gif" alt="" /></span>
 								</div>
 								<!-- 동영상 //-->
-								<div class="onairGoodsIn"><!-- 2016-06-17 : div 추가 -->					
+								<div class="onairGoodsIn"><!-- 2016-06-17 : div 추가 -->
 									<div class="goods_wide">
 										<div class="goods_img">
-											<img src="../../img/_tmp/014.jpg" alt="" />	
+											<img src="../../img/tmp/014.jpg" alt="" />
 											<span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>
 											<span class="btn_play"><a></a></span>
 										</div>
@@ -84,14 +348,14 @@
 													<span class="rate"><em>20</em>%<span></span></span>
 													<span class="sale">일시불 할인</span>
 												</div>
-											</div>								
-										</div>							
+											</div>
+										</div>
 									</div>
 									<!-- 온에어 - 재생 및 재생시간 -->
 									<p class="time">
 										<span class="onair"><em>On Air</em></span>
 										<span>
-											남은시간 : <em>00:22:45</em> 
+											남은시간 : <em>00:22:45</em>
 										</span>
 									</p>
 									<!-- <p class="time">
@@ -106,13 +370,13 @@
 										<span class="btn with_prd"><a href="#">함께하는 상품 <em>2</em></a></span>
 										<span class="btn bgcolor4"><a href="#">구매하기</a></span>
 									</div>
-									<!-- /buttons -->	
+									<!-- /buttons -->
 									<!-- 함께파는 상품 -->
 									<div class="with_goods_wrap my_goods_wrap">
 										<ul class="goods_list">
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -133,12 +397,12 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -159,12 +423,12 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -183,16 +447,16 @@
 														<p class="sale">
 															<i>쇼핑엔T가</i> <em>43,800</em>원
 														</p> -->
-														<p class="counsel">상담 전용 상품입니다.</p>	
+														<p class="counsel">상담 전용 상품입니다.</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
 													<p class="soldout"><span><em>일시품절</em></span></p>
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 </div>
 
 													<!-- 혜택 -->
@@ -213,12 +477,12 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -239,12 +503,12 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -265,12 +529,12 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 											<li>
 												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종 너비향 육포 2종너비향 육포 2종너비향 육포 2종너비향 육포 2종</div>
 
 													<!-- 혜택 -->
@@ -291,7 +555,7 @@
 														</p>
 													</div>
 													<!-- //상품가격 -->
-													
+
 												</div>
 											</li>
 										</ul>
@@ -299,7 +563,7 @@
 									</div>
 									<!-- 함께파는 상품 //-->
 								</div>
-							</div>					
+							</div>
 							<!-- //실시간방송상품 -->
 
 							<!-- 다음 방송 상품 -->
@@ -308,11 +572,11 @@
 									<h3>
 										다음 방송 상품
 										<span class="time"><span></span>다음 방송시간 <em>09:00 ~ 10:20</em></span>
-									</h3>							
+									</h3>
 									<span class="tv_link">TV편성표</span>
 								</div>
 								<div class="goods_img">
-									<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 								</div>
 								<div class="goods_cont">
 									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 보호막으로 하루종일 촉촉하게</p>
@@ -340,26 +604,26 @@
 										</div>
 									</div>
 								</div>
-							</div>					
+							</div>
 							<!-- 다음 방송 상품 //-->
 
-							<!-- 롤링배너 -->	
+							<!-- 롤링배너 -->
 							<div class="rollBan">
 								<div class="slideZone">
 									<div id="ban-slide" class="imgSlide">
 										<ul class="BannerList swiper-wrapper" >
-											<li class="swiper-slide"><a href="#"><img src="../../img/_tmp/010_3.jpg" alt=""></a></li> 
-											<li class="swiper-slide"><a href="#"><img src="../../img/_tmp/010_3.jpg" alt=""></a></li> 
-											<li class="swiper-slide"><a href="#"><img src="../../img/_tmp/010_3.jpg" alt=""></a></li> 
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
 										</ul>
 									</div>
-								</div>	
+								</div>
 								<p id="ban-circle" class="slideCircle"></p>
 							</div>
 							<!-- //롤링배너 --><!-- 2016-06-15 -->
-							
+
 							<!-- 베스트상품 -->
-							<div class="rollBan best">								
+							<div class="rollBan best">
 								<div class="goods_top">
 									<h3>베스트상품</h3>
 									<p>늘 고객님만 생각하고 또 생각합니다</p>
@@ -370,7 +634,7 @@
 											<li class="swiper-slide">
 												<div class="goods_wide">
 													<div class="goods_img">
-														<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 														<span  class="rank">01</span>
 													</div>
 													<div class="goods_cont">
@@ -404,7 +668,7 @@
 											<li class="swiper-slide">
 												<div class="goods_wide">
 													<div class="goods_img">
-														<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 														<span  class="rank">02</span>
 													</div>
 													<div class="goods_cont">
@@ -438,7 +702,7 @@
 											<li class="swiper-slide">
 												<div class="goods_wide">
 													<div class="goods_img">
-														<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 														<span  class="rank">03</span>
 													</div>
 													<div class="goods_cont">
@@ -472,7 +736,7 @@
 											<li class="swiper-slide">
 												<div class="goods_wide">
 													<div class="goods_img">
-														<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 														<span  class="rank">04</span>
 													</div>
 													<div class="goods_cont">
@@ -506,7 +770,7 @@
 											<li class="swiper-slide">
 												<div class="goods_wide">
 													<div class="goods_img">
-														<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 														<span  class="rank">05</span>
 													</div>
 													<div class="goods_cont">
@@ -540,7 +804,7 @@
 										</ul>
 									</div>
 								</div>
-								
+
 							</div>
 							<!-- 베스트상품 //-->
 
@@ -553,7 +817,7 @@
 								<ul class="goods_list">
 									<li>
 										<div class="goods">
-											<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 											<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 											<!-- 상품가격 -->
@@ -566,12 +830,12 @@
 												</p>
 											</div>
 											<!-- //상품가격 -->
-											
+
 										</div>
 									</li>
 									<li>
 										<div class="goods">
-											<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 											<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
 											<!-- 상품가격 -->
@@ -584,11 +848,11 @@
 												</p>
 											</div>
 											<!-- //상품가격 -->
-											
+
 										</div>
 									</li>
 								</ul>
-							</div>				
+							</div>
 							<!-- 내가 담아놓은 상품 //-->
 
 							<!-- T는 상품 -->
@@ -599,7 +863,7 @@
 							<div class="goods_list_wrap">
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -630,7 +894,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -663,7 +927,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -694,7 +958,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -725,7 +989,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -756,7 +1020,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -787,7 +1051,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -818,7 +1082,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -849,7 +1113,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -880,7 +1144,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -945,7 +1209,7 @@
 														<ul class="goods_list">
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
@@ -957,7 +1221,7 @@
 																		</p>
 																		<!-- <p class="counsel">상담전용 상품입니다</p> -->
 																	</div>
-																	<!-- //상품가격 -->														
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit2">
@@ -976,11 +1240,11 @@
 														<div class="btns_wrap">
 															<span class="btn full bgcolor7"><a href="#">방송중 구매가능</a></span>
 														</div>
-														
+
 														<ul class="goods_list together_list">
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 화적포 무방부제 무발색제 화적포무방부제 무발색제 화적포</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
@@ -991,7 +1255,7 @@
 																	<!-- //상품가격 -->
 																	<div class="goods_benefit2">
 																		<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-																	</div>															
+																	</div>
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1004,7 +1268,7 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 화적포</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
@@ -1015,7 +1279,7 @@
 																	<!-- //상품가격 -->
 																	<div class="goods_benefit2">
 																		<span class="rate"><em>20</em>%<span></span></span>
-																	</div>															
+																	</div>
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1044,7 +1308,7 @@
 														<ul class="goods_list">
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
@@ -1055,9 +1319,9 @@
 																			<span><em>164,800</em>원</span>
 																		</p> -->
 																		<p  class="counsel">상담전용 상품입니다</p>
-																	</div>															
-																	<!-- //상품가격 -->															
-																</div>	
+																	</div>
+																	<!-- //상품가격 -->
+																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit2">
 																	<!-- <span class="rate"><em>20</em>%<span></span></span> -->
@@ -1076,7 +1340,7 @@
 															<span class="btn full bgcolor7"><a href="#">구매하기</a></span>
 															<span class="btn full bgcolor7"><a href="#">상담신청하기</a></span>
 														</div>
-														
+
 														<!-- <div class="btns_wrap">
 															<span class="btn viewmore"><a>더보기</a></span>
 														</div> -->
@@ -1092,13 +1356,13 @@
 												<dt>
 													<em class="onair">On Air</em>
 													<span class="time"><em>남은시간  00:33:32</em></span>
-													<span class="movie"><a href="#">방송보기</a></span>										
+													<span class="movie"><a href="#">방송보기</a></span>
 												</dt>
 												<dd>
 													<div class="goods_wrap">
 														<div class="goods_wide">
 															<div class="goods_img">
-																<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+																<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 															</div>
 															<div class="goods_cont">
 																<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -1136,13 +1400,13 @@
 																	<!-- 일시품절 상품 표시 -->
 																	<p class="soldout"><span><em>일시품절</em></span></p>
 																	<!-- //일시품절 상품 표시 -->
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
 																		<span><em>164,800</em>원</span>
 																	</div>
-																	<!-- //상품가격 -->															
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1155,14 +1419,14 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
 																		<del><em>216,100</em>원</del>
 																		<span><em>164,800</em>원</span>
 																	</div>
-																	<!-- //상품가격 -->															
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1175,14 +1439,14 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
 																		<del><em>216,100</em>원</del>
 																		<span><em>164,800</em>원</span>
 																	</div>
-																	<!-- //상품가격 -->															
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1195,7 +1459,7 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
@@ -1220,14 +1484,14 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
 																		<del><em>216,100</em>원</del>
 																		<span><em>164,800</em>원</span>
 																	</div>
-																	<!-- //상품가격 -->															
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1240,14 +1504,14 @@
 															</li>
 															<li>
 																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/_tmp/001.jpg" alt=""></a></div>
+																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
 																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 																	<!-- 상품가격 -->
 																	<div class="goods_price">
 																		<del><em>216,100</em>원</del>
 																		<span><em>164,800</em>원</span>
 																	</div>
-																	<!-- //상품가격 -->															
+																	<!-- //상품가격 -->
 																</div>
 																<!-- 혜택 -->
 																<div class="goods_benefit">
@@ -1275,14 +1539,14 @@
 							<!-- 상품 배너 -->
 							<div class="eventmain">
 								<ul class="limeBanner">
-									<li class="limeLeft"><a href="#"><img src="../../img/_tmp/event_img6.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img7.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img8.png" alt="" /></a></li>
+									<li class="limeLeft"><a href="#"><img src="../../img/tmp/event_img6.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img7.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img8.png" alt="" /></a></li>
 								</ul>
 								<ul class="BannerList">
-									<li><a href="#"><img src="../../img/_tmp/event_img9.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img10.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img11.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img9.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img10.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img11.png" alt="" /></a></li>
 								</ul>
 							</div>
 							<!-- //상품 배너 -->
@@ -1304,7 +1568,7 @@
 							<div class="goods_list_wrap">
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -1318,7 +1582,7 @@
 													<i>쇼핑엔T가</i> <em>43,800</em>원
 												</p>
 											</div>
-											<!-- //상품가격 -->	
+											<!-- //상품가격 -->
 											<!-- 혜택 -->
 											<div class="goods_benefit">
 												<p><span>사은품</span></p>
@@ -1331,11 +1595,11 @@
 											</div>
 											<!-- //혜택 -->
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="goods_wide rank">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/001.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1350,7 +1614,7 @@
 												</p>
 												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->									
+											<!-- //상품가격 -->
 										</div>
 									</div>
 									<!-- 혜택 -->
@@ -1369,7 +1633,7 @@
 								</div>
 								<div class="goods_wide rank">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/001.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1384,7 +1648,7 @@
 												</p> -->
 												<p class="counsel">상담전용 상품입니다</p>
 											</div>
-											<!-- //상품가격 -->									
+											<!-- //상품가격 -->
 										</div>
 									</div>
 									<!-- 혜택 -->
@@ -1403,7 +1667,7 @@
 								</div>
 								<div class="goods_wide rank">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/001.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1411,14 +1675,14 @@
 											<!-- 상품가격 -->
 											<div class="goods_price">
 												<p class="sell">
-													판매가 <em>76,200</em>원 
+													판매가 <em>76,200</em>원
 												</p>
 												<p class="sale">
 													<i>쇼핑엔T가</i> <em>43,800</em>원
 												</p>
 												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->									
+											<!-- //상품가격 -->
 										</div>
 									</div>
 									<!-- 혜택 -->
@@ -1437,7 +1701,7 @@
 								</div>
 								<div class="goods_wide rank">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/001.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1452,7 +1716,7 @@
 												</p>
 												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->										
+											<!-- //상품가격 -->
 										</div>
 									</div>
 									<!-- 혜택 -->
@@ -1471,7 +1735,7 @@
 								</div>
 								<div class="goods_wide rank">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/001.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1486,7 +1750,7 @@
 												</p>
 												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->										
+											<!-- //상품가격 -->
 										</div>
 									</div>
 									<!-- 혜택 -->
@@ -1509,10 +1773,10 @@
 							<div class="goods_top">
 								<h3>T는 상품</h3>
 							</div>
-							<div class="goods_list_wrap">						
+							<div class="goods_list_wrap">
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -1543,7 +1807,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1576,7 +1840,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+2이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -1607,7 +1871,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/014.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
@@ -1640,7 +1904,7 @@
 								</div>
 								<div class="goods_wide">
 									<div class="goods_img">
-										<a><img src="../../img/_tmp/013.jpg" alt="" /></a>
+										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 									</div>
 									<div class="goods_cont">
 										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
@@ -1668,18 +1932,18 @@
 											</div>
 										</div>
 									</div>
-								</div>						
+								</div>
 							</div>
 							<!--T는 상품 목록 //-->
 							<div class="ui-more-loading"><img src="../../img/loading.png" alt="" /></div>
 						</section>
 						<!-- 이벤트 -->
-						<section class="mainContents" id="homeCont4">	
+						<section class="mainContents" id="homeCont4">
 							<!-- 이벤트 배너 상세 -->
 							<h2 class="sub_tit"><span>5월엔 매직이벤트</span></h2><!-- 2016-06-14 : 클래스 수정 -->
 							<div class="eventBan">
 								<ul class="BannerDetail">
-									<li><img src="../../img/_tmp/event_img4.png" alt="" /></li>
+									<li><img src="../../img/tmp/event_img4.png" alt="" /></li>
 								</ul>
 							</div>
 							<!-- //이벤트 배너 상세 -->
@@ -1687,9 +1951,9 @@
 							<!-- 이벤트 배너 -->
 							<div class="eventmain">
 								<ul class="BannerList">
-									<li><a href="#"><img src="../../img/_tmp/event_img1.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img2.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/_tmp/event_img3.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img1.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img2.png" alt="" /></a></li>
+									<li><a href="#"><img src="../../img/tmp/event_img3.png" alt="" /></a></li>
 								</ul>
 								<!-- 이벤트 목룍 없을 경우 -->
 								<div class="eventNone">
@@ -1698,11 +1962,11 @@
 									<p>품질 좋은 상품을 보다 저렴하게<br>이용할 수 있는 이벤트로 찾아오겠습니다.<br>그때까지 잠시 기다려주세요.</p>
 								</div>
 								<!--//이벤트 목룍 없을 경우 -->
-							</div>							
+							</div>
 							<!-- //이벤트 배너 -->
 							<!-- banner image --><!-- 2015-04-28 배너 추가 -->
 							<!-- <div class="eventBan">
-								<a href="#"><img src="../../img/_tmp/009.jpg" alt=""></a>
+								<a href="#"><img src="../../img/tmp/009.jpg" alt=""></a>
 							</div> -->
 							<!-- /banner image -->
 						</section>
@@ -1710,22 +1974,55 @@
 						<section class="mainContents" id="homeCont5">
 							기획전
 						</section>
-					
+
 					</div>
-				</div>				
+				</div>
 			</main>
 			<!--main E-->
 			<!--footer S-->
-			<%@ include file="/contents/2015_t/views/includefile/footer.jsp"%>
+			<footer class="footer">
+  <nav class="fmu">
+    <ul>
+      <li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
+      <li><a>고객센터</a></li>
+      <li><a href="tel:0801301003">상담전화</a></li>
+    </ul>
+  </nav>
+  <nav class="fmu2">
+    <ul>
+      <li><a href="../views/common/service.jsp">회사소개</a></li>
+      <li><a href="../views/common/provision1.jsp">이용약관</a></li>
+      <li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
+      <li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
+    </ul>
+  </nav>
+  <address>
+    <p>주식회사 티알엔 대표이사 : 민택근</p>
+    <p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
+    <p>사업자등록번호 : 116-81-50973</p>
+    <p>통신판매업 신고 서울중구 1670호</p>
+    <p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
+    <p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
+
+    <p class="bt">
+      <span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2010301010030201670" target="_blank">사업자정보확인</a></span>
+      <span><a href="../views/common/credit_bank.jsp">신한은행 채무지급 보증안내</a></span>
+    </p>
+    <p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
+  </address>
+</footer>
+<!-- dimmed-->
+<div class="dim" style="display:none;"></div>
+<!-- //dimmed -->
 			<!--footer E-->
 		</div><!-- end wrap_inner -->
 	</div><!-- end wrap -->
 
-	<%@ include file="/contents/2015_t/views/includefile/page_top.jsp"%>
+	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
 </div><!-- end container -->
 <!-- pop up -->
 <!-- <div id="popup_wrap_0" class="popup_wrap">
-	<div id="popup_box_0" class="popup_box">	
+	<div id="popup_box_0" class="popup_box">
 		<div class="rollpop">
 			<div>
 				<a onclick="javascript:urlChange('http://m.shoppingntmall.com/plan/planshop/swipeDetail/2017110150?pageType=1')" id="link_banner_1" class="link_banner">
@@ -1769,20 +2066,20 @@ function urlChange(url){
 var doubleClick = 0;
 function provideCoupon(couponNo){
     var parObj = new Object();
-	
+
 	if(comUtil.isEmpty(couponNo)){
 	    alert("쿠폰 발급 실패");
 		return;
 	}
-	
+
     parObj['mediaCode'] = "";
     parObj['couponNo']  = couponNo;
-    
+
     if(doubleClick > 0){
         return;
     }
     doubleClick++;
-    
+
     commonJsonAjax("/customer/provide-coupon", parObj, 'json', 'POST')
     .done(function(data, textStatus, jqXHR){
         if("200" == data.data.code) {
@@ -1801,12 +2098,28 @@ function provideCoupon(couponNo){
         alert("시스템 오류가 발생하였습니다.");
         doubleClick = 0;
     });
-    
+
 }
 
 </script>
 <!-- //pop up -->
-<%@ include file="/contents/2015_t/views/includefile/scriptlink.jsp"%>
+<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../resources/js/touch.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="../../resources/js/overflow.js"></script>
+<script type="text/javascript" src="../../resources/js/swipe.js"></script>
+<script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../resources/js/swiper.js"></script>
+<script type="text/javascript" src="../../resources/js/slick.js"></script>
+<script type="text/javascript" src="../../resources/js/iscroll.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script> <!--2018-04-16 추가-->
+<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
+<script type="text/javascript" src="../../resources/js/loading.js"></script>
+<script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
+<script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
+<script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
 <script type="text/javascript">
 // DEBUG 여부를 확인하기 위한 설정.
 var _debug = true;
@@ -1817,14 +2130,14 @@ var version = new Date().getTime() / 1000;
 var searchList = []; // 최근 검색어 쿠키 저장 리스트
 
 var ie = (function(){
-	var undef, 
+	var undef,
 	v = 3,
 	div = document.createElement('div'),
 	all = div.getElementsByTagName('i');
 	while(
 		div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
 		all[0]
-	); 
+	);
 	return v > 4 ? v : undef;
 }());
 
@@ -1851,7 +2164,7 @@ var commonJsonAjax = function(target_url, target_data, target_dataType, target_m
 		data : target_data,
 		dataType : target_dataType,
 		cache:false,
-        timeout : 30000, 
+        timeout : 30000,
         contentType : "application/json;charset=UTF-8",
         dataType : target_dataType,
         data: JSON.stringify(target_data)
@@ -1866,7 +2179,7 @@ var commonJsonAjaxSync = function(target_url, target_data, target_dataType, targ
 		dataType : target_dataType,
 		cache:false,
 		async: false,
-        timeout : 30000, 
+        timeout : 30000,
         contentType : "application/json;charset=UTF-8",
         dataType : target_dataType,
         data: JSON.stringify(target_data)
@@ -1921,17 +2234,17 @@ function goSearch(){
 	var pageNo = jQuery('#pageNo').val();
 	var query = jQuery('#query').val();
 	var url = "";
-	
+
 	searchKeyword = searchKeyword.trim();
 
 	var re = /[.~!@\#$%^&*\-=+|\\/:;?"`<>'_]/gi;
-			  
+
     if(re.test(searchKeyword)){
     	alert("특수문자는 입력할 수 없습니다.");
 		event.preventDefault();
 		return;
 	}
-	
+
 	if (searchKeyword == null || searchKeyword == '' ) {
 		var linkUrl = jQuery('#searchKeywordName').attr('link');
 		if(linkUrl!= null && linkUrl !=''){
@@ -1946,7 +2259,7 @@ function goSearch(){
 		}else{
 		    url = "/goods-search/search/"+ encodeURIComponent(searchKeyword)+ "?query="+query;
 		}
-		
+
 		try{
 			if(jQuery.cookie('searchList').split(',').indexOf(searchKeyword) != -1){
     		}else{
@@ -1954,9 +2267,9 @@ function goSearch(){
     			jQuery.cookie('searchList', searchList, { path: '/' });
     		}
 		}catch(e){
-		
+
 		}
-		
+
 		window.location.href = "http://dev-m.shoppingntmall.com" + url;
 	}
 }
@@ -2002,11 +2315,11 @@ function logout() {
 
 function aLoginCheck(forwardUrl) {
 	var param = {};
-	
+
 	if( forwardUrl ) {
 		param['forwardUrl'] = forwardUrl;
 	}
-	
+
 	commonAjax('/member/login/check', param, 'json', 'post')
 	.done(function(data, textStatus, jqXHR) {
 		if( data.code == 200 ) {
@@ -2075,7 +2388,7 @@ function isApp(){
 
 function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
     var movieUrl = _url;
-    
+
 	if(!confirm('실시간 방송을 시청하시려면, 3G/4G 환경에서는 사용자 요금에 따라 요금이 부가될 수 있습니다. 시청하시겠습니까?')){
 		if(endDate) {
     		endDate = new Date(endDate);
@@ -2087,7 +2400,7 @@ function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
     	}
         return false;
     }
-	
+
 	if(endDate) {
     	endDate = new Date(endDate);
         var curDate = new Date();
@@ -2096,9 +2409,9 @@ function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
 	} else {
 		endDate = new Date();
 	}
-	
+
     if(_url != ""){
-	
+
 		var lbsParam = {
 			said				:"LBSTEST",
 			asset_id			:"10010",
@@ -2124,7 +2437,7 @@ function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
     			try{
     				var resultData = JSON.parse(data.data);
     				movieUrl = resultData.content[0].content_otu;
-        			if (isApp()) { 
+        			if (isApp()) {
                         live = live || "false";
                         var playParams = {
                             "src" : movieUrl,
@@ -2145,7 +2458,7 @@ function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
         	}).fail(function(jqXHR, textStatus, errorThrown) {
     	});
 		/*
-		if (isApp()) { 
+		if (isApp()) {
             live = live || "false";
             var playParams = {
                 "src" : movieUrl,
@@ -2161,30 +2474,30 @@ function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
             window.location = movieUrl;
     	}
 		*/
-		
+
     }else{
 		alert('동영상이 존재하지 않습니다.');
     }
 }
 
-function setupVideo(type, playerIdx, menuArr) 
+function setupVideo(type, playerIdx, menuArr)
 {
 
 console.log(JSON.stringify(menuArr));
     var r = 1;
     var heightP = 0;
-    
+
 	if(typeof endDate == "undefined") {
 		endDate = "0";
 	}
-	
+
     // 임시
     if (isIOS() && !isApp()) return;
-    
+
     if (!isIOS()) {
         r = window.devicePixelRatio;
     }
-    
+
     if(type == "view"){
       if(isIOS()) {
           heightP = 80;
@@ -2192,7 +2505,7 @@ console.log(JSON.stringify(menuArr));
           heightP = 80;
       }
     }
-    
+
     var setupParams = {
         "default" : {
             "pmode" : {
@@ -2286,7 +2599,7 @@ console.log(JSON.stringify(menuArr));
     		videoParam :setupParams
     	}
 	}
-	
+
     if(iOsAgent){
         window.location = "netplay://setupVideo?q=" + JSON.stringify(setupParams) + "&main=" + JSON.stringify(menuArr);
 	}else{
@@ -2297,7 +2610,7 @@ console.log(JSON.stringify(menuArr));
 function sendPlayerViewStatus(status)
 {
     var deem = jQuery('.deem_white');
-    
+
     if(deem.length > 0){
         if(status == "zoom" || status == "hide"){
             deem.hide();
@@ -2314,7 +2627,7 @@ var locationParams = {
 
 // App ActionBar 숨김
 function appBarHide(){
-	if (isApp()) { 
+	if (isApp()) {
 		try{
 			window.shoppingntapp.appActionBottomBarHide();
 		}catch(e){}
@@ -2323,7 +2636,7 @@ function appBarHide(){
 
 // App ActionBar 노출(단 디폴트 액션바가 노출되는 상황 조건)
 function appBarShow(){
-	if (isApp()) { 
+	if (isApp()) {
 		if(appActionVarDisplayYn()){
 			try{
 				window.shoppingntapp.appActionBottomBarShow();
@@ -2334,7 +2647,7 @@ function appBarShow(){
 
 // App HeaderBar 숨김
 function topBarHide(){
-	if (isApp()) { 
+	if (isApp()) {
 		try{
 			if(isAndroid()) {
 				window.shoppingntapp.appActionTopBarHide();
@@ -2375,7 +2688,7 @@ function appActionVarDisplayYn(){
 }
 
 function showSearch(){
-	//jQuery.removeCookie('searchList', { path: '/' }); 
+	//jQuery.removeCookie('searchList', { path: '/' });
 	if(jQuery.cookie('searchList')==undefined||jQuery.cookie('searchList')==""){
 		jQuery.cookie('searchList', searchList, { path: '/' });
 	}else{
@@ -2391,16 +2704,16 @@ function showSearch(){
 			if(count > 10) break;
 			jQuery("#searchList").append('<dd><a href="javascript: setSearchKeyword(\''+searchList[x-1]+'\');" id="searchResult1">'+searchList[x-1]+'</a></dd>');
 			count++;
-		} 
+		}
 	}
-	
+
 	jQuery("#searchList").append('<dd><span class="btn size2 bgcolor8"><a>닫기</a></span></dd>');
-	jQuery(".search_list dl dd .btn a").on('click', function(){  
-		topBarShow(); 
-		appBarShow(); 
+	jQuery(".search_list dl dd .btn a").on('click', function(){
+		topBarShow();
+		appBarShow();
 		ui_search.hideSearchBar();
-		float_header.side_close();	
-		$('.wrap_inner').css('height', 'auto');	
+		float_header.side_close();
+		$('.wrap_inner').css('height', 'auto');
 		$('.floating_btn_top').show(); // 2016-06-30
 	});
 }
@@ -2424,8 +2737,8 @@ function appCloseVideo() {
 }
 
 function sendAppTitleInfo(){
-	    
-	if(location.href.indexOf("index") <0 && location.href.indexOf("goods-list") <0 && location.href.indexOf("/display/goods/") <0 ){ 
+
+	if(location.href.indexOf("index") <0 && location.href.indexOf("goods-list") <0 && location.href.indexOf("/display/goods/") <0 ){
     	var titleObj = {};
     	jQuery('.gnb.sub').hide();
     	titleObj.title = jQuery.trim(jQuery('.gnb.sub').find('h2').children('span').text());
@@ -2484,13 +2797,13 @@ function setDay() {
     var year        = jQuery("#birthYear").val();
     var month       = jQuery("#birthMonth").val();
     var day         = jQuery("#birthDate").val();
-    
+
     var arrayMonth  = [31,28,31,30,31,30,31,31,30,31,30,31];
 
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
         arrayMonth[1] = 29;
     }
-    
+
     $("#birthDate option").remove();
     for (var i=0; i<=arrayMonth[month-1]; i++) {
 		if(i==0) {
@@ -2523,8 +2836,8 @@ function setDay() {
   ga('create', 'UA-80829108-1', 'auto');
   ga('send', 'pageview');
     </script>
-    <script type="text/javascript" src="/resources/js/lib/jquery.timers.js"></script>
-    <script type="text/javascript" src="/resources/js/popup.js"></script>
+    <script type="text/javascript" src="../../../../resources/js/lib/jquery.timers.js"></script>
+    <script type="text/javascript" src="../../../../resources/js/popup.js"></script>
 
 <script type="text/javascript">
 // 메인에 라인 페이지가 존재할 때
@@ -2535,56 +2848,56 @@ var menuArr = new Array();
 if(isApp()){
 	var menuObj ={};
 						menuObj = {};
-    		menuObj.name = "홈"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "홈";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =0;
     		                menuObj.mainYn = "0";
                 		menuArr.push(menuObj);
 								menuObj = {};
-    		menuObj.name = "TV 편성"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "TV 편성";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =1;
     		                menuObj.mainYn = "0";
                 		menuArr.push(menuObj);
 								menuObj = {};
-    		menuObj.name = "테마   Shop"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "테마   Shop";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =2;
     		                menuObj.mainYn = "1";
                 		menuArr.push(menuObj);
 								menuObj = {};
-    		menuObj.name = "베스트"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "베스트";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =3;
     		                menuObj.mainYn = "0";
                 		menuArr.push(menuObj);
 								menuObj = {};
-    		menuObj.name = "이벤트"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "이벤트";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =4;
     		                menuObj.mainYn = "0";
                 		menuArr.push(menuObj);
 								menuObj = {};
-    		menuObj.name = "나이키 기획전"; 
-    		menuObj.name = menuObj.name.replace(/\&/g,""); 
-    		menuObj.name = menuObj.name.replace(/\#/g,""); 
-    		menuObj.name = menuObj.name.replace(/\?/g,""); 
-    		menuObj.name = menuObj.name.replace(/\=/g,""); 
+    		menuObj.name = "나이키 기획전";
+    		menuObj.name = menuObj.name.replace(/\&/g,"");
+    		menuObj.name = menuObj.name.replace(/\#/g,"");
+    		menuObj.name = menuObj.name.replace(/\?/g,"");
+    		menuObj.name = menuObj.name.replace(/\=/g,"");
     		menuObj.index =5;
     		                menuObj.mainYn = "0";
                 		menuArr.push(menuObj);
@@ -2592,7 +2905,7 @@ if(isApp()){
 
 
 var mainSwipe;
-$(document).ready(function(){	
+$(document).ready(function(){
 	// 메인 화면은 loading indicator 사용 안함
 	jQuery.ajaxSetup({
         beforeSend:function(){
@@ -2614,17 +2927,17 @@ $(document).ready(function(){
     		loop: true,
     		pagination: '.slideCircle',
     		paginationClickable: true
-    	});	
+    	});
     }
-    	
+
     if(jQuery('#ban-slide2').length!=0){
     	var ban_loop = $('#ban-slide2 .swiper-slide').length;
-    		ban_loop > 1 ? ban_loop=true : ban_loop=false;		
+    		ban_loop > 1 ? ban_loop=true : ban_loop=false;
     	var banSlideList = new Swiper('#ban-slide2', {
     		slidesPerView: 'auto',
     		centeredSlides: true,
     		loop: ban_loop
-    	});	
+    	});
     }
 
     //팝업롤링 2018-02-07 추가
@@ -2641,44 +2954,44 @@ $(document).ready(function(){
 		mainSwipe_handler();
 		if(isApp()){
     		setupVideo('view', '', menuArr);
-			
+
 			//setupVideo 이후에 현재 페이지 값을 전달해야 함.
 			var hashLocation = location.hash;
         	var hashSplit = hashLocation.split("#");
         	var hashName = hashSplit[1];
-        	
-			    		        		    			        	        		    			        	        		    			        	        		    			        	        		    			        	        		    			        	    		
+
+
 			if( hashName != undefined && hashName != (0 + 2)) {
         		hashName = Number(hashName);
-    			setTimeout(function(){ 
+    			setTimeout(function(){
     				location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
-    			}, 100);	
+    			}, 100);
         	}else{
 			    hashName = Number(0 + 2);
-    			setTimeout(function(){ 
+    			setTimeout(function(){
     				location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
     			}, 100);
 			}
     	}
 	},200);
-	
-	$(window).on('load resize',function(){				
+
+	$(window).on('load resize',function(){
 		var hashLocation = location.hash;
     	var hashSplit = hashLocation.split("#");
     	var hashName = hashSplit[1];
-		
-				    					    	    					    	    					    	    					    	    					    	    					    			
+
+
 		if( hashName != undefined && hashName != (0 + 2)) {
-    		hashName = Number(hashName);	
+    		hashName = Number(hashName);
     	}else{
 		    hashName = Number(0 + 2);
 		}
-		
+
 		startSlideNum = hashName;
 		//startSlideNum = $('.gnb ul li.current').index();
 		mainSwipe_handler();
 		//swipeTrigger();
-		setTimeout(function(){ 
+		setTimeout(function(){
 			$("#homeSlider").height($(".mainContents").eq(startSlideNum).height());
 		}, 300);
 	})
@@ -2692,24 +3005,24 @@ $(document).ready(function(){
 		if(mainSwipe){
 			mainSwipe.kill();
 		}
-		mainSwipe = Swipe(document.getElementById('homeSlider'),{		
+		mainSwipe = Swipe(document.getElementById('homeSlider'),{
 			callback : function(index , elem){
-			
+
 			//alert(index);
 			//alert(elem);
-			
+
 				if(isApp()){
 					location.href = "shoppingntapp://setMainCategoryIndex?main="+index;
 				}
 				$("#homeSlider").height($(".mainContents").eq(index).height());
 				menuHandler.init('main', index);
-				
+
 				if(index < 5){
-					menuScroll.scrollTo(0, 0, 300);				
-				} else {	
-					menuScroll.scrollTo(menuScroll.maxScrollX, 0, 0);			
+					menuScroll.scrollTo(0, 0, 300);
+				} else {
+					menuScroll.scrollTo(menuScroll.maxScrollX, 0, 0);
 				}
-				
+
 				if (index == 1)	{
 					 timer = setTimeout(function(){
 					 	if(jQuery('.scdList').find('.tvOnair').length) {
@@ -2722,13 +3035,13 @@ $(document).ready(function(){
 					$('html, body').animate({'scrollTop':'0'}, 200);
 					clearTimeout(timer);
 				}
-				
+
 				if( index == 1 || index == 2 || index == 3 ){
-				    var arr = [0,0,0,0]; 
+				    var arr = [0,0,0,0];
 					if(typeof planCode[0] != "undefined"){
 					    arr = planCode[0].split(":");
 					}
-					
+
 					if(arr[0] == "90000016"){
 					    viewSwipeLimeDetail(arr[0], 5)
 					}else if(arr[0] == "90000017"){
@@ -2737,7 +3050,7 @@ $(document).ready(function(){
     				    viewSwipeLimeMain();
 					}
     			}
-				
+
 				if( index == 2 || index == 3 || index == 4 ){
 				    var arr1 = [0,0,0,0];
 					var arr2 = [0,0,0,0];
@@ -2747,7 +3060,7 @@ $(document).ready(function(){
 					if(typeof planCode[1] != "undefined"){
 					    arr2 = planCode[1].split(":");
 					}
-					
+
 					if(arr1[0] == "90000016" && arr2[0] == "90000017"){
 					    viewSwipeLimeDetail(arr2[0], 6)
 					}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
@@ -2757,7 +3070,7 @@ $(document).ready(function(){
 					}
 
     			}
-				
+
 				if( index == 3 || index == 4 || index == 5 ){
 				    var arr1 = [0,0,0,0];
 					var arr2 = [0,0,0,0];
@@ -2774,11 +3087,11 @@ $(document).ready(function(){
 					}else{
 					            						viewSwipeEventMain();
     											}
-				
+
     			}
-				
+
 				if( index == 4 || index == 5 || index == 6 ){
-				    
+
 				    var arr1 = [0,0,0,0];
 					var arr2 = [0,0,0,0];
 					if(typeof planCode[0] != "undefined"){
@@ -2787,7 +3100,7 @@ $(document).ready(function(){
 					if(typeof planCode[1] != "undefined"){
 					    arr2 = planCode[1].split(":");
 					}
-					
+
 					if(arr1[0] == "90000016" && arr2[0] == "90000017"){
     				    viewSwipeRecomMain();
 					}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
@@ -2796,9 +3109,9 @@ $(document).ready(function(){
     				    viewSwipeLimeDetail(arr1[0], 7);
 					}
     			}
-				
+
 				if( index == 5 || index == 6 || index == 7 ){
-				    
+
 				    var arr1 = [0,0,0,0];
 					var arr2 = [0,0,0,0];
 					if(typeof planCode[0] != "undefined"){
@@ -2807,7 +3120,7 @@ $(document).ready(function(){
 					if(typeof planCode[1] != "undefined"){
 					    arr2 = planCode[1].split(":");
 					}
-					
+
 					if(arr1[0] == "90000016" && arr2[0] == "90000017"){
     				            						viewSwipeEventMain();
     											}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
@@ -2816,7 +3129,7 @@ $(document).ready(function(){
 					    viewSwipeLimeDetail(arr2[0], 8);
 					}
     			}
-				
+
 				if( index == 6 || index == 7 || index == 8 ){
 				    var arr1 = [0,0,0,0];
 					var arr2 = [0,0,0,0];
@@ -2838,21 +3151,21 @@ $(document).ready(function(){
 					    viewSwipeLimeDetail(arr2[0], menuLength - 1);
 					}
     			}
-				
+
 				if( menuLength == 9 ) {
 					if( index == 7 || index == 8 || index == 9 ){
 					    var arr4 = [0,0,0,0];
 					    if(typeof planCode[3] != "undefined"){
 						    arr4 = planCode[3].split(":");
 						}
-					
+
 						viewSwipeLimeDetail(arr4[0], menuLength - 1);
         			}
 				}
-				
+
 				if(elem == undefined) index = "0";
     			window.location.replace('#'+index, '');
-    			
+
     			if(!iOsAgent){
 					appCloseVideo();
 				}
@@ -2878,20 +3191,20 @@ $(document).ready(function(){
 				}
 			}
 		}
-		
+
 		$(".gnb").find("li").click(function(){
 			mainSwipe.slide($(this).index(), 200);
 			return false;
 		});
-		
+
 		var hashLocation = location.hash;
     	var hashSplit = hashLocation.split("#");
     	var hashName = hashSplit[1];
 		var classById = $('#lnb2').attr('class');
-        
-				    					    	    					    	    					    	    					    	    					    	    					    			
+
+
         if( hashName != undefined && hashName != (0 + 2)) {
-		
+
 			hashName = Number(hashName);
             //mainSwipe.slide(hashName, 200);
             $(".gnb").find("li").eq(hashName).trigger('click');
@@ -2906,9 +3219,9 @@ $(document).ready(function(){
                 location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
             }
         }
-    	
+
 	};
-	//main swipe  
+	//main swipe
 	function swipeTrigger(){
 		$("#homeSlider").swipe({
 			swipe:function() {
@@ -2919,34 +3232,34 @@ $(document).ready(function(){
 			triggerOnTouchEnd:false
 		});
 	};
-		
+
 	/*
 	jQuery('.btn.with_prd, .with_goods_wrap .btn_close').click(function(){
 		if( jQuery('.with_goods_wrap').hasClass('open') ){
 			jQuery('.with_goods_wrap').removeClass('open').hide();
 		} else {
 			jQuery('.with_goods_wrap').addClass('open').show()
-		}		
+		}
 	});
 	*/
-	
+
     jQuery('#mainTogetherOpen,#mainTogetherClose').click(function(){
         if( jQuery('#mainTogether').hasClass('open') ){
             jQuery('#mainTogether').removeClass('open').hide();
         } else {
             jQuery('#mainTogether').addClass('open').show()
-        }       
+        }
     });
-	
+
 	// 편성표 바로가기
 	jQuery(".tv_link").click(function() {
 		mainSwipe.slide(1, 200);
 		return false;
 	});
-	
+
 			        		                jQuery("#popup_wrap_0").popSnt({popupBox : ".popup_box", linkBanner : "#link_banner_0", popupCloseButton : "#button_popup_close_0", popupTodayCloseButton : "#button_today_close_0", TodayClose : true, cookieName : "popupCookie_0_20180206", closeFlag : "1", popupCnt : "3" });
-					    				    				    					
-	
+
+
 });
 
 
@@ -2959,18 +3272,18 @@ function changeMainIndex(index){
 }
 
 function selectBroadCastList(fromDate) {
-    jQuery.ajax({       
+    jQuery.ajax({
         type: 'get',
         url : '/broadcast/selectBroadCastList?fromDate='+fromDate,
-		async: true, 
-        dataType : "html", 
-        success: function(data, textStatus, jqXHR) {                
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont1').html(data);
         },
-        complete: function(data, textStatus, jqXHR) {                
+        complete: function(data, textStatus, jqXHR) {
 			setTimeout(function(){
 				resizePage("1");
-				
+
 			 	if(jQuery('.scdList').find('.tvOnair').length) {
 					goOnair();
 				}
@@ -2986,18 +3299,18 @@ function viewSwipeLimeMain() {
 	if( jQuery('#homeCont2').html() != "&nbsp;" ){
 		return;
 	}
-	
-    jQuery.ajax({       
+
+    jQuery.ajax({
         type: 'get',
         url : '/plan/swipeLimeMain' ,
-		async: true, 
-        dataType : "html", 
-        success: function(data, textStatus, jqXHR) {                
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont2').html(data);
         },
-        complete: function(data, textStatus, jqXHR) {                
+        complete: function(data, textStatus, jqXHR) {
 			setTimeout('resizePage("2")', 300);
-			
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
@@ -3009,18 +3322,18 @@ function viewSwipeRecomMain() {
 	if( jQuery('#homeCont3').html() != "&nbsp;" ) {
 		return;
 	}
-			
-    jQuery.ajax({       
+
+    jQuery.ajax({
         type: 'get',
         url : '/category/swipeRecommendMain' ,
 		async: true,
         dataType : "html",
-        success: function(data, textStatus, jqXHR) {                
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont3').html(data);
         },
         complete: function(data, textStatus, jqXHR) {
 			setTimeout('resizePage("3")', 300);
-			
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
@@ -3032,18 +3345,18 @@ function viewSwipeEventMain() {
 	if( jQuery('#homeCont4').html() != "&nbsp;" ){
 		return;
 	}
-	
-    jQuery.ajax({       
+
+    jQuery.ajax({
         type: 'get',
         url : '/plan/swipeEventMain' ,
-		async: true, 
-        dataType : "html", 
-        success: function(data, textStatus, jqXHR) {    
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont4').html(data);
         },
-        complete: function(data, textStatus, jqXHR) {                
+        complete: function(data, textStatus, jqXHR) {
 			setTimeout('resizePage("4")', 300);
-			
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
@@ -3055,18 +3368,18 @@ function viewSwipeEventDetail(planCode) {
 	if( jQuery('#homeCont4').html() != "&nbsp;" ){
 		return;
 	}
-	
-    jQuery.ajax({       
+
+    jQuery.ajax({
         type: 'get',
         url : 'plan/event/swipeDetail/'+planCode ,
-		async: true, 
-        dataType : "html", 
-        success: function(data, textStatus, jqXHR) {    
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont4').html(data);
         },
-        complete: function(data, textStatus, jqXHR) {                
+        complete: function(data, textStatus, jqXHR) {
 			setTimeout('resizePage("4")', 300);
-			
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
@@ -3081,14 +3394,14 @@ function viewSwipeLimeDetail(planCode, num){
 	var param = new Object();
 	param['categoryCode'] = planCode;
 	/*
-    jQuery.ajax({       
+    jQuery.ajax({
         type: 'get',
         url : '/plan/planshop/swipeDetail/'+planCode ,
-		async: true, 
-        dataType : "html", 
+		async: true,
+        dataType : "html",
         success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont'+num).html(data);
-			
+
         },
         complete: function(data, textStatus, jqXHR) {
 			if(num == '5') {
@@ -3100,21 +3413,21 @@ function viewSwipeLimeDetail(planCode, num){
 			} else if(num == '8'){
 				setTimeout('resizePage("8")', 300);
 			}
-			
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
 		}
     });
     */
-      
-    jQuery.ajax({       
+
+    jQuery.ajax({
         type: 'get',
         url : '/plan/swipeLimeMain',
         data: param,
-        async: true, 
-        dataType : "html", 
-        success: function(data, textStatus, jqXHR) {                
+        async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
             jQuery('#homeCont'+num).html(data);
         },
         complete: function(data, textStatus, jqXHR) {
@@ -3127,13 +3440,13 @@ function viewSwipeLimeDetail(planCode, num){
             } else if(num == '8'){
                 setTimeout('resizePage("8")', 300);
             }
-            
+
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
         }
     });
-    
+
 }
 
 function resizePage(num) {
@@ -3145,7 +3458,7 @@ function resizePage(num) {
 }
 
 jQuery('#time').each(function(){
-    var jQthis  = jQuery(this); 
+    var jQthis  = jQuery(this);
     var endDate = new Date(jQthis.attr('endDate'));
     var curDate = new Date();
     var leftTime = (endDate - curDate) / 1000;
@@ -3156,7 +3469,7 @@ jQuery(this).everyTime(1000, "countTimer", function(){
     jQuery('#time').each(function(){
         var jQthis = jQuery(this);
         var leftTime = jQthis.attr('leftTime');
-        
+
         if (leftTime <= 0) {
             timerClass('.leftTime', "00:00:00");
         } else {
@@ -3176,25 +3489,25 @@ jQuery(this).everyTime(1000, "countTimer", function(){
             }
         }
         leftTime = leftTime - 1;
-        
+
         jQthis.attr('leftTime', leftTime);
     });
 });
-    
+
 function timerClass(obj, timeHtml){
     jQuery('.leftTime').html(timeHtml);
 }
 
 function goOnair(){
     var onAirTarget = jQuery('.scdList').find('.tvOnair');
-    
+
     var headerSize = 0;
     if($('.header').length) headerSize = $('.header').height();
-	
+
 	if(isApp() && isIOS()) {
 		headerSize = 40;
 	}
-    
+
 	var loc = onAirTarget.offset().top - (headerSize + 50);
     $('html, body').scrollTop(loc);
 }
@@ -3202,7 +3515,7 @@ function goOnair(){
 ui_more.init(addlist);
 
 
-var totalCount              = 100;          
+var totalCount              = 100;
 var loadingZoneCurrentPage  = Number(jQuery('#goodsListLoadingZone').attr('currentpage'));
 var rowsPerPage             = 10;
 var loadingZoneIsMoreData   = (jQuery('#goodsListLoadingZone').attr('ismoredata') == "true");
@@ -3214,11 +3527,11 @@ function addlist(){
     var hashSplit = hashLocation.split("#");
 	var hashName = hashSplit[1];
 	var classById = $('#lnb2').attr('class');
-	
+
 	//홈 더보기 실행
 	if(hashName == "0"){
                 if (loadingZoneIsMoreData && !ajaxLoding)  {
-		
+
             loadingZoneCurrentPage++;
             nextPage++;
             ajaxLoding = true;
@@ -3229,69 +3542,69 @@ function addlist(){
             paramList.push(nextPage);
             paramList.push("&rowsPerPage=");
             paramList.push(rowsPerPage);
-            
-            jQuery.ajax({       
+
+            jQuery.ajax({
                 type: 'get',
                 url : '/index/more' ,
                 data : paramList.join(''),
-                dataType : "html",          
-                success: function(data, textStatus, jqXHR) {                
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
                     jQuery('#indexMore').append(data);
-                    ajaxLoding = false; 
+                    ajaxLoding = false;
                     ui_loading.detachLoading();//로딩이미지 none
-                }, complete: function(data, textStatus, jqXHR) {                
+                }, complete: function(data, textStatus, jqXHR) {
         			setTimeout('resizePage("0")', 300);
-                }, 
+                },
                 error: function(jqXHR, textStatus, errorThrown) {
                             ui_loading.detachLoading();//로딩이미지 none
                             alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
                 }
             })
-            
+
             loadingZoneIsMoreData = (totalCount/rowsPerPage > loadingZoneCurrentPage) ? true : false;
-			
+
         }
-		
+
 	}else if(classById == "current"){
         var classById = $('#lnb2').attr('class');
-	
+
 	    var limeismoredata = "";
-	    
+
 	    if(limeTotalCount > limeNextPage * limeRowsPerPage){
 	        limeismoredata = true;
 	    }else{
 	        limeismoredata = false;
 	    }
-	
+
 	    limeLoadingZoneIsMoreData   = limeismoredata;
-	
+
 	    if (limeLoadingZoneIsMoreData && !limeAjaxLoding)  {
-		    
+
 		    //alert("limeLoadingZoneIsMoreData: "+limeLoadingZoneIsMoreData);
 		    //alert("!limeAjaxLoding: "+ !limeAjaxLoding);
-		
+
     	    limeNextPage++;
     	    limeAjaxLoding = true;
-    	    
+
     	    ui_loading.attachLoading();//로딩이미지 block
     	    var paramList = [];
     	    paramList.push("pageNo=");
     	    paramList.push(limeNextPage);
     	    paramList.push("&rowCnt=");
     	    paramList.push(limeRowsPerPage);
-    	    
-    	    jQuery.ajax({       
+
+    	    jQuery.ajax({
     	        type: 'get',
     	        url : '/plan/swipeLimeMain/more' ,
     	        data : paramList.join(''),
-    	        dataType : "html",          
-    	        success: function(data, textStatus, jqXHR) {                
+    	        dataType : "html",
+    	        success: function(data, textStatus, jqXHR) {
     	            jQuery('#limeMore').append(data);
-    	            limeAjaxLoding = false; 
+    	            limeAjaxLoding = false;
     	            ui_loading.detachLoading();//로딩이미지 none
-    	        },complete: function(data, textStatus, jqXHR) {                
+    	        },complete: function(data, textStatus, jqXHR) {
     	            setTimeout('resizePage("2")', 300);
-    	            
+
     	        },
     	        error: function(jqXHR, textStatus, errorThrown) {
     	                    ui_loading.detachLoading();//로딩이미지 none
@@ -3299,7 +3612,7 @@ function addlist(){
     	        }
     	    })
 	    }
-	
+
 	}
 
 }
