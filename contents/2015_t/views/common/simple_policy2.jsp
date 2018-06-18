@@ -1,0 +1,261 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
+<html lang="ko">
+<head>
+<%@ include file="/contents/2015_t/views/includefile/declare2.jsp"%>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false"><!-- @@@ 2015-01-07 소스 추가 -->
+<%@ include file="/contents/2015_t/views/includefile/skipNavi.jsp"%>
+<div class="container"><!-- @@@ 2014-11-25 추가 -->
+	<div class="wrap">
+
+		<div class="wrap_inner">
+			<!--header S-->
+			<%@ include file="/contents/2015_t/views/includefile/header2.jsp"%>
+			<!--header E-->
+			<!--main S-->
+			<main id="contents">
+				<section class="contents">
+					<h2><span>개인정보 수집 및 이용안내</span></h2>
+					<div class="policy">
+						<dl>
+							<dt><a name="go01">1. 개인정보 수집에 대한 동의</a></dt>
+							<dd>
+								<p>쇼핑엔T은 고객님께서 개인정보취급방침 또는 이용약관의 내용에 대해「동의한다」또는「동의하지 않는다」버튼을 클릭할 수 있는 절차를 마련하고 있으며,「동의한다」버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다.</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a name="go02">2. 개인정보의 수집 및 이용 목적</a></dt>
+							<dd>
+								<p>"개인정보"라 함은 생존하는 개인에 관한 정보로서 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함)를 말합니다.</p>
+								<p>쇼핑엔T 고객의 개인정보를 수집 이용하는 목적은 다음과 같습니다.</p>
+								<div class="colTable">
+									<table>
+										<colgroup>
+											<col style="width:35%;"/>
+											<col style="width:65%;"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"><p>구분</p></th>
+												<th scope="col"><p>이용목적</p></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><p>회원 관리</p></td>
+												<td>
+													<p class="text2">- 회원제 서비스 이용에 따른 본인확인, 개인식별</p>
+													<p class="text2">- 불량회원의 부정이용 방지와 비인가 사용 방지, 중복가입방지</p>
+													<p class="text2">- 가입의사 확인, 가입 및 가입횟수 제한</p>
+													<p class="text2">- 미성년자의 확인</p>
+													<p class="text2">- 고객상담, 고객불만 접수 및 처리, 분쟁조정을 위한 기록보존</p>
+													<p class="text2">- 고지사항 전달</p>
+												</td>
+											</tr>
+											<tr>
+												<td><p>서비스 제공에 관한<br />계약의 이행 및<br />서비스 제공에 따른<br />요금정산</p></td>
+												<td>
+													<p class="text2">- 새로운 정보와 고지사항의 안내, 상품과 경품 배송 시 배송지 주소 및 연락처 확인 등</p>
+													<p class="text2">- 금융거래 관련 본인인증 및 금융서비스</p>
+													<p class="text2">- 청구서 발송, 구매 및 요금결제, 요금추심</p>
+												</td>
+											</tr>
+											<tr>
+												<td><p>마케팅 및 광고에<br />활용</p></td>
+												<td>
+													<p class="text2">- 고객에게 최적화된 서비스 제공</p>
+													<p class="text2">- 신규 서비스(제품) 개발 및 특화</p>
+													<p class="text2">- 인구통계학적 특성에 따른 서비스 제공 및 광고 게재</p>
+													<p class="text2">- 웹페이지 접속 빈도 파악</p>
+													<p class="text2">- 정기 간행물 발송, 새로운 상품 또는 서비스 안내</p>
+													<p class="text2">- 고객 관심사에 부합하는 웹서비스 및 이벤트 기획</p>
+													<p class="text2">- 고객 기념일 축하 메시지 전달</p>
+													<p class="text2">- 경품행사, 이벤트 등 광고성 정보 전달 또는 회원 참여공간 운영</p>
+													<p class="text2">- 고객설문조사</p>
+													<p class="text2">- 서비스 및 상품 안내</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a name="go03">3. 개인정보의 수집 항목</a></dt>
+							<dd>
+								<ul>
+									<li>
+										<p class="text1">가. 쇼핑엔T은 기본적인 서비스 제공을 위한 필수 정보만을 수집하고 있으며 고객 각각의 기호와 필요에 맞는 서비스를 제공하기 위한 정보 수집 시 별도 동의를 득하고 수집하고 있습니다. 선택 정보를 입력하지 않은 경우에도 서비스 이용 제한은 없습니다.</p>
+									</li>
+									<li>
+										<p class="text1">나. 쇼핑엔T은 이용자의 기본적 인권 침해의 우려가 있는 민감한 개인정보(인종 및 민족, 사상 및 신조, 출신지 및 본적지, 정치적 성향 및 범죄기록, 건강상태 및 성생활 등)는 수집하지 않습니다. 그리고, 어떤 경우에라도 입력하신 정보를 이용자들에게 사전에 밝힌 목적 이외에 다른 목적으로는 사용하지 않으며 외부로 유출하지 않습니다.</p>
+									</li>
+									<li>
+										<p class="text1">다. 쇼핑엔T은 다음과 같이 개인정보를 수집하여 이용합니다.</p>
+										<div class="colTable">
+											<table>
+												<colgroup>
+													<col style="width:12%;"/>
+													<col style="width:40%;"/>
+													<col style="width:38%;"/>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col"><p>구분</p></th>
+														<th scope="col"><p>개인정보 수집항목</p></th>
+														<th scope="col"><p>이용목적</p></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row" rowspan="4"><p>필수</p></th>
+														<td>
+															<p>성명, 생년월일, 성별, CI(암호화된 동일인 식별정보),DI(중복가입확인정보)</p>
+														</td>
+														<td>
+															<p>서비스제공 및 서비스이용에 따른 본인확인, 민원사항의 처리,연령제한서비스 제공, 중복가입 방지식별, 고객의 기념일 등 이벤트를 통한 경품제공 등</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>아이디, 비밀번호</p>
+														</td>
+														<td>
+															<p>서비스 이용을 위한 홈페이지 인증</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>이동전화번호, 통신사, e-mail</p>
+														</td>
+														<td>
+															<p>서비스제공 및 서비스이용에 따른 본인확인, 서비스이용에 따른 민원사항의 처리, 본인의사의 확인, 불만처리, 새로운 정보와 고지사항의 안내, 연락처 확인 등</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>서비스 이용기록, 이용정지 기록, 이용해지 기록, IP address, 접속로그</p>
+														</td>
+														<td>
+															<p>불량회원의 부정 이용방지</p>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row" rowspan="7"><p>선택</p></th>
+														<td>
+															<p>은행계좌정보, 신용카드정보</p>
+														</td>
+														<td>
+															<p>대금결제서비스의 제공 등</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>주소</p>
+														</td>
+														<td>
+															<p>상품과 경품 배송 시 배송지 주소 확인</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>OCB 번호, T맴버쉽 번호</p>
+														</td>
+														<td>
+															<p>OCB 적립,사용 및 T맴버쉽 할인</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>현금영수증 번호</p>
+														</td>
+														<td>
+															<p>현금영수증 발행	</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>요금청구 및 결제기록</p>
+														</td>
+														<td>
+															<p>전자금융거래기록보관</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>TV 셋탑박스 ID</p>
+														</td>
+														<td>
+															<p>TV 간편가입 확인</p>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<p>쿠키</p>
+														</td>
+														<td>
+															<p>불량회원의 부정 이용방지</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a name="go04">4. 개인정보의 수집 방법</a></dt>
+							<dd>
+								<p>쇼핑엔T은 사이트 회원가입 절차, 상담절차, 이벤트나 경품 행사, 영업업무 위탁사 또는 제휴사 등으로부터의 수집, 이동 전화 및 유-무선 인터넷 서비스 사용시 생성정보 수집 툴을 통한 방법(쿠키) 등으로 개인 정보를 수집합니다.</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a name="go05">5. 개인정보의 보유 및 이용기간</a></dt>
+							<dd>
+								<ul>
+									<li>
+										<p class="text1">가. 고객의 개인정보는 쇼핑엔T 고객에게 서비스를 제공하는 기간 동안에 보유 및 이용됩니다. 회원 탈퇴 시 수집된 개인의 정보가 열람 또는 이용될 수 없도록 파기 처리됩니다. 다만, 관계법령의 규정에 의하여 보존할 필요성이 있는 경우에는 관계법령에 따라 보존합니다.</p>
+									</li>
+									<li>
+										<p class="text1">나. 상법 및 ‘전자상거래등에서 소비자보호에 관한 법률’, 전자금융거래법, 여신전문금융업법 국세기본법, 법인세법, 부가가치세법 등 관련 법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인을 위하여 일정기간 보유하여야 할 필요가 있을 경우 개인정보는 일정기간 보유되며, 이 때 보유되는 개인정보의 열람 및 이용은 해당 사유로 국한되며, 사전에 보유목적, 기간 및 보유하는 개인정보 항목을 명시하여야 합니다.</p>
+										<div class="pd_left15">
+											<p class="text2_b">- 고객에게 미리 고지하고 그 보유기간이 경과하지 아니한 경우와 개별적으로 귀하의 동의를 받은 경우에는 약속한 보유기간</p>
+											<p class="text2_b">- 표시/광고에 관한 기록 : 6개월 (전자상거래법)</p>
+											<p class="text2_b">- 계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래법)</p>
+											<p class="text2_b">- 대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래법)</p>
+											<p class="text2_b">- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래법)</p>
+											<p class="text2_b">- 신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 (신용정보의 이용 및 보호에 관한 법률)</p>
+										</div>
+									</li>
+									<li>
+										<p class="text1">다. 고객님의 동의를 받아 보유하고 있는 거래정보에 대해 고객님께서 열람을 요구하는 경우에는 지체없이 그 열람&bull;확인할 수 있도록 조치합니다.</p>
+									</li>
+									<li>
+										<p class="text1">라. 회원가입을 탈퇴한 경우에는 회원 재가입, 임의해지 등을 반복적으로 행함으로써 쇼핑엔T이 제공하는 할인쿠폰, 마일리지, 이벤트 혜택 등의 경제상의 이익을 불편법적으로 수취하거나 이 과정에서 명의도용 등의 행위 우려가 있으므로 이러한 불•편법 행위 차단 등의 목적으로 <span class="fwb">회원 탈퇴 후 30일동안 회원의 성명, CI, DI, 아이디, 비밀번호, 이메일, 로그기록, 접속아이피를 보관</span>합니다.</p>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<ul class="btn_multi">
+							<li><a class="btn btn_radius5 btn_gray btn_h40" >닫기</a></li>
+						</ul>
+					</div>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<%@ include file="/contents/2015_t/views/includefile/footer2.jsp"%>
+			<!--footer E-->
+		</div><!-- end wrap_inner --><!-- @@@ 2014-11-25 end 주석 추가 -->
+		
+	</div><!-- end wrap --><!-- @@@ 2014-11-25 end 주석 추가 -->
+
+	<!-- @@@ 2014-11-28 위치이동 -->
+	<%@ include file="/contents/2015_t/views/includefile/page_top.jsp"%>
+	<!-- //@@@ 2014-11-28 위치이동 -->
+</div><!-- end container --><!-- @@@ 2014-11-25 추가 -->
+<%@ include file="/contents/2015_t/views/includefile/scriptlink.jsp"%>
+</body>
+</html>

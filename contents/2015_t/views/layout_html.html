@@ -1,0 +1,633 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
+<html lang="ko">
+<head>
+<title>쇼핑엔T</title>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
+<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/layout.css"><!-- 공통 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/main.css"><!-- 메인 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/member.css"><!-- 로그인,회원가입 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/goods.css"><!-- 상품목록및상세 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/order.css"><!-- 주문결제 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/mypage.css"><!-- 마이페이지 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/customer.css"><!-- 고객센터 -->
+<link rel="stylesheet" type="text/css" href="/contents/2015_t/resources/css/etc.css"><!-- 기타(푸터메뉴) -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- skipnavi -->
+<div class="skip_nav">
+	<a href="#contents">본문 바로가기</a>
+</div>
+<!-- /skipnavi -->
+<div class="container">
+	<div class="wrap">
+	
+		<!-- side bar -->
+		<div class="nav_sideBar">
+			<p class="sideClose"><span><em>X</em></span></p>
+			<div class="nav_side">
+			
+	             <!-- member info -->
+	             <div class="info">
+	                <div class="box login" style="display:none;">
+	                    <p class="t">고객님, 환영합니다.</p><!-- 2015-05-15 수정 -->
+	                    <div class="btn">
+	                        <a class="btnLogin" href="#.">로그인</a>
+	                    </div>
+	                </div>
+	                <div class="box logout" style="display:block;">
+	                	<p class="t"><strong class="name">홍길동님</strong><em class="level lv1">등급1</em><span>반갑습니다!</span></p><!-- 2015-05-15 수정 -->
+	                    <div class="btn">
+	                        <a class="btnLogout">로그아웃</a>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- /member info -->  
+	            <!-- link -->
+	            <nav class="mynav">
+	            	<ul>
+	                	<li><a class="cart" href="#">장바구니</a></li>
+	                	<li><a class="deli" href="#">주문/배송</a></li>
+	                	<li><a class="shop" href="#">MY쇼핑</a></li>
+	                </ul>
+	            </nav>
+	            <!-- /link -->
+	            <!-- quicklink -->
+				<nav class="quicklink">
+					<ul>
+						<li><a href="javascript:;">할인쿠폰/혜택 모아보기</a></li>
+						<li><a href="javascript:;">고객만족센터</a></li>
+					</ul>
+				</nav>
+				<!-- /quicklink -->
+				<!-- category -->
+				<nav class="category">
+					<h2>카테고리</h2>
+					<ul>
+						<li><a href="javascript:;"><span></span>패션/잡화</a></li>
+						<li><a href="javascript:;"><span></span>가구/인테리어</a></li>
+						<li><a href="javascript:;"><span></span>유아동</a></li>
+						<li><a href="javascript:;"><span></span>주방</a></li>
+						<li><a href="javascript:;"><span></span>주방가전</a></li>
+						<li><a href="javascript:;"><span></span>생활</a></li>
+						<li><a href="javascript:;"><span></span>이미용</a></li>
+						<li><a href="javascript:;"><span></span>디지털</a></li>
+						<li><a href="javascript:;"><span></span>생활가전</a></li>
+						<li><a href="javascript:;"><span></span>식품</a></li>
+						<li><a href="javascript:;"><span></span>헬스/레저</a></li>					
+						<li><a href="javascript:;"></a></li>
+					</ul>
+				</nav>
+				<!-- /category -->
+				<!-- today's view -->
+	            <div class="history">
+	            	<h2>오늘 본 상품</h2>
+	                <div class="goods_wrap">
+	                    <ul class="goods_list">
+	                       <li>
+	                       		<div class="goods">
+	                                <div class="goods_img"><a href="javascript:;"><img src="../../img/_tmp/006.jpg" alt="" /></a></div>
+	                                <div class="goods_name">싱가포르 너비향 육포</div>
+	                                <div class="goods_price">
+	                                    <del><em>9,876,200</em>원</del>
+	                                    <span><em>9,543,100</em>원</span>
+	                                </div>
+	                                <!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span class="delivery">무료배송</span></p>
+									</div>
+									<!-- /혜택 -->
+								</div>
+	                        </li>
+	                        <li>
+	                       		<div class="goods">
+	                                <div class="goods_img"><a href="javascript:;"><img src="../../img/_tmp/007.jpg" alt="" /></a></div>
+	                                <div class="goods_name">싱가포르 너비향 육포</div>
+	                                <div class="goods_price">
+	                                    <del></del>
+	                                    <p class="counsel">상담 전용 상품입니다.</p>
+	                                </div>
+	                           </div>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <!-- /today's view -->
+			</div>
+		</div>
+		<!-- /side bar -->	
+
+		<div class="wrap_inner">
+			<!--header S-->
+			<header class="header">
+				<h1><a ><span>쇼핑엔T</span></a></h1><!-- 2015-05-08 텍스트 수정 -->
+				<a class="nav_aside"><span>사이드 네비게이션</span></a>
+				<a class="search"><span>검색</span></a>
+				<a class="myp_aside"><span>마이페이지 바로가기</span></a><!-- 2015-05-08 텍스트 수정 -->
+				<div class="searchZone">
+					<fieldset>
+						<legend>검색어 입력</legend>
+						<form>
+							<p>
+								<span>
+									<input type="text" placeholder="검색어를 입력해 주세요" name="" id="" />
+									<a class="bt"><em>검색</em></a>
+								</span>
+							</p>
+						</form>
+					</fieldset>
+				</div>
+			</header>
+			<!--header E-->
+			<!--main S-->
+			<main id="contents">
+				<nav class="gnb">
+					<ul>
+						<li><a>TV편성</a></li>
+						<li><a class="current">베스트</a></li>
+						<li><a>기획전</a></li>
+						<li><a>이벤트</a></li>
+					</ul>
+				</nav>
+				<section class="contents">
+				
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전 페이지로 바로가기</a></span>
+					<h2><span>카테고리명</span></h2>
+					<span class="floating_btn_right"><a class="view_category">전체 카테고리 보기</a></span>
+					
+					<div class="contents_wrap">
+					
+						<!-- category fulldown layer -->
+						<div class="ctgr_fulldown">		
+							<nav class="category">
+								<h2>카테고리</h2>
+								<ul>
+									<li><a href="javascript:;"><span></span>패션/잡화</a></li>
+									<li><a href="javascript:;"><span></span>가구/인테리어</a></li>
+									<li><a href="javascript:;"><span></span>유아동</a></li>
+									<li><a href="javascript:;"><span></span>주방</a></li>
+									<li><a href="javascript:;"><span></span>주방가전</a></li>
+									<li><a href="javascript:;"><span></span>생활</a></li>
+									<li><a href="javascript:;"><span></span>이미용</a></li>
+									<li><a href="javascript:;"><span></span>디지털</a></li>
+									<li><a href="javascript:;"><span></span>생활가전</a></li>
+									<li><a href="javascript:;"><span></span>식품</a></li>
+									<li><a href="javascript:;"><span></span>헬스/레저</a></li>
+									<li><a href="javascript:;"></a></li>
+								</ul>
+							</nav>
+							<p class="sideClose"><span><em>X</em></span></p>
+						</div>
+						<!-- /category fulldown layer -->
+						
+						<!-- 2015-05-12 수정 -->
+						<ul class="tab_group tabtype2 piece4 ui-tab-btns ui-accordion-btn">
+							<li><a class="current"data-tab-target="detail_tab1"><span>1개월</span></a></li>
+							<li><a data-tab-target="detail_tab2"><span>3개월</span></a></li>
+							<li><a data-tab-target="detail_tab3"><span>6개월</span></a></li>
+							<li><a class="accordion_btn" data-tab-target="detail_tab4"><span>기간 조회</span></a></li>
+						</ul>
+						<!-- /2015-05-12 수정 -->
+						<!-- 기간 조회 -->
+						<div class="accordion_wrap">
+							<div class="period">
+								<div class="accordion_con">
+									<div class="period_inquiry">
+										<div class="period_ymd">
+											<p>
+												<span>
+													<select name="" tabindex="4">
+									                      <option value="">2014</option>
+									                      <option value="">2015</option>
+									                </select>
+									                <em>년</em>
+												</span>
+											</p>
+											<p>
+												<span>
+													<select name="" tabindex="4">
+									                      <option value="">1</option>
+									                      <option value="">2</option>
+									                      <option value="">3</option>
+									                      <option value="">4</option>
+									                      <option value="">5</option>
+									                      <option value="">6</option>
+									                      <option value="">7</option>
+									                      <option value="">8</option>
+									                      <option value="">9</option>
+									                      <option value="">10</option>
+									                      <option value="">11</option>
+									                      <option value="">12</option>
+									                </select>
+									                <em>월</em>
+												</span>
+											</p>
+											<p>
+												<span>
+													<select name="" tabindex="5">
+									                      <option value="">1</option>
+									                      <option value="">2</option>
+									                      <option value="">3</option>
+									                      <option value="">4</option>
+									                      <option value="">5</option>
+									                      <option value="">6</option>
+									                      <option value="">7</option>
+									                      <option value="">8</option>
+									                      <option value="">9</option>
+									                      <option value="">10</option>
+									                      <option value="">11</option>
+									                      <option value="">12</option>
+									                      <option value="">13</option>
+									                      <option value="">14</option>
+									                      <option value="">15</option>
+									                      <option value="">16</option>
+									                      <option value="">17</option>
+									                      <option value="">18</option>
+									                      <option value="">19</option>
+									                      <option value="">20</option>
+									                      <option value="">21</option>
+									                      <option value="">22</option>
+									                      <option value="">23</option>
+									                      <option value="">24</option>
+									                      <option value="">25</option>
+									                      <option value="">26</option>
+									                      <option value="">27</option>
+									                      <option value="">28</option>
+									                      <option value="">29</option>
+									                      <option value="">30</option>
+									                      <option value="">31</option>
+									                </select>
+									                <em>일</em>
+									            </span>
+										    </p>
+										</div>
+										<div class="period_ymd">
+											<p>
+												<span>
+									                <em class="wave">~</em>
+													<select name="" tabindex="4">
+									                      <option value="">2014</option>
+									                      <option value="">2015</option>
+									                </select>
+									                <em>년</em>
+												</span>
+											</p>
+											<p>
+												<span>
+													<select name="" tabindex="4">
+									                      <option value="">1</option>
+									                      <option value="">2</option>
+									                      <option value="">3</option>
+									                      <option value="">4</option>
+									                      <option value="">5</option>
+									                      <option value="">6</option>
+									                      <option value="">7</option>
+									                      <option value="">8</option>
+									                      <option value="">9</option>
+									                      <option value="">10</option>
+									                      <option value="">11</option>
+									                      <option value="">12</option>
+									                </select>
+									                <em>월</em>
+												</span>
+											</p>
+											<p>
+												<span>
+													<select name="" tabindex="5">
+									                      <option value="">1</option>
+									                      <option value="">2</option>
+									                      <option value="">3</option>
+									                      <option value="">4</option>
+									                      <option value="">5</option>
+									                      <option value="">6</option>
+									                      <option value="">7</option>
+									                      <option value="">8</option>
+									                      <option value="">9</option>
+									                      <option value="">10</option>
+									                      <option value="">11</option>
+									                      <option value="">12</option>
+									                      <option value="">13</option>
+									                      <option value="">14</option>
+									                      <option value="">15</option>
+									                      <option value="">16</option>
+									                      <option value="">17</option>
+									                      <option value="">18</option>
+									                      <option value="">19</option>
+									                      <option value="">20</option>
+									                      <option value="">21</option>
+									                      <option value="">22</option>
+									                      <option value="">23</option>
+									                      <option value="">24</option>
+									                      <option value="">25</option>
+									                      <option value="">26</option>
+									                      <option value="">27</option>
+									                      <option value="">28</option>
+									                      <option value="">29</option>
+									                      <option value="">30</option>
+									                      <option value="">31</option>
+									                </select>
+									                <em>일</em>
+									            </span>
+										    </p>
+										</div>
+									    <p class="inquiry"><a class="btn_ib10 btn_radius4 btn_white btn_h32">조회</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //기간 조회 -->
+						
+						
+						<!-- tab -->
+						<div class="toggleView">
+												
+							<!-- tab -->
+							<ul class="tab_group piece2 tab_detail ui-tab-btns">
+								<li><a class="current">기본정보</a></li>
+								<li><a class="">상품평(999)</a></li>
+							</ul>
+							<!-- /tab -->
+							
+							<div id="detail_tab1" class="ui-tab-content basicinfo">
+							
+								<!-- 상품고시정보 -->
+								<div class="tooggle_box active">
+									<div class="toggle_tit ui-accordion-btn">
+										<p>상품고시정보<em></em></p>
+									</div>
+									<div class="toggle_con">
+										<div class="toggle_con_padding">											
+											<ul class="listtype1">
+												<li><em>종류</em>미니 파우치</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //상품고시정보 -->
+								<!-- 배송정보 -->
+								<div class="tooggle_box">
+									<div class="toggle_tit ui-accordion-btn">
+										<p>배송정보<em></em></p>
+									</div>
+									<div class="toggle_con">
+										<div class="toggle_con_padding">											
+											<div class="asinput">
+												도서지역(제주 등)을 제외하고는 전국 어느 곳이나 배송료가 무료입니다.<br>
+												배송은 결제확인 후 1일~4일이며, 배송조회에서 배송현황을 확인하실 수 있습니다.<br>
+											</div>											
+										</div>
+									</div>
+								</div>
+								<!-- //배송정보 -->
+								<!-- 취소/반품/AS안내 -->
+								<div class="tooggle_box">
+									<div class="toggle_tit ui-accordion-btn">
+										<p>취소/반품/AS안내<em></em></p>
+									</div>
+									<div class="toggle_con">
+										<div class="toggle_con_padding">											
+											<div class="asinput">
+												구매자 사정으로 교환이나 환불을 할 경우 왕복 배송료는 구매자 부담이며, 상품에 이상이 있거나 잘못 배송이 된 경우에는 왕복 배송료를 판매자가 부담합니다.
+											</div>											
+										</div>
+									</div>
+								</div>
+								<!-- //취소/반품/AS안내 -->							
+							</div>
+							
+							<div id="detail_tab2" class="ui-tab-content" style="display:none;">
+							상품평 22222222
+							</div>
+							
+						</div>
+						<!-- /tab -->
+						
+						<!-- 별점 -->
+						<div class="selectscore">
+							<dl class="form_input2">
+								<dt>상품품질</dt>
+								<dd>
+									<ul class="star_score">
+										<li><span class="star">1점</span></li>
+										<li><span class="star">2점</span></li>
+										<li><span class="star">3점</span></li>
+										<li><span class="star">4점</span></li>
+										<li><span class="star">5점</span></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="form_input2">
+								<dt>배송</dt>
+								<dd>
+									<ul class="star_score">
+										<li><span class="star">1점</span></li>
+										<li><span class="star">2점</span></li>
+										<li><span class="star">3점</span></li>
+										<li><span class="star">4점</span></li>
+										<li><span class="star">5점</span></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="form_input2">
+								<dt>서비스</dt>
+								<dd>
+									<ul class="star_score">
+										<li><span class="star">1점</span></li>
+										<li><span class="star">2점</span></li>
+										<li><span class="star">3점</span></li>
+										<li><span class="star">4점</span></li>
+										<li><span class="star">5점</span></li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<!-- /별점 -->
+
+
+
+					</div>
+					
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<footer class="footer">
+				<!-- 2015-05-08 수정 -->
+				<nav class="fmu">
+					<ul>
+						<li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
+						<li><a>고객센터</a></li>
+						<li><a href="tel:0801301003">상담전화</a></li>
+						<li><a>APP설치</a></li>
+					</ul>
+				</nav>
+				<nav class="fmu2">
+					<ul>
+						<li><a>회사소개</a></li>
+						<li><a>이용약관</a></li>
+						<li><a>청소년보호정책</a></li>
+						<li><a>개인정보취급방침</a></li>
+					</ul>
+				</nav>
+				<address>
+					<p>
+						<span>아이디지털홈쇼핑</span>
+						<span>대표 : 민택근</span>
+					</p>
+					<p>서울특별시 중구 퇴계로 131 (신일빌딩 6층)</p>
+					<p>사업자등록번호 : 117-81-54803</p>
+					<p>통신판매업 신고 2013-서울종로-0384</p>
+					<p class="cs"><span>문의 <a href="mailto:help@idigitalhomeshopping.com">help@idigitalhomeshopping.com</a></span><span class="tel">080-130-1010</span></p>
+					<p>
+						<span><a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2008301010030201608&area1=&area2=&currpage=1&searchKey=04&searchVal=2148618758&stdate=&enddate=" target="_blank">사업자정보확인</a></span>
+						<span><a>OO은행 채무지급 보증안내</a></span>
+					</p>		
+					<p>Copyright  ©I-DIGITAL HOME SHOPPING. All Rights Reserved.</p>
+			</footer>
+			<!-- /2015-05-08 수정 -->
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+
+	</div><!-- end wrap -->
+	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
+	
+	<div class="dragUpBoxWrap ui-detail-option">	
+		
+		<div class="optionWrap ui-detail-optbox">
+			<!-- 2015-05-07 최외각 div 추가 -->
+			<div class="goodsoption">
+				<!-- 2015-05-07 위치변경 -->
+				<p class="dragBtn ui-detail-dragbtn"><a href="javascript:;">버튼</a></p>
+				<!-- /2015-05-07 위치변경 -->
+				<div class="option">
+					<p class="selOPtion">
+						<select>
+							<option>사은품1-A 선택</option>
+							<option>사은품1-B 선택</option>
+						</select>
+					</p>
+					<p class="selOPtion">
+						<select>
+							<option>사은품2-A 선택</option>
+							<option>사은품2-B 선택</option>
+						</select>
+					</p>
+					<p class="selOPtion">
+						<select>
+							<option>옵션1 선택</option>
+							<option>옵션2 선택</option>
+						</select>
+					</p>
+				</div>			
+				<div class="selected">
+					<ul>						
+						<li>
+							<article class="sel_amount_only ui-stepper ui-evt-bound">
+								<div>
+									<span class="minus"><em>-</em></span>
+									<p><input type="number" value="1" min="1" max="999" tabindex="2"></p>
+									<span class="plus"><em>+</em></span>
+								</div>							
+							</article>
+						</li>
+						<li>
+							<p class="sel_option">베이지/95</p>
+							<article class="sel_amount ui-stepper ui-evt-bound">							
+								<div>
+									<span class="minus"><em>-</em></span>
+									<p><input type="number" value="1" min="1" max="999" tabindex="3"></p>
+									<span class="plus"><em>+</em></span>
+								</div>							
+								<span class="reset"><span class="btn del"><a>삭제</a></span></span><!-- 2015-05-06 수정 -->
+							</article>
+						</li>
+						<li>
+							<p class="sel_option">[옵션111111] 베이지베이지베이지베이지베이지/free</p>
+							<article class="sel_amount ui-stepper ui-evt-bound">							
+								<div>
+									<span class="minus"><em>-</em></span>
+									<p><input type="number" value="1" min="1" max="999" tabindex="4"></p>
+									<span class="plus"><em>+</em></span>
+								</div>							
+								<span class="reset"><span class="btn del"><a>삭제</a></span></span><!-- 2015-05-06 수정 -->
+							</article>
+						</li>
+					</ul>
+				</div>
+				<div class="priceSumInfo">
+				<dl>
+					<dt>총 주문금액</dt>
+					<dd>
+						<span class="price"><em>9,876,543</em>원</span>
+					</dd>
+				</dl>
+			</div>
+			</div>
+			<!-- /2015-05-07 최외각 div 추가 -->			
+		</div>
+		<div class="buttonWrap ui-detail-btnbox">	
+			<!-- 2015-05-07 수정 -->
+			<!-- 일반상품 -->
+			<div class="btnZone">
+				<p class="square"><!-- 2015-05-12 : 버튼 위치 변경 -->
+					<span class="btn iconed btn-wish"><a>위시리스트</a></span>
+					<span class="btn iconed btn-cart" style="display:inline;"><a>장바구니</a></span>
+					<span class="btn iconed btn-gocart" style="display:none;"><a>장바구니</a></span>
+				</p>
+				<div class="btns_wrap">
+					<span class="btn btn-buy" style="display:inline;"><a>구매하기</a></span>
+					<span class="btn btn-order" style="display:none;"><a>구매하기</a></span>
+				</div>
+			</div>
+			<!-- /일반상품 -->
+			<!-- /2015-05-07 수정 -->
+			<!-- 2015-05-08 수정 -->
+			<!-- 무형상품 -->
+			<div class="btnZone btn_counsel">
+				<p class="square">
+					<span class="btn iconed btn-wish"><a>위시리스트</a></span>
+				</p>
+				<div class="btns_wrap">
+					<span class="btn counsel"><a>상담신청하기</a></span>
+				</div>
+			</div>
+			<!-- /무형상품 -->
+			<!-- /2015-05-08 수정 -->
+			<!-- 2015-05-07 수정 -->
+			<!-- 품절일 경우 -->
+			<div class="btnZone btn_soldout">
+				<p class="square">
+					<span class="btn iconed btn-wish"><a>위시리스트</a></span>
+				</p>
+				<div class="btns_wrap">
+					<p>죄송합니다.<br>이 상품은 <span class="emp2">품절</span> 되었습니다.</p>
+				</div>
+			</div>
+			<!-- /품절일 경우 -->
+			<!-- /2015-05-07 수정 -->
+		</div>
+		
+	</div>
+	
+	
+	
+</div><!-- end container -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<script type="text/javascript" src="/contents/2015_t/resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/contents/2015_t/resources/js/touch.js"></script>
+<script type="text/javascript" src="/contents/2015_t/resources/js/jquery-mobile.ui.js"></script>
+<script type="text/javascript" src="/contents/2015_t/resources/js/jquery-style.ui.js"></script>
+<script type="text/javascript" src="/contents/2015_t/resources/js/overflow.js"></script>
+<script type="text/javascript" src="/contents/2015_t/resources/js/swipe.js"></script>
+</body>
+</html>

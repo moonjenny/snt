@@ -1,0 +1,160 @@
+@charset "utf-8";
+/*
+* 파일명	: member.css (로그인,회원가입,모바일간편결제)
+* 작성자	: 신세연
+* 작성일	: 2014.10.21
+*/
+
+/*로그인*/
+.loginZone{padding:40px 15px 0;}
+.loginZone fieldset{position:relative;}
+.loginZone fieldset .input_box{margin-right:80px;}
+.loginZone fieldset .input_box ul li{margin-bottom:8px;}
+.loginZone fieldset .input_box ul li span.inputBox{}
+.loginZone fieldset .login_btn{position:absolute;top:0;right:0;}
+.loginZone fieldset .login_btn a{width:70px;height:30px;padding:20px 0;font-size:16px;line-height:30px;font-weight:bold;}
+.loginZone fieldset .check{min-width:210px;height:22px;margin-right:80px;}
+.loginZone fieldset .check li{float:left;}
+.loginZone fieldset .check li:first-child{width:52%;}
+.loginZone fieldset .check li:last-child{width:48%;}
+.loginZone fieldset .check li input[type="checkbox"]{margin-right:5px}
+.loginZone fieldset .check li label{color:#555;font-size:13px;}
+.loginZone ul.btn_single.third li:nth-child(1){width:32.5%;}
+.loginZone ul.btn_single.third li:nth-child(2){width:35%;}
+.loginZone ul.btn_single.third li:nth-child(3){width:32.5%;}
+.loginZone ul.btn_multi{margin-top:0;}
+
+/*아이디 찾기 , 비밀번호 찾기*/
+.memSrchZone{padding:36px 15px 0;}
+.memSrchZone ul.mark{padding-top:25px;}
+.memSrchZone .result_id{margin:19px 0 25px;text-align:center;}
+.memSrchZone .result_id p{margin-bottom:-9px;color:#444;font-size:14px;font-weight:bold;}
+.memSrchZone .result_id p span{margin-left:20px;color:#666;font-weight:normal;}
+.memSrchZone .result_pw{margin-top:22px;margin-bottom:-8px;}
+.memSrchZone .result_pw dl.form_input2{margin-bottom:0;}
+.memSrchZone .pw_change{padding:0;}
+.memSrchZone .pw_change ul.btn_multi{margin-top:15px;}
+.memSrchZone .pw_memory{position:relative;height:32px;padding-right:97px;}
+.memSrchZone .pw_memory ul.mark{padding-top:7px;}
+.memSrchZone .pw_memory p.password{position:absolute;top:0;right:0;}
+.memSrchZone .pw_memory p.password a.btn_ib0{width:90px;}
+
+/*비밀번호 변경안내*/
+.pw_change{padding:22px 15px 0;}
+.pw_change p.pw_chg_care{color:#666;font-size:12px;}
+.pw_change p.pw_chg_care span{color:#444;font-size:12px;font-weight:bold;}
+.pw_change p.pw_chg_care:nth-child(1){margin-bottom:3px;}
+.pw_change p.pw_chg_care:nth-child(2){margin-bottom:23px;}
+.pw_change dl.form_input2{margin-top:10px;margin-bottom:0;}
+.pw_change dl.form_input2 dd{padding-left:120px;}
+
+/*step*/
+ol.step{height:35px;}
+ol.step li{position:relative;float:left;height:35px;text-align:center;background:#bbb;}
+ol.step li:nth-child(1){width:21%;}
+ol.step li:nth-child(2){width:26%;}
+ol.step li:nth-child(3){width:26%;}
+ol.step li:nth-child(4){width:27%;}
+ol.step.half li:first-child{width:46%;}
+ol.step.half li:last-child{width:54%;}
+ol.step li em{display:block;z-index:1;position:absolute;top:0;right:-21px;width:21px;height:35px;background-image:url(../../img2014/ico_member.png);background-repeat:no-repeat;background-position:-21px 0;background-size:250px auto;-webkit-background-size:250px auto;}
+ol.step li span{display:block;padding:10px 0 9px 21px;color:#fff;font-size:12px;background-image:url(../../img2014/ico_member.png);background-repeat:no-repeat;background-position:0 0;background-size:250px auto;-webkit-background-size:250px auto;}
+ol.step li:nth-child(1) span{padding-left:0;background-image:none;}
+ol.step li.current{font-weight:bold;background-color:#ef8006;}
+ol.step li.current em{background-position:0 -50px;}
+ol.step li.current span{background-position:-30px -50px;}
+
+/*모바일인증*/
+.mobileCertifyZone{padding:40px 15px 0;}
+.tvCertify{padding-bottom:29px;text-align:center;}
+.tvCertify em{display:inline-block;width:60px;height:44px;background:url(../../img2014/ico_member.png) no-repeat 0 -100px;background-size:250px auto;-webkit-background-size:250px auto;}
+.tvCertify p{margin-top:5px;color:#444;font-size:16px;line-height:20px;font-weight:bold;letter-spacing:-1px;word-spacing:-1px;}
+
+/*본인인증*/
+.memCertifyZone{padding:36px 15px 0;text-align:center;}
+.certify{height:85px;margin-top:23px;}
+.certify li{float:left;width:50%;}
+.certify li:first-child a{margin-right:4px;}
+.certify li:last-child a{margin-left:4px;}
+.certify li a{height:70px;padding:15px 0 0;color:#fff;font-size:16px;line-height:30px;font-weight:bold;text-align:center;background:#bbb;}
+.certify li a em{display:block;height:32px;margin:auto;background-image:url(../../img2014/ico_button.png);background-repeat:no-repeat;background-size:150px auto;-webkit-background-size:150px auto;}
+.certify li a em.phone{width:32px;background-position:4px -25px;}
+.certify li a em.ipin{width:32px;background-position:-30px -25px;}
+.memCertifyZone ul.mark{padding-top:25px;}
+
+/*약관동의*/
+.memAgreeZone{padding:21px 0 0;}
+.memAgreeZone .whole_agree{padding:4px 15px 22px;}
+.memAgreeZone .whole_agree .check label{color:#444;font-size:14px;font-weight:bold;letter-spacing:-1px;word-spacing:-0.5px;}
+.memAgreeZone .agree{padding:0 15px;}
+.memAgreeZone dl{margin-bottom:9px;text-align:left;}
+.memAgreeZone dl:last-child{margin-bottom:0;}
+.memAgreeZone dl dt{color:#444;font-size:14px;font-weight:bold;}
+.memAgreeZone dl dd{padding-top:6px;}
+.memAgreeZone dl dd .txt{margin-bottom:8px;color:#888;font-size:11px;}
+.memAgreeZone dl dd .check_box .pabtn{position:absolute;top:8px;right:10px;}
+.memAgreeZone .order_agree{margin-top:15px;}
+.memAgreeZone .choice_agree{margin-top:21px;}
+.memAgreeZone .choice_agree .item{margin-bottom:5px;color:#888;font-size:11px;}
+
+/*회원정보*/
+.memInforZone{padding:21px 15px 0;}
+.memInforZone .readonly dl.form_input2:last-child{margin-bottom:0;}
+.memInforZone .readonly dl.form_input2 dt{top:0;}
+.memInforZone .readonly dl dd ul.mark{padding-top:5px;}
+.memInforZone ul.btn_single{min-height:40px;margin-top:25px;}
+
+/*가입완료*/
+.memCompleteZone{padding:40px 15px 0;text-align:center;}
+.memCompleteZone em{display:block;height:55px;background:url(../../img2014/ico_member.png) no-repeat center -150px;background-size:250px auto;-webkit-background-size:250px auto;}
+.memCompleteZone p{margin-top:4px;color:#666;font-size:12px;font-weight:bold;}
+.memCompleteZone p:nth-child(2){margin-top:11px;color:#444;font-size:16px;font-weight:bold;}
+.memCompleteZone span{display:block;color:#666;font-size:12px;font-weight:normal;}
+
+/*아이디중복확인*/
+.id_area{position:relative;height:32px;padding-right:75px;}
+.id_area p.dupl{position:absolute;top:0;right:0;}
+.id_area p.dupl a.btn_ib0{width:68px;}
+
+/*비밀번호*/
+.pw_regard{position:relative;min-height:25px;margin-top:5px;padding-right:70px;}
+.memInforZone dl dd .pw_regard ul.mark{padding-top:0;padding-bottom:5px;}
+.pw_regard p.view{position:absolute;top:5px;right:0;height:25px;}
+
+/*생일*/
+.birth_area{height:32px;}
+.birth_area p{float:left;}
+.birth_area p:nth-child(1){width:30%;}
+.birth_area p:nth-child(2){width:35%;}
+.birth_area p:nth-child(3){width:35%;}
+.birth_area p > span{position:relative;display:block;padding-right:20px;}
+.birth_area p:nth-child(2) span{padding-left:18px;}
+.birth_area p span em{position:absolute;top:7px;right:0;color:#666;font-size:14px;}
+
+/*휴대전화*/
+.phone_area{height:32px;}
+.phone_area p{float:left;width:33%;}
+.phone_area p:nth-child(1){width:34%;}
+.phone_area p span{position:relative;display:block;padding-left:15px;}
+.phone_area p span .inputBox{padding-left:0;}
+.phone_area p:nth-child(1) > span{padding-left:0;}
+.phone_area p span em{position:absolute;top:6px;left:0;width:15px;color:#666;font-size:14px;text-align:center;}
+.phone_area2{position:relative;padding-right:102px;}
+.phone_area2 p.submit{position:absolute;top:0;right:0;}
+.phone_area2 p.submit a.btn_ib0{width:95px;}
+.phone_area3{position:relative;margin-top:10px;padding-right:102px;}
+.phone_area3 p.confirm{position:absolute;top:0;right:0;}
+.phone_area3 p.confirm a.btn_ib0{width:95px;}
+
+/*이메일*/
+.email_area{height:32px;}
+.email_area p{float:left;}
+.email_area p:first-child{width:48.5%;}
+.email_area p:last-child{width:51.5%;}
+.email_area p > span{position:relative;display:block;padding-left:20px;}
+.email_area p:first-child > span{padding-left:0;}
+.email_area p span em{position:absolute;top:6px;left:0;width:20px;color:#666;font-size:14px;text-align:center;}
+
+/*TV비밀번호*/
+.tv_pw_area{position:relative;height:32px;}
+.tv_pw_area .tvPw{display:block;position:absolute;top:-23px;right:0;color:#888;font-size:11px;}

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head> 
+   		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <link rel="stylesheet" href="netplayer.css">
+        <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+		<script type="text/javascript" src="/contents/2015_t/resources/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="/resources/js/lib/jquery.timers.js"></script>
+        <script src="netplayer.js"></script>
+    </head>
+
+    <body>
+	    <div class="play_wrap"><!-- 클래스 추가 : 기본모드 play_wrap, 전체화면 play_wrap full, 작은화면 play_wrap small -->
+			<!--  <div class="side_out" style="display:none">축소</div> -->
+			<!-- 상단 퀵 메뉴
+			<ul class="quick_nav">
+				<li class="buy callback custom" data-id='buy'><a href="javascript:;"><em></em><span>바11로구매</span></a></li>
+				<li class="linkUrl callback custom" data-id='linkUrl'><a href="javascript:;"><em></em><span>상세보기</span></a></li>
+			</ul>
+			<!--// 상단 퀵 메뉴 -->
+
+			<div class="sun_light" style="display:none">
+				<p id="bright"><span id="bright_value"></span></p>
+				<em class="bright_b"></em>
+			</div>
+			<div class="sun_music" style="display:none">
+				<p id="volume"><span id="volume_value"></span></p>
+				<em class="volume_b"></em>
+			</div>
+			<!--// 볼륨 및 명앙 상태 조절 바 -->
+			
+			<!-- 볼륨 및 명앙 텍스트 -->
+			<div class="light_text" style="display:none"><em></em>0</div>
+			<div class="music_text" style="display:none"><em></em>0</div>
+			<!--// 볼륨 및 명앙 텍스트 -->
+		
+			<!-- 하단 타임라인 및 버튼 -->
+			<div class="timeline_area">
+				<div class="timeline">
+					<p>
+						<strong id="load_status">gray</strong>
+						<span id="seek_value">red</span>
+					</p>
+					<em class="point">btn</em>
+				</div>
+				<div class="time_text">
+					<span class="start_time">01:04</span>
+					<span class="end_time">01:01:04</span>
+				</div>
+				<!-- <div class="timeline_btn">
+					<span class="btn_prev">perv</span>
+					<span class="btn_play">play</span>
+					<span class="btn_stop" style="display:none">stop</span>
+					<span class="btn_next">next</span>
+					<span class="btn_vol">vol</span>
+					<span class="btn_all" style="display:none">all</span>
+				</div> -->
+				<div class="timeline_deem"></div>
+			</div>
+			<!-- 하단 타임라인 및 버튼 -->
+			<!-- 2016-06-20 버튼 추가 및 텍스트 수정 -->
+			<div class="func6">화면닫기</div>
+			<div class="func2">작은화면</div>
+			<div class="func4">기본화면</div>
+			<div class="func3">전체화면</div>
+			<div class="func1_on">음향켜기</div>
+			<div class="func1">음향끄기</div>
+			<div class="btn_buy timeup">구매하기</div><!-- 2016-06-20 timeline가 보여질 시 timeup클래스 추가 -->
+			<div class="btn_ctr_wrap">
+				<p class="btn_play"></p>
+				<p class="btn_stop" style="display:none"></p>
+				<div class="onair_time">ON AIR<span></span>남은 시간 :  00:45:00</div>
+			</div>
+			<div class="func_title"><span class="func_back"></span><p id="title_text">상품의 제목이나 정보가 들어갈 위치입니다.상품의 제목이나 정보가 들어갈 위치입니다.</p><em id="title_price"></em></div>
+			<div class="sns_deem" style="display:none"></div>
+			<!-- 2016-06-20 버튼 추가 및 텍스트 수정 //-->
+		</div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*
+* 파일명	: etc.css (기타)
+* 작성자	: 신세연
+* 작성일	: 2014.11.28
+*/
+/*서비스소개*/
+.svcInfo{width:100%;}
+.svcInfo li{text-align:left;}
+.svcInfo li img{width:100%;}
+.svcInfo li div{position:relative;width:245px;margin:auto;padding-left:75px;}
+.svcInfo li div em{position:absolute;top:25px;left:20px;width:35px;background-image:url(../../img2014/ico_service.png);background-repeat:no-repeat;background-size:120px auto;-webkit-background-size:120px auto;}
+.svcInfo li div dl{padding-top:21px;}
+.svcInfo li div dl dt{padding-bottom:6px;}
+.svcInfo li dl dt{color:#444;font-size:13px;font-weight:bold;}
+.svcInfo li dl dd{color:#666;font-size:11px;}
+.svcInfo li:nth-child(2){padding:10px 0 21px;text-align:center;border-bottom:1px solid #f4f4f4;}
+.svcInfo li:nth-child(2) dl dt{color:#222;font-size:16px;}
+.svcInfo li:nth-child(2) dl dd{color:#222;font-size:13px;}
+.svcInfo li:nth-child(3) div em{height:45px;background-position:0 0;}
+.svcInfo li:nth-child(4) div em{height:40px;background-position:-40px 0;}
+.svcInfo li:nth-child(5) div em{height:35px;background-position:-80px 0;}
+
+/*약관*/
+.provision{padding:15px 15px 0;}
+.provision dl dt{padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.provision dl dd{padding-top:5px;color:#666;font-size:11px;}
+.provision dl dd p{padding-bottom:5px;color:#666;font-size:11px;}
+.provision dl dd ul{overflow:hidden;}
+.provision dl dd ul li{padding:0 0 10px;}
+.provision dl dd .text1{padding-bottom:5px;padding-left:12px;color:#666;font-size:11px;text-indent:-12px;}
+.provision dl dd .text2{padding:3px 0;padding-left:15px;color:#666;font-size:11px;text-indent:-15px;}
+
+.provision .additional{margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;background:#f9f9f9;}
+.provision .additional dl:first-child dt{padding-top:0;}
+.provision .additional dl dd{padding-top:5px;}
+
+/*개인정보취급방침*/
+.policy{padding:15px 15px 0;}
+.policy h3{margin-bottom:5px;color:#555;font-size:12px;}
+.policy dl dt{padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.policy dl dd{padding-top:5px;color:#666;font-size:11px;}
+.policy dl dd ul{overflow:hidden;}
+.policy dl dd ul li{padding:0 0 10px;}
+.policy p{padding-bottom:5px;color:#666;font-size:11px;}
+.policy p span{vertical-align:top;}
+.policy p a{color:#666;font-size:11px;}
+.policy dl dd .text1{padding-left:14px;color:#666;font-size:11px;text-indent:-14px;}
+.policy dl dd .text2{padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;}
+.policy dl dd .text2_b{padding-top:3px;padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;font-weight:bold;}
+.policy dl dd .text3{padding-left:10px;color:#666;font-size:11px;text-indent:-10px;}
+
+.pd_left10{padding-left:10px;}
+.pd_left12{padding-left:12px;}
+.pd_left15{padding-left:15px;}
+
+.policy .date{margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;background:#f9f9f9;}
+.policy .date p{margin:0;padding:0;color:#444;font-size:12px;font-weight:bold;text-align:center;}
+.policy .date p span{position:relative;margin-left:12px;padding-left:10px;font-weight:normal;vertical-align:top;}
+.policy .date p span em{position:absolute;top:1px;left:0;width:1px;height:12px;font-size:0;background:#ddd;}
+
+.colTable table{width:100%;}
+.colTable table thead tr th{text-align:center;}
+.colTable table thead tr th p{padding:7px 0;color:#555;font-size:12px;border-top:1px solid #eee;border-left:1px solid #eee;border-bottom:1px solid #eee;background:#f9f9f9;}
+.colTable table thead tr th:first-child p{border-top-left-radius:3px;-webkit-border-top-left-radius:3px;-moz-border-top-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-left-radius:3px;-moz-border-bottom-left-radius:3px;}
+.colTable table thead tr th:last-child p{border-right:1px solid #eee;border-top-right-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-top-right-radius:3px;border-bottom-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-bottom-right-radius:3px;}
+.colTable table tbody tr th{padding:6px 0 3px;color:#555;font-size:12px;text-align:center;border-bottom:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td{padding:6px 5px 3px;border-bottom:1px solid #eee;border-left:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td:first-child{border-left:0;}
+.colTable table tbody tr th p{padding-top:3px;}
+.colTable table tbody tr td p{padding-top:3px;}
+
+/*채무지급 보증안내*/
+.credit{padding:22px 15px 25px;}
+.credit p{margin-bottom:13px;color:#555;font-size:13px;}
+.credit img{width:100%;}
+

@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*
+* 파일명	: etc.css (기타)
+* 작성일	: 2015.04.20
+* 수정일	: 2015.05.27
+*/
+
+/*서비스소개*/
+.visualimg img {width:100%;}
+.svcInfo {padding:0 15px;}
+.svcInfo ul {margin-top:10px;}
+.svcInfo ul li {position:relative;padding:8px 0;border-bottom:1px solid #eee;}
+.svcInfo ul li span {display:inline-block;width:70px;font-weight:bold;}
+.svcInfo ul li p {display:inline-block;color:#666;}
+
+/*약관*/
+.provision {padding:15px 15px 0;}
+.provision dl dt {padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.provision dl dd {padding-top:5px;color:#666;font-size:11px;}
+.provision dl dd p {padding-bottom:5px;color:#666;font-size:11px;}
+.provision dl dd ul {overflow:hidden;}
+.provision dl dd ul li {padding:0 0 10px;}
+.provision dl dd .text1 {padding-bottom:5px;padding-left:12px;color:#666;font-size:11px;text-indent:-12px;}
+.provision dl dd .text2 {padding:3px 0;padding-left:15px;color:#666;font-size:11px;text-indent:-15px;}
+
+.provision .additional {margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#f9f9f9;}
+.provision .additional dl:first-child dt {padding-top:0;}
+.provision .additional dl dd {padding-top:5px;}
+
+/*개인정보취급방침*/
+.policy {padding:15px 15px 0;}
+.policy h3 {margin-bottom:5px;color:#555;font-size:12px;}
+.policy dl dt {padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.policy dl dd {padding-top:5px;color:#666;font-size:11px;}
+.policy dl dd ul {overflow:hidden;}
+.policy dl dd ul li {padding:0 0 10px;}
+.policy p {padding-bottom:5px;color:#666;font-size:11px;}
+.policy p span {vertical-align:top;}
+.policy p a {color:#666;font-size:11px;}
+.policy p .bold{font-weight:700;}
+.policy dl dd .text1 {padding-left:14px;color:#666;font-size:11px;text-indent:-14px;}
+.policy dl dd .text2 {padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;}
+.policy dl dd .text2_b {padding-top:3px;padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;font-weight:bold;}
+.policy dl dd .text3 {padding-left:10px;color:#666;font-size:11px;text-indent:-10px;}
+
+.policy .result table {width:100%;}
+.policy .result table tr {cursor:pointer;}
+.policy .result table tr th p {padding:7px 2px;color:#555;font-size:14px;border:1px solid #ddd;border-right:none;background:#f6f6f6;}
+.policy .result table tr th:first-child p {border-left:none;}
+.policy .result table tr td {padding:7px 2px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;vertical-align:middle;}
+.policy .result table tr td:nth-child(1) {color:#666;text-align:center;border-left:none}
+.policy .result table tr td:nth-child(2) p {padding:0;color:#666;}
+.policy .result table tr td:nth-child(2) .juso1 {color:#666;}
+.policy .result table tr td:nth-child(2) .juso2 {margin-top:3px;color:#999;font-size:11px;}
+.prev_link{font-weight:bold;}
+
+
+
+.pd_left10 {padding-left:10px;}
+.pd_left12 {padding-left:12px;}
+.pd_left15 {padding-left:15px;}
+
+.policy .date {margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#f9f9f9;}
+.policy .date p {margin:0;padding:0;color:#444;font-size:12px;font-weight:bold;text-align:center;}
+.policy .date p span {position:relative;margin-left:12px;padding-left:10px;font-weight:normal;vertical-align:top;}
+.policy .date p span em {position:absolute;top:1px;left:0;width:1px;height:12px;font-size:0;background:#ddd;}
+
+.colTable table {width:100%;}
+.colTable table thead tr th {text-align:center;}
+.colTable table thead tr th p {padding:7px 0;color:#555;font-size:12px;border-top:1px solid #eee;border-left:1px solid #eee;border-bottom:1px solid #eee;background:#f9f9f9;}
+.colTable table thead tr th:first-child p {border-top-left-radius:3px;-webkit-border-top-left-radius:3px;-moz-border-top-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-left-radius:3px;-moz-border-bottom-left-radius:3px;}
+.colTable table thead tr th:last-child p {border-right:1px solid #eee;border-top-right-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-top-right-radius:3px;border-bottom-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-bottom-right-radius:3px;}
+.colTable table tbody tr th {padding:6px 0 3px;color:#555;font-size:12px;text-align:center;border-bottom:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td {padding:6px 5px 3px;border-bottom:1px solid #eee;border-left:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td:first-child {border-left:0;}
+.colTable table tbody tr th p {padding-top:3px;}
+.colTable table tbody tr td p {padding-top:3px;}
+
+.tb_list table {width:100%;border-top:1px solid #eee;}
+.tb_list table thead tr th {padding:10px 12px;text-align:center;background:#f6f6f6;border-bottom:1px solid #eee;border-left:1px solid #eee;font-size:13px;font-weight:normal;}
+.tb_list table thead tr th:first-child {border-left:0;}
+.tb_list table tbody tr th {padding:10px 12px;color:#555;font-size:12px;text-align:center;border-bottom:1px solid #eee;}
+.tb_list table tbody tr td {padding:10px 12px;border-bottom:1px solid #eee;border-left:1px solid #eee;}
+
+/*채무지급 보증안내*/
+.credit {padding:22px 15px 25px;}
+.credit p {margin-bottom:13px;color:#555;font-size:13px;}
+.credit img {width:100%;}
+
+.select_st{width:100%;height:22px;border:#888888 solid 1px;background:#ffffff; display:block;}

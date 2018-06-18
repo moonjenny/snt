@@ -1,0 +1,436 @@
+@charset "utf-8";
+/*
+* 파일명	:order.css (주문결제,모바일간편결제)
+* 작성일	: 2015.04.20
+* 수정일	: 2015.05.27
+*/
+
+/*주문결제하기*/
+.orderZone .order_tit {margin-top:20px;padding:8px 15px;font-size:14px;background:#eee;}
+.orderZone .order_tit:first-child {margin-top:0;border-top:0;}
+.orderZone .step+.order_tit{margin-top:20px;}
+.orderZone .order_wrap {padding:0 15px;}
+.total_wrap {margin:0 15px;padding:0 10px 1px;background:#f6f6f6;}
+.orderZone .total_wrap {margin-top:15px;}
+.orderZone .complete_wrap {margin:15px;padding:15px 15px 25px;background:#eee;}
+
+/*주문상품*/
+ul.order_goods {border-top:1px solid #ddd;}
+.orderZone ul.order_goods {margin-top:10px;border-top:4px solid #ddd;}
+ul.order_goods:first-child {margin-top:0;border-top:none;}
+ul.order_goods li .goods {z-index:0;position:relative;min-height:70px;margin:0;padding:10px 10px 10px 80px;}
+ul.order_goods li .goods .goods_img {position:absolute;top:10px;left:0}
+ul.order_goods li .goods .goods_img img {width:70px;height:70px;}
+ul.order_goods li .goods .goods_img .soldout {z-index:10;position:absolute;top:0;left:0;width:70px;height:70px;}
+ul.order_goods li .goods .goods_img .soldout em {padding:15px 0 17px;}
+ul.order_goods li .goods .goods_name {overflow:hidden;max-height:34px;color:#444;font-size:13px;line-height:1.4em;font-weight:bold;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;}
+ul.order_goods li .goods .goods_price {padding-top:10px;line-height:1;text-align:left;}
+ul.order_goods li .goods .goods_price del {margin-right:5px;color:#999;font-size:12px;/* font-weight:bold; */color:#bfbfbf;text-decoration:none;}
+ul.order_goods li .goods .goods_price del em {color:#999;color:#bfbfbf;font-size:13px;vertical-align:-1px;text-decoration:line-through;}
+ul.order_goods li .goods .goods_price span {color:#666;font-size:13px;}
+ul.order_goods li .goods .goods_price span em {color:#e50278;color:#3b3b3b;font-size:17px;vertical-align:-1px;font-weight:bold;}
+ul.order_goods li .goods .goods_counsel {padding-top:10px;font-size:14px;font-weight:bold;text-align:left;color:#e50278;}
+ul.order_goods li .goods_append {padding:4px 2px 4px;border-top:1px solid #ddd;}
+ul.order_goods li .goods_append p {position:relative;padding:2px 0 2px 80px;}
+ul.order_goods li .goods_append p em {position:absolute;top:4px;left:0;font-weight:bold;}
+ul.order_goods li .goods_append p:nth-of-type(3) {margin-top:6px;padding-top:6px;;border-top:1px solid #ddd;}
+ul.order_goods li .goods_append p:nth-of-type(3) em {top:8px;}
+ul.order_goods li .goods_append p .gift_option {display:block;}
+
+.order_wrap .check.agree {padding:20px 0 0;text-align:left;}
+
+/*주문고객정보*/
+.order_info {padding:6px 0 0;}
+.order_info dl {overflow:hidden;position:relative;}
+.order_info dl dt {position:absolute;top:5px;left:0;color:#444;font-size:14px;font-weight:bold;}
+.order_info dl dd {padding-top:6px;padding-left:80px;color:#666;font-size:13px;}
+
+/*받는고객정보*/
+.receiverinfo {margin:20px 0 0;}
+.receiverinfo.form_input2 dd {padding-left:80px;}
+.receiverinfo .delivery_list {margin-left:-80px;}
+.order_wrap .same {margin-top:15px;}
+ul.tab_address {overflow:hidden;/* padding:0; *//* margin:0; */padding-top:10px;}
+ul.tab_address li {width:33.3%;}
+
+/*받으시는분-배송지목록*/
+.receive_area {overflow:hidden;position:relative;padding-right:87px;}
+.receive_area .btn a {padding:8px 0 7px;font-size:13px;}
+.receive_area p.delivery {position:absolute;top:0;right:0;}
+.receive_area.nobtn {padding-right:0;}
+.order_wrap.rcvcustomer .receiverinfo {margin-bottom:0;}
+.order_wrap.rcvcustomer .form_input dt {padding-top:10px;}
+
+/*주소*/
+.address_area {overflow:hidden;position:relative;padding-right:97px;}
+.address_area p {float:left;}
+.address_area p:nth-child(1) {width:100%;}
+.address_area p:nth-child(2) {width:52%;}
+.address_area p span {position:relative;display:block;padding-left:15px;}
+.address_area p span .inputBox {padding-left:0;}
+.address_area p span .inputBox input {text-align:center;text-indent:0;}
+.address_area p:nth-child(1) > span {padding-left:0;}
+.address_area p span em {position:absolute;top:6px;left:0;width:15px;color:#666;font-size:14px;text-align:center;}
+.address_area .post {position:absolute;top:0;right:0;}
+.address_area .btn.size2 a {width:90px;font-size:13px;}
+.address_area2 {margin-top:5px;}
+.address_area3 {margin:10px 0 0;}
+.order_wrap .check.address_area3 {text-align:left;}
+
+/*배송지목록*/
+.delivery_list {overflow:hidden;margin-top:5px;padding:5px 10px;border:1px solid #ddd;}
+.delivery_list li {position:relative;min-height:25px;padding:5px 0 7px;border-top:1px dashed #ddd;}
+.delivery_list li:first-child {border-top:none}
+.delivery_list li div {padding-right:50px;}
+.delivery_list li div p {color:#555;font-size:12px;}
+.delivery_list li div p:first-child {color:#555;font-size:13px;font-weight:bold;}
+.delivery_list li .select {position:absolute;top:8px;right:0;}
+
+/*배송시요구사항*/
+.delivery_area {margin-top:10px;}
+.delivery_area textarea {height:35px;}
+
+/*간편결제_수신동의*/
+.order_wrap .check_box {margin-top:15px;}
+
+/*할인정보*/
+.discount_wrap {overflow:hidden;padding:0 15px;}
+.discount_wrap ul li.area_trbl {margin:15px 0 0;}
+.discount_wrap ul li.area_trbl.hidden {height:0;font-size:0;line-height:0;}
+.discount_wrap ul li.coupon {padding-bottom:0;}
+.discount_wrap ul li h4 {color:#444;font-size:14px;}
+.discount_wrap ul li .price em {font-weight:bold;}
+.discount_wrap ul li ul.mark {margin-top:0;padding-top:5px;}
+.discount_topline {border-top:0;}
+
+/*할인정보-기본할인,TV상품할인*/
+.discount_wrap ul li.basic, .discount_wrap ul li.tv {margin-top:18px;padding:7px 10px;border:1px solid #ddd;}
+.discount_wrap ul li.basic + .discount_wrap ul li.tv {margin-top:10px;}
+.discount_wrap ul li.basic h4, .discount_wrap ul li.tv h4 {float:left;line-height:14px;}
+.discount_wrap ul li.basic .price, .discount_wrap ul li.tv .price {text-align:right;}
+.discount_wrap ul li.tv {margin-top:10px;}
+
+/*할인정보-쿠폰할인*/
+.coupon_acount {margin-bottom:15px;}
+
+/*할인정보-일시불할인*/
+.discount_wrap ul li.area_trbl.lump {margin-top:0;padding-top:15px;}
+.discount_wrap ul li.area_trbl + li.lump {margin-top:15px;border-top:1px solid #ddd;}
+.discount_wrap ul li.lump h4 {float:left;}
+.discount_wrap ul li.lump h4 input[type="checkbox"] {margin-right:5px;}
+.discount_wrap ul li.lump .price {text-align:right;}
+
+/*할인정보-쿠폰사용*/
+.coupon_goods {margin-top:0;padding:5px 0}
+.coupon_goods li {margin-top:5px;padding:10px 0;border-top:1px solid #f4f4f4;}
+.coupon_goods li:first-child {padding-top:5px;border-top:0;}
+.coupon_goods li p {position:relative;margin-bottom:10px;padding-left:10px;font-size:13px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;}
+.coupon_goods li p span {position:absolute;top:0;left:-1px;font-size:14px;line-height:17px;}
+.coupon_acount .price, .save_acount .price {position:relative;color:#444;font-weight:bold;}
+.coupon_acount span:nth-of-type(2), .save_acount span:nth-of-type(2) {position:absolute;top:0;right:0;}
+/*할인정보-적립금사용*/
+.discount_wrap ul li.savemoney {position:relative;margin-top:15px;padding-top:15px;border-top:1px solid #ddd;}
+.discount_wrap ul li.savemoney:first-child {margin-top:0;border-top:none;}
+.discount_wrap ul li.savemoney .save_use p:first-child {position:absolute;top:7px;left:0;}
+.discount_wrap ul li.savemoney .save_use p:first-child:before {content:"적립금";display:inline-block;margin-right:3px;vertical-align:top;}
+.discount_wrap ul li.savemoney .save_use p:first-child:after {content:"중";display:inline-block;margin-left:3px;vertical-align:top;}
+.discount_wrap ul li.savemoney .save_use p:first-child em {vertical-align:top;}
+.save_use {position:relative;padding-left:140px;padding-right:15px;}
+.save_use .inputBox+em {position:absolute;top:6px;right:0;}
+.save_use .inputBox input[type="text"] {text-align:right;color:#444}
+.discount_wrap ul li.savemoney .unit {display:block;margin:0;margin-top:5px;text-align:right}
+.save_use span.inputBox input[type="tel"] {text-align:right;padding-left:5px;padding-right:5px;}
+.save_use p.use {position:absolute;top:0;right:65px;}
+.save_acount {position:relative;}
+.savemoney .btns_wrap.btn2 {margin:15px 0}
+
+/*할인정보-OK캐사백사용/T멤버십사용*/
+.discount_wrap .accordion_wrap .accordion_tit p .add_per {margin-left:10px;color:#888;font-size:12px;font-weight:normal;}
+.discount_wrap .accordion_wrap .accordion_tit p .down {display:inline;position:absolute;right:33px;color:#444;font-size:14px;font-weight:normal;}
+.discount_wrap .accordion_wrap .accordion_tit p .up {display:none;position:absolute;right:33px;color:#444;font-size:14px;font-weight:normal;}
+.discount_wrap .accordion_wrap .accordion_con dl.form_agree dd {margin-bottom:4px;}
+.discount_wrap .accordion_wrap .active .accordion_tit p .down {display:none;}
+.discount_wrap .accordion_wrap .active .accordion_tit p .up {display:inline;}
+.discount_wrap .accordion_wrap .accordion_con dl.form_input dt {color:#555;font-size:13px;}
+.point_area {overflow:hidden;position:relative;padding-right:95px;}
+.point_area em {position:absolute;top:6px;right:77px;}
+.point_area p.use {position:absolute;top:0;right:0;}
+
+/*카드번호 조회 및 확인 결과*/
+.point_result dl {overflow:hidden;margin-top:10px;}
+.point_result dl dt {float:left;padding-top:2px;color:#666;font-size:13px;font-weight:bold;}
+.point_result dl dd {float:left;padding-left:5px;}
+.point_result dl dd span em {color:#666;}
+
+/*카드번호*/
+.card_quarter_area2 {overflow:hidden;position:relative;padding-right:70px;}
+.card_quarter_area2 .ocb_inquiry {position:absolute;top:0;right:0;}
+.card_quarter_area2 .tms_confirm {position:absolute;top:0;right:0;}
+.card_quarter_area {height:32px;}
+.card_quarter_area p {float:left;width:26%;}
+.card_quarter_area p:first-child {width:22%;}
+.card_quarter_area p > span {position:relative;display:block;padding-left:15px;}
+.card_quarter_area p:first-child > span {padding-left:0;}
+.card_quarter_area p span em {position:absolute;top:6px;left:0;width:15px;color:#666;font-size:14px;text-align:center;}
+
+/*적립혜택*/
+.total_wrap .benefit {padding:10px 0;border-top:2px dotted #ddd}
+.total_wrap .benefit .save dl {position:relative;}
+.total_wrap .benefit .save dl dt {padding-bottom:3px;color:#444;font-size:14px;font-weight:bold;}
+.total_wrap .benefit .save dl dt span {font-size:10px;font-weight:normal;}
+.total_wrap .benefit .save dl dd {position:absolute;top:0;right:0;}
+.total_wrap .benefit .save dl dd div {position:relative;padding-right:95px;}
+.total_wrap .benefit .save dl dd pdrZero {padding-right:0;}
+.total_wrap .benefit .save dl dd div {overflow:hidden;display:inline-block;width:100%;padding:0;color:#555;font-size:13px;font-weight:normal;vertical-align:top;}
+.total_wrap .benefit .save dl dd div p:first-child {float:left;padding-top:3px;}
+.total_wrap .benefit .save dl dd div p span {color:#555;font-size:13px;}
+.total_wrap .benefit .save dl dd .point {float:right;}
+.total_wrap .benefit .save dl dd .point em {color:#666;}
+.total_wrap .benefit .save dl dd .price {float:right;}
+.total_wrap .benefit .save .price em {color:#1476d1;}
+.total_wrap .benefit .save .price em:before {content:"+";display:inline-block;margin-right:3px;}
+.total_wrap .benefit .save dl dd div .notInfo {color:#aaa;}
+.total_wrap .benefit .save dl dd div .notInfo p:first-child {line-height:1.1;}
+.total_wrap .benefit .save dl dd div .notInfo span.point {color:#aaa;}
+.total_wrap .benefit .save dl dd div .notInfo span.point em {color:#aaa;}
+.total_wrap .benefit .save dl dd div .notInfo span.price {color:#aaa;}
+.total_wrap .benefit .save dl dd div .notInfo span.price em {color:#aaa;}
+.total_wrap .benefit .save dl dd .ocbReg {position:absolute;top:0;right:0;}
+.total_wrap .benefit .save dl dd .ocbReg a.btn_ib0 {width:83px;font-size:11px;}
+
+.skp_agree_wrap {padding:0 14px 14px;border-top:1px solid #eee;}
+.skp_agree_wrap dl.form_input dd .btn {margin-top:10px;}
+
+/*결제수단*/
+dl.pay_method {padding-top:14px;}
+dl.pay_method dt {padding-bottom:5px;color:#444;font-size:14px;font-weight:bold;}
+.pay_method .btns_wrap {margin-top:5px}
+.pay_method .btn a {height:26px;padding-top:11px;border:none;background-color:#6163d3 !important}/*a1a1a1*/
+.pay_method .btn a.current {background-color:#54546c !important}
+.pay_method .btn a:before {content:"";display:inline-block;height:26px;margin-right:10px;background:url(../../img/ico_order.png) no-repeat;background-size:200px auto;}
+.pay_method .btn.card a:before {width:35px;vertical-align:middle;background-position:0 -90px;}
+.pay_method .btn.bank2 a:before {width:35px;vertical-align:middle;background-position:-50px -90px;}
+.pay_method .btn.bank2.mob a:before {width:35px;vertical-align:middle;background-position:-80px -50px;}
+
+dl.pay_method dd ul {overflow:hidden;height:80px;margin:0;}
+dl.pay_method dd ul li {float:left;width:25.5%;}
+dl.pay_method dd ul li:first-child {width:23.5%;}
+dl.pay_method dd ul li a {display:block;height:66px;margin-left:5px;padding:12px 0 0;color:#666;font-size:12px;line-height:16px;font-weight:bold;text-align:center;border:1px solid #eee;background:#f9f9f9;}
+dl.pay_method dd ul li:first-child a {margin-left:0;}
+dl.pay_method dd ul li a em {display:block;width:40px;height:30px;margin:auto;background-image:url(../../img/ico_order.png);background-repeat:no-repeat;background-size:200px auto;}
+dl.pay_method dd ul li a em.card {background-position:0 -50px;}
+dl.pay_method dd ul li a em.bank1 {background-position:-40px -50px;}
+dl.pay_method dd ul li a em.bank2 {background-position:-80px -50px;}
+dl.pay_method dd ul li a em.paypin {background-position:-120px -50px;}
+dl.pay_method dd ul li a.current {color:#fff;border:1px solid #6d7f99;background:#6d7f99;}
+dl.pay_method dd ul li a.current em.card {background-position:0 -90px;}
+dl.pay_method dd ul li a.current em.bank1 {background-position:-40px -90px;}
+dl.pay_method dd ul li a.current em.bank2 {background-position:-80px -90px;}
+dl.pay_method dd ul li a.current em.paypin {background-position:-120px -90px;}
+dl.pay_method dd ul li a.disabled {color:#eee;border:1px solid #f4f4f4;background:#fff;}
+dl.pay_method dd ul li a.disabled em.card {background-position:0 -130px;}
+dl.pay_method dd ul li a.disabled em.bank1 {background-position:-40px -130px;}
+dl.pay_method dd ul li a.disabled em.bank2 {background-position:-80px -130px;}
+dl.pay_method dd ul li a.disabled em.paypin {background-position:-120px -130px;}
+
+/*결제수단*/
+.pay_method_con ul.mark {margin-top:4px;}
+.pay_method_con dl.form_input {margin-bottom:10px;}
+.pay_method_con dl.form_input:last-child {margin-bottom:0;}
+.pay_method_con dl.form_input dt {padding-top:0;}
+.pay_method_con dl.form_input2 dd {padding-left:100px;}
+
+.card_select {overflow:hidden;margin-top:10px;padding:7px;background:#eee;}
+.card_select dl {overflow:hidden;float:left;width:49%;}
+.card_select dl:first-child {margin-right:1.5%}
+.card_select dt, .card_select dd {float:left;}
+.card_select dt {width:34%;margin:7px 2% 0 0;text-align:right;}
+.card_select dd {width:64%}
+
+/*카드청구할인내용*/
+.card_discount p span {display:inline-block;margin-right:10px;font-weight:bold;vertical-align:0;}
+
+/*포인트사용*/
+.card_point_area {margin:0;}
+.card_point_area dl dd {position:relative;padding-bottom:5px;}
+.card_point_area dl dd .check {text-align:left;}
+.card_point_area dl dd p.guide {position:absolute;top:0;right:0;}
+
+/*현금영수증*/
+.radio {color:#555;font-size:12px;letter-spacing:-0.5px;word-spacing:-1px;}
+.radio input[type="radio"] {margin-right:5px;}
+.taxsave_area {margin:15px 0 0;}
+.taxsave_area .selectrcpt {background:#ddd;}
+.taxsave_area .selectrcpt ul {overflow:hidden;padding:10px 0;}
+.taxsave_area .selectrcpt ul li {float:left;width:50%;text-align:center;}
+.taxsave_print {padding:10px;border:1px solid #ddd;}
+.taxsave_print .radio {margin:15px 0 5px;}
+.taxsave_print .radio:first-child {margin-top:0;}
+.taxsave_print .phone_area {margin-top:5px;}
+.taxsave_print .jumin_area {margin-top:5px;}
+
+/*주민등록번호*/
+.jumin_area {height:32px;}
+.jumin_area p {float:left;}
+.jumin_area p:first-child {width:48%;}
+.jumin_area p:last-child {width:52%;}
+.jumin_area p > span {position:relative;display:block;padding-left:15px;}
+.jumin_area p:first-child > span {padding-left:0;}
+.jumin_area p span em {position:absolute;top:2px;left:4px;color:#666;font-size:14px;}
+
+/*사업자등록번호*/
+.business_area {height:32px;}
+.business_area p {float:left;width:28%;}
+.business_area p:nth-child(1) {width:31%;}
+.business_area p:nth-child(3) {width:41%;}
+.business_area p > span {position:relative;display:block;padding-left:15px;}
+.business_area p:nth-child(1) > span {padding-left:0;}
+.business_area p span em {position:absolute;top:2px;left:4px;color:#666;font-size:14px;}
+
+/*상담신청*/
+.counselask .counsel {padding-top:0;text-align:center;}
+
+/*결제금액이 0원일경우*/
+.payment_zero {padding:15px 0;margin-bottom:10px;text-align:center;border-bottom:1px solid #f4f4f4;background:#ddd;}
+.payment_zero p {color:#666;font-size:15px;line-height:18px;font-weight:bold;}
+
+/*주문완료*/
+.orderComplete {padding:25px 0 25px;text-align:center}
+.orderComplete > p {font-size:13px;line-height:1.5;font-weight:normal;}
+.orderComplete > p:nth-of-type(1) {margin-bottom:7px;color:#222;font-size:15px;line-height:1.3;font-weight:bold;}
+.orderComplete > p span {display:block}
+.orderComplete .order_copy p {color:#444;font-size:15px;line-height:1.3;font-weight:normal;}
+.orderComplete .order_copy p span {display:block;margin-top:5px;color:#666;font-size:13px;font-weight:normal;}
+.orderComplete .order_num {margin-top:20px;text-align:center;}
+.orderComplete .order_num p {display:block;height:30px;margin:0 auto;}
+.orderComplete .order_num p:nth-child(2) {margin-top:10px;}
+.orderComplete .order_num p span {display:inline-block;margin:0;padding:0 30px;color:#fff;font-size:14px;line-height:30px;text-align:center;vertical-align:middle;border-radius:15px;background:#e50278}
+.orderComplete .order_num p span em {vertical-align:bottom;}
+.orderComplete .order_num p:nth-child(2) span {color:#444;text-decoration:underline;line-height:1.4;background:none}
+.orderComplete .order_num p:nth-child(2) span em {color:#e50278;font-size:18px;font-weight:bold;line-height:1.3;text-decoration:underline;}
+
+/*결제/가격 정보*/
+.order_wrap.payway {padding-top:12px;padding-bottom:12px}
+.payway p {padding:1px 0;}
+.payway em {display:inline-block;width:80px;font-weight:bold;}
+.payway span {display:inline-block;}
+
+/*주문정보/할인정보*/
+.complete_wrap .goods {border-top-left-radius:4px;border-top-right-radius:4px;background:#fff;}
+.complete_wrap .goods li:first-child {padding:6px 14px;}
+.complete_wrap .goods li:first-child dl {overflow:hidden;position:relative;}
+.complete_wrap .goods li:first-child dl dt {position:absolute;top:6px;left:0;color:#444;font-size:14px;}
+.complete_wrap .goods li:first-child dl dd {text-align:right;}
+.complete_wrap .goods li:first-child dl dd .price {color:#444;font-size:16px;line-height:30px;}
+.complete_wrap .goods li:first-child dl dd .price em {color:#666;font-size:19px;}
+.complete_wrap .goods li:last-child {padding:0 14px;border-top:1px solid #eee;}
+.complete_wrap .goods li:last-child .discount {overflow:hidden;position:relative;padding:10px 0;padding-left:37px;}
+.complete_wrap .goods li:last-child .discount:last-child {border-top:1px solid #ddd;}
+.complete_wrap .goods li:last-child .discount em.emIcon {position:absolute;left:0;}
+.complete_wrap .goods li:last-child .discount em.minus {top:10px;}
+.complete_wrap .goods li:last-child .discount em.plus {top:10px;}
+.complete_wrap .goods li:last-child .discount dl {overflow:hidden;position:relative;}
+.complete_wrap .goods li:last-child .discount dl dt {position:absolute;top:3px;left:0;color:#555;font-size:13px;}
+.complete_wrap .goods li:last-child .discount dl dd {padding-left:100px;text-align:right;}
+.complete_wrap .goods li:last-child .discount dl dd .minus {color:#666;}
+.complete_wrap .goods li:last-child .discount dl dd .plus {color:#666;}
+.complete_wrap .goods li:last-child .discount dl dd .price em {color:#666;}
+.complete_wrap .goods li:last-child .discount dl dd .point em {color:#666;}
+
+/*결제정보*/
+.complete_wrap .payment {padding:8px 14px 12px;border-bottom-left-radius:4px;-webkit-border-bottom-left-radius:4px;-moz-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-webkit-border-bottom-right-radius:4px;-moz-border-bottom-right-radius:4px;background:#f4f4f4;}
+.complete_wrap .payment .total dl {overflow:hidden;position:relative;}
+.complete_wrap .payment .total dl dt {position:absolute;top:3px;left:0;color:#444;font-size:18px;line-height:22px;font-weight:bold;}
+.complete_wrap .payment .total dl dt span {font-size:9px;line-height:13px;font-weight:normal;}
+.complete_wrap .payment .total dl dd {padding-bottom:21px;padding-left:110px;text-align:right;}
+.complete_wrap .payment .total dl dd .price {color:#444;font-size:16px;}
+.complete_wrap .payment .total dl dd .price em {font-size:20px;}
+.complete_wrap .payment .method {padding-top:7px;border-top:1px solid #ddd;}
+.complete_wrap .payment .method p {padding-top:2px;color:#666;vertical-align:top;}
+.complete_wrap .payment .method p span {color:#666;vertical-align:top;}
+
+/*배송정보*/
+.complete_info {padding:6px 0 0;}
+.complete_info dl {overflow:hidden;position:relative;}
+.complete_info dl dt {position:absolute;top:5px;left:0;color:#444;font-size:14px;font-weight:bold;}
+.complete_info dl dd {padding-top:6px;padding-left:100px;color:#666;font-size:13px;}
+
+/*포인트사용안내*/
+.point_guard {padding:10px 0;}
+.point_guard h4 {padding:10px 0 3px;color:#ef8006;font-size:14px;font-weight:bold;}
+.point_guard dl.regard {margin-top:0;padding-top:0;padding-bottom:6px;}
+.point_guard dl.regard dt {padding-top:15px;}
+
+/*우편번호찾기*/
+ul.tab_post {overflow:hidden;/* padding-bottom:15px; */}
+ul.tab_post li {width:50%;}
+/* ul.tab_post li:nth-of-type(1) a {border-top-left-radius:4px;}
+ul.tab_post li:nth-of-type(2) a {border-top-right-radius:4px;} */
+ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
+.post_wrap {padding:0 15px;}
+.post_wrap .tit {background:none;}
+.post_wrap .tit p {color:#444;}
+.post_wrap .tit p em {font-weight:bold;vertical-align:top;}
+.post_wrap fieldset {margin-top:10px;}
+.addr_area1 {position:relative;padding:0 66px 0 50px;}
+.addr_area1 em {position:absolute;top:7px;left:0;display:block;font-size:13px;}
+.addr_area1 p.search {position:absolute;top:0;right:0;}
+.addr_area1 p.search .btn.size2 a {min-width:60px;padding:8px 0 7px;font-size:13px;}
+.addr_area2 {position:relative;overflow:hidden;padding-left:50px;margin-bottom:8px;}
+.addr_area2 em {position:absolute;top:7px;left:0;}
+.addr_area2 span {float:left;display:inline-block;width:49%;}
+.addr_area2 span:last-child select {margin-left:5px;}
+.post_wrap .result {position:relative;margin-top:10px;}
+.post_wrap .result h3 {display:none;margin-bottom:10px;color:#444;font-size:15px;}
+.post_wrap .result .addr_select {margin:10px 0;text-align:center;font-size:13px;color:#e50278;}
+.post_wrap .result .addr_select span:before {content:"";display:inline-block;width:13px;height:13px;margin-right:5px;vertical-align:middle;background:url(../../img/ico_button.png) no-repeat 0 -125px;background-size:150px auto;margin-top:-1px;}
+.post_wrap .result table {width:100%;}
+.post_wrap .result table tr {cursor:pointer;}
+.post_wrap .result table tr th p {padding:7px 0;color:#555;font-size:14px;border:1px solid #ddd;border-right:none;background:#f6f6f6;}
+.post_wrap .result table tr th:first-child p {border-left:none;}
+.post_wrap .result table tr td {padding:7px 0;border-left:1px solid #ddd;border-bottom:1px solid #ddd;vertical-align:middle;}
+.post_wrap .result table tr td:nth-child(1) {color:#666;text-align:center;border-left:none}
+.post_wrap .result table tr td:nth-child(2) {padding-right:10px;padding-left:10px;}
+.post_wrap .result table tr td:nth-child(2) p {padding:0;color:#666;}
+.post_wrap .result table tr td:nth-child(2) .juso1 {color:#666;}
+.post_wrap .result table tr td:nth-child(2) .juso2 {margin-top:3px;color:#999;font-size:11px;}
+.post_wrap .regard {margin-top:25px;}
+
+.post_wrap h3.st{margin-bottom:10px;color:#444;font-size:14px;display:block;margin-top:20px;}
+.post_wrap .nodata {color:#555;font-size:14px;font-weight:bold;}
+.post_wrap .add_result{margin-bottom:15px;}
+.post_wrap .address_post{position:relative;width:100%}
+.post_wrap .address_post > p:nth-child(1){position:absolute;left:0;top:0;width:60px}
+.post_wrap .address_post > p:nth-child(2){padding-left:65px;}
+
+
+/*주문실패*/
+.orderfail span:before {content:"";display:block;;width:84px;height:76px;margin:11px auto 20px;background:url(../../img/ico_order.png) no-repeat -98px -168px;background-size:200px auto}
+.orderfail p i{color:#e50278;font-style:normal;}
+
+/*간편결제 로그인*/
+.orderZone .post_wrap{padding:0;}
+.orderZone .post_wrap .tit {padding:20px 15px 15px;}
+.orderZone .post_wrap .tit em{color:#e50278;font-weight:normal;}
+.orderZone .loginZone {padding:15px 15px 0;}
+.orderZone .loginZone .btns_wrap+.btns_wrap {margin-bottom:15px;}
+.orderZone .loginZone ul.mark {margin-top:15px;}
+
+/* 2017-06-20 카드정보입력 페이지 추가*/
+.order_wrap.rcvcustomer .form_input { padding-top: 10px; }
+.creditcard_area {overflow:hidden;position:relative;}
+.creditcard_area p {float:left;width:25%;}
+.creditcard_area p:nth-child(1) {width:25%;}
+.creditcard_area p:nth-child(1) > span {padding-left:0;}
+.creditcard_area p span {position:relative;display:block;padding-left:6px;}
+.creditcard_area p span .inputBox {padding-left:0;}
+.creditcard_area p span .inputBox input {text-align:center;text-indent:0;}
+
+.cardinfo_area {height:32px;}
+.cardinfo_area p {float:left;width:36%;}
+.cardinfo_area p span {position:relative;display:block;padding-left:35px;}
+.cardinfo_area p span .inputBox {padding-left:0;}
+.cardinfo_area p:nth-child(1) {width:25%;}
+.cardinfo_area p:nth-child(1) > span {padding-left:0;}
+.cardinfo_area p span em {position:absolute;top:6px;left:11px;width:15px;color:#666;font-size:14px;text-align:center;}
+.cardinfo_area p span em.monthyear { position:absolute;top:6px;left:0;width:50px;color:#666;font-size:14px;text-align:center;}

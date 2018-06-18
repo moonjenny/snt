@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+			<footer class="footer type2"><!-- 2016-06-30 : type2클래스 추가 -->
+				<nav class="fmu2">
+					<ul>						
+						<li><a href="../views/common/provision1.jsp">이용약관</a></li>
+						<li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
+						<li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
+						<li><a href="tel:0801301003">상담전화</a></li>
+					</ul>
+				</nav>
+				<address>
+					<p>쇼핑엔T  대표 : 민택근</p>
+					<p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
+					<p>사업자등록번호 : 117-81-54803</p>
+					<p>통신판매업 신고번호 : 2015-서울중구-0507</p>
+					<p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
+					<p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
+					
+					<p class="bt">
+						<span><a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2015301013030200491&area1=&area2=&currpage=1&searchKey=04&searchVal=1178154803&stdate=&enddate=" target="_blank">사업자정보확인</a></span>
+						<span><a href="../views/common/credit_bank.jsp">신한은행 채무지급 보증안내</a></span>
+					</p>		
+					<p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
+				</address>
+			</footer>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->

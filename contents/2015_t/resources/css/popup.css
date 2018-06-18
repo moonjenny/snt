@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{height:100%}
+*{margin:0;padding:0; font-family:AppleSDGothicNeo-Light,HelveticaNeue-Light,sans-serif;}
+em,address{font-style:normal}
+ol,ul,dl{list-style:none}
+fieldset,img,hr,button{border:0}
+/*img{vertical-align:top}*/
+table{border-collapse:collapse;border-spacing:0}
+legend,caption{overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;padding:0;font-size:0;line-height:0}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+textarea{resize:none;outline:none}
+.button{overflow:visible;cursor:pointer;outline:none}
+
+/* 팝업 */
+.popup_wrap{background-color:rgba(0, 0, 0, 0.8);height:100%;width:100%;z-index:9999;position:fixed;left:0;top:0;} /*2018-03-07 팝업 dimed opacity변경*/
+.popup_wrap .ir_scale{color:transparent;overflow:hidden;font-size:0}
+.popup_wrap .popup_box{min-width:260px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);display:block}
+/*.popup_wrap .appdown_box{width:100%;}*/
+.popup_wrap .popup_box .link_banner{display:block;width:100%;}
+.popup_wrap .popup_box .link_banner img{width:100%;}
+.popup_wrap .popup_box .button_box{overflow:hidden;background-color:#fff}
+.popup_wrap .popup_box .button_box .button_today_close{background-color:#fff;color:#000;width:100%;font-size:13px;padding:10px 0;border-radius:0;-webkit-appearance:none;float:left;width:130px}
+.popup_wrap .popup_box .button_box .button_popup_close{background-color:#fff;color:#000;width:100%;font-size:13px;padding:10px 0;border-radius:0;-webkit-appearance:none;float:right;width:50px}
+.button_box .slick_next{display:block;color:#fff;width:100%;font-size:13px;padding:10px 0;border-radius:0;-webkit-appearance:none;background:#000;}
+.popup_wrap .popup_box .roll_inner .button_box{overflow:hidden;background:#000;}
+.popup_wrap .popup_box .roll_inner .button_box .btn_wrap,
+.popup_wrap .popup_box .roll_inner .button_box .button_popup_close{float:left;width:50%;background:transparent;color:#fff;position:relative;}
+.popup_wrap .popup_box .roll_inner .button_box .button_today_close{width:100%;background:#000;color:#fff;}
+.popup_wrap .popup_box .roll_inner .button_box .btn_wrap:after{content:'';width:1px;height:25px;background:#333333;position:absolute;top:7px;right:0;}
+
+.appdownpop{margin:0 -57px;}
+.appdownpop img{width:100%;}
+.appdownpop a{display:block;}
+
+/*팝업롤링*/
+.rollpop{overflow:hidden;position:relative;width:280px;}
+/* Slider */
+.slick-slider{position: relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent;}
+.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0;}
+.slick-list:focus{outline:none;}
+.slick-list.dragging{cursor:pointer;cursor:hand;}
+.slick-slider .slick-track,
+.slick-slider .slick-list{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);}
+.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto;}
+.slick-track:before,
+.slick-track:after{display:table;content:'';}
+.slick-track:after{clear:both;}
+.slick-loading .slick-track{visibility:hidden;}
+.slick-slide{display:none;float:left;height:100%;min-height:1px;}
+[dir='rtl'] .slick-slide{float:right;}
+.slick-slide img{display:block;}
+.slick-slide.slick-loading img{display:none;}
+.slick-slide.dragging img{pointer-events:none;}
+.slick-initialized .slick-slide{display:block;}
+.slick-loading .slick-slide{visibility:hidden;}
+.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent;}
+.slick-arrow.slick-hidden{display: none;}
+/* Slider */
+.slick-loading .slick-list{background:#fff url('./ajax-loader.gif') center center no-repeat;}
+/* Arrows */
+.slick-prev,
+.slick-next{font-size:0;line-height:0;position:absolute;top:50%;display:block;width:20px;height:20px;padding:0;-webkit-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%);cursor:pointer;color:transparent;border:none;outline:none;background:transparent;}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus{color:transparent;outline:none;background:transparent;}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before{opacity:1;}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before{opacity:.25;}
+.slick-prev:before,
+.slick-next:before{font-family:'slick';font-size: 20px;line-height:1;opacity:.75;color:white;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.slick-prev{left:-25px;}
+[dir='rtl'] .slick-prev{right:-25px;left:auto;}
+.slick-prev:before{content:'←';}
+[dir='rtl'] .slick-prev:before{content:'→';}
+.slick-next{right:-25px;}
+[dir='rtl'] .slick-next{right:auto;left:-25px;}
+.slick-next:before{content:'→';}
+[dir='rtl'] .slick-next:before{content:'←';}
+
+/* Dots */
+.slick-dotted.slick-slider{}
+.slick-dots{position:absolute;bottom:10px;display:block;width:100%;padding:0;margin:0;list-style:none;text-align:center;}
+.slick-dots li{position:relative;display:inline-block;width:8px;height:8px;margin:0 4px;padding:0;cursor:pointer;}
+.slick-dots li button{width:100%;height:100%;font-size:0;line-height:0;display:block;cursor:pointer;border:0;outline:none;background:#e2e2e2;border-radius:20px}
+.slick-dots li button:hover,
+.slick-dots li button:focus{outline:none;}
+.slick-dots li.slick-active button{background:#333;}
+
+.button_box .next,
+.button_box .last{display:none;}
+.button_box .show{display:block;}
+
+.roll_inner .slick-dots li{width:6px;height:6px;margin:0 2px;}
+.roll_inner .slick-dots li button{background:rgba(115,115,115,0.7);}
+.roll_inner .slick-dots li.slick-active{width:15px;}
+.roll_inner .slick-dots li.slick-active button{background:rgba(31,36,41,0.9);}
+
+/*간단팝업 2018-04-26추가*/
+.pop_wrap{visibility:hidden;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:99;position:fixed;left:0;top:0;}
+.pop_wrap.show{visibility:visible;-webkit-animation:fadeIn 1s;animation:fadeIn 1s;}
+.pop_inner{width:290px;height:200px;background:#fff;text-align:center;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);z-index:100;}
+.pop_cont{padding:35px 30px 30px;}
+.pop_cont strong{padding-bottom:20px;font-size:15px;color:#252525;display:block;line-height:1;}
+.pop_close{width:17px;height:17px;background:url('../../img/ico_close.png') no-repeat;background-size:100% auto;position:absolute;right:11px;top:11px;color:#fff;font-size:0;line-height:0;}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@keyframes fadeIn{
+	from{opacity:0;}
+	to{opacity:1;}
+}

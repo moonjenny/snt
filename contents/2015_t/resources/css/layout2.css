@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+/*
+* 파일명	: layout2.css 
+* 작성일	: 2015.04.20
+* 수정일	: 2015.05.27
+*/
+
+/*layout 정의*/
+.wrap {overflow:hidden;z-index:1;width:100%;}
+.wrap_inner {overflow:hidden;z-index:1;position:relative;display:block;width:100%;}
+
+/*header 정의*/
+.header2 {position:relative;height:40px;background:#fff;background:url(../../img/bg_gnb.png) 0 0;border-bottom:solid 1px #e4e4e4; }
+.header2 h1 {text-align:center}
+.header2 h1 a {display:inline-block;margin:0 auto}
+.header2 h1 a span {display:block;width:51px;height:20px;text-indent:-9999px;background:url(../../img/h1_head_logo.png) no-repeat 0 0;background-size:51px auto;margin-top:13px;}
+ 
+/*header 정의*/
+/*.header_wrap{height:41px;}
+.header {position:relative;height:40px;background:#fff;background:url(../../img/bg_gnb.png) 0 0;border-bottom:solid 1px #e4e4e4;transition-property: transform; transform-origin: 0px 0px 0px; transform: translate(0px, 0px) scale(1) translateZ(0px);}
+.header.fixed{position:fixed;top:0;right:0;width:100%;z-index:40; }
+.header.search_open{width:100%;position:absolute;}
+.header a {cursor:pointer}
+.header h1 {text-align:center}
+.header h1 a {display:inline-block;margin:0 auto}
+.header h1 a span {display:block;width:51px;height:20px;text-indent:-9999px;background:url(../../img/h1_head_logo.png) no-repeat 0 0;background-size:51px auto;margin-top:13px;}
+.header h2 span {display:block;padding:0 56px;padding:12px 0 8px;font-size:14px;font-weight:bold;text-align:center;border-bottom:none;text-overflow:ellipsis;white-space:nowrap}
+.header .floating_btn_back{top:11px;}*/
+
+/* .header2 {position:relative;height:52px;background:#1a1a1a url(../../img/img_top.png) no-repeat center 0;background-size:320px auto}
+.header2 a {cursor:pointer}
+.header2 h1 {padding-top:4px;text-align:center}
+.header2 h1 a {display:inline-block;margin:0 auto}
+.header2 h1 a span {display:block;width:69px;height:44px;text-indent:-9999px;background:url(../../img/h1_logo.png) no-repeat 0 0;background-size:69px auto} */
+input[type="text"],input[type="date"], input[type="password"],input[type="tel"],input[type="email"],input[type="number"],input[type="radio"],input[type="checkbox"],select {border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;appearance:none;-webkit-appearance:none}
+input[type="text"],input[type="password"],input[type="tel"],input[type="email"] {width:100%;height:30px;margin:0;padding:0;color:#666;font-size:13px;border:0;background:#fff;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
+span.inputBox input[type="text"], span.inputBox input[type="date"], span.inputBox input[type="password"], span.inputBox input[type="email"] {padding:0 5px;text-align:left}
+input, select, textarea, button {vertical-align:middle;}
+/* reset 정의 */
+html, body, div, span, object, iframe, frame,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:middle;
+    background:transparent;
+	-webkit-text-size-adjust:none;
+}
+
+input[type="text"],input[type="date"], input[type="password"],input[type="tel"],input[type="email"],input[type="number"],input[type="radio"],input[type="checkbox"],select {border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;appearance:none;-webkit-appearance:none}
+input[type="text"],input[type="password"],input[type="tel"],input[type="email"] {width:100%;height:30px;margin:0;padding:0;color:#666;font-size:13px;border:0;background:#fff;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
+span.inputBox input[type="text"], span.inputBox input[type="date"], span.inputBox input[type="password"], span.inputBox input[type="email"] {padding:0 5px;text-align:left}
+input, select, textarea, button {vertical-align:middle;}
+
+
+/* 2017-09-20 휴면고객안내 신규페이지 */
+.privacy {padding:10px 30px;text-align:center;/*background-color:#f5f5f5;*/}
+.privacy p {padding: 0px 0 10px;font-size:1.3em;}
+.privacy em.logo {overflow:hidden;display:inline-block;padding:0;font-size:0;text-indent:0;background:url(../../img/privacy_logo_white.jpg)50% 50% no-repeat;background-size:120px auto;}
+.privacy em {width:190px;height:100px;}
+.privacy div {padding:30px 20px;background:#fff;word-break:keep-all;}
+.privacy div table {width:100%;border-top:1px solid #888888;border-bottom:1px solid #888888;font-size:1.1em;}
+.privacy div table th {padding:10px 8px 10px;text-align:center;border-bottom:1px solid #cccccc;background-color:#f6f7f9;}
+.privacy div td {padding:10px 8px 10px;text-align:left;border:1px solid #cccccc;border-left:none;border-top:none;vertical-align:middle;}
+.privacy div tr td:last-child {border-right:none;}
+.privacy div.p_btn {padding:10px 0px;/*background-color:#f5f5f5;*/}
+.privacy div.p_btn a img {width:125px; height:auto; margin-right:3px; }
+.privacy div.p_btn a img.end {margin-right:0;}

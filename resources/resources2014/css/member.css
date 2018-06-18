@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*
+* 파일명	: member.css (로그인,회원가입,모바일간편결제)
+* 작성자	: 신세연
+* 작성일	: 2014.10.21
+*/
+
+/*결과메시지노출*/
+.message{margin-top:10px;color:#d91a35;font-size:11px;}
+
+/*로그인*/
+.loginZone{padding:40px 15px 50px;}
+.loginZone fieldset{position:relative;padding-bottom:20px;border-bottom:1px solid #dedde3;}
+.loginZone fieldset .input_box{margin-right:80px;}
+.loginZone fieldset .input_box ul li{margin-bottom:8px;}
+.loginZone fieldset .input_box ul li span.inputBox{}
+.loginZone fieldset .login_btn{position:absolute;top:0;right:0;}
+.loginZone fieldset .login_btn a{width:70px;height:30px;padding:20px 0;font-size:16px;line-height:30px;font-weight:bold;}
+.loginZone fieldset .check{min-width:210px;height:27px;margin-right:80px;}
+.loginZone fieldset .check li{float:left;}
+.loginZone fieldset .check li:first-child{width:52%;}
+.loginZone fieldset .check li:last-child{width:48%;}
+.loginZone fieldset .check li input[type="checkbox"]{margin-right:5px}
+.loginZone fieldset .check li label{color:#555;font-size:13px;}
+.loginZone .btn_multi li a em{display:inline-block;vertical-align:-6px;background-image:url(../../img2014/ico_button.png);background-repeat:no-repeat;background-size:150px 150px;}
+.loginZone .btn_multi li a em.delivery{width:20px;height:20px;margin-right:5px;vertical-align:-5px;background-position:-25px 0;}
+.loginZone .btn_multi li a em.order{width:20px;height:20px;margin-right:5px;vertical-align:-5px;background-position:0 0;}
+
+/*아이디 찾기 , 비밀번호 찾기*/
+.memSrchZone{padding:36px 15px 50px;}
+
+/*회원가입 step*/
+ol.step{height:40px;}
+ol.step li{position:relative;float:left;height:40px;text-align:center;background:#bab9bd;}
+ol.step li:nth-child(1){width:21%;}
+ol.step li:nth-child(2){width:26%;}
+ol.step li:nth-child(3){width:26%;}
+ol.step li:nth-child(4){width:27%;}
+ol.step li em{display:block;z-index:1;position:absolute;top:0;right:-21px;width:21px;height:40px;background-image:url(../../img2014/ico_member.png);background-repeat:no-repeat;background-position:-21px 0;background-size:200px 200px;}
+ol.step li span{display:block;height:40px;padding-left:21px;color:#fff;font-size:12px;line-height:40px;background-image:url(../../img2014/ico_member.png);background-repeat:no-repeat;background-position:0 0;background-size:200px 200px;}
+ol.step li:nth-child(1) span{padding-left:0;background-image:none;}
+ol.step li.current{font-weight:bold;background-color:#f58026;}
+ol.step li.current em{background-position:0 -50px;}
+ol.step li.current span{background-position:-30px -50px;}
+
+
+/*모바일인증*/
+.mobileCertifyZone{padding:40px 15px 50px;text-align:center;}
+.mobileCertifyZone em{display:inline-block;width:60px;height:44px;background:url(../../img2014/ico_member.png) no-repeat -60px -100px;background-size:200px 200px;}
+.mobileCertifyZone p{margin-top:5px;color:#444;font-size:16px;line-height:20px;font-weight:bold;letter-spacing:-1px;word-spacing:-1px;}
+.mobileCertifyZone ul.form_input{padding-top:29px;}
+
+/*본인인증*/
+.memCertifyZone{padding:36px 15px 50px;text-align:center;}
+.certify{height:90px;margin-top:15px;}
+.certify li{float:left;width:50%;}
+.certify li:first-child a{margin-right:4px;}
+.certify li:last-child a{margin-left:4px;}
+.certify li a{height:73px;padding:15px 0 0;font-size:16px;line-height:30px;font-weight:bold;text-align:center;}
+.certify li a em{display:block;height:32px;margin:auto;background-image:url(../../img2014/ico_button.png);background-repeat:no-repeat;background-size:150px 150px;}
+.certify li a em.phone{width:32px;background-position:4px -25px;}
+.certify li a em.ipin{width:32px;background-position:-30px -25px;}
+
+/*약관동의*/
+.memAgreeZone{padding:36px 15px 50px;}
+.memAgreeZone dl{margin-bottom:20px;text-align:left;}
+.memAgreeZone dl:last-child{margin-bottom:0;}
+.memAgreeZone dl dt{color:#444;font-size:17px;font-weight:bold;}
+.memAgreeZone dl dd{padding-top:8px;}
+.memAgreeZone dl dd .txt{margin-bottom:8px;color:#888;font-size:11px;}
+.memAgreeZone dl dd .check_box{position:relative;min-height:25px;padding:5px 10px 10px;border-top:1px solid #e6e5e9;background:#f2f1f5;border-radius:4px;-wekit-border-radius:4px;}
+.memAgreeZone dl dd .check_box input[type="checkbox"]{position:absolute;top:50%;left:10px;margin-top:-13px;}
+.memAgreeZone dl dd .check_box p{padding-top:3px;padding-left:30px;color:#555;font-size:12px;line-height:18px;}
+.memAgreeZone dl dd .check_box .pabtn{position:absolute;top:8px;right:10px;}
+.memAgreeZone dl dd .check_box .pabtn a em{display:inline-block;width:5px;height:9px;margin-left:5px;background:url(../../img2014/ico_button.png) no-repeat -50px 0;background-size:150px 150px;}
+
+/*회원정보*/
+.memInforZone{padding:36px 15px 50px;}
+.memInforZone ul.readonly li{padding-top:10px;color:#444;font-size:16px;font-weight:bold;}
+.memInforZone ul.readonly li.w50{float:left;width:50%;padding-top:0;}
+.memInforZone ul.readonly li.w100{float:none;clear:both;width:100%;}
+.memInforZone ul.readonly li span{color:#555;font-size:16px;font-weight:normal;}
+.memInforZone dl{position:relative;display:inline-block;width:100%;padding-top:10px;}
+.memInforZone dl dt{color:#444;font-size:16px;font-weight:bold;}
+.memInforZone dl dd{padding-top:5px;}
+.memInforZone dl dd .id_area{position:relative;padding-right:75px;}
+.memInforZone dl dd .id_area p{position:absolute;top:0;right:0;}
+.memInforZone dl dd .pw_area{position:relative;padding-right:75px;}
+.memInforZone dl dd .pw_area p{position:absolute;top:10px;right:0;}
+.memInforZone dl dd .birth_area p{float:left;}
+.memInforZone dl dd .birth_area p:nth-child(1){width:48%;}
+.memInforZone dl dd .birth_area p:nth-child(2){width:52%;}
+.memInforZone dl dd .birth_area p > span{position:relative;display:block;padding-right:20px;}
+.memInforZone dl dd .birth_area p:nth-child(2) span{padding-left:18px;}
+.memInforZone dl dd .birth_area p span em{position:absolute;top:2px;right:0;color:#666;font-size:14px;}
+.memInforZone dl dd .phone_area{overflow:hidden;}
+.memInforZone dl dd .phone_area p{float:left;width:33%;}
+.memInforZone dl dd .phone_area p:nth-child(1){width:34%;}
+.memInforZone dl dd .phone_area p > span{position:relative;display:block;padding-left:15px;}
+.memInforZone dl dd .phone_area p:nth-child(1) > span{padding-left:0;}
+.memInforZone dl dd .phone_area p span em{position:absolute;top:2px;left:4px;color:#666;font-size:14px;}
+.memInforZone dl dd .phone_area2{position:relative;margin-top:10px;padding-right:106px;}
+.memInforZone dl dd .phone_area2 p{position:absolute;top:0;right:0;}
+.memInforZone dl dd .email_area p{float:left;}
+.memInforZone dl dd .email_area p:nth-child(1){width:48%;}
+.memInforZone dl dd .email_area p:nth-child(2){width:52%;}
+.memInforZone dl dd .email_area p > span{position:relative;display:block;padding-left:20px;}
+.memInforZone dl dd .email_area p:nth-child(1) > span{padding-left:0;}
+.memInforZone dl dd .email_area p span em{position:absolute;top:2px;left:3px;color:#666;font-size:14px;}
+.memInforZone dl dd .tv_pw_area{position:relative;}
+.memInforZone dl dd .tv_pw_area .tvPw{display:block;position:absolute;top:-23px;right:0;color:#888;font-size:11px;}
+.memInforZone dl dd ul.mark{padding-top:5px;}
+.memInforZone ul.btn_single{min-height:40px;margin-top:25px;}
+
+/*가입완료*/
+.memCompleteZone{padding:36px 15px 50px;text-align:center;}
+.memCompleteZone em{display:inline-block;width:55px;height:55px;margin-top:4px;background:url(../../img2014/ico_member.png) no-repeat 0 -100px;background-size:200px 200px;}
+.memCompleteZone p{margin-top:6px;color:#444;font-size:16px;line-height:20px;font-weight:bold;}
+.memCompleteZone span{display:block;color:#666;font-size:12px;font-weight:normal;}

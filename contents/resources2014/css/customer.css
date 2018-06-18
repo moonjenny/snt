@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*
+* 파일명	: customer.css (고객센터)
+* 작성자	: 신세연
+* 작성일	: 2014.10.23
+*/
+/*서브메인*/
+ul.menu_quick{height:70px;padding:25px 15px 10px;}
+ul.menu_quick li{float:left;}
+ul.menu_quick li a{display:block;height:50px;padding:12px 0 8px;color:#fff;font-size:12px;font-weight:bold;text-align:center;background:#bbb;}
+ul.menu_quick li a em{display:block;width:36px;height:32px;margin:auto;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-size:120px auto;-webkit-background-size:120px auto;}
+ul.menu_quick li:nth-child(1){width:33%;}
+ul.menu_quick li:nth-child(1) a em{background-position:0 0;}
+ul.menu_quick li:nth-child(2){width:33.5%;}
+ul.menu_quick li:nth-child(2) a{margin-left:5px;}
+ul.menu_quick li:nth-child(2) a em{background-position:-40px 0;}
+ul.menu_quick li:nth-child(3){width:33.5%;}
+ul.menu_quick li:nth-child(3) a{margin-left:5px;}
+ul.menu_quick li:nth-child(3) a em{background-position:-80px 0;}
+
+.board{position:relative;}
+.board .more{position:absolute;top:15px;right:15px;}
+.board h3{padding:20px 15px 7px 15px;color:#444;font-size:16px;}
+
+/*공지사항*/
+.board ul li p{color:#555;font-size:14px;}
+.board ul li p:nth-child(2){height:16px;vertical-align:middle;}
+.board ul li p span.date{display:inline-block;color:#888;font-size:13px;vertical-align:top;}
+.board ul li p span.new{display:inline-block;width:16px;height:16px;text-indent:-9999px;vertical-align:2px;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:0 -35px;background-size:120px auto;-webkit-background-size:120px auto;}
+
+.board ul.notice_list{margin-top:25px;border-top:1px solid #f4f4f4;}
+.cstmIndex .board ul.notice_list{margin-top:0;}
+.board ul.notice_list li{padding:10px 15px 9px;border-bottom:1px solid #f4f4f4;cursor:pointer;}
+.board ul.notice_list li p:first-child{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+
+.board ul.notice_read{margin-top:22px;}
+.board ul.notice_read li{padding:15px 15px 12px;border-bottom:1px solid #f4f4f4;}
+.board ul.notice_read li:first-child{padding-top:0;padding-bottom:15px;border-bottom:5px solid #f4f4f4;}
+.board ul.notice_read li:first-child p:first-child{font-size:15px;font-weight:bold;}
+.board ul.notice_read li div{min-height:180px;color:#666;font-size:13px;}
+.board ul.notice_read li div img{width:100%;min-width:290px;}
+
+/*자주하는질문*/
+ul.tab_faq{height:72px;padding-top:24px;padding-bottom:25px;}
+ul.tab_faq li{width:33.3%;}
+ul.tab_faq li a{margin-top:1px;margin-right:1px;}
+ul.tab_faq li:nth-child(1) a{border-bottom-left-radius:0;-webkit-border-bottom-left-radius:0;-moz-border-bottom-left-radius:0;}
+ul.tab_faq li:nth-child(3) a{margin-right:0;border-top-right-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-top-right-radius:5px;}
+ul.tab_faq li:nth-child(4) a{border-bottom-left-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-bottom-left-radius:5px;}
+ul.tab_faq li:nth-child(6) a{margin-right:0;border-top-right-radius:0;-webkit-border-top-right-radius:0;-moz-border-top-right-radius:0;border-bottom-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-bottom-right-radius:5px;}
+
+.accordion_wrap .faq_list{border-bottom:1px solid #eee;}
+.accordion_wrap .faq_list:first-child{border-top:1px solid #eee;}
+.accordion_wrap .faq_tit{cursor:pointer;}
+.accordion_wrap .faq_tit p{position:relative;padding:12px 35px 11px 45px;font-size:13px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.accordion_wrap .faq_tit p .faq_num{position:absolute;top:8px;left:15px;width:25px;padding:2px 0;font-size:15px;text-align:center;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:-25px -35px;background-size:120px auto;-webkit-background-size:120px auto;}
+.accordion_wrap .faq_tit p em{position:absolute;top:16px;right:15px;display:inline-block;width:13px;height:8px;background:url(../../img2014/ico_arrow.png);background-repeat:no-repeat;background-position:0 0;background-size:100px auto;-webkit-background-size:100px auto;}
+.accordion_wrap .faq_con{overflow:hidden;height:0;padding:0 15px;background:#f9f9f9;-webkit-transition:padding 200ms ease;transition:padding 200ms ease;}
+.accordion_wrap .faq_con dl{overflow:hidden;}
+.accordion_wrap .faq_con dl dt{position:relative;min-height:25px;padding:0 5px 3px 32px;color:#555;font-size:12px;}
+.accordion_wrap .faq_con dl dt em{position:absolute;top:0;left:6px;width:13px;height:15px;text-indent:-9999px;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:0 -70px;background-size:120px auto;-webkit-background-size:120px auto;}
+.accordion_wrap .faq_con dl dd{position:relative;min-height:25px;padding:0 5px 0 32px;color:#555;font-size:12px;}
+.accordion_wrap .faq_con dl dd em{position:absolute;top:0;left:6px;width:13px;height:15px;text-indent:-9999px;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:-20px -70px;background-size:120px auto;-webkit-background-size:120px auto;}
+.accordion_wrap .active p .faq_num{color:#fff;background-position:-60px -35px;}
+.accordion_wrap .active p em{background-position:-15px 0;}
+.accordion_wrap .active .faq_con{height:auto;padding:15px;border-top:1px solid #eee;}
+
+/*더보기,목록으로*/
+.board .btn_multi li a{margin:0 15px;}
+
+/*1:1문의하기*/
+ul.tab_inquiry{padding-top:24px;padding-bottom:24px;}
+ul.tab_inquiry li{width:50%;}
+.inquiryZone fieldset{padding:0 15px;}
+.inquiryType_area{position:relative;padding-right:110px;}
+.inquiryType_area p{position:absolute;top:0;right:0;}
+.inquiryType_area p a.btn_ib0{width:103px;}
+.alim_area{height:25px;margin-top:15px;}
+.alim_area input[type="checkbox"]{margin-right:5px}
+.alim_area label{color:#666;font-size:13px;font-weight:bold;}
+.alim_regard{}
+.alim_regard ul.mark{padding-top:9px;}
+.alim_regard ul.mark li{margin-bottom:0;}
+.inquiryZone fieldset .regard{border-top:0;}
+.inquiry_goods_list{margin-top:8px;}
+.inquiry_goods_list ul.order_goods:last-child{margin-bottom:0;}
+.inquiry_goods_list ul.order_goods li{margin-bottom:0;border-top:1px solid #f0f1f2;}
+.inquiry_goods_list ul.order_goods li:first-child{border-top:0;}
+.inquiry_goods_list ul.order_goods li .goods{padding-right:62px;}
+.inquiry_goods_list ul.order_goods li .goods .goods_price{text-align:left;}
+.inquiry_goods_list ul.order_goods li .goods .goods_select{position:absolute;top:25px;right:10px;}
+.inquiryZone .inquiry_goods_list ul.btn_multi{margin-top:10px;}
+.inquiryZone .inquiry_goods_list ul.btn_multi li{margin-bottom:0;}
+.inquiryZone .inquiry_goods_list ul.btn_multi li a{margin:0;}
+
+.inquiryZone ul li{position:relative;}
+.inquiryZone ul li .refer_status{position:absolute;top:10px;left:15px;width:50px;height:50px;}
+.inquiryZone ul li .refer_status span.answer{display:block;width:50px;height:50px;font-size:11px;text-align:center;}
+.inquiryZone ul li .refer_status span.answer em{display:block;margin:auto;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-size:120px auto;-webkit-background-size:120px auto;}
+.inquiryZone ul li .refer_status span.waiting{color:#888;}
+.inquiryZone ul li .refer_status span.waiting em{width:12px;height:22px;margin-top:7px;background-position:-50px -70px;}
+.inquiryZone ul li .refer_status span.prepare{color:#888;}
+.inquiryZone ul li .refer_status span.prepare em{width:18px;height:20px;margin-top:8px;background-position:-70px -70px;}
+.inquiryZone ul li .refer_status span.complete{color:#666;}
+.inquiryZone ul li .refer_status span.complete em{width:20px;height:20px;margin-top:10px;background-position:-95px -70px;}
+.inquiryZone ul li .refer_con{position:relative;min-height:50px;padding-right:15px;padding-left:60px;}
+.inquiryZone ul li .refer_con .date{color:#999;font-size:12px;line-height:13px;}
+.inquiryZone ul li .refer_con .type{color:#444;font-size:14px;line-height:18px;font-weight:bold;}
+.inquiryZone ul li .refer_con .title{color:#666;font-size:13px;line-height:18px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.inquiryZone ul li .refer_con em{position:absolute;top:50%;right:0;display:inline-block;width:9px;height:16px;margin-top:-8px;background:url(../../img2014/ico_arrow.png) no-repeat 0 -15px;background-size:100px auto;-webkit-background-size:100px auto;}
+.inquiryZone ul.list{margin-bottom:25px;border-top:1px solid #f4f4f4;}
+.inquiryZone ul.list li{padding:10px 15px;border-bottom:1px solid #f4f4f4;}
+.inquiryZone ul.read{border-top:1px solid #f4f4f4;}
+.inquiryZone ul.read li{padding:10px 15px;border-bottom:1px solid #f4f4f4;}
+.inquiryZone .inquiry_goods_list{margin-top:0;padding:10px 0 15px;}
+.inquiryZone .inquiry_refer_con{padding:0 15px 15px;}
+.inquiryZone .inquiry_refer_con .inquiry_goods_list{padding-bottom:2px;}
+.inquiryZone .inquiry_refer_con dl{border:1px solid #f4f4f4;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#fff;}
+.inquiryZone .inquiry_refer_con dl dt{position:relative;min-height:25px;padding:40px 15px 12px 15px;color:#555;font-size:12px;}
+.inquiryZone .inquiry_refer_con dl dt em{position:absolute;top:15px;left:15px;width:13px;height:15px;text-indent:-9999px;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:0 -70px;background-size:120px auto;-webkit-background-size:120px auto;}
+.inquiryZone .inquiry_refer_con dl dd{position:relative;min-height:25px;padding:40px 15px 12px 15px;color:#555;font-size:12px;border-top:1px solid #f4f4f4;}
+.inquiryZone .inquiry_refer_con dl dd em{position:absolute;top:15px;left:15px;width:13px;height:15px;text-indent:-9999px;background-image:url(../../img2014/ico_customer.png);background-repeat:no-repeat;background-position:-20px -70px;background-size:120px auto;-webkit-background-size:120px auto;}
+.inquiryZone .list_nodata{border-top:0;}
+.inquiryZone ul.btn_single{margin-top:10px;}
+.inquiryZone ul.btn_single.half li:first-child a{margin-left:15px;}
+.inquiryZone ul.btn_single.half li:last-child a{margin-right:15px;}
+.inquiryZone ul.btn_multi{margin-top:10px;}
+.inquiryZone ul.btn_multi li a{margin:0 15px;}

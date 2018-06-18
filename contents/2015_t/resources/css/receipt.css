@@ -1,0 +1,62 @@
+@charset "utf-8";
+* {margin:0;padding:0;font-family:"맑은 고딕",Dotum,Verdana,Arial,sans-serif;font-size:12px; color: #333;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, a, abbr, acronym, big, font, img, small, center, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, tbody, tfoot, thead, tr, th, td{margin:0; padding:0; border:0;font-size:100%;background:transparent;} 
+blockquote, q {quotes:none;} 
+ins {text-decoration:none;} 
+del {text-decoration:line-through;} 
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+/* Table */
+table {border-collapse: separate; border-spacing: 0;}
+caption, th, td {font-weight: normal; }
+caption {display:none;}
+
+img {border:0 none; font-size:0px;line-height:0px;}
+hr {display:none;}
+em, address {font-style:normal;}
+strong {font-weight:bold;}
+ol, ul, li {list-style:none;} 
+h3,h4{text-align:left;}
+
+/* link */
+a, a:link, a:visited, a:active {text-decoration:none;color:inherit;}
+a:hover {color:#e50278; text-decoration:underline;}
+a:active {text-decoration:none;}
+
+
+
+/* Layout */
+#wrap{width: 1200px; margin: 0 auto;}
+#wrap #header	{ height: 30px; padding: 20px 0; border-bottom: 4px solid #e50278; }
+#wrap #header h1	{float: left; margin: 0 0 0 20px; } 
+#wrap #header h2 { float: left; margin: 0 0 0 20px; font-size: 26px; font-weight: normal; text-align: center; }
+
+#container{width:1160px; margin:0 auto; padding: 0 0 30px 0;}
+#container:after{content:'';display:block;clear:both;}
+#container p	{	margin: 20px 0 10px 0; font-size: 20px; font-weight: normal; }
+#container p strong	{font-size: inherit;}
+#container h3	{	font-size: 18px; margin: 20px 0 10px 0;}
+
+.boardC {	border-top: 2px solid #e50278; border-bottom:1px solid #dfdfdf; width: 100%;}
+.boardC thead tr th {	font-weight: bold; padding: 14px 0 16px 0px; font-size:16px;	line-height:18px; border-bottom:1px solid #dfdfdf; border-left:1px solid #dfdfdf; color: #333333; background-color: #fafafa; }
+.boardC thead tr th:first-child,
+.boardC tbody tr th:first-child,
+.boardC tbody tr td:first-child {	border-left:none;}
+.boardC tbody tr th,
+.boardC tbody tr td {	padding: 14px 10px 16px 10px; font-size:16px;	line-height:18px; border-bottom:1px solid #dfdfdf; color: #333333; border-left:1px solid #dfdfdf; color: #333333; text-align: center;}
+.boardC tbody tr td.subject {	text-align: left;}
+.boardC tbody tr th {font-weight: normal;}
+.boardC tbody tr td .fontju {float: left; margin: 10px 0 0 0; font-size: 13px;}
+
+.boardC1 {	border-top: 1px solid #e50278; border-bottom:1px solid #dfdfdf; width: 100%; margin: -1px 0 0 0;}
+.boardC1 thead tr th {	font-weight: bold; padding: 14px 0 16px 0px; font-size:16px;	line-height:18px; border-bottom:1px solid #dfdfdf; color: #333333; background-color: #fafafa; }
+.boardC1 tbody tr td {	padding: 14px 10px 16px 10px; font-size:18px;	line-height:18px; border-bottom:1px solid #dfdfdf; color: #333333;  font-weight: bold; text-align: center;}
+.boardC1 tbody tr td.tdbg01 { background:url(../../img/icon01.png) no-repeat 0 18px;}
+.boardC1 tbody tr td.tdbg02 { background:url(../../img/icon02.png) no-repeat 0 18px;}
+.boardC1 tbody tr td.tdbg03 { background:url(../../img/icon03.png) no-repeat 0 18px; color: #e50278;}
+.boardC1 tbody tr td.tdbg04 { color: #e50278; }
