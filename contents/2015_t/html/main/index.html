@@ -1,76 +1,81 @@
-
 <!doctype html>
 <html lang="ko">
-<head>
-<title>쇼핑엔T</title>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
-<meta name="format-detection" content="telephone=no">
-<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
-<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css"><!-- 공통 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/main.css"><!-- 메인 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"><!-- 로그인,회원가입 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/goods.css"><!-- 상품목록및상세 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/order.css"><!-- 주문결제 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"><!-- 마이페이지 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"><!-- 고객센터 -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"><!-- 기타(푸터메뉴) -->
-<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css"><!-- 기타(푸터메뉴) -->
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-<body>
-<!-- skipnavi -->
-<div class="skip_nav">
-	<a href="#contents">본문 바로가기</a>
-</div>
-<!-- /skipnavi -->
-<div class="container">
-	<div class="wrap">
-		<div class="nav_sideBar">
-  <p class="sideClose"><span><em>X</em></span></p>
-  <div class="nav_side">
 
-           <!-- member info -->
-           <div class="info">
-              <div class="box login">
-                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->
-        <p class="t"><strong class="name">홍길동님</strong></p>
-                  <div class="myShop">
-                      <ul class="btnMy">
-                          <!-- <li><a>회원가입</a></li>
-                          <li><a>로그인</a></li> --><!-- 비로그인 -->
-            <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <!-- /member info -->
-          <!-- link -->
-          <nav class="mynav">
-            <ul>
-                  <li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
-                <li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
-                  <li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
-                  <li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
-              </ul>
-          </nav>
-          <!-- /link -->
-          <!-- inquiry(비로그인시) -->
-          <nav class="inquiry">
-              <div class="btns_wrap">
-                  <span class="btn fullwidth"><a>주문/배송 조회<span></span></a></span>
-              </div>
-          </nav>
-          <!-- /inquiry(비로그인시) -->
-          <!-- eventimg -->
-          <nav class="eventimg"><!-- 2015-06-08 : 이벤트이미지영역 추가 -->
-              <p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
-          </nav>
-          <!-- /eventimg -->
-          <!-- quicklink : 이전소스
+<head>
+	<title>쇼핑엔T</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" id="viewport">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="apple-touch-icon-precomposed" href="../../img/favicon_ios.png" /><!-- iOS계열 아이콘 -->
+	<link rel="shortcut icon" href="../../img/favicon_32x32.ico"><!-- 웹용 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css"><!-- 공통 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css"><!-- 메인 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"><!-- 로그인,회원가입 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/goods.css"><!-- 상품목록및상세 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/order.css"><!-- 주문결제 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"><!-- 마이페이지 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"><!-- 고객센터 -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"><!-- 기타(푸터메뉴) -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css"><!-- 기타(푸터메뉴) -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- skipnavi -->
+	<div class="skip_nav">
+		<a href="#contents">본문 바로가기</a>
+	</div>
+	<!-- /skipnavi -->
+	<div class="container">
+		<div class="wrap">
+			<div class="nav_sideBar">
+				<p class="sideClose"><span><em>X</em></span></p>
+				<div class="nav_side">
+
+					<!-- member info -->
+					<div class="info">
+						<div class="box login">
+							<!-- <p class="t">로그인 해주세요</p> -->
+							<!-- 비로그인 -->
+							<p class="t"><strong class="name">홍길동님</strong></p>
+							<div class="myShop">
+								<ul class="btnMy">
+									<!-- <li><a>회원가입</a></li>
+                          <li><a>로그인</a></li> -->
+									<!-- 비로그인 -->
+									<li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /member info -->
+					<!-- link -->
+					<nav class="mynav">
+						<ul>
+							<li><a class="coup" href="../mypage/coupon_list_issue.jsp">쿠폰<span></span><p>5 장</p></a></li>
+							<li><a class="save" href="../mypage/savedcash.jsp">적립금<span></span><p>20,000원</p></a></li>
+							<li><a class="deli" href="../mypage/order_delivery_list.jsp">주문/배송<span></span><p>GO<span></span></p></a></li>
+							<li><a class="cart" href="../mypage/cart.jsp">장바구니<span></span><p>GO<span></span></p></a></li>
+						</ul>
+					</nav>
+					<!-- /link -->
+					<!-- inquiry(비로그인시) -->
+					<nav class="inquiry">
+						<div class="btns_wrap">
+							<span class="btn fullwidth"><a>주문/배송 조회<span></span></a>
+							</span>
+						</div>
+					</nav>
+					<!-- /inquiry(비로그인시) -->
+					<!-- eventimg -->
+					<nav class="eventimg">
+						<!-- 2015-06-08 : 이벤트이미지영역 추가 -->
+						<p><a href=""><img src="../../img/tmp/event_img5.png" alt=""></a></p>
+					</nav>
+					<!-- /eventimg -->
+					<!-- quicklink : 이전소스
     <nav class="quicklink">
       <ul>
         <li><a href="../mypage/level.jsp">할인쿠폰/혜택 모아보기</a></li>
@@ -79,108 +84,109 @@
     </nav>
     /quicklink -->
 
-    <!-- category depth추가 2018-03-21-->
-    <nav class="category">
-      <ul id="categoryList">
-        <li>
-          <a href="#sublist01" class="depth_01">패션/잡화</a>
-          <ul class="cate_depth_sublist" id="sublist01">
-            <li><a href="#">패션/잡화1-1</a></li>
-            <li><a href="#">패션/잡화2-1</a></li>
-            <li><a href="#">패션/잡화3-1</a></li>
-            <li><a href="#">패션/잡화4-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist02" class="depth_01">이미용</a>
-                    <ul class="cate_depth_sublist" id="sublist02">
-            <li><a href="#">이미용1-2</a></li>
-            <li><a href="#">이미용2-2</a></li>
-          </ul>
-                  </li>
-                  <li>
-          <a href="#sublist03" class="depth_01">쥬얼리/시계</a>
-          <ul class="cate_depth_sublist" id="sublist03">
-            <li><a href="#">쥬얼리/시계1-1</a></li>
-            <li><a href="#">쥬얼리/시계2-1</a></li>
-            <li><a href="#">쥬얼리/시계3-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist04" class="depth_01">식품</a>
-                    <ul class="cate_depth_sublist" id="sublist04">
-            <li><a href="#">식품1-2</a></li>
-            <li><a href="#">식품2-2</a></li>
-            <li><a href="#">식품2-3</a></li>
-          </ul>
-                  </li>
-        <li>
-          <a href="#sublist05" class="depth_01">생활</a>
-          <ul class="cate_depth_sublist" id="sublist05">
-            <li><a href="#">생활1-1</a></li>
-            <li><a href="#">생활2-1</a></li>
-          </ul>
-        </li>
-                  <li>
-                    <a href="#sublist06" class="depth_01">주방</a>
-                    <ul class="cate_depth_sublist" id="sublist06">
-            <li><a href="#">주방1-2</a></li>
-            <li><a href="#">주방1-2</a></li>
-            <li><a href="#">주방1-3</a></li>
-            <li><a href="#">주방1-4</a></li>
-            <li><a href="#">주방1-5</a></li>
-          </ul>
-                  </li>
-                  <li>
-                    <a href="#sublist07" class="depth_01">가구/인테리어</a>
-                    <ul class="cate_depth_sublist" id="sublist07">
-            <li><a href="#">중카테고리1-2</a></li>
-            <li><a href="#">중카테고리2-2</a></li>
-            <li><a href="#">중카테고리2-3</a></li>
-            <li><a href="#">중카테고리2-4</a></li>
-            <li><a href="#">중카테고리2-5</a></li>
-          </ul>
-                  </li>
-                  <li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
-                  <li><a href="#" class="depth_01">주방가전</a></li>
-                  <li><a href="#" class="depth_01">디지털</a></li>
-                  <li>
-                    <a href="#sublist09" class="depth_01">헬스/케어</a>
-                    <ul class="cate_depth_sublist" id="sublist09">
-            <li><a href="#">중카테고리1-2</a></li>
-            <li><a href="#">중카테고리2-2</a></li>
-            <li><a href="#">중카테고리2-3</a></li>
-            <li><a href="#">중카테고리2-4</a></li>
-            <li><a href="#">중카테고리2-5</a></li>
-          </ul>
-                  </li>
-      </ul>
-    </nav>
-    <!--// category depth추가 2018-03-21 -->
+					<!-- category depth추가 2018-03-21-->
+					<nav class="category">
+						<ul id="categoryList">
+							<li>
+								<a href="#sublist01" class="depth_01">패션/잡화</a>
+								<ul class="cate_depth_sublist" id="sublist01">
+									<li><a href="#">패션/잡화1-1</a></li>
+									<li><a href="#">패션/잡화2-1</a></li>
+									<li><a href="#">패션/잡화3-1</a></li>
+									<li><a href="#">패션/잡화4-1</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist02" class="depth_01">이미용</a>
+								<ul class="cate_depth_sublist" id="sublist02">
+									<li><a href="#">이미용1-2</a></li>
+									<li><a href="#">이미용2-2</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist03" class="depth_01">쥬얼리/시계</a>
+								<ul class="cate_depth_sublist" id="sublist03">
+									<li><a href="#">쥬얼리/시계1-1</a></li>
+									<li><a href="#">쥬얼리/시계2-1</a></li>
+									<li><a href="#">쥬얼리/시계3-1</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist04" class="depth_01">식품</a>
+								<ul class="cate_depth_sublist" id="sublist04">
+									<li><a href="#">식품1-2</a></li>
+									<li><a href="#">식품2-2</a></li>
+									<li><a href="#">식품2-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist05" class="depth_01">생활</a>
+								<ul class="cate_depth_sublist" id="sublist05">
+									<li><a href="#">생활1-1</a></li>
+									<li><a href="#">생활2-1</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist06" class="depth_01">주방</a>
+								<ul class="cate_depth_sublist" id="sublist06">
+									<li><a href="#">주방1-2</a></li>
+									<li><a href="#">주방1-2</a></li>
+									<li><a href="#">주방1-3</a></li>
+									<li><a href="#">주방1-4</a></li>
+									<li><a href="#">주방1-5</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#sublist07" class="depth_01">가구/인테리어</a>
+								<ul class="cate_depth_sublist" id="sublist07">
+									<li><a href="#">중카테고리1-2</a></li>
+									<li><a href="#">중카테고리2-2</a></li>
+									<li><a href="#">중카테고리2-3</a></li>
+									<li><a href="#">중카테고리2-4</a></li>
+									<li><a href="#">중카테고리2-5</a></li>
+								</ul>
+							</li>
+							<li><a href="http://m.shoppingntmall.com/category/goods-list/10000020" class="depth_01">유아동</a></li>
+							<li><a href="#" class="depth_01">주방가전</a></li>
+							<li><a href="#" class="depth_01">디지털</a></li>
+							<li>
+								<a href="#sublist09" class="depth_01">헬스/케어</a>
+								<ul class="cate_depth_sublist" id="sublist09">
+									<li><a href="#">중카테고리1-2</a></li>
+									<li><a href="#">중카테고리2-2</a></li>
+									<li><a href="#">중카테고리2-3</a></li>
+									<li><a href="#">중카테고리2-4</a></li>
+									<li><a href="#">중카테고리2-5</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<!--// category depth추가 2018-03-21 -->
 
-          <!-- service -->
-          <nav class="service"><!-- 2016-06-08 : 서비스영역 추가 -->
-              <ul>
-                  <li><a class="log" href="#"><span></span>로그아웃</a></li>
-                  <li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
-                  <li><a class="set" href="#"><span></span>설정</a></li>
-                  <li><a class="app" href="#"><span></span>App 다운로드</a></li>
-              </ul>
-          </nav>
-          <!-- /service -->
-    <!-- today's view -->
-          <div class="history">
-            <h2>오늘 본 상품</h2>
-              <p class="his_all"><a href="">전체보기</a></p>
+					<!-- service -->
+					<nav class="service">
+						<!-- 2016-06-08 : 서비스영역 추가 -->
+						<ul>
+							<li><a class="log" href="#"><span></span>로그아웃</a></li>
+							<li><a class="cen" href="../customer/submain.jsp"><span></span>고객센터</a></li>
+							<li><a class="set" href="#"><span></span>설정</a></li>
+							<li><a class="app" href="#"><span></span>App 다운로드</a></li>
+						</ul>
+					</nav>
+					<!-- /service -->
+					<!-- today's view -->
+					<div class="history">
+						<h2>오늘 본 상품</h2>
+						<p class="his_all"><a href="">전체보기</a></p>
 
-      <div class="my_goods_wrap">
-        <ul class="goods_list">
-          <li>
-            <div class="goods">
-              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+						<div class="my_goods_wrap">
+							<ul class="goods_list">
+								<li>
+									<div class="goods">
+										<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격
+										<!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -191,24 +197,24 @@
               </div>
               <!-- //상품가격 -->
 
-              <!-- 201806 가격정책 start -->
-              <div class="price_info02">
-                <i class="blind">할인율</i><span class="discount">10%</span>
-                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
-                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
-              </div>
-              <!-- //201806 가격정책 end -->
-            </div>
-          </li>
-          <li>
-            <div class="goods">
-              <!-- 일시품절 상품 표시 -->
-              <p class="soldout"><span><em>일시품절</em></span></p>
-              <!-- //일시품절 상품 표시 -->
-              <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-              <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+										<!-- 201806 가격정책 start -->
+										<div class="price_info02">
+											<i class="blind">할인율</i><span class="discount">10%</span>
+											<i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+											<i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+										</div>
+										<!-- //201806 가격정책 end -->
+									</div>
+								</li>
+								<li>
+									<div class="goods">
+										<!-- 일시품절 상품 표시 -->
+										<p class="soldout"><span><em>일시품절</em></span></p>
+										<!-- //일시품절 상품 표시 -->
+										<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격
+										<!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -220,111 +226,657 @@
               </div>
               <!-- //상품가격 -->
 
-              <!-- 201806 가격정책 start -->
-              <div class="price_info02">
-                <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
-                <i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
-              </div>
-              <!-- //201806 가격정책 end -->
-            </div>
-          </li>
-        </ul>
-        <!-- no data-->
-                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p>
-        <!-- //no data-->
-      </div>
+										<!-- 201806 가격정책 start -->
+										<div class="price_info02">
+											<i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+											<i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+										</div>
+										<!-- //201806 가격정책 end -->
+									</div>
+								</li>
+							</ul>
+							<!-- no data-->
+							<p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p>
+							<!-- //no data-->
+						</div>
 
-          </div>
-          <!-- /today's view -->
-  </div>
-</div>
+					</div>
+					<!-- /today's view -->
+				</div>
+			</div>
 
-		<div class="wrap_inner">
-			<!--header S-->
-			<header class="header">
-  <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
-  <a class="nav_aside"><span>메뉴</span></a>
-  <a class="search"><span>검색</span></a>
-</header>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header">
+					<h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
+					<a class="nav_aside"><span>메뉴</span></a>
+					<a class="search"><span>검색</span></a>
+				</header>
 
-<div class="searchZone"><!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
-  <fieldset>
-    <legend>검색어 입력</legend>
-    <form>
-      <p>
-        <span>
+				<div class="searchZone">
+					<!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
+					<fieldset>
+						<legend>검색어 입력</legend>
+						<form>
+							<p>
+								<span>
           <input type="text" placeholder="요즘 유행하는 핫 아이템이 궁금하다면?!" name="" id="" />
           <a class="bt"><em></em></a>
         </span>
-      </p>
-    </form>
-  </fieldset>
-  <div class="search_list">
-    <dl>
-      <dt>최근검색어</dt>
-      <dd><a href="">침대</a></dd>
-      <dd><a href="">간이침대</a></dd>
-      <dd><a href="">이층침대</a></dd>
-      <dd><a href="">매트리스</a></dd>
-      <dd><a href="">쇼파형침대</a></dd>
-      <dd><a href="">침대 커버</a></dd>
-      <!-- 최근 검색어 없을 경우 -->
-      <!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
-      <!-- 최근 검색어 없을 경우 //-->
-      <dd>
-        <span class="btn size2 bgcolor8"><a>닫기</a></span>
-      </dd>
-    </dl>
-  </div>
-</div>
-			<!--header E-->
-			<!--main S-->
-			<main id="contents">
-				<nav class="gnb main" id="topNav">
-					<ul>
-						<li class="current"><a>홈</a></li>
-						<li><a>TV편성</a></li>
-						<li><a>라임</a></li>
-						<li><a>T는상품</a></li>
-						<li><a>이벤트</a></li>
-						<li><a>기획전</a></li>
-					</ul>
-				</nav>
-				<div id="homeSlider" class="swipe">
-					<div class="swipe-wrap">
-						<!-- home -->
-						<section class="mainContents" id="homeCont0">
-							<!-- top banner -->
-							<div class="topbanner" >
-								<ul>
-									<li><a><img src="../../img/banner_lime.jpg" alt="" /></a></li>
-								</ul>
-								<span class="closebanner"><a>닫기</a></span>
-							</div>
-							<!-- /top banner -->
-							<!-- 실시간방송상품 -->
-							<div class="onairGoods">
-								<!-- 동영상 --><!-- 2016-06-17 -->
-								<div class="vod_wrap" style="display:none"><!-- 클래스 추가 : 기본모드 vod_wrap, 가로모드 vod_wrap full, 하단 축소 모드 vod_wrap small -->
-									<p class="ctr">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</p>
-									<span class="blank pic"><img src="../../img/blank_vod.gif" alt="" /></span>
+							</p>
+						</form>
+					</fieldset>
+					<div class="search_list">
+						<dl>
+							<dt>최근검색어</dt>
+							<dd><a href="">침대</a></dd>
+							<dd><a href="">간이침대</a></dd>
+							<dd><a href="">이층침대</a></dd>
+							<dd><a href="">매트리스</a></dd>
+							<dd><a href="">쇼파형침대</a></dd>
+							<dd><a href="">침대 커버</a></dd>
+							<!-- 최근 검색어 없을 경우 -->
+							<!-- <dd><p>최근 검색어 내역이 없습니다.</p></dd> -->
+							<!-- 최근 검색어 없을 경우 //-->
+							<dd>
+								<span class="btn size2 bgcolor8"><a>닫기</a></span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<nav class="gnb main" id="topNav">
+						<ul>
+							<li class="current"><a>홈</a></li>
+							<li><a>TV편성</a></li>
+							<li><a>라임</a></li>
+							<li><a>T는상품</a></li>
+							<li><a>이벤트</a></li>
+							<li><a>기획전</a></li>
+						</ul>
+					</nav>
+					<div id="homeSlider" class="swipe">
+						<div class="swipe-wrap">
+							<!-- home -->
+							<section class="mainContents" id="homeCont0">
+								<!-- top banner -->
+								<div class="topbanner">
+									<ul>
+										<li><a><img src="../../img/banner_lime.jpg" alt="" /></a></li>
+									</ul>
+									<span class="closebanner"><a>닫기</a></span>
 								</div>
-								<!-- 동영상 //-->
-								<div class="onairGoodsIn"><!-- 2016-06-17 : div 추가 -->
+								<!-- /top banner -->
+								<!-- 실시간방송상품 -->
+								<div class="onairGoods">
+									<!-- 동영상 -->
+									<!-- 2016-06-17 -->
+									<div class="vod_wrap" style="display:none">
+										<!-- 클래스 추가 : 기본모드 vod_wrap, 가로모드 vod_wrap full, 하단 축소 모드 vod_wrap small -->
+										<p class="ctr">
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</p>
+										<span class="blank pic"><img src="../../img/blank_vod.gif" alt="" /></span>
+									</div>
+									<!-- 동영상 //-->
+									<div class="onairGoodsIn">
+										<!-- 2016-06-17 : div 추가 -->
+										<div class="goods_wide">
+											<div class="goods_img">
+												<img src="../../img/tmp/014.jpg" alt="" />
+												<span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>
+												<span class="btn_play"><a></a></span>
+											</div>
+											<div class="goods_cont">
+												<p class="goods_name">[최저가] 싸이닉 올데이 포어 클레이 마스크+올데이</p>
+												<div class="goods">
+													<!-- 상품가격 -->
+													<div class="goods_price">
+														<p class="sell">
+															판매가 <em>76,200</em>원
+														</p>
+														<p class="sale">
+															<i>쇼핑엔T가</i> <em>43,800</em>원
+														</p>
+													</div>
+													<!-- //상품가격 -->
+													<!-- 혜택 -->
+													<div class="goods_benefit">
+														<p><span>사은품</span></p>
+														<p><span>무이자12</span></p>
+														<p><span>무료배송</span></p>
+													</div>
+													<!-- //혜택 -->
+													<div class="goods_benefit2">
+														<span class="rate"><em>20</em>%<span></span></span>
+														<span class="sale">일시불 할인</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 온에어 - 재생 및 재생시간 -->
+										<p class="time">
+											<span class="onair"><em>On Air</em></span>
+											<span>
+											남은시간 : <em>00:22:45</em>
+										</span>
+										</p>
+										<!-- <p class="time">
+										<span class="onair"><em>On Air</em></span>
+										<span id="time" enddate="2016/06/30 11:43:00" sysdate="2016/06/30 10:14:51" lefttime="">
+											남은시간 : <em class="leftTime"></em>
+										</span>
+									</p> -->
+										<!-- 온에어 - 재생 및 재생시간 //-->
+										<!-- buttons -->
+										<div class="btns_wrap btn2">
+											<span class="btn with_prd"><a href="#">함께하는 상품 <em>2</em></a></span>
+											<span class="btn bgcolor4"><a href="#">구매하기</a></span>
+										</div>
+										<!-- /buttons -->
+										<!-- 함께파는 상품 -->
+										<div class="with_goods_wrap my_goods_wrap">
+											<ul class="goods_list">
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="sell">
+																판매가 <em>76,200</em>원
+															</p>
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<!-- <p class="sell">
+															판매가 <em>76,200</em>원
+														</p> -->
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<!-- <p class="sell">
+															판매가 <em>76,200</em>원
+														</p>
+														<p class="sale">
+															<i>쇼핑엔T가</i> <em>43,800</em>원
+														</p> -->
+															<p class="counsel">상담 전용 상품입니다.</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<p class="soldout"><span><em>일시품절</em></span></p>
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 </div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="sell">
+																판매가 <em>76,200</em>원
+															</p>
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="sell">
+																판매가 <em>76,200</em>원
+															</p>
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="sell">
+																판매가 <em>76,200</em>원
+															</p>
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종 너비향 육포 2종너비향 육포 2종너비향 육포 2종너비향 육포 2종</div>
+
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="sell">
+																판매가 <em>76,200</em>원
+															</p>
+															<p class="sale">
+																<i>쇼핑엔T가</i> <em>43,800</em>원
+															</p>
+														</div>
+														<!-- //상품가격 -->
+
+													</div>
+												</li>
+											</ul>
+											<span class="btn_close"></span>
+										</div>
+										<!-- 함께파는 상품 //-->
+									</div>
+								</div>
+								<!-- //실시간방송상품 -->
+
+								<!-- 다음 방송 상품 -->
+								<div class="next_goods_wrap goods_wide">
+									<div class="goods_top">
+										<h3>
+										다음 방송 상품
+										<span class="time"><span></span>다음 방송시간 <em>09:00 ~ 10:20</em></span>
+									</h3>
+										<span class="tv_link">TV편성표</span>
+									</div>
+									<div class="goods_img">
+										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+									</div>
+									<div class="goods_cont">
+										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 보호막으로 하루종일 촉촉하게</p>
+										<div class="goods">
+											<!-- 상품가격 -->
+											<div class="goods_price">
+												<p class="sell">
+													판매가 <em>76,200</em>원
+												</p>
+												<p class="sale">
+													<i>쇼핑엔T가</i> <em>43,800</em>원
+												</p>
+											</div>
+											<!-- //상품가격 -->
+											<!-- 혜택 -->
+											<div class="goods_benefit">
+												<p><span>사은품</span></p>
+												<p><span>무이자12</span></p>
+												<p><span>무료배송</span></p>
+											</div>
+											<!-- //혜택 -->
+											<div class="goods_benefit2">
+												<span class="rate"><em>5</em>%<span></span></span>
+												<span class="sale">일시불 할인</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 다음 방송 상품 //-->
+
+								<!-- 롤링배너 -->
+								<div class="rollBan">
+									<div class="slideZone">
+										<div id="ban-slide" class="imgSlide">
+											<ul class="BannerList swiper-wrapper">
+												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
+												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
+												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
+											</ul>
+										</div>
+									</div>
+									<p id="ban-circle" class="slideCircle"></p>
+								</div>
+								<!-- //롤링배너 -->
+								<!-- 2016-06-15 -->
+
+								<!-- 베스트상품 -->
+								<div class="rollBan best">
+									<div class="goods_top">
+										<h3>베스트상품</h3>
+										<p>늘 고객님만 생각하고 또 생각합니다</p>
+									</div>
+									<div class="slideZone">
+										<div id="ban-slide2" class="imgSlide">
+											<ul class="swiper-wrapper">
+												<li class="swiper-slide">
+													<div class="goods_wide">
+														<div class="goods_img">
+															<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+															<span class="rank">01</span>
+														</div>
+														<div class="goods_cont">
+															<p class="goods_name">[신일] 더센쿡 다용도 믹서기 더센쿡 다용도 믹서기 더센쿡 다용도 믹서기 (텀블러) [SMX-SB2BMX-SB2B]</p>
+															<div class="goods">
+																<!-- 상품가격 -->
+																<div class="goods_price">
+																	<p class="sell">
+																		판매가 <em>76,200</em>원
+																	</p>
+																	<p class="sale">
+																		<i>쇼핑엔T가</i> <em>43,800</em>원
+																	</p>
+																</div>
+																<!-- //상품가격 -->
+																<!-- 혜택 -->
+																<div class="goods_benefit">
+																	<p><span>사은품</span></p>
+																	<p><span>무이자12</span></p>
+																	<p><span>무료배송</span></p>
+																</div>
+																<!-- //혜택 -->
+																<div class="goods_benefit2">
+																	<span class="rate"><em>20</em>%<span></span></span>
+																	<span class="sale">일시불 할인</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="swiper-slide">
+													<div class="goods_wide">
+														<div class="goods_img">
+															<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+															<span class="rank">02</span>
+														</div>
+														<div class="goods_cont">
+															<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저 클렌저클렌저클렌저</p>
+															<div class="goods">
+																<!-- 상품가격 -->
+																<div class="goods_price">
+																	<p class="sell">
+																		판매가 <em>76,200</em>원
+																	</p>
+																	<p class="sale">
+																		<i>쇼핑엔T가</i> <em>43,800</em>원
+																	</p>
+																</div>
+																<!-- //상품가격 -->
+																<!-- 혜택 -->
+																<div class="goods_benefit">
+																	<p><span>사은품</span></p>
+																	<p><span>무이자12</span></p>
+																	<p><span>무료배송</span></p>
+																</div>
+																<!-- //혜택 -->
+																<div class="goods_benefit2">
+																	<span class="rate"><em>20</em>%<span></span></span>
+																	<span class="sale">일시불 할인</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="swiper-slide">
+													<div class="goods_wide">
+														<div class="goods_img">
+															<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+															<span class="rank">03</span>
+														</div>
+														<div class="goods_cont">
+															<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+															<div class="goods">
+																<!-- 상품가격 -->
+																<div class="goods_price">
+																	<p class="sell">
+																		판매가 <em>76,200</em>원
+																	</p>
+																	<p class="sale">
+																		<i>쇼핑엔T가</i> <em>43,800</em>원
+																	</p>
+																</div>
+																<!-- //상품가격 -->
+																<!-- 혜택 -->
+																<div class="goods_benefit">
+																	<p><span>사은품</span></p>
+																	<p><span>무이자12</span></p>
+																	<p><span>무료배송</span></p>
+																</div>
+																<!-- //혜택 -->
+																<div class="goods_benefit2">
+																	<span class="rate"><em>20</em>%<span></span></span>
+																	<span class="sale">일시불 할인</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="swiper-slide">
+													<div class="goods_wide">
+														<div class="goods_img">
+															<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+															<span class="rank">04</span>
+														</div>
+														<div class="goods_cont">
+															<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+															<div class="goods">
+																<!-- 상품가격 -->
+																<div class="goods_price">
+																	<p class="sell">
+																		판매가 <em>76,200</em>원
+																	</p>
+																	<p class="sale">
+																		<i>쇼핑엔T가</i> <em>43,800</em>원
+																	</p>
+																</div>
+																<!-- //상품가격 -->
+																<!-- 혜택 -->
+																<div class="goods_benefit">
+																	<p><span>사은품</span></p>
+																	<p><span>무이자12</span></p>
+																	<p><span>무료배송</span></p>
+																</div>
+																<!-- //혜택 -->
+																<div class="goods_benefit2">
+																	<span class="rate"><em>20</em>%<span></span></span>
+																	<span class="sale">일시불 할인</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="swiper-slide">
+													<div class="goods_wide">
+														<div class="goods_img">
+															<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+															<span class="rank">05</span>
+														</div>
+														<div class="goods_cont">
+															<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+															<div class="goods">
+																<!-- 상품가격 -->
+																<div class="goods_price">
+																	<p class="sell">
+																		판매가 <em>76,200</em>원
+																	</p>
+																	<p class="sale">
+																		<i>쇼핑엔T가</i> <em>43,800</em>원
+																	</p>
+																</div>
+																<!-- //상품가격 -->
+																<!-- 혜택 -->
+																<div class="goods_benefit">
+																	<p><span>사은품</span></p>
+																	<p><span>무이자12</span></p>
+																	<p><span>무료배송</span></p>
+																</div>
+																<!-- //혜택 -->
+																<div class="goods_benefit2">
+																	<span class="rate"><em>20</em>%<span></span></span>
+																	<span class="sale">일시불 할인</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<!-- 베스트상품 //-->
+
+								<!-- 내가 담아놓은 상품 -->
+								<div class="my_goods_wrap">
+									<div class="goods_top">
+										<h3>내가 담아놓은 상품</h3>
+										<span class="btn_all_view"><a>전체보기</a></span>
+									</div>
+									<ul class="goods_list">
+										<li>
+											<div class="goods">
+												<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+												<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+
+											</div>
+										</li>
+										<li>
+											<div class="goods">
+												<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+												<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- 내가 담아놓은 상품 //-->
+
+								<!-- T는 상품 -->
+								<div class="goods_top">
+									<h3>T는 상품</h3>
+								</div>
+								<!-- 상품 목록 -->
+								<div class="goods_list_wrap">
 									<div class="goods_wide">
 										<div class="goods_img">
-											<img src="../../img/tmp/014.jpg" alt="" />
-											<span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>
-											<span class="btn_play"><a></a></span>
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
 										</div>
 										<div class="goods_cont">
-											<p class="goods_name">[최저가] 싸이닉 올데이 포어 클레이 마스크+올데이</p>
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
 											<div class="goods">
 												<!-- 상품가격 -->
 												<div class="goods_price">
@@ -350,1239 +902,735 @@
 											</div>
 										</div>
 									</div>
-									<!-- 온에어 - 재생 및 재생시간 -->
-									<p class="time">
-										<span class="onair"><em>On Air</em></span>
-										<span>
-											남은시간 : <em>00:22:45</em>
-										</span>
-									</p>
-									<!-- <p class="time">
-										<span class="onair"><em>On Air</em></span>
-										<span id="time" enddate="2016/06/30 11:43:00" sysdate="2016/06/30 10:14:51" lefttime="">
-											남은시간 : <em class="leftTime"></em>
-										</span>
-									</p> -->
-									<!-- 온에어 - 재생 및 재생시간 //-->
-									<!-- buttons -->
-									<div class="btns_wrap btn2">
-										<span class="btn with_prd"><a href="#">함께하는 상품 <em>2</em></a></span>
-										<span class="btn bgcolor4"><a href="#">구매하기</a></span>
-									</div>
-									<!-- /buttons -->
-									<!-- 함께파는 상품 -->
-									<div class="with_goods_wrap my_goods_wrap">
-										<ul class="goods_list">
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<!-- <p class="sell">
-															판매가 <em>76,200</em>원
-														</p> -->
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<!-- <p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p> -->
-														<p class="counsel">상담 전용 상품입니다.</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<p class="soldout"><span><em>일시품절</em></span></p>
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 </div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-											<li>
-												<div class="goods">
-													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종 너비향 육포 2종너비향 육포 2종너비향 육포 2종너비향 육포 2종</div>
-
-													<!-- 혜택 -->
-													<div class="goods_benefit">
-														<p><span>사은품</span></p>
-														<p><span>무이자12</span></p>
-														<p><span>무료배송</span></p>
-													</div>
-													<!-- //혜택 -->
-
-													<!-- 상품가격 -->
-													<div class="goods_price">
-														<p class="sell">
-															판매가 <em>76,200</em>원
-														</p>
-														<p class="sale">
-															<i>쇼핑엔T가</i> <em>43,800</em>원
-														</p>
-													</div>
-													<!-- //상품가격 -->
-
-												</div>
-											</li>
-										</ul>
-										<span  class="btn_close"></span>
-									</div>
-									<!-- 함께파는 상품 //-->
-								</div>
-							</div>
-							<!-- //실시간방송상품 -->
-
-							<!-- 다음 방송 상품 -->
-							<div class="next_goods_wrap goods_wide">
-								<div class="goods_top">
-									<h3>
-										다음 방송 상품
-										<span class="time"><span></span>다음 방송시간 <em>09:00 ~ 10:20</em></span>
-									</h3>
-									<span class="tv_link">TV편성표</span>
-								</div>
-								<div class="goods_img">
-									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-								</div>
-								<div class="goods_cont">
-									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 보호막으로 하루종일 촉촉하게</p>
-									<div class="goods">
-										<!-- 상품가격 -->
-										<div class="goods_price">
-											<p class="sell">
-												판매가 <em>76,200</em>원
-											</p>
-											<p class="sale">
-												<i>쇼핑엔T가</i> <em>43,800</em>원
-											</p>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 										</div>
-										<!-- //상품가격 -->
-										<!-- 혜택 -->
-										<div class="goods_benefit">
-											<p><span>사은품</span></p>
-											<p><span>무이자12</span></p>
-											<p><span>무료배송</span></p>
-										</div>
-										<!-- //혜택 -->
-										<div class="goods_benefit2">
-											<span class="rate"><em>5</em>%<span></span></span>
-											<span class="sale">일시불 할인</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- 다음 방송 상품 //-->
-
-							<!-- 롤링배너 -->
-							<div class="rollBan">
-								<div class="slideZone">
-									<div id="ban-slide" class="imgSlide">
-										<ul class="BannerList swiper-wrapper" >
-											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
-											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
-											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/010_3.jpg" alt=""></a></li>
-										</ul>
-									</div>
-								</div>
-								<p id="ban-circle" class="slideCircle"></p>
-							</div>
-							<!-- //롤링배너 --><!-- 2016-06-15 -->
-
-							<!-- 베스트상품 -->
-							<div class="rollBan best">
-								<div class="goods_top">
-									<h3>베스트상품</h3>
-									<p>늘 고객님만 생각하고 또 생각합니다</p>
-								</div>
-								<div class="slideZone">
-									<div id="ban-slide2" class="imgSlide">
-										<ul class="swiper-wrapper">
-											<li class="swiper-slide">
-												<div class="goods_wide">
-													<div class="goods_img">
-														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-														<span  class="rank">01</span>
-													</div>
-													<div class="goods_cont">
-														<p class="goods_name">[신일] 더센쿡 다용도 믹서기 더센쿡 다용도 믹서기 더센쿡 다용도 믹서기 (텀블러) [SMX-SB2BMX-SB2B]</p>
-														<div class="goods">
-															<!-- 상품가격 -->
-															<div class="goods_price">
-																<p class="sell">
-																	판매가 <em>76,200</em>원
-																</p>
-																<p class="sale">
-																	<i>쇼핑엔T가</i> <em>43,800</em>원
-																</p>
-															</div>
-															<!-- //상품가격 -->
-															<!-- 혜택 -->
-															<div class="goods_benefit">
-																<p><span>사은품</span></p>
-																<p><span>무이자12</span></p>
-																<p><span>무료배송</span></p>
-															</div>
-															<!-- //혜택 -->
-															<div class="goods_benefit2">
-																<span class="rate"><em>20</em>%<span></span></span>
-																<span class="sale">일시불 할인</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="swiper-slide">
-												<div class="goods_wide">
-													<div class="goods_img">
-														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-														<span  class="rank">02</span>
-													</div>
-													<div class="goods_cont">
-														<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저 클렌저클렌저클렌저</p>
-														<div class="goods">
-															<!-- 상품가격 -->
-															<div class="goods_price">
-																<p class="sell">
-																	판매가 <em>76,200</em>원
-																</p>
-																<p class="sale">
-																	<i>쇼핑엔T가</i> <em>43,800</em>원
-																</p>
-															</div>
-															<!-- //상품가격 -->
-															<!-- 혜택 -->
-															<div class="goods_benefit">
-																<p><span>사은품</span></p>
-																<p><span>무이자12</span></p>
-																<p><span>무료배송</span></p>
-															</div>
-															<!-- //혜택 -->
-															<div class="goods_benefit2">
-																<span class="rate"><em>20</em>%<span></span></span>
-																<span class="sale">일시불 할인</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="swiper-slide">
-												<div class="goods_wide">
-													<div class="goods_img">
-														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-														<span  class="rank">03</span>
-													</div>
-													<div class="goods_cont">
-														<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-														<div class="goods">
-															<!-- 상품가격 -->
-															<div class="goods_price">
-																<p class="sell">
-																	판매가 <em>76,200</em>원
-																</p>
-																<p class="sale">
-																	<i>쇼핑엔T가</i> <em>43,800</em>원
-																</p>
-															</div>
-															<!-- //상품가격 -->
-															<!-- 혜택 -->
-															<div class="goods_benefit">
-																<p><span>사은품</span></p>
-																<p><span>무이자12</span></p>
-																<p><span>무료배송</span></p>
-															</div>
-															<!-- //혜택 -->
-															<div class="goods_benefit2">
-																<span class="rate"><em>20</em>%<span></span></span>
-																<span class="sale">일시불 할인</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="swiper-slide">
-												<div class="goods_wide">
-													<div class="goods_img">
-														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-														<span  class="rank">04</span>
-													</div>
-													<div class="goods_cont">
-														<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-														<div class="goods">
-															<!-- 상품가격 -->
-															<div class="goods_price">
-																<p class="sell">
-																	판매가 <em>76,200</em>원
-																</p>
-																<p class="sale">
-																	<i>쇼핑엔T가</i> <em>43,800</em>원
-																</p>
-															</div>
-															<!-- //상품가격 -->
-															<!-- 혜택 -->
-															<div class="goods_benefit">
-																<p><span>사은품</span></p>
-																<p><span>무이자12</span></p>
-																<p><span>무료배송</span></p>
-															</div>
-															<!-- //혜택 -->
-															<div class="goods_benefit2">
-																<span class="rate"><em>20</em>%<span></span></span>
-																<span class="sale">일시불 할인</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="swiper-slide">
-												<div class="goods_wide">
-													<div class="goods_img">
-														<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-														<span  class="rank">05</span>
-													</div>
-													<div class="goods_cont">
-														<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-														<div class="goods">
-															<!-- 상품가격 -->
-															<div class="goods_price">
-																<p class="sell">
-																	판매가 <em>76,200</em>원
-																</p>
-																<p class="sale">
-																	<i>쇼핑엔T가</i> <em>43,800</em>원
-																</p>
-															</div>
-															<!-- //상품가격 -->
-															<!-- 혜택 -->
-															<div class="goods_benefit">
-																<p><span>사은품</span></p>
-																<p><span>무이자12</span></p>
-																<p><span>무료배송</span></p>
-															</div>
-															<!-- //혜택 -->
-															<div class="goods_benefit2">
-																<span class="rate"><em>20</em>%<span></span></span>
-																<span class="sale">일시불 할인</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-
-							</div>
-							<!-- 베스트상품 //-->
-
-							<!-- 내가 담아놓은 상품 -->
-							<div class="my_goods_wrap">
-								<div class="goods_top">
-									<h3>내가 담아놓은 상품</h3>
-									<span class="btn_all_view"><a>전체보기</a></span>
-								</div>
-								<ul class="goods_list">
-									<li>
-										<div class="goods">
-											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-											<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-
-										</div>
-									</li>
-									<li>
-										<div class="goods">
-											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-											<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-
-										</div>
-									</li>
-								</ul>
-							</div>
-							<!-- 내가 담아놓은 상품 //-->
-
-							<!-- T는 상품 -->
-							<div class="goods_top">
-								<h3>T는 상품</h3>
-							</div>
-							<!-- 상품 목록 -->
-							<div class="goods_list_wrap">
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<!-- <p class="sell">
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<!-- <p class="sell">
 													판매가 <em>76,200</em>원
 												</p>
 												<p class="sale">
 													<i>쇼핑엔T가</i> <em>43,800</em>원
 												</p> -->
-												<p class="counsel">상담전용 상품입니다</p>
+													<p class="counsel">상담전용 상품입니다</p>
 
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-												<span class="sale">일시불 할인</span>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<!-- <p class="sell">
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<!-- <p class="sell">
 													판매가 <em>76,200</em>원
 												</p> -->
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<!-- <span class="sale">일시불 할인</span> -->
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<!-- <span class="sale">일시불 할인</span> -->
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<!-- <span class="rate"><em>20</em>%<span></span></span>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<!-- <span class="rate"><em>20</em>%<span></span></span>
 												<span class="sale">일시불 할인</span> -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- T는 상품 //-->
+								<!-- T는 상품 //-->
 
-							<!-- 이벤트&혜택 -->
-							<div class="eventBan">
-								<!-- 2015-04-21 타이틀 삭제 -->
-								<ul class="BannerList">
-									<li><a href="#"><img src="../../img/banner_app.jpg" alt="" /></a></li>
-								</ul>
-							</div>
-							<!-- //이벤트&혜택 -->
-						</section>
-						<!-- TV편성 -->
-						<section class="mainContents" id="homeCont1">
-							<div class="tvDate">
-								<ol>
-									<li><a onclick="goUrl('/broadcast/main?fromDate=2015/06/03')"><span>06월 03일</span></a></li>
-									<li><span>06월 04일</span></li>
-									<li><a onclick="goUrl('/broadcast/main?fromDate=2015/06/05')"><span>06월 05일</span></a></li>
-								</ol>
-							</div>
-							<div class="scdList">
-								<ol>
-									<li>
-										<div class="tv_time"><span></span></div>
-										<div class="goods_box">
-											<dl>
-												<dt>
+								<!-- 이벤트&혜택 -->
+								<div class="eventBan">
+									<!-- 2015-04-21 타이틀 삭제 -->
+									<ul class="BannerList">
+										<li><a href="#"><img src="../../img/banner_app.jpg" alt="" /></a></li>
+									</ul>
+								</div>
+								<!-- //이벤트&혜택 -->
+							</section>
+							<!-- TV편성 -->
+							<section class="mainContents" id="homeCont1">
+								<div class="tvDate">
+									<ol>
+										<li><a onclick="goUrl('/broadcast/main?fromDate=2015/06/03')"><span>06월 03일</span></a></li>
+										<li><span>06월 04일</span></li>
+										<li><a onclick="goUrl('/broadcast/main?fromDate=2015/06/05')"><span>06월 05일</span></a></li>
+									</ol>
+								</div>
+								<div class="scdList">
+									<ol>
+										<li>
+											<div class="tv_time"><span></span></div>
+											<div class="goods_box">
+												<dl>
+													<dt>
 													<span class="time">방송시간 <em>09:00 ~ 10:20</em></span>
 													<span class="movie"><a href="#">방송알림</a></span>
 												</dt>
-												<dd>
-													<div class="goods_wrap">
-														<ul class="goods_list">
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<p>
-																			<del><em>216,100</em>원</del>
-																		</p>
-																		<p>
-																			<span><em>164,800</em>원</span>
-																		</p>
-																		<!-- <p class="counsel">상담전용 상품입니다</p> -->
+													<dd>
+														<div class="goods_wrap">
+															<ul class="goods_list">
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<p>
+																				<del><em>216,100</em>원</del>
+																			</p>
+																			<p>
+																				<span><em>164,800</em>원</span>
+																			</p>
+																			<!-- <p class="counsel">상담전용 상품입니다</p> -->
+																		</div>
+																		<!-- //상품가격 -->
 																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit2">
-																	<span class="rate"><em>20</em>%<span></span></span>
-																	<span class="sale">일시불 할인</span>
-																</div>
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																</div>
-																<!-- //혜택 --><!-- 2016-06-08 : 위치 수정 -->
-															</li>
-														</ul>
-
-														<div class="btns_wrap">
-															<span class="btn full bgcolor7"><a href="#">방송중 구매가능</a></span>
-														</div>
-
-														<ul class="goods_list together_list">
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 화적포 무방부제 무발색제 화적포무방부제 무발색제 화적포</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
-																		<!-- <p class="counsel">상담전용 상품입니다</p> -->
-																	</div>
-																	<!-- //상품가격 -->
-																	<div class="goods_benefit2">
-																		<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-																	</div>
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 --><!-- 2016-06-08 : 위치 수정 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 화적포</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
-																		<!-- <p class="counsel">상담전용 상품입니다</p> -->
-																	</div>
-																	<!-- //상품가격 -->
+																	<!-- 혜택 -->
 																	<div class="goods_benefit2">
 																		<span class="rate"><em>20</em>%<span></span></span>
+																		<span class="sale">일시불 할인</span>
 																	</div>
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-														</ul>
-													</div>
-												</dd>
-											</dl>
-										</div>
-									</li>
-									<li>
-										<div class="tv_time"><span></span></div>
-										<div class="goods_box">
-											<dl>
-												<dt>
-													<span class="time">방송시간 <em>12:00 ~ 13:00</em></span>
-												</dt>
-												<dd>
-													<div class="goods_wrap">
-														<ul class="goods_list">
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<!-- <p>
-																			<del><em>216,100</em>원</del>
-																		</p>
-																		<p>
-																			<span><em>164,800</em>원</span>
-																		</p> -->
-																		<p  class="counsel">상담전용 상품입니다</p>
-																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit2">
-																	<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-																	<span class="sale">일시불 할인</span>
-																</div>
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-														</ul>
-
-														<div class="btns_wrap">
-															<span class="btn full bgcolor7"><a href="#">구매하기</a></span>
-															<span class="btn full bgcolor7"><a href="#">상담신청하기</a></span>
-														</div>
-
-														<!-- <div class="btns_wrap">
-															<span class="btn viewmore"><a>더보기</a></span>
-														</div> -->
-													</div>
-												</dd>
-											</dl>
-										</div>
-									</li>
-									<li class="tvOnair">
-										<div class="tv_time"><span></span></div>
-										<div class="goods_box">
-											<dl>
-												<dt>
-													<em class="onair">On Air</em>
-													<span class="time"><em>남은시간  00:33:32</em></span>
-													<span class="movie"><a href="#">방송보기</a></span>
-												</dt>
-												<dd>
-													<div class="goods_wrap">
-														<div class="goods_wide">
-															<div class="goods_img">
-																<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-															</div>
-															<div class="goods_cont">
-																<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-																<div class="goods">
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<p class="sell">
-																			판매가 <em>76,200</em>원
-																		</p>
-																		<p class="sale">
-																			<i>쇼핑엔T가</i> <em>43,800</em>원
-																		</p>
-																	</div>
-																	<!-- //상품가격 -->
-																	<!-- 혜택 -->
 																	<div class="goods_benefit">
 																		<p><span>사은품</span></p>
 																		<p><span>무이자12</span></p>
 																		<p><span>무료배송</span></p>
 																	</div>
 																	<!-- //혜택 -->
+																	<!-- 2016-06-08 : 위치 수정 -->
+																</li>
+															</ul>
+
+															<div class="btns_wrap">
+																<span class="btn full bgcolor7"><a href="#">방송중 구매가능</a></span>
+															</div>
+
+															<ul class="goods_list together_list">
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 화적포 무방부제 무발색제 화적포무방부제 무발색제 화적포</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																			<!-- <p class="counsel">상담전용 상품입니다</p> -->
+																		</div>
+																		<!-- //상품가격 -->
+																		<div class="goods_benefit2">
+																			<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+																		</div>
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																	<!-- 2016-06-08 : 위치 수정 -->
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 화적포</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																			<!-- <p class="counsel">상담전용 상품입니다</p> -->
+																		</div>
+																		<!-- //상품가격 -->
+																		<div class="goods_benefit2">
+																			<span class="rate"><em>20</em>%<span></span></span>
+																		</div>
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																</li>
+															</ul>
+														</div>
+													</dd>
+												</dl>
+											</div>
+										</li>
+										<li>
+											<div class="tv_time"><span></span></div>
+											<div class="goods_box">
+												<dl>
+													<dt>
+													<span class="time">방송시간 <em>12:00 ~ 13:00</em></span>
+												</dt>
+													<dd>
+														<div class="goods_wrap">
+															<ul class="goods_list">
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<!-- <p>
+																			<del><em>216,100</em>원</del>
+																		</p>
+																		<p>
+																			<span><em>164,800</em>원</span>
+																		</p> -->
+																			<p class="counsel">상담전용 상품입니다</p>
+																		</div>
+																		<!-- //상품가격 -->
+																	</div>
+																	<!-- 혜택 -->
 																	<div class="goods_benefit2">
-																		<span class="rate"><em>20</em>%<span></span></span>
+																		<!-- <span class="rate"><em>20</em>%<span></span></span> -->
 																		<span class="sale">일시불 할인</span>
+																	</div>
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																</li>
+															</ul>
+
+															<div class="btns_wrap">
+																<span class="btn full bgcolor7"><a href="#">구매하기</a></span>
+																<span class="btn full bgcolor7"><a href="#">상담신청하기</a></span>
+															</div>
+
+															<!-- <div class="btns_wrap">
+															<span class="btn viewmore"><a>더보기</a></span>
+														</div> -->
+														</div>
+													</dd>
+												</dl>
+											</div>
+										</li>
+										<li class="tvOnair">
+											<div class="tv_time"><span></span></div>
+											<div class="goods_box">
+												<dl>
+													<dt>
+													<em class="onair">On Air</em>
+													<span class="time"><em>남은시간  00:33:32</em></span>
+													<span class="movie"><a href="#">방송보기</a></span>
+												</dt>
+													<dd>
+														<div class="goods_wrap">
+															<div class="goods_wide">
+																<div class="goods_img">
+																	<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+																</div>
+																<div class="goods_cont">
+																	<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+																	<div class="goods">
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<p class="sell">
+																				판매가 <em>76,200</em>원
+																			</p>
+																			<p class="sale">
+																				<i>쇼핑엔T가</i> <em>43,800</em>원
+																			</p>
+																		</div>
+																		<!-- //상품가격 -->
+																		<!-- 혜택 -->
+																		<div class="goods_benefit">
+																			<p><span>사은품</span></p>
+																			<p><span>무이자12</span></p>
+																			<p><span>무료배송</span></p>
+																		</div>
+																		<!-- //혜택 -->
+																		<div class="goods_benefit2">
+																			<span class="rate"><em>20</em>%<span></span></span>
+																			<span class="sale">일시불 할인</span>
+																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
-														<div class="btns_wrap">
-															<span class="btn full bgcolor4"><a href="#">구매하기</a></span>
-														</div>
-														<ul class="goods_list together_list">
-															<li>
-																<div class="goods">
-																	<!-- 일시품절 상품 표시 -->
-																	<p class="soldout"><span><em>일시품절</em></span></p>
-																	<!-- //일시품절 상품 표시 -->
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<span><em>164,800</em>원</span>
+															<div class="btns_wrap">
+																<span class="btn full bgcolor4"><a href="#">구매하기</a></span>
+															</div>
+															<ul class="goods_list together_list">
+																<li>
+																	<div class="goods">
+																		<!-- 일시품절 상품 표시 -->
+																		<p class="soldout"><span><em>일시품절</em></span></p>
+																		<!-- //일시품절 상품 표시 -->
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
 																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
 																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<!-- <p><span>사은품</span></p>
+																	<!-- //혜택 -->
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<!-- <p><span>사은품</span></p>
 																	<p><span>무이자12</span></p>
 																	<p><span>무료배송</span></p>
 																	<p><span>일시불 할인</span></p> -->
-																</div>
-																<!-- //혜택 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
-																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
-																	</div>
-																	<!-- //상품가격 -->
-																	<!-- 혜택 -->
-																	<div class="goods_benefit2">
-																		<span class="rate"><em>20</em>%<span></span></span>
 																	</div>
 																	<!-- //혜택 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
 																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-															<li>
-																<div class="goods">
-																	<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
-																	<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
-																	<!-- 상품가격 -->
-																	<div class="goods_price">
-																		<del><em>216,100</em>원</del>
-																		<span><em>164,800</em>원</span>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
 																	</div>
-																	<!-- //상품가격 -->
-																</div>
-																<!-- 혜택 -->
-																<div class="goods_benefit">
-																	<p><span>사은품</span></p>
-																	<p><span>무이자12</span></p>
-																	<p><span>무료배송</span></p>
-																	<p><span>일시불 할인</span></p>
-																</div>
-																<!-- //혜택 -->
-															</li>
-														</ul>
-														<div class="btns_wrap">
-															<span class="btn viewmore"><a>함께파는 상품<em>(8)</em> 더보기</a></span>
+																	<!-- //혜택 -->
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
+																		<!-- 혜택 -->
+																		<div class="goods_benefit2">
+																			<span class="rate"><em>20</em>%<span></span></span>
+																		</div>
+																		<!-- //혜택 -->
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																</li>
+																<li>
+																	<div class="goods">
+																		<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+																		<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+																		<!-- 상품가격 -->
+																		<div class="goods_price">
+																			<del><em>216,100</em>원</del>
+																			<span><em>164,800</em>원</span>
+																		</div>
+																		<!-- //상품가격 -->
+																	</div>
+																	<!-- 혜택 -->
+																	<div class="goods_benefit">
+																		<p><span>사은품</span></p>
+																		<p><span>무이자12</span></p>
+																		<p><span>무료배송</span></p>
+																		<p><span>일시불 할인</span></p>
+																	</div>
+																	<!-- //혜택 -->
+																</li>
+															</ul>
+															<div class="btns_wrap">
+																<span class="btn viewmore"><a>함께파는 상품<em>(8)</em> 더보기</a></span>
+															</div>
 														</div>
-													</div>
-												</dd>
-											</dl>
-										</div>
-									</li>
-								</ol>
-							</div>
-						</section>
-						<!-- 라임 -->
-						<section class="mainContents" id="homeCont2">
-							<!-- 상품 배너 -->
-							<div class="eventmain">
-								<ul class="limeBanner">
-									<li class="limeLeft"><a href="#"><img src="../../img/tmp/event_img6.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img7.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img8.png" alt="" /></a></li>
-								</ul>
-								<ul class="BannerList">
-									<li><a href="#"><img src="../../img/tmp/event_img9.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img10.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img11.png" alt="" /></a></li>
-								</ul>
-							</div>
-							<!-- //상품 배너 -->
-						</section>
-						<!-- T는상품 -->
-						<section class="mainContents" id="homeCont3">
-							<!-- top banner -->
-							<div class="topbanner" >
-								<ul>
-									<li><a><img src="../../img/banner_lime.jpg" alt="" /></a></li>
-								</ul>
-								<span class="closebanner"><a>닫기</a></span>
-							</div>
-							<!-- /top banner -->
-							<!-- 베스트상품 목록 -->
-							<div class="goods_top">
-								<h2>베스트상품</h2>
-							</div>
-							<div class="goods_list_wrap">
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
+													</dd>
+												</dl>
 											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
+										</li>
+									</ol>
+								</div>
+							</section>
+							<!-- 라임 -->
+							<section class="mainContents" id="homeCont2">
+								<!-- 상품 배너 -->
+								<div class="eventmain">
+									<ul class="limeBanner">
+										<li class="limeLeft"><a href="#"><img src="../../img/tmp/event_img6.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img7.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img8.png" alt="" /></a></li>
+									</ul>
+									<ul class="BannerList">
+										<li><a href="#"><img src="../../img/tmp/event_img9.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img10.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img11.png" alt="" /></a></li>
+									</ul>
+								</div>
+								<!-- //상품 배너 -->
+							</section>
+							<!-- T는상품 -->
+							<section class="mainContents" id="homeCont3">
+								<!-- top banner -->
+								<div class="topbanner">
+									<ul>
+										<li><a><img src="../../img/banner_lime.jpg" alt="" /></a></li>
+									</ul>
+									<span class="closebanner"><a>닫기</a></span>
+								</div>
+								<!-- /top banner -->
+								<!-- 베스트상품 목록 -->
+								<div class="goods_top">
+									<h2>베스트상품</h2>
+								</div>
+								<div class="goods_list_wrap">
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+												<!-- //혜택 -->
+											</div>
+										</div>
+									</div>
+									<div class="goods_wide rank">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/001.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+													<!-- <p class="counsel">상담전용 상품입니다</p> -->
+												</div>
+												<!-- //상품가격 -->
+											</div>
+										</div>
+										<!-- 혜택 -->
+										<div class="goods_benefit_wp">
 											<div class="goods_benefit">
 												<p><span>사은품</span></p>
 												<p><span>무이자12</span></p>
@@ -1592,410 +1640,377 @@
 												<span class="rate"><em>20</em>%<span></span></span>
 												<span class="sale">일시불 할인</span>
 											</div>
-											<!-- //혜택 -->
 										</div>
+										<!-- //혜택 -->
 									</div>
-								</div>
-								<div class="goods_wide rank">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-												<!-- <p class="counsel">상담전용 상품입니다</p> -->
-											</div>
-											<!-- //상품가격 -->
+									<div class="goods_wide rank">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 										</div>
-									</div>
-									<!-- 혜택 -->
-									<div class="goods_benefit_wp">
-										<div class="goods_benefit">
-											<p><span>사은품</span></p>
-											<p><span>무이자12</span></p>
-											<p><span>무료배송</span></p>
-										</div>
-										<div class="goods_benefit2">
-											<span class="rate"><em>20</em>%<span></span></span>
-											<span class="sale">일시불 할인</span>
-										</div>
-									</div>
-									<!-- //혜택 -->
-								</div>
-								<div class="goods_wide rank">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<!-- <p class="sell">
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<!-- <p class="sell">
 													판매가 <em>76,200</em>원
 												</p>
 												<p class="sale">
 													<i>쇼핑엔T가</i> <em>43,800</em>원
 												</p> -->
-												<p class="counsel">상담전용 상품입니다</p>
+													<p class="counsel">상담전용 상품입니다</p>
+												</div>
+												<!-- //상품가격 -->
 											</div>
-											<!-- //상품가격 -->
 										</div>
-									</div>
-									<!-- 혜택 -->
-									<div class="goods_benefit_wp">
-										<div class="goods_benefit">
-											<p><span>사은품</span></p>
-											<p><span>무이자12</span></p>
-											<p><span>무료배송</span></p>
-										</div>
-										<div class="goods_benefit2">
-											<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-											<span class="sale">일시불 할인</span>
-										</div>
-									</div>
-									<!-- //혜택 -->
-								</div>
-								<div class="goods_wide rank">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-												<!-- <p class="counsel">상담전용 상품입니다</p> -->
+										<!-- 혜택 -->
+										<div class="goods_benefit_wp">
+											<div class="goods_benefit">
+												<p><span>사은품</span></p>
+												<p><span>무이자12</span></p>
+												<p><span>무료배송</span></p>
 											</div>
-											<!-- //상품가격 -->
+											<div class="goods_benefit2">
+												<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+												<span class="sale">일시불 할인</span>
+											</div>
 										</div>
+										<!-- //혜택 -->
 									</div>
-									<!-- 혜택 -->
-									<div class="goods_benefit_wp">
-										<div class="goods_benefit">
-											<!-- <p><span>사은품</span></p>
+									<div class="goods_wide rank">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/001.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+													<!-- <p class="counsel">상담전용 상품입니다</p> -->
+												</div>
+												<!-- //상품가격 -->
+											</div>
+										</div>
+										<!-- 혜택 -->
+										<div class="goods_benefit_wp">
+											<div class="goods_benefit">
+												<!-- <p><span>사은품</span></p>
 											<p><span>무이자12</span></p>
 											<p><span>무료배송</span></p> -->
-										</div>
-										<div class="goods_benefit2">
-											<span class="rate"><em>20</em>%<span></span></span>
-											<!-- <span class="sale">일시불 할인</span> -->
-										</div>
-									</div>
-									<!-- //혜택 -->
-								</div>
-								<div class="goods_wide rank">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->
+											<div class="goods_benefit2">
+												<span class="rate"><em>20</em>%<span></span></span>
+												<!-- <span class="sale">일시불 할인</span> -->
+											</div>
 										</div>
+										<!-- //혜택 -->
 									</div>
-									<!-- 혜택 -->
-									<div class="goods_benefit_wp">
-										<div class="goods_benefit">
-											<p><span>사은품</span></p>
-											<p><span>무이자12</span></p>
-											<p><span>무료배송</span></p>
+									<div class="goods_wide rank">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/001.jpg" alt="" /></a>
 										</div>
-										<div class="goods_benefit2">
-											<!-- <span class="rate"><em>20</em>%<span></span></span>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+													<!-- <p class="counsel">상담전용 상품입니다</p> -->
+												</div>
+												<!-- //상품가격 -->
+											</div>
+										</div>
+										<!-- 혜택 -->
+										<div class="goods_benefit_wp">
+											<div class="goods_benefit">
+												<p><span>사은품</span></p>
+												<p><span>무이자12</span></p>
+												<p><span>무료배송</span></p>
+											</div>
+											<div class="goods_benefit2">
+												<!-- <span class="rate"><em>20</em>%<span></span></span>
 											<span class="sale">일시불 할인</span> -->
-										</div>
-									</div>
-									<!-- //혜택 -->
-								</div>
-								<div class="goods_wide rank">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/001.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-												<!-- <p class="counsel">상담전용 상품입니다</p> -->
 											</div>
-											<!-- //상품가격 -->
 										</div>
+										<!-- //혜택 -->
 									</div>
-									<!-- 혜택 -->
-									<div class="goods_benefit_wp">
-										<div class="goods_benefit">
-											<!-- <p><span>사은품</span></p>
+									<div class="goods_wide rank">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/001.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+													<!-- <p class="counsel">상담전용 상품입니다</p> -->
+												</div>
+												<!-- //상품가격 -->
+											</div>
+										</div>
+										<!-- 혜택 -->
+										<div class="goods_benefit_wp">
+											<div class="goods_benefit">
+												<!-- <p><span>사은품</span></p>
 											<p><span>무이자12</span></p>
 											<p><span>무료배송</span></p>-->
-										</div>
-										<div class="goods_benefit2">
-											<!-- <span class="rate"><em>20</em>%<span></span></span>
+											</div>
+											<div class="goods_benefit2">
+												<!-- <span class="rate"><em>20</em>%<span></span></span>
 											<span class="sale">일시불 할인</span> -->
-										</div>
-									</div>
-									<!-- //혜택 -->
-								</div>
-							</div>
-							<!-- 베스트상품 //-->
-							<!-- T는 상품 목록 -->
-							<div class="goods_top">
-								<h3>T는 상품</h3>
-							</div>
-							<div class="goods_list_wrap">
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
 											</div>
 										</div>
+										<!-- //혜택 -->
 									</div>
 								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<!-- <p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p> -->
-												<p class="counsel">상담전용 상품입니다</p>
-
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-												<span class="sale">일시불 할인</span>
+								<!-- 베스트상품 //-->
+								<!-- T는 상품 목록 -->
+								<div class="goods_top">
+									<h3>T는 상품</h3>
+								</div>
+								<div class="goods_list_wrap">
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+2이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
-													판매가 <em>76,200</em>원
-												</p>
-												<p class="sale">
-													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
-											</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
 										</div>
-									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/014.jpg" alt="" /></a>
-									</div>
-									<div class="goods_cont">
-										<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<!-- <p class="sell">
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<!-- <p class="sell">
 													판매가 <em>76,200</em>원
 												</p>
 												<p class="sale">
 													<i>쇼핑엔T가</i> <em>43,800</em>원
 												</p> -->
-												<p class="counsel">상담전용 상품입니다</p>
+													<p class="counsel">상담전용 상품입니다</p>
 
-											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<!-- <span class="rate"><em>20</em>%<span></span></span> -->
-												<span class="sale">일시불 할인</span>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="goods_wide">
-									<div class="goods_img">
-										<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+2이벤트 얇은 수분 보호막으로 하루종일 촉촉하게 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="goods_cont">
-										<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
-										<div class="goods">
-											<!-- 상품가격 -->
-											<div class="goods_price">
-												<p class="sell">
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<!-- <p class="sell">
 													판매가 <em>76,200</em>원
 												</p>
 												<p class="sale">
 													<i>쇼핑엔T가</i> <em>43,800</em>원
-												</p>
+												</p> -->
+													<p class="counsel">상담전용 상품입니다</p>
+
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
-											<!-- //상품가격 -->
-											<!-- 혜택 -->
-											<div class="goods_benefit">
-												<p><span>사은품</span></p>
-												<p><span>무이자12</span></p>
-												<p><span>무료배송</span></p>
-											</div>
-											<!-- //혜택 -->
-											<div class="goods_benefit2">
-												<span class="rate"><em>20</em>%<span></span></span>
-												<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+									<div class="goods_wide">
+										<div class="goods_img">
+											<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+										</div>
+										<div class="goods_cont">
+											<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+											<div class="goods">
+												<!-- 상품가격 -->
+												<div class="goods_price">
+													<p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔T가</i> <em>43,800</em>원
+													</p>
+												</div>
+												<!-- //상품가격 -->
+												<!-- 혜택 -->
+												<div class="goods_benefit">
+													<p><span>사은품</span></p>
+													<p><span>무이자12</span></p>
+													<p><span>무료배송</span></p>
+												</div>
+												<!-- //혜택 -->
+												<div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--T는 상품 목록 //-->
-							<div class="ui-more-loading"><img src="../../img/loading.png" alt="" /></div>
-						</section>
-						<!-- 이벤트 -->
-						<section class="mainContents" id="homeCont4">
-							<!-- 이벤트 배너 상세 -->
-							<h2 class="sub_tit"><span>5월엔 매직이벤트</span></h2><!-- 2016-06-14 : 클래스 수정 -->
-							<div class="eventBan">
-								<ul class="BannerDetail">
-									<li><img src="../../img/tmp/event_img4.png" alt="" /></li>
-								</ul>
-							</div>
-							<!-- //이벤트 배너 상세 -->
-
-							<!-- 이벤트 배너 -->
-							<div class="eventmain">
-								<ul class="BannerList">
-									<li><a href="#"><img src="../../img/tmp/event_img1.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img2.png" alt="" /></a></li>
-									<li><a href="#"><img src="../../img/tmp/event_img3.png" alt="" /></a></li>
-								</ul>
-								<!-- 이벤트 목룍 없을 경우 -->
-								<div class="eventNone">
-									<p><img src="../../img/favicon.png" alt="" /></p>
-									<p class="event_txt">현재 진행중인 이벤트가 없습니다.</p>
-									<p>품질 좋은 상품을 보다 저렴하게<br>이용할 수 있는 이벤트로 찾아오겠습니다.<br>그때까지 잠시 기다려주세요.</p>
+								<!--T는 상품 목록 //-->
+								<div class="ui-more-loading"><img src="../../img/loading.png" alt="" /></div>
+							</section>
+							<!-- 이벤트 -->
+							<section class="mainContents" id="homeCont4">
+								<!-- 이벤트 배너 상세 -->
+								<h2 class="sub_tit"><span>5월엔 매직이벤트</span></h2>
+								<!-- 2016-06-14 : 클래스 수정 -->
+								<div class="eventBan">
+									<ul class="BannerDetail">
+										<li><img src="../../img/tmp/event_img4.png" alt="" /></li>
+									</ul>
 								</div>
-								<!--//이벤트 목룍 없을 경우 -->
-							</div>
-							<!-- //이벤트 배너 -->
-							<!-- banner image --><!-- 2015-04-28 배너 추가 -->
-							<!-- <div class="eventBan">
+								<!-- //이벤트 배너 상세 -->
+
+								<!-- 이벤트 배너 -->
+								<div class="eventmain">
+									<ul class="BannerList">
+										<li><a href="#"><img src="../../img/tmp/event_img1.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img2.png" alt="" /></a></li>
+										<li><a href="#"><img src="../../img/tmp/event_img3.png" alt="" /></a></li>
+									</ul>
+									<!-- 이벤트 목룍 없을 경우 -->
+									<div class="eventNone">
+										<p><img src="../../img/favicon.png" alt="" /></p>
+										<p class="event_txt">현재 진행중인 이벤트가 없습니다.</p>
+										<p>품질 좋은 상품을 보다 저렴하게<br>이용할 수 있는 이벤트로 찾아오겠습니다.<br>그때까지 잠시 기다려주세요.</p>
+									</div>
+									<!--//이벤트 목룍 없을 경우 -->
+								</div>
+								<!-- //이벤트 배너 -->
+								<!-- banner image -->
+								<!-- 2015-04-28 배너 추가 -->
+								<!-- <div class="eventBan">
 								<a href="#"><img src="../../img/tmp/009.jpg" alt=""></a>
 							</div> -->
-							<!-- /banner image -->
-						</section>
-						<!-- 기획전 -->
-						<section class="mainContents" id="homeCont5">
-							기획전
-						</section>
+								<!-- /banner image -->
+							</section>
+							<!-- 기획전 -->
+							<section class="mainContents" id="homeCont5">
+								기획전
+							</section>
 
+						</div>
 					</div>
-				</div>
-			</main>
-			<!--main E-->
-			<!--footer S-->
-			<footer class="footer">
-  <nav class="fmu">
-    <ul>
-      <li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
-      <li><a>고객센터</a></li>
-      <li><a href="tel:0801301003">상담전화</a></li>
-    </ul>
-  </nav>
-  <nav class="fmu2">
-    <ul>
-      <li><a href="../views/common/service.jsp">회사소개</a></li>
-      <li><a href="../views/common/provision1.jsp">이용약관</a></li>
-      <li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
-      <li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
-    </ul>
-  </nav>
-  <address>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<footer class="footer">
+					<nav class="fmu">
+						<ul>
+							<li><span style="display:none;"><a>로그인</a></span><span style="display:block;"><a>로그아웃</a></span></li>
+							<li><a>고객센터</a></li>
+							<li><a href="tel:0801301003">상담전화</a></li>
+						</ul>
+					</nav>
+					<nav class="fmu2">
+						<ul>
+							<li><a href="../views/common/service.jsp">회사소개</a></li>
+							<li><a href="../views/common/provision1.jsp">이용약관</a></li>
+							<li><a href="../views/common/policy2.jsp">청소년보호정책</a></li>
+							<li><a href="../views/common/policy1.jsp">개인정보취급방침</a></li>
+						</ul>
+					</nav>
+					<address>
     <p>주식회사 티알엔 대표이사 : 민택근</p>
     <p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
     <p>사업자등록번호 : 116-81-50973</p>
@@ -2009,106 +2024,113 @@
     </p>
     <p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
   </address>
-</footer>
-<!-- dimmed-->
-<div class="dim" style="display:none;"></div>
-<!-- //dimmed -->
-			<!--footer E-->
-		</div><!-- end wrap_inner -->
-	</div><!-- end wrap -->
+				</footer>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div>
+			<!-- end wrap_inner -->
+		</div>
+		<!-- end wrap -->
 
-	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
-</div><!-- end container -->
-<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../resources/js/touch.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
-<script type="text/javascript" src="../../resources/js/overflow.js"></script>
-<script type="text/javascript" src="../../resources/js/swipe.js"></script>
-<script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../../resources/js/swiper.js"></script>
-<script type="text/javascript" src="../../resources/js/slick.js"></script>
-<script type="text/javascript" src="../../resources/js/iscroll.js"></script>
-<script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script> <!--2018-04-16 추가-->
-<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
-<script type="text/javascript" src="../../resources/js/loading.js"></script>
-<script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
-<script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
-<script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
-<script type="text/javascript">
-	$(function(){
-		// main swipe
-		var startSlideNum = 0;
-		function mainSwipe_handler(){
-			var mainSwipe = Swipe(document.getElementById('homeSlider'),{
-				callback : function(index , elem){
-					$("#homeSlider").height($(".mainContents").eq(index).height());
-					menuHandler.init('main', index);
-					var timer;	//2016-06-29
-					if (index == 1)	{
-						timer = setTimeout(function(){
-							main.schedule.init();
-						}, 300);
-					} else {
-						$('html, body').scrollTop(0);
-						$('html, body').animate({'scrollTop':'0'}, 200);
-						clearTimeout(timer);
-					};
-					if(index < 5){
-						menuScroll.scrollTo(0, 0, 300);
-					} else {
-						menuScroll.scrollTo(menuScroll.maxScrollX, 0, 0);
-					}
-				},
-				startSlide : startSlideNum
-			});
-			$(".gnb").find("li").click(function(){
-				mainSwipe.slide($(this).index(),200);
-				return false;
-			});
-		}
+		<span class="floating_btn_top"><a>페이지 맨위로</a></span>
+	</div>
+	<!-- end container -->
+	<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/touch.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.touchSwipe.js"></script>
+	<script type="text/javascript" src="../../resources/js/overflow.js"></script>
+	<script type="text/javascript" src="../../resources/js/swipe.js"></script>
+	<script type="text/javascript" src="../../../../resources/resources2014/js/cware.mobile.init.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../../resources/js/swiper.js"></script>
+	<script type="text/javascript" src="../../resources/js/slick.js"></script>
+	<script type="text/javascript" src="../../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.watermark.js"></script>
+	<!--2018-04-16 추가-->
+	<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
+	<script type="text/javascript" src="../../resources/js/loading.js"></script>
+	<script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
+	<script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
+	<script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// main swipe
+			var startSlideNum = 0;
 
-		var menuLength = $(".gnb").find("li").length;
-		if( menuLength == 5 ) {
-			$(".gnb").addClass('size5');
-		} //2016-06-21 메뉴 개수 5개일경우
-
-		$(window).on('load resize',function(){
-			startSlideNum = $('.gnb ul li.current').index();
-			mainSwipe_handler();
-			setTimeout(function(){
-				$("#homeSlider").height($(".mainContents").eq(startSlideNum).height());
-			}, 300);
-		})
-
-		// main - home 배너 롤링 //2016-06-15
-		var eventSlideList =  new Swiper('#ban-slide', {
-			slidesPerView: 'auto',
-			centeredSlides: true,
-			loop: true,
-			pagination: '.slideCircle',
-			paginationClickable: true
-		});
-
-		//main - home 베스트 상품 롤링  //2016-06-23
-		var ban_loop = $('#ban-slide2 .swiper-slide').length;
-		ban_loop > 1 ? ban_loop=true : ban_loop=false;
-		var banSlideList = new Swiper('#ban-slide2', {
-			slidesPerView: 'auto',
-			centeredSlides: true,
-			loop: ban_loop
-		});
-		$('.btn.with_prd, .with_goods_wrap .btn_close').click(function(){
-			if( $('.with_goods_wrap').hasClass('open') ){
-				$('.with_goods_wrap').removeClass('open').hide();
-			} else {
-				$('.with_goods_wrap').addClass('open').show()
+			function mainSwipe_handler() {
+				var mainSwipe = Swipe(document.getElementById('homeSlider'), {
+					callback: function(index, elem) {
+						$("#homeSlider").height($(".mainContents").eq(index).height());
+						menuHandler.init('main', index);
+						var timer; //2016-06-29
+						if (index == 1) {
+							timer = setTimeout(function() {
+								main.schedule.init();
+							}, 300);
+						} else {
+							$('html, body').scrollTop(0);
+							$('html, body').animate({
+								'scrollTop': '0'
+							}, 200);
+							clearTimeout(timer);
+						};
+						if (index < 5) {
+							menuScroll.scrollTo(0, 0, 300);
+						} else {
+							menuScroll.scrollTo(menuScroll.maxScrollX, 0, 0);
+						}
+					},
+					startSlide: startSlideNum
+				});
+				$(".gnb").find("li").click(function() {
+					mainSwipe.slide($(this).index(), 200);
+					return false;
+				});
 			}
+
+			var menuLength = $(".gnb").find("li").length;
+			if (menuLength == 5) {
+				$(".gnb").addClass('size5');
+			} //2016-06-21 메뉴 개수 5개일경우
+
+			$(window).on('load resize', function() {
+				startSlideNum = $('.gnb ul li.current').index();
+				mainSwipe_handler();
+				setTimeout(function() {
+					$("#homeSlider").height($(".mainContents").eq(startSlideNum).height());
+				}, 300);
+			})
+
+			// main - home 배너 롤링 //2016-06-15
+			var eventSlideList = new Swiper('#ban-slide', {
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				loop: true,
+				pagination: '.slideCircle',
+				paginationClickable: true
+			});
+
+			//main - home 베스트 상품 롤링  //2016-06-23
+			var ban_loop = $('#ban-slide2 .swiper-slide').length;
+			ban_loop > 1 ? ban_loop = true : ban_loop = false;
+			var banSlideList = new Swiper('#ban-slide2', {
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				loop: ban_loop
+			});
+			$('.btn.with_prd, .with_goods_wrap .btn_close').click(function() {
+				if ($('.with_goods_wrap').hasClass('open')) {
+					$('.with_goods_wrap').removeClass('open').hide();
+				} else {
+					$('.with_goods_wrap').addClass('open').show()
+				}
+			});
 		});
-	});
-</script>
-<!-- 2015-07-03
+	</script>
+	<!-- 2015-07-03
 <script type="text/javascript">
 $(document).ready(function () {
 $('.topbanner').show();
@@ -2217,6 +2239,7 @@ UI = {
 });
  </script>
  -->
-<!-- 2015-07-03 -->
+	<!-- 2015-07-03 -->
 </body>
+
 </html>
