@@ -472,7 +472,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .ui-tab-content .msg_cash em{font-weight:bold;font-size:21px;}
 .total_wrap li:nth-of-type(2) .discount dl dd em{font-weight:normal;}
 .total_wrap .payment dl dd .price, .total_wrap .payment .price em{font-style:italic;}
-.popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:45px;border:1px solid #e0e0e0;color:#111;font-size:14px;font-family:HelveticaNeue-Light,sans-serif,arial;}
+.popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:45px;border:1px solid #e0e0e0;color:#111;font-size:14px;/*font-family:HelveticaNeue-Light,sans-serif,arial;*/}
 .popup_wrap.pop_bnlife .pin_form ul li input::-webkit-input-placeholder {font-size:14px;color:red;}
 .popup_wrap.pop_bnlife .pin_form ul li input.pin{width:75%;width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);width:calc(100% - 80px);text-indent:15px;}
 .popup_wrap.pop_bnlife .pin_form ul li input.certify{width:75px;text-align:center;}
