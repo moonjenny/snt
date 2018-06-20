@@ -482,7 +482,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point em{font-size:16px;font-weight:bold;color:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_error{position:relative;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_error .msg{margin:0 0 10px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;display:block;width:75%;width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);width:calc(100% - 80px);text-indent:15px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:75px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:75px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;border:1px solid #54546c;}
 .popup_wrap.pop_bnlife .pin_form.input ul li:before{content:'1';position:absolute;left:0;width:35px;height:45px;line-height:45px;text-align:center;color:#999;}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li:before{content:'2';}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li+li:before{content:'3';}
