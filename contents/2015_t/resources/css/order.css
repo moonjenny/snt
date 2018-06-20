@@ -452,7 +452,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .layerPop .layerCont{overflow:hidden;padding:90px 0 0;height:95%;height:-webkit-calc(100% - 90px);height:-moz-calc(100% - 90px);height:calc(100% - 90px);}
 .popup_wrap.pop_bnlife .layerPop .layerCont h4{position:absolute;top:0;left:0;width:100%;height:44px;font-size:15px;color:#252525;text-align:center;line-height:44px;background:#fff;border-bottom:1px solid #d1d1d1;}
 .popup_wrap.pop_bnlife .layerPop .layerCont ul.tab_group{margin:0}
-.popup_wrap.pop_bnlife .layerPop .pop_scroll{position:relative;height:100%;overflow-y:auto;}
+.popup_wrap.pop_bnlife .layerPop .pop_scroll{position:relative;height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .popup_wrap.pop_bnlife .ui-tab-btns{position:absolute;top:45px;left:0;width:100%;height:44px;display:-webkit-flex;display:flex;border-bottom:1px solid #d1d1d1;background:#fff;}
 .popup_wrap.pop_bnlife .ui-tab-btns li{-webkit-flex:1;-ms-flex: 1;flex:1;}
 .popup_wrap.pop_bnlife .ui-tab-btns li a{padding:11px 0 13px;margin:0 5px;display:block;line-height:20px;text-align:center;font-size:14px;font-weight:bold;color:#252525;}
@@ -464,7 +464,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .ui-tab-content .input_box li:first-child{border-bottom:1px solid #e0e0e0;}
 .popup_wrap.pop_bnlife .ui-tab-content .input_box li{position:relative;height:50px;}
 .popup_wrap.pop_bnlife .ui-tab-content .input_box li label{position:absolute;left:10px;font-size:14px;color:#3b3b3b;line-height:50px;letter-spacing:-1px;}
-.popup_wrap.pop_bnlife .ui-tab-content .input_box li input{padding-left:95px;font-size:14px;color:#111;height:50px;font-family:HelveticaNeue-Light,sans-serif,arial;}
+.popup_wrap.pop_bnlife .ui-tab-content .input_box li input{padding-left:95px;font-size:14px;color:#111;height:50px;font-weight:bold;font-family:HelveticaNeue-Light,sans-serif,arial;}
 .popup_wrap.pop_bnlife .ui-tab-content .btn_inquire .btn{width:100%;}
 .popup_wrap.pop_bnlife .ui-tab-content .btn_inquire a{display:block;border-radius:0;padding:18px 5px 16px;margin-bottom:15px;}
 .popup_wrap.pop_bnlife .ui-tab-content .btn_inquire a em{font-size:17px;font-weight:bold;line-height:10px;}
@@ -472,7 +472,8 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .ui-tab-content .msg_cash em{font-weight:bold;font-size:21px;}
 .total_wrap li:nth-of-type(2) .discount dl dd em{font-weight:normal;}
 .total_wrap .payment dl dd .price, .total_wrap .payment .price em{font-style:italic;}
-.popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:45px;border:1px solid #e0e0e0;color:#111;font-size:14px;}
+.popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:45px;border:1px solid #e0e0e0;color:#111;font-size:14px;font-family:HelveticaNeue-Light,sans-serif,arial;}
+.popup_wrap.pop_bnlife .pin_form ul li input::-webkit-input-placeholder {font-size:14px;color:red;}
 .popup_wrap.pop_bnlife .pin_form ul li input.pin{width:75%;width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);width:calc(100% - 80px);text-indent:15px;}
 .popup_wrap.pop_bnlife .pin_form ul li input.certify{width:75px;text-align:center;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point{margin:0 0 10px;padding:0 0 0 15px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
