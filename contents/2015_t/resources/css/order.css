@@ -473,14 +473,14 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .total_wrap li:nth-of-type(2) .discount dl dd em{font-weight:normal;}
 .total_wrap .payment dl dd .price, .total_wrap .payment .price em{font-style:italic;}
 .popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:43px;border:1px solid #e0e0e0;color:#111;font-size:14px;}
-.popup_wrap.pop_bnlife .pin_form ul li input.pin{width:75%;width:-webkit-calc(100% - 70px);width:-moz-calc(100% - 70px);width:calc(100% - 70px);text-indent:15px;}
-.popup_wrap.pop_bnlife .pin_form ul li input.certify{width:65px;text-align:center;}
+.popup_wrap.pop_bnlife .pin_form ul li input.pin{width:75%;width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);width:calc(100% - 80px);text-indent:15px;}
+.popup_wrap.pop_bnlife .pin_form ul li input.certify{width:75px;text-align:center;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point{margin:0 0 10px;padding:0 0 0 15px;height:43px;line-height:43px;border:1px solid #e0e0e0;color:#111;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point{color:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point em{font-size:16px;font-weight:bold;color:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_error{position:relative;}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_error .msg{margin:0 0 10px;height:43px;line-height:43px;border:1px solid #e0e0e0;color:#111;display:block;width:75%;width:-webkit-calc(100% - 70px);width:-moz-calc(100% - 70px);width:calc(100% - 70px);text-indent:15px;}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:65px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_error .msg{margin:0 0 10px;height:43px;line-height:43px;border:1px solid #e0e0e0;color:#111;display:block;width:75%;width:-webkit-calc(100% - 80px);width:-moz-calc(100% - 80px);width:calc(100% - 80px);text-indent:15px;}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:75px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;}
 .popup_wrap.pop_bnlife .notice{margin:30px 0;}
 .popup_wrap.pop_bnlife .notice dt{position:relative;padding:0 0 5px 23px;color:#54546c;}
 .popup_wrap.pop_bnlife .notice dt:before{content:'';position:absolute;left:0;top:0;width:18px;height:18px;background:url(../../img/ico_notice.png) no-repeat;background-size:18px auto;}

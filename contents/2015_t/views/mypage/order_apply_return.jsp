@@ -63,14 +63,14 @@
 							</dl>
 						</div>
 						<div class="orderApply_wrap">
-							<div class="reason_select">								
+							<div class="reason_select">
 								<dl class="form_input"><!-- 2015-05-12 dt 삭제 -->
 									<dd>
 										<select>
 											<option>반품사유 선택</option>
 										</select>
 									</dd>
-								</dl>								
+								</dl>
 								<h3>기타사유</h3><!-- 2015-05-12 추가 -->
 								<dl class="form_input"><!-- 2015-05-12 dt 삭제 -->
 									<dd>
@@ -102,6 +102,9 @@
 														<dd><p>쿠폰 할인</p><span class="price"><em>900</em>원</span></dd>
 														<dd><p>일시불 할인</p><span class="price"><em>1,000</em>원</span></dd>
 														<dd><p>TV상품 할인</p><span class="price"><em>1,000</em>원</span></dd>
+														<!-- 2018-06-22 도서문화상품권 -->
+														<dd><p>도서상품권 사용</p><span class="price"><em>1,000</em>원</span></dd>
+														<!-- //2018-06-22 도서문화상품권 -->
 													</dl>
 													<dl>
 														<dt>결제금액</dt>
@@ -150,14 +153,14 @@
 										<dt>예금주</dt>
 										<dd>
 											<div class="bank_name">
-												<span class="inputBox"><input type="text" placeholder="예금주" name="" tabindex="" autocapitalize="off" /></span>												
+												<span class="inputBox"><input type="text" placeholder="예금주" name="" tabindex="" autocapitalize="off" /></span>
 												<p class="account"><span class="btn size2 bgcolor1"><a href="#">계좌인증</a></span></p><!-- 2015-06-01 수정 -->
 											</div>
 										</dd>
 									</dl>
 								</div>
 							</div>
-							<!-- //환불계좌정보 -->	
+							<!-- //환불계좌정보 -->
 							<!-- 2015-05-12 반품안내 삭제 -->
 							<!-- 2015-05-12 수정 -->
 							<ul class="mark refer">
