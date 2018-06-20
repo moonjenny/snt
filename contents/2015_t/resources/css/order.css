@@ -447,8 +447,8 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .discount_wrap ul li.bnlife .btns_wrap{margin:10px 0;}
 .popup_wrap.pop_bnlife{background-color:#fff;}
 .popup_wrap.pop_bnlife .layerPop{display:none;padding:0;margin:0;height:100%;}
-.popup_wrap.pop_bnlife > .layClose{top:0;right:0;width:37px;height:43px;}
-.popup_wrap.pop_bnlife > .layClose em{margin:13px 10px;width:17px;height:17px;background:url(../../img/ico_close02.png) no-repeat;background-size:17px auto;}
+.popup_wrap.pop_bnlife .layClose{top:0;right:0;width:37px;height:43px;}
+.popup_wrap.pop_bnlife .layClose em{margin:13px 10px;width:17px;height:17px;background:url(../../img/ico_close02.png) no-repeat;background-size:17px auto;}
 .popup_wrap.pop_bnlife .layerPop .layerCont{overflow:hidden;padding:90px 0 0;height:95%;height:-webkit-calc(100% - 90px);height:-moz-calc(100% - 90px);height:calc(100% - 90px);}
 .popup_wrap.pop_bnlife .layerPop .layerCont h4{position:absolute;top:0;left:0;width:100%;height:44px;font-size:15px;color:#252525;text-align:center;line-height:44px;background:#fff;border-bottom:1px solid #d1d1d1;}
 .popup_wrap.pop_bnlife .layerPop .layerCont ul.tab_group{margin:0}
