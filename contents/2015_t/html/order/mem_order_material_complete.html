@@ -24,19 +24,19 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
+
 	$(".order_wrap .order_goods:nth-of-type(2)").hide();
 	$(".order_wrap .order_goods:nth-of-type(3)").hide();
 	$("#counsellorinfoh3").hide();
 	$("#counsellorinfoh3 + .order_wrap").hide();
 	$(".orderComplete p:nth-of-type(3)").hide();
 	$(".orderComplete p:nth-of-type(5)").hide();
-	
+
 	$(".type2").click(function () {
 		$(".order_wrap .order_goods:nth-of-type(2)").show();
 	});
-	
-}); 
+
+});
 </script>
 <!-- /html 화면 확인용 임시 스크립트 : 개발 미적용 -->
 </head>
@@ -51,22 +51,22 @@ $(document).ready(function(){
 		<div class="nav_sideBar">
   <p class="sideClose"><span><em>X</em></span></p>
   <div class="nav_side">
-  
+
            <!-- member info -->
            <div class="info">
               <div class="box login">
-                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->								
+                  <!-- <p class="t">로그인 해주세요</p> --><!-- 비로그인 -->
         <p class="t"><strong class="name">홍길동님</strong></p>
                   <div class="myShop">
                       <ul class="btnMy">
                           <!-- <li><a>회원가입</a></li>
-                          <li><a>로그인</a></li> --><!-- 비로그인 --> 
+                          <li><a>로그인</a></li> --><!-- 비로그인 -->
             <li><a href="../mypage/submain.jsp">마이쇼핑</a></li>
                       </ul>
                   </div>
               </div>
           </div>
-          <!-- /member info -->  
+          <!-- /member info -->
           <!-- link -->
           <nav class="mynav">
             <ul>
@@ -97,7 +97,7 @@ $(document).ready(function(){
       </ul>
     </nav>
     /quicklink -->
-    
+
     <!-- category depth추가 2018-03-21-->
     <nav class="category">
       <ul id="categoryList">
@@ -192,14 +192,14 @@ $(document).ready(function(){
             <h2>오늘 본 상품</h2>
               <p class="his_all"><a href="">전체보기</a></p>
 
-      <div class="my_goods_wrap">					
+      <div class="my_goods_wrap">
         <ul class="goods_list">
           <li>
             <div class="goods">
               <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
               <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격 
+              <!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -218,7 +218,7 @@ $(document).ready(function(){
               </div>
               <!-- //201806 가격정책 end -->
             </div>
-          </li>						
+          </li>
           <li>
             <div class="goods">
               <!-- 일시품절 상품 표시 -->
@@ -227,7 +227,7 @@ $(document).ready(function(){
               <div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
               <div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
 
-              <!-- 상품가격 
+              <!-- 상품가격
               <div class="goods_price">
                 <p class="sell">
                   판매가 <em>76,200</em>원
@@ -238,7 +238,7 @@ $(document).ready(function(){
                  <p class="counsel">상담 전용 상품입니다.</p>
               </div>
               <!-- //상품가격 -->
-              
+
               <!-- 201806 가격정책 start -->
               <div class="price_info02">
                 <i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
@@ -249,10 +249,10 @@ $(document).ready(function(){
           </li>
         </ul>
         <!-- no data-->
-                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p> 
+                  <p class="list_nodata type3">아직 오늘 본 상품이 없으시네요</p>
         <!-- //no data-->
       </div>
-             
+
           </div>
           <!-- /today's view -->
   </div>
@@ -263,7 +263,7 @@ $(document).ready(function(){
 			<header class="header">
   <h1><a href="../main/home.jsp"><span>ShoppingnT</span></a></h1>
   <a class="nav_aside"><span>메뉴</span></a>
-  <a class="search"><span>검색</span></a>			
+  <a class="search"><span>검색</span></a>
 </header>
 
 <div class="searchZone"><!-- 2016-06-17 위치 변경 및 최근검색어 영역 추가 -->
@@ -278,7 +278,7 @@ $(document).ready(function(){
       </p>
     </form>
   </fieldset>
-  <div class="search_list"> 
+  <div class="search_list">
     <dl>
       <dt>최근검색어</dt>
       <dd><a href="">침대</a></dd>
@@ -318,7 +318,7 @@ $(document).ready(function(){
 						</div>
 					</div>
 					<!-- //주문완료 -->
-					
+
 					<div class="orderZone">
 						<!-- 주문상품정보 -->
 						<h3 class="order_tit">1. 주문 상품 정보</h3>
@@ -387,8 +387,8 @@ $(document).ready(function(){
 							</ul>
 							<!-- 2015-04-30 총주문금액 삭제 -->
 						</div>
-							
-						<h3 class="order_tit orderacount">2. 결제/가격 정보</h3><!-- 2015-05-03 추가 -->						
+
+						<h3 class="order_tit orderacount">2. 결제/가격 정보</h3><!-- 2015-05-03 추가 -->
 						<!-- 결제방법 --><!-- 2015-05-04 수정 -->
 						<div class="order_wrap payway">
 							<div class="method">
@@ -397,7 +397,7 @@ $(document).ready(function(){
 								<p><em>납부방식</em><span>일시불</span></p>
 							</div>
 						</div>
-						<!-- //결제방법 -->			
+						<!-- //결제방법 -->
 						<div class="total_wrap">
 							<ul class="goods">
 								<li>
@@ -410,7 +410,7 @@ $(document).ready(function(){
 								</li>
 								<li>
 									<!-- 2015-04-30 수정 -->
-									<div class="discount">								
+									<div class="discount">
 										<dl>
 											<dt>상품 할인</dt>
 											<dd><span class="price minus"><em>100</em>원</span></dd>
@@ -418,15 +418,21 @@ $(document).ready(function(){
 										<dl>
 											<dt>스마트폰 할인</dt>
 											<dd><span class="price minus"><em>1,000</em>원</span></dd>
-										</dl>										
+										</dl>
 										<dl>
 											<dt>쿠폰 사용</dt>
 											<dd><span class="price minus"><em>900</em>원</span></dd>
-										</dl>										
+										</dl>
 										<dl>
 											<dt>일시불 할인</dt>
 											<dd><span class="price minus"><em>12,000</em>원</span></dd>
 										</dl>
+                    <!-- 2018-06-22 도서문화상품권 -->
+                    <dl>
+                      <dt>도서상품권 사용</dt>
+                      <dd><span class="price minus"><em>2,500</em>원</span></dd>
+                    </dl>
+                    <!-- //2018-06-22 도서문화상품권 -->
 										<dl>
 											<dt>적립금 사용</dt>
 											<dd><span class="price minus"><em>2,500</em>원</span></dd>
@@ -447,21 +453,21 @@ $(document).ready(function(){
 									</dd>
 								</dl>
 							</div>
-							<div class="benefit">								
+							<div class="benefit">
 								<div class="save">
 									<!-- 2015-05-02 수정 -->
 									<dl>
-										<dt>적립혜택<span>(적립금)</span></dt>										
+										<dt>적립혜택<span>(적립금)</span></dt>
 										<dd><span class="price"><em>30</em>원</span></dd>
 									</dl>
 									<!-- /2015-05-02 수정 -->
 								</div>
 							</div>
-						</div>						
-						
+						</div>
+
 						<h3 class="order_tit" id="counsellorinfoh3">2. 상담자 정보</h3>
 						<div class="order_wrap">
-							<div class="complete_info">								
+							<div class="complete_info">
 								<dl>
 									<dt>이름</dt>
 									<dd>홍길동</dd>
@@ -470,13 +476,13 @@ $(document).ready(function(){
 									<dt>휴대전화</dt>
 									<dd>000-0000-0000</dd>
 								</dl>
-							</div>							
+							</div>
 						</div>
-						
+
 						<!-- 배송 정보 -->
 						<h3 class="order_tit" id="deliverinfoh3">3. 배송 정보</h3><!-- 2015-05-04 수정 -->
 						<div class="order_wrap">
-							<div class="complete_info">								
+							<div class="complete_info">
 								<dl>
 									<dt>받는 고객 정보</dt><!-- 2015-04-30 띄어쓰기 수정 -->
 									<dd>홍길동</dd>
@@ -494,15 +500,15 @@ $(document).ready(function(){
 									<dd>000-000<br />
 										서울특별시 중구 퇴계로 24 SK남산그린빌딩<br />
 									</dd>
-								</dl>								
+								</dl>
 								<dl>
 									<dt>배송메모</dt>
 									<dd>빠른 배송 부탁드립니다. 도착시 전화주세요.</dd>
 								</dl>
-							</div>							
+							</div>
 						</div>
 						<!-- //배송 정보 -->
-						
+
 						<!-- 2015-06-04 수정, 2015-06-01, 2015-05-04 -->
 						<div class="order_wrap btns_wrap">
 							<span class="btn fullwidth bgcolor5"><a>쇼핑 계속하기</a></span>
@@ -515,7 +521,7 @@ $(document).ready(function(){
 							->
 						</div>
 						<!-- /수정 -->
-						
+
 					</div>
 				</section>
 			</main>
@@ -528,7 +534,7 @@ $(document).ready(function(){
       <li><a>고객센터</a></li>
       <li><a href="tel:0801301003">상담전화</a></li>
     </ul>
-  </nav>				
+  </nav>
   <nav class="fmu2">
     <ul>
       <li><a href="../views/common/service.jsp">회사소개</a></li>
@@ -544,11 +550,11 @@ $(document).ready(function(){
     <p>통신판매업 신고 서울중구 1670호</p>
     <p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
     <p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
-    
+
     <p class="bt">
       <span><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2010301010030201670" target="_blank">사업자정보확인</a></span>
       <span><a href="../views/common/credit_bank.jsp">신한은행 채무지급 보증안내</a></span>
-    </p>		
+    </p>
     <p class="copy">Copyright  © SHOPPING&T. All Rights Reserved.</p><!-- 2016-06-09 : 텍스트 수정 -->
   </address>
 </footer>
@@ -558,7 +564,7 @@ $(document).ready(function(){
 			<!--footer E-->
 		</div><!-- end wrap_inner -->
 	</div><!-- end wrap -->
-	
+
 	<span class="floating_btn_top"><a>페이지 맨위로</a></span>
 </div><!-- end container -->
 <script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>

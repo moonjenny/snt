@@ -69,7 +69,7 @@
 .mypage_wrap .menulink li a span {display:none;position:absolute;top:12px;left:15px;width:25px;height:20px;background-image:url(../../img/ico_layout.png);background-repeat:no-repeat;background-position:-135px 0;background-size:200px auto;}
 .mypage_wrap .menulink li a:after {content:"";position:absolute;top:50%;right:15px;display:inline-block;width:8px;height:16px;margin-top:-8px;background:url(../../img/ico_arrow.png) no-repeat right 0;background-size:100px auto;}
 .mypage_wrap .menulink li a .new_text{position:unset;display:inline-block;vertical-align:top;color:#e50278;background:transparent;}
- 
+
 /* 나의 회원 혜택 */
 .coupon_list {border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
 .coupon_list li {position:relative;padding:10px 10px 10px 80px;border-top:1px solid #ddd;}
@@ -355,8 +355,8 @@ h3 + ul.order_goods {border-top:none !important;}
 .orderDetail_wrap {overflow:hidden;}
 .orderdetail dl.order_list dd.goods_list {margin:0 15px 15px;border-bottom:none}
 .orderdetail dl.order_list dt h3 {margin-top:0;}
-.orderdetail dl.order_list dd.goods_list .goods_state, 
-.orderdetail dl.order_list dd.goods_list .btns_wrap, 
+.orderdetail dl.order_list dd.goods_list .goods_state,
+.orderdetail dl.order_list dd.goods_list .btns_wrap,
 .orderdetail dl.order_list dd.goods_list .order_goods {border:0;}
 .orderdetail dl.order_list dd.goods_list .goods_state, .orderdetail dl.order_list dd.goods_list .btns_wrap {margin-top:15px;}
 .orderList_wrap dl.order_list dd.goods_list {border-top:4px solid #ddd;}
@@ -441,9 +441,9 @@ h3 + ul.order_goods {border-top:none !important;}
 .return_amount dl dd {text-align:right;}
 .return_amount .inputbox {margin-top:10px;}
 .return_amount .inputbox .total_wrap {margin:0;}
-.return_amount .inputbox dl dt {color:#666;font-size:13px;font-weight:bold;}
-.return_amount .inputbox dl dt span {display:inline-block;margin-left:5px;color:#666;font-size:11px;line-height:1;}
-.return_amount .inputbox dl dd p {color:#666;font-size:13px;}
+.return_amount .inputbox dl dt {color:#434343;font-size:13px;font-weight:bold;}
+.return_amount .inputbox dl dt span {display:inline-block;margin-left:5px;color:#434343;font-size:11px;line-height:1;}
+.return_amount .inputbox dl dd p {color:#434343;font-size:13px;}
 .regard.return {margin-top:10px;}
 .regard.return ul.mark {padding-top:5px;}
 

@@ -746,6 +746,12 @@
                       <dt>일시불 할인</dt>
                       <dd><span class="price minus"><em>100</em>원</span></dd>
                     </dl>
+                    <!-- 2018-06-22 도서문화상품권 -->
+                    <dl>
+                      <dt>도서상품권 사용</dt>
+                      <dd><span class="price minus"><em>2,500</em>원</span></dd>
+                    </dl>
+                    <!-- //2018-06-22 도서문화상품권 -->
                     <dl>
                       <dt>적립금 사용</dt>
                       <dd><span class="price minus"><em>2,500</em>원</span></dd>
@@ -1011,76 +1017,122 @@
   <span class="floating_btn_top"><a>페이지 맨위로</a></span>
 
   <!-- 2018-06-22 도서문화상품권 팝업 start -->
-	<div class="popup_wrap" style="display:none;">
-		<div class="dim"></div>
+	<div class="popup_wrap pop_bnlife" style="display:block;">
 		<div id="pop_bnlife" class="layerPop">
 			<a class="layClose"><em>닫기</em></a>
 			<div class="layerCont">
-				<dl>
-					<dt>장바구니 이용안내</dt>
-					<dd>
-						<ul class="mark">
-							<li>주문서를 작성하시기 전에 선택하신 상품후기, 수량 및 가격 등이 정확한지 확인하세요.</li><!-- 2015-06-02 수정 -->
-						</ul>
-					</dd>
-				</dl>
-				<dl>
-					<dt>무이자할부 이용안내</dt>
-					<dd>
-						<ul class="mark">
-							<!-- 2015-06-02 수정 -->
-							<li>무이자 할부 개월 수가 다른 상품들을 동시에 주문하시면 상품 중에서 가장 낮은 할부 개월 수로 일괄 조정됩니다.</li>
-							<li>(예시) 무이자 할부 개월 수가 3개월, 6개월인 상품을 함께 주문하실 경우, 모두 3개월로 주문이 됩니다.</li>
-							<li>상품별 무이자 할부 개월 수 적용을 하시려면 상품을 개별로 주문하여 주십시오.</li>
-							<!-- /2015-06-02 수정 -->
-						</ul>
-					</dd>
-				</dl>
-				<dl>
-					<dt>배송비 유료상품 배송안내</dt>
-					<dd>
-						<ul class="mark">
-							<li>유료배송 상품의 경우, 지정 금액 이상을 구매하실 경우 배송비가 절약될 수 있습니다.</li>
-						</ul>
-					</dd>
-				</dl>
+        <h4>도서문화상품권 사용</h4>
+        <ul class="ui-tab-btns">
+          <li><a href="#none" class="current">북앤라이프 캐시로 충전</a></li>
+          <li><a href="#none">PIN번호로 충전</a></li>
+        </ul>
+        <div class="pop_scroll">
+          <!-- 북앤라이프 캐시로 충전 -->
+          <div class="ui-tab-content" style="display:block;">
+            <!-- 로그인 -->
+            <div class="bnlife_login">
+              <div class="input_box">
+  							<ul>
+  								<li>
+                    <label for="id">북앤라이프 ID</label>
+                    <input type="text" name="id" autocapitalize="off" autofocus="autofocus">
+  								</li>
+  								<li>
+                    <label for="pw">비밀번호</label>
+                    <input type="password" name="pw" autocapitalize="off">
+  								</li>
+  							</ul>
+  						</div>
+              <div class="btn_inquire"><span class="btn bgcolor5"><a href="#none">조회하기</a></span></div>
+            </div>
+            <!-- //로그인 -->
+            <!-- 로그인 후 캐시정보 -->
+            <div class="bnlife_login">
+              <p class="msg_cash">dkghsldkghslg dhslgs 님의 캐시는<br> <em>12,500</em>원 입니다.</p>
+              <div class="btn_inquire"><span class="btn bgcolor4"><a href="#none">캐시 사용하기</a></span></div>
+            </div>
+            <!-- //로그인 후 캐시정보 -->
+          </div>
+          <!-- //북앤라이프 캐시로 충전 -->
+          <!-- PIN번호로 충전 -->
+          <div class="ui-tab-content" style="display:none;">
+            <!-- PIN번호 입력 -->
+            <div class="pin_form">
+              <ul>
+                <!-- pin번호 최대 5개까지 입력 -->
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4">
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4">
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4">
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4">
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4">
+                </li>
+              </ul>
+              <div class="btn_inquire"><span class="btn bgcolor5"><a href="#none">조회하기</a></span></div>
+            </div>
+            <!-- //PIN번호 입력 -->
+            <div class="pin_form">
+              <ul>
+                <!-- 사용가능 -->
+                <li>
+                  <div class="pin_point">
+                    <span class="point"><em>5,000</em>원</span>
+                    <span class="txt">사용가능</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="pin_point">
+                    <span class="point"><em>10,000</em>원</span>
+                    <span class="txt">사용가능</span>
+                  </div>
+                </li>
+                <!-- 핀번호 오류시 -->
+                <li>
+                  <div class="pin_error">
+                    <span class="msg">PIN번호를 다시 확인해주세요</span>
+                    <button class="">다시입력</button>
+                  </div>
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="16">
+                  <input type="password" class="certify" placeholder="인증번호">
+                </li>
+                <li>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="16">
+                  <input type="password" class="certify" placeholder="인증번호">
+                </li>
+              </ul>
+              <div class="btn_inquire"><span class="btn bgcolor4"><a href="#none">총 <em>15,000</em>원 사용하기</a></span></div>
+            </div>
+            <div class="notice">
+              <dl>
+                <dt>안내</dt>
+                <dd>결제금액은 1번 PIN번호부터 차감됩니다.</dd>
+                <dd>상품권 사용 후 잔액은, 5→1번 순으로 PIN번호에 남습니다.</dd>
+                <dd>입력하신 PIN번호는 보안상의 이유로 쇼핑엔티에 저장되지 않습니다.</dd>
+              </dl>
+              <div class="img_box"><img src="../../img/tmp/tmp_bnlife.jpg" alt="PIN번호 위치 확인"></div>
+            </div>
+          </div>
+          <!-- //PIN번호로 충전 -->
+        </div>
 			</div>
 		</div>
 
 
-    <div id="pop_point_use" class="layerPop">
-      <a class="layClose"><em>닫기</em></a>
-      <div class="layerCont">
-        <dl>
-          <dt>장바구니 이용안내</dt>
-          <dd>
-            <ul class="mark">
-              <li>주문서를 작성하시기 전에 선택하신 상품후기, 수량 및 가격 등이 정확한지 확인하세요.</li><!-- 2015-06-02 수정 -->
-            </ul>
-          </dd>
-        </dl>
-        <dl>
-          <dt>무이자할부 이용안내</dt>
-          <dd>
-            <ul class="mark">
-              <!-- 2015-06-02 수정 -->
-              <li>무이자 할부 개월 수가 다른 상품들을 동시에 주문하시면 상품 중에서 가장 낮은 할부 개월 수로 일괄 조정됩니다.</li>
-              <li>(예시) 무이자 할부 개월 수가 3개월, 6개월인 상품을 함께 주문하실 경우, 모두 3개월로 주문이 됩니다.</li>
-              <li>상품별 무이자 할부 개월 수 적용을 하시려면 상품을 개별로 주문하여 주십시오.</li>
-              <!-- /2015-06-02 수정 -->
-            </ul>
-          </dd>
-        </dl>
-        <dl>
-          <dt>배송비 유료상품 배송안내</dt>
-          <dd>
-            <ul class="mark">
-              <li>유료배송 상품의 경우, 지정 금액 이상을 구매하실 경우 배송비가 절약될 수 있습니다.</li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-    </div>
 	</div>
   <!-- //2018-06-22 도서문화상품권 팝업 end -->
 
@@ -1105,5 +1157,24 @@
   <script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
   <script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
 </body>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $(".pin_form .pin").keyup(function (e) {
+    if($(this).val().length === 19) return;
+    if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+    let newStr = '';
+    let groups = $(this).val().split('-');
+    for(let i in groups) {
+     if (groups[i].length % 4 === 0) {
+      newStr += groups[i] + "-"
+     } else {
+      newStr += groups[i];
+     }
+    }
+    $(this).val(newStr);
+  });
+})
+</script>
 
 </html>

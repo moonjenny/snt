@@ -14,7 +14,7 @@ body {position:static;min-height:100%}
 
 @media only screen and  (width:320px)  {.wrap_inner {width:320px;}	}
 @media only screen and  (width:412px)  {.wrap_inner {width:412px;}	}	/* note5 */
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2){ .wrap_inner {width:375px;} } 
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2){ .wrap_inner {width:375px;} }
 @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 3) { .wrap_inner {width:414px;}	}
 
 .wrap.side_open{overflow:hidden;}
@@ -43,7 +43,7 @@ body {position:static;min-height:100%}
 .nav_side .info .box .myShop {position:absolute;top:15px;right:14px}
 .nav_side .info .box .myShop li{float:left;}
 .nav_side .info .box .myShop li:first-child+li{padding-left:15px;background:url(../../img/ico_lnb.png) no-repeat -124px -25px;background-size:200px auto}
-.nav_side .info .box .myShop a {display:inline-block;min-width:0;height:21px;color:#ffffff;font-size:14px;padding-top:2px;} 
+.nav_side .info .box .myShop a {display:inline-block;min-width:0;height:21px;color:#ffffff;font-size:14px;padding-top:2px;}
 .nav_side .info .box.logout .name {display:inline-block;height:24px;margin-right:4px;padding-top:4px;vertical-align:middle;font-size:17px;font-weight:normal;}
 .nav_side .info .box.logout span {display:inline-block;height:24px;padding-top:6px;vertical-align:middle;}
 .nav_side .level {margin:0 5px 0 0;text-indent:-9999px;font-size:0;}
@@ -190,7 +190,7 @@ nav.service ul li a.app span{width:23px;height:25px;background-position:-172px -
 .ctgr_fulldown nav.category ul li:nth-child(10) a span {background-position:-50px -255px;}
 .ctgr_fulldown nav.category ul li:nth-child(11) a span {background-position:-75px -255px;}
 .ctgr_fulldown nav.category ul li:nth-child(12) a span {background-position:-100px -255px;}
-  
+
 /*사이드바(마이페이지)*/
 .log_area {overflow:hidden;position:relative;top:0;left:0;height:45px;padding-right:78px;background:#ef8006}
 .log_area p {padding:14px 0 14px 15px;color:#fff;font-size:13px}
@@ -337,7 +337,7 @@ h4 {font-size:14px;color:#444;}
 @-webkit-keyframes loading {
     from  {-webkit-transform: rotate(0deg);}
     to    {-webkit-transform: rotate(360deg);}
-} 
+}
 
 .loading2_wrap{}
 .loading2{width:48px;height:48px;background:url(../../img/bg_loading.png) no-repeat -1px -3px;background-size:48px auto;margin:0 auto;position:relative;}
@@ -356,13 +356,13 @@ h4 {font-size:14px;color:#444;}
   0% {   fill-opacity: 0;stroke-dashoffset: -500;  }
   50% {  fill-opacity: 0.3;	}
   100% { fill-opacity: 0;stroke-dashoffset: 600; }
-} 
+}
 
 @-webkit-keyframes  loading2 {
   0% {   fill-opacity: 0;stroke-dashoffset: -500;  }
   50% {  fill-opacity: 0.3;	}
   100% { fill-opacity: 0;stroke-dashoffset: 600; }
-} 
+}
 
 .blind {visibility:hidden;overflow:hidden;position:absolute;left:-9999px;width:0;height:0;font-size:0;line-height:0}
 
@@ -459,7 +459,7 @@ em.level.lv5:before {background-position:-140px 0;}
 .table_wrap.level em.level.lv3:before {background-position:-56px 0;}
 .table_wrap.level em.level.lv4:before {background-position:-84px 0;}
 .table_wrap.level em.level.lv5:before {background-position:-112px 0;}
-  
+
 /*이미지확대보기*/
 .details_Zoom {position:relative;width:100%;}
 .goods_image img {display:block;width:100%;}
@@ -821,7 +821,8 @@ ul.tab_group.piece3 li:nth-of-type(3n) a {margin-right:0;}
 .total_wrap li:nth-of-type(2) .discount dl:first-child {padding-top:0;}
 .total_wrap li:nth-of-type(2) .discount dl dt {position:absolute;top:3px;left:0;color:#555;font-size:13px;}
 .total_wrap li:nth-of-type(2) .discount dl dd {padding:4px 0;padding-left:100px;text-align:right;}
-.total_wrap li:nth-of-type(2) .discount dl dd p, .total_wrap li:nth-of-type(2) .discount dl dd span {display:inline-block;line-height:1;}
+.total_wrap li:nth-of-type(2) .discount dl dd p, .total_wrap li:nth-of-type(2) .discount dl dd span {display:inline-block;line-height:1;color:#434343;}
+.total_wrap li:nth-of-type(2) .discount dl dd span em{color:#434343;}
 .total_wrap li:nth-of-type(2) .discount dl dd p:after {content:":";display:inline-block;width:1px;height:13px;margin:0 5px;font-weight:bold;}
 .total_wrap li:nth-of-type(2) .discount dl dd .minus em {color:#e50278;}
 .total_wrap li:nth-of-type(2) .discount dl dd .minus em:before {content:"-";display:inline-block;margin-right:3px;}
@@ -910,7 +911,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -940,7 +941,7 @@ img {
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -973,7 +974,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -996,7 +997,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:0;
     padding:0;
