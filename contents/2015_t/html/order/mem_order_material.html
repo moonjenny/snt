@@ -1156,25 +1156,25 @@
   <script type="text/javascript" src="../../../../resources/js/lib/LAB.js"></script>
   <script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
   <script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
-</body>
 
-<script type="text/javascript">
-$(document).ready(function () {
-  $(".pin_form .pin").keyup(function (e) {
-    if($(this).val().length === 19) return;
-    if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
-    let newStr = '';
-    let groups = $(this).val().split('-');
-    for(let i in groups) {
-     if (groups[i].length % 4 === 0) {
-      newStr += groups[i] + "-"
-     } else {
-      newStr += groups[i];
-     }
-    }
-    $(this).val(newStr);
-  });
-})
-</script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(".pin_form .pin").keyup(function (e) {
+      if($(this).val().length === 19) return;
+      if(e.keyCode === 8 || e.keyCode === 37 || e.keyCode === 39) return;
+      let newStr = '';
+      let groups = $(this).val().split('-');
+      for(let i in groups) {
+       if (groups[i].length % 4 === 0) {
+        newStr += groups[i] + "-"
+       } else {
+        newStr += groups[i];
+       }
+      }
+      $(this).val(newStr);
+    });
+  })
+  </script>
+</body>
 
 </html>
