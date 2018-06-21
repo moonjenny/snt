@@ -475,14 +475,14 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li{position:relative;}
 .popup_wrap.pop_bnlife .pin_form ul li input{margin:0 0 10px;height:45px;border:1px solid #e0e0e0;color:#111;font-size:14px;font-family:HelveticaNeue-Light,sans-serif,arial;}
 .popup_wrap.pop_bnlife .pin_form ul li input::-webkit-input-placeholder {font-size:14px;color:#999;}
-.popup_wrap.pop_bnlife .pin_form ul li input.pin{display:block;width:75%;width:-webkit-calc(100% - 77px);width:-moz-calc(100% - 77px);width:calc(100% - 77px);text-indent:15px;}
-.popup_wrap.pop_bnlife .pin_form ul li input.certify{position:absolute;top:0;right:0;width:75px;text-align:center;}
+.popup_wrap.pop_bnlife .pin_form ul li input.pin{display:block;width:75%;width:-webkit-calc(100% - 72px);width:-moz-calc(100% - 72px);width:calc(100% - 72px);text-indent:15px;}
+.popup_wrap.pop_bnlife .pin_form ul li input.certify{position:absolute;top:0;right:0;width:70px;text-align:center;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point{margin:0 0 10px;padding:0 0 0 15px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point{color:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point em{font-size:16px;font-weight:bold;color:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_error{position:relative;}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_error .msg{margin:0 0 10px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;display:block;width:75%;width:-webkit-calc(100% - 77px);width:-moz-calc(100% - 77px);width:calc(100% - 77px);text-indent:15px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:75px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;border:1px solid #54546c;}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_error .msg{margin:0 0 10px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;display:block;width:75%;width:-webkit-calc(100% - 72px);width:-moz-calc(100% - 72px);width:calc(100% - 72px);text-indent:15px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:70px;height:45px;text-align:center;background:#54546c;color:#fff;font-size:12px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;border:1px solid #54546c;}
 .popup_wrap.pop_bnlife .pin_form.input ul li:before{content:'1';position:absolute;left:0;width:35px;height:45px;line-height:46px;text-align:center;color:#999;}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li:before{content:'2';}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li+li:before{content:'3';}

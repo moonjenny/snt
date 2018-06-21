@@ -1104,8 +1104,10 @@
                 <li>
                   <div class="pin_error">
                     <span class="msg">PIN번호를 다시 확인해주세요</span>
-                    <button class="">다시입력</button>
+                    <button class="btn_return">다시입력</button>
                   </div>
+                  <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19" style="display:none">
+                  <input type="password" class="certify" placeholder="인증번호" maxlength="4" size="4" style="display:none">
                 </li>
                 <li>
                   <input type="text" class="pin" placeholder="PIN번호 16자리 입력" maxlength="19">
@@ -1175,6 +1177,12 @@
        }
       }
       $(this).val(newStr);
+    });
+    $(".pin_error .btn_return").on('click', function(){
+      console.log("btn return");
+      $(this).parent().hide();
+      $(this).parent().parent().find(".pin").show();
+      $(this).parent().parent().find(".certify").show();
     });
   });
   </script>
