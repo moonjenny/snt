@@ -478,7 +478,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .msg{position:absolute;top:0;left:15px;height:45px;line-height:45px;color:#999;width:70%;width:-webkit-calc(100% - 107px);width:-moz-calc(100% - 107px);width:calc(100% - 107px);font-size:14px;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_add{display:-webkit-flex;display:flex;height:43px;line-height:43px;margin:0 72px 0 0;padding:0 0 0 15px;border:1px solid #e0e0e0;color:#fff;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_add.show{color:#111;}
-.popup_wrap.pop_bnlife .pin_form ul li .pin_add input{text-align:center;-webkit-flex:1;-ms-flex:1;flex:1;margin:7px 0 0;}
+.popup_wrap.pop_bnlife .pin_form ul li .pin_add input{-webkit-flex:1;-ms-flex:1;flex:1;margin:7px 0 0;}
 .popup_wrap.pop_bnlife .pin_form ul li input.certify{position:absolute;top:0;right:0;width:70px;text-align:center;height:45px;border:1px solid #e0e0e0;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point{margin:0 0 10px;padding:0 0 0 15px;height:45px;line-height:45px;border:1px solid #e0e0e0;color:#111;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_point .point{color:#e50278;}
