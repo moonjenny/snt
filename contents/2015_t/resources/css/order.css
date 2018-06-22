@@ -489,7 +489,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_error button{position:absolute;top:0;right:0;width:70px;height:45px;text-align:center;background:#54546c;color:#fff;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;border:1px solid #54546c;font-size:14px;}
 .popup_wrap.pop_bnlife .pin_form.input ul li .msg{left:35px;}
 .popup_wrap.pop_bnlife .pin_form.input ul li .pin_add{padding:0 0 0 35px}
-.popup_wrap.pop_bnlife .pin_form.input ul li:before{content:'1';position:absolute;left:0;width:35px;height:45px;line-height:45px;text-align:center;color:#999;}
+.popup_wrap.pop_bnlife .pin_form.input ul li:before{content:'1';position:absolute;left:0;width:35px;height:45px;line-height:44px;text-align:center;color:#999;}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li:before{content:'2';}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li+li:before{content:'3';}
 .popup_wrap.pop_bnlife .pin_form.input ul li+li+li+li:before{content:'4';}
