@@ -473,7 +473,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 .total_wrap li:nth-of-type(2) .discount dl dd em{font-weight:normal;}
 .total_wrap .payment dl dd .price, .total_wrap .payment .price em{font-style:italic;}
 .popup_wrap.pop_bnlife .pin_form ul li{position:relative;margin:0 0 10px;}
-.popup_wrap.pop_bnlife .pin_form ul li input{color:#111;font-size:14px;font-family:tahoma,helvetica,AppleSDGothicNeo,HelveticaNeue-Light,arial,sans-serif}
+.popup_wrap.pop_bnlife .pin_form ul li input{color:#111;font-size:14px;font-family:helvetica,AppleSDGothicNeo,HelveticaNeue-Light,arial,sans-serif}
 .popup_wrap.pop_bnlife .pin_form ul li input::-webkit-input-placeholder {font-size:14px;color:#999;}
 .popup_wrap.pop_bnlife .pin_form ul li .msg{position:absolute;top:0;left:15px;height:45px;line-height:46px;color:#999;width:70%;width:-webkit-calc(100% - 107px);width:-moz-calc(100% - 107px);width:calc(100% - 107px);font-size:14px;}
 .popup_wrap.pop_bnlife .pin_form ul li .pin_add{display:-webkit-flex;display:flex;height:43px;line-height:44px;margin:0 72px 0 0;padding:0 0 0 15px;border:1px solid #e0e0e0;color:#fff;font-size:14px;}
