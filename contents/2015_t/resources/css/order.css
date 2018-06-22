@@ -438,7 +438,7 @@ ul.tab_post li a.current {color:#fff;/* border:none; */background:#e50278;}
 
 /* 2018-06-22 도서문화상품권 */
 .discount_wrap ul li.bnlife{position:relative;padding-top:15px;margin-top:15px;border-top:1px solid #ddd;}
-.discount_wrap ul li.bnlife .save_use p:first-child {position:absolute;top:7px;left:0;}
+.discount_wrap ul li.bnlife .save_use p:first-child {position:absolute;top:7px;left:0;color:#1761ae;}
 .discount_wrap ul li.bnlife .save_use p:first-child:before {content:"상품권";display:inline-block;margin-right:3px;vertical-align:top;color:#434343;}
 .discount_wrap ul li.bnlife .save_use p:first-child:after {content:"중";display:inline-block;margin-left:3px;vertical-align:top;color:#434343;}
 .discount_wrap ul li.bnlife .save_use p:first-child em{vertical-align:top;}
