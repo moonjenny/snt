@@ -65,7 +65,7 @@
 									<h3 class="greytype">기본 정보</h3>
 								</dt>
 								<!-- loop -->
-								<dd class="goods_list">									
+								<dd class="goods_list">
 									<div class="goods_state"><!-- 2015-05-13 위치변경, "case" 삭제 -->
 										<span>배송중</span>
 										<!--
@@ -108,7 +108,7 @@
 									-->
 									<!-- /buttons -->
 									<!-- /2015-05-13 위치변경, 수정 -->
-									
+
 									<ul class="order_goods">
 										<li>
 											<div class="goods">
@@ -188,10 +188,10 @@
 											</div>
 										</li>
 									</ul>
-									
+
 								</dd>
-								<!-- /loop -->	
-								
+								<!-- /loop -->
+
 								<!-- loop -->
 								<dd class="goods_list">
 									<div class="goods_state"><!-- 2015-05-13 위치변경, "case" 삭제 -->
@@ -236,7 +236,7 @@
 									-->
 									<!-- /buttons -->
 									<!-- /2015-05-13 위치변경, 수정 -->
-									
+
 									<ul class="order_goods">
 										<li>
 											<div class="goods">
@@ -315,15 +315,15 @@
 												<!-- //옵션변경 -->
 											</div>
 										</li>
-									</ul>																	
+									</ul>
 								</dd>
-								<!-- /loop -->	
-								
+								<!-- /loop -->
+
 							</dl>
 						</div>
-						
+
 						<div class="orderDetail_wrap">
-						
+
 							<h3 class="greytype">연락처/상담 내용<span class="btn size2 bgcolor1 ui-chg-counsel-switch"><a>수정</a></span></h3><!-- 2015-05-13 수정 -->
 							<div class="detail_con detail_counsel">
 								<div id="chg-counsel-on" class="change_counsel" style="display:none;">
@@ -357,7 +357,7 @@
 												</p>
 											</div>
 										</dd>
-									</dl>									
+									</dl>
 									<dl class="form_input">
 										<dt>상담하실 내용</dt>
 										<dd>
@@ -378,7 +378,7 @@
 										<dt>휴대전화</dt>
 										<dd>00-0000-0000</dd>
 									</dl>
-									
+
 									<dl>
 										<dt>상담하실 내용</dt>
 										<dd>
@@ -387,16 +387,16 @@
 									</dl>
 								</div>
 							</div>
-						
-							<h3 class="greytype">배송정보<span class="btn size2 bgcolor1 ui-chg-addr-switch"><a>배송지변경</a></span></h3><!-- 2015-05-13 수정 -->							
+
+							<h3 class="greytype">배송정보<span class="btn size2 bgcolor1 ui-chg-addr-switch"><a>배송지변경</a></span></h3><!-- 2015-05-13 수정 -->
 							<div class="detail_con">
-								<div id="chg-addr-on" class="change_addr" style="display:none;">								
+								<div id="chg-addr-on" class="change_addr" style="display:none;">
 									<div class="rcvcustomer"><!-- 2015-05-02 class 추가 -->
 										<ul class="tab_group tab_address">
 											<li><a class="current">기본 주소</a></li>
 											<li><a class="">최근 주소</a></li>
 											<li><a class="">신규 주소</a></li>
-										</ul>							
+										</ul>
 										<!-- 2015-04-30 수정 -->
 										<dl class="form_input2 receiverinfo">
 											<dt>받으시는 분</dt>
@@ -409,7 +409,7 @@
 												<div class="receive_area nomember" style="display: none;">
 													<span class="inputBox"><input type="text" placeholder="" name="id" tabindex="2" autocapitalize="off"></span>
 												</div>
-												<!-- /비회원 주문인 경우 -->									
+												<!-- /비회원 주문인 경우 -->
 												<div class="delivery_list">
 													<!-- 첫구매 and 기본주소 선택시
 													<p class="nodata">등록하신 기본 주소가 없습니다.</p>
@@ -559,7 +559,7 @@
 												</div>
 											</dd>
 										</dl>
-										<!-- /2015-05-02 수정 -->										
+										<!-- /2015-05-02 수정 -->
 										<!-- 2015-05-13 수정 -->
 										<div class="btns_wrap btn2">
 											<span class="btn size2 bgcolor2"><a>취소</a></span>
@@ -567,7 +567,7 @@
 										</div>
 										<!-- /2015-05-13 수정 -->
 									</div>
-								</div>								
+								</div>
 								<div id="chg-addr-off" class="info_box" style="display:block;">
 									<dl>
 										<dt>주문고객</dt>
@@ -605,8 +605,8 @@
 									</dl>
 								</div>
 							</div>
-							
-							<h3 class="greytype">주문/결제 정보<span class="btn size2 bgcolor1"><a>영수증보기</a></h3><!-- 2015-05-13 수정 -->							
+
+							<h3 class="greytype">주문/결제 정보<span class="btn size2 bgcolor1"><a>영수증보기</a></h3><!-- 2015-05-13 수정 -->
 							<!-- 2015-05-13 수정 -->
 							<div class="total_wrap"><!-- 2015-05-13 수정 -->
 								<ul class="goods"><!-- 2015-05-13 수정 -->
@@ -620,7 +620,7 @@
 									</li>
 									<li>
 										<!-- 2015-04-30 수정 -->
-										<div class="discount">								
+										<div class="discount">
 											<dl>
 												<dt>상품 할인</dt>
 												<dd><span class="price minus"><em>100</em>원</span></dd>
@@ -628,11 +628,11 @@
 											<dl>
 												<dt>방송상품 할인</dt>
 												<dd><span class="price minus"><em>100</em>원</span></dd>
-											</dl>										
+											</dl>
 											<dl>
 												<dt>쿠폰 사용</dt>
 												<dd><span class="price minus"><em>900</em>원</span></dd>
-											</dl>										
+											</dl>
 											<dl>
 												<dt>일시불 할인</dt>
 												<dd><span class="price minus"><em>100</em>원</span></dd>
@@ -661,7 +661,7 @@
 									<div class="save">
 										<!-- 2015-05-02 수정 -->
 										<dl>
-											<dt>적립혜택<span>(적립금)</span></dt>										
+											<dt>적립혜택<span>(적립금)</span></dt>
 											<dd><span class="price"><em>30</em>원</span></dd>
 										</dl>
 										<!-- /2015-05-02 수정 -->
@@ -688,9 +688,9 @@
 								</dl>
 							</div>
 							<!-- /2015-05-13 수정 -->
-							
+
 						</div>
-						
+
 					</div>
 				</section>
 			</main>
@@ -704,7 +704,6 @@
 	<%@ include file="/contents/2015_t/views/includefile/page_top.jsp"%>
 </div><!-- end container -->
 <%@ include file="/contents/2015_t/views/includefile/scriptlink.jsp"%>
-<script type="text/javascript" src="/contents/2015_t/resources/js/test.ui.js"></script>
 </body>
 <!--배너 js추가 2018-03-06-->
 <script>
