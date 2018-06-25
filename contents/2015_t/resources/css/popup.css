@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 html,body{height:100%}
-*{margin:0;padding:0; font-family:HelveticaNeue-Light,AppleSDGothicNeo-Light,'Malgun Gothic','맑은 고딕',sans-serif}
+*{margin:0;padding:0; font-family:Malgun Gothic,Dotum,"돋움",Gulim,"굴림",tahoma,helvetica,AppleSDGothicNeo,HelveticaNeue-Light,arial,sans-serif}
 em,address{font-style:normal}
 ol,ul,dl{list-style:none}
 fieldset,img,hr,button{border:0}
