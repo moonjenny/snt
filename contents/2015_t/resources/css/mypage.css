@@ -715,3 +715,27 @@ ul.alarm_goods li .alarm_txt {color:#6163d3;padding-bottom:15px;font-size:12px;f
 .restore .txt span em{display:block;color:#e50278;font-weight:bold;}
 .restore .txt p:before {content:"";margin:0 auto 30px;display:block;width:77px;height:109px;background:url(../../img/dormant.png) no-repeat -8px -280px;background-size:200px auto;}
 .restore .txt p.inactive:before {content:"";margin:0 auto 30px;display:block;width:78px;height:109px;background:url(../../img/dormant.png) no-repeat -89px -280px;background-size:200px auto;}
+
+/* 20180713 적립금 수정 s */
+.summaryZone{padding:20px 15px;}
+.summaryZone ul.savemoney{margin:0;display:-webkit-flex;display:flex;border:1px solid #e4e4e4;}
+.summaryZone ul.savemoney li{padding:14px 0;width:33.33%;-webkit-flex:1;flex:1;border-left:1px solid #e4e4e4;}
+.summaryZone ul.savemoney li:first-child{border-left:none;}
+.summaryZone ul.savemoney li span{display:block;text-align:center;}
+.summaryZone ul.savemoney li span em{font-size:16px;font-weight:bold;}
+.summaryZone ul.savemoney li .txt{margin:0 0 5px;font-size:11px;color:#252525;}
+.summaryZone ul.savemoney li .pt em{color:#393939;}
+.summaryZone ul.savemoney li .pt_total{color:#e50278;}
+.summaryZone .pt-list.ui-tab-btns{height:40px;border-bottom:1px solid #ccc;margin:25px 0 0;display:-webkit-flex;display:flex;}
+.summaryZone .pt-list.ui-tab-btns li{width:33.33%;-webkit-flex:1;flex:1;}
+.summaryZone .pt-list.ui-tab-btns li a{position:relative;display:block;text-align:center;line-height:40px;font-size:14px;font-weight:bold;color:#252525;}
+.summaryZone .pt-list.ui-tab-btns li a.current{color:#e50278;}
+.summaryZone .pt-list.ui-tab-btns li a.current:after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:4px;background:#d51a8d;}
+.summaryZone .pt-list .tab-term{display:-webkit-flex;display:flex;margin:0 18px;padding:15px 0;}
+.summaryZone .pt-list .tab-term li{width:25%;-webkit-flex:1;flex:1;border-left:1px solid #e4e4e4;}
+.summaryZone .pt-list .tab-term li:first-child{border-left:none;}
+.summaryZone .pt-list .tab-term li a{display:block;text-align:center;font-size:13px;color:#252525;}
+.summaryZone .pt-list .tab-term li a.selected{color:#e50278;font-weight:bold;}
+.summaryZone .pt-list dl{padding:14px 0;border-bottom:1px solid #e4e4e4;}
+
+/* 20180713 적립금 수정 e */
