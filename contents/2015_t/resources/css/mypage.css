@@ -733,13 +733,14 @@ ul.alarm_goods li .alarm_txt {color:#6163d3;padding-bottom:15px;font-size:12px;f
 .summaryZone .pt-list.ui-tab-btns li a.current{color:#e50278;}
 .summaryZone .pt-list.ui-tab-btns li a.current:after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:4px;background:#d51a8d;}
 .summaryZone .pt-list .tab-term{display:-webkit-flex;display:flex;margin:0 18px;padding:15px 0;}
-.summaryZone .pt-list .tab-term + dl{margin-top:5px;border-top:1px solid #e4e4e4;}
+.summaryZone .pt-list .tab-term + dl,
+.summaryZone .pt-list .tab-term + .accordion_wrap + dl{margin-top:5px;border-top:1px solid #e4e4e4;}
 .summaryZone .pt-list .tab-term li{position:relative;width:25%;-webkit-flex:1;flex:1;}
 .summaryZone .pt-list .tab-term li:after{content:'';position:absolute;left:0;top:50%;margin-top:-5px;width:1px;height:10px;background:#e4e4e4;}
 .summaryZone .pt-list .tab-term li:first-child:after{display:none;}
 .summaryZone .pt-list .tab-term li:first-child{border-left:none;}
 .summaryZone .pt-list .tab-term li a{display:block;text-align:center;font-size:13px;color:#252525;}
-.summaryZone .pt-list .tab-term li a.selected{color:#e50278;font-weight:bold;}
+.summaryZone .pt-list .tab-term li a.current{color:#e50278;font-weight:bold;}
 .summaryZone .pt-list dl{position:relative;padding:14px 0;border-bottom:1px solid #e4e4e4;}
 .summaryZone .pt-list dt{margin-right:85px;padding:0 0 0 5px;}
 .summaryZone .pt-list dd{position:absolute;top:14px;right:5px;width:80px;text-align:right;}
