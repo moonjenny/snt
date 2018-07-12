@@ -802,7 +802,7 @@ ul.tab_group.piece3 li:nth-of-type(3n) a {margin-right:0;}
 
 /*기간(개월)*/
 .accordion_wrap.active .accordion_con {overflow:hidden;display:block;}
-.accordion_wrap .period .accordion_con {margin-top:1px;padding:6px 0;background:#ebebeb;}
+.accordion_wrap .period .accordion_con {margin-top:1px;padding:4px 0 20px;border-bottom:1px solid #e4e4e4;background:#fff;}
 
 /*총상품금액*/
 .total_wrap li:nth-of-type(1) {padding:4px 2px;}
