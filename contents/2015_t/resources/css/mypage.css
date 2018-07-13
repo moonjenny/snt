@@ -218,7 +218,7 @@ ul.period_month li a.current span {color:#fff;}
 .period_ymd p:nth-child(1) span em.wave {left:0;}
 .period_ymd p:nth-child(2) span {padding-left:5px;}
 .period_ymd p:nth-child(3) span {padding-left:5px;}
-.period_ymd p span em {position:absolute;top:6px;right:0;color:#444;font-size:14px;}
+.period_ymd p span em {position:absolute;top:6px;right:0;color:#444;font-size:13px;}
 .period_ymd:nth-child(1) p:nth-child(3) span:after {content:"~";display:inline-block;position:absolute;top:6px;right:-15px;width:10px;height:10px;}
 .period .btn a {min-width:40px;padding:8px 0 7px;font-size:13px;color:#fff;background:#54546c !important;border-radius:0;border:none;}
 .period_ymd span select {height:28px;border-color:#e4e4e4;}
@@ -748,7 +748,7 @@ ul.alarm_goods li .alarm_txt {color:#6163d3;padding-bottom:15px;font-size:12px;f
 .summaryZone .pt-list dd{position:absolute;top:11px;right:5px;width:80px;text-align:right;}
 .summaryZone .pt-list .day{display:block;color:#434343;font-size:11px;}
 .summaryZone .pt-list .name{display:block;width:100%;color:#252525;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
-.summaryZone .pt-list .name i.new{display:inline-block;margin-left:2px;width:10px;height:10px;line-height:10px;color:#e50278;text-align:center;font-size:8px;font-style:normal;border-radius:3px;background-color:#fff;border:solid 1px #e50278;font-family:HelveticaNeue-Light;}
+.summaryZone .pt-list .name i.new{display:inline-block;margin:0 2px 1px;width:10px;height:10px;line-height:10px;color:#e50278;text-align:center;font-size:8px;font-style:normal;border-radius:3px;background-color:#fff;border:solid 1px #e50278;font-family:HelveticaNeue-Light;}
 .summaryZone .pt-list .coment{display:block;color:#434343;font-size:11px;}
 .summaryZone .pt-list .pt{display:block;color:#252525;font-size:14px;font-weight:bold;line-height:16px;}
 .summaryZone .pt-list .pt.plus{color:#e50278;}
