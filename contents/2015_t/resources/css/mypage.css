@@ -748,7 +748,7 @@ ul.alarm_goods li .alarm_txt {color:#6163d3;padding-bottom:15px;font-size:12px;f
 .summaryZone .pt-list dd{position:absolute;top:11px;right:5px;width:80px;text-align:right;}
 .summaryZone .pt-list .day{display:block;color:#434343;font-size:11px;}
 .summaryZone .pt-list .name{display:block;width:100%;color:#252525;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
-.summaryZone .pt-list .name i.new{display:inline-block;margin-left:2px;width:10px;height:10px;line-height:10px;color:#e50278;text-align:center;font-size:8px;font-style:normal;border-radius:3px;background-color:#fff;border:solid 1px #e50278;font-family:HelveticaNeue-Light;}
+.summaryZone .pt-list .name i.new{display:inline-block;margin-left:2px;width:10px;height:10px;line-height:12px;color:#e50278;text-align:center;font-size:8px;font-style:normal;border-radius:3px;background-color:#fff;border:solid 1px #e50278;font-family:HelveticaNeue-Light;}
 .summaryZone .pt-list .coment{display:block;color:#434343;font-size:11px;}
 .summaryZone .pt-list .pt{display:block;color:#252525;font-size:14px;font-weight:bold;line-height:16px;}
 .summaryZone .pt-list .pt.plus{color:#e50278;}
