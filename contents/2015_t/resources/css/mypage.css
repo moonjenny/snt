@@ -747,9 +747,9 @@ ul.alarm_goods li .alarm_txt {color:#6163d3;padding-bottom:15px;font-size:12px;f
 .summaryZone .pt-list dt{margin-right:85px;padding:0 0 0 5px;}
 .summaryZone .pt-list dd{position:absolute;top:11px;right:5px;width:80px;text-align:right;}
 .summaryZone .pt-list .day{display:block;color:#434343;font-size:11px;}
-.summaryZone .pt-list .name{display:block;width:100%;color:#252525;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+.summaryZone .pt-list .name{display:block;width:100%;color:#252525;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
 .summaryZone .pt-list .coment{display:block;color:#434343;font-size:11px;}
-.summaryZone .pt-list .pt{display:block;color:#252525;font-size:14px;font-weight:bold;}
+.summaryZone .pt-list .pt{display:block;color:#252525;font-size:14px;font-weight:bold;line-height:16px;}
 .summaryZone .pt-list .pt.plus{color:#e50278;}
 .summaryZone .pt-list .term-result{margin-bottom:10px;text-align:center;font-size:12px;color:#434343;font-family:HelveticaNeue-Light;}
 /* 20180713 적립금 수정 e */
