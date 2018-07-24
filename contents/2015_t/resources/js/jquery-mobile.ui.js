@@ -1548,7 +1548,8 @@ $(window).scroll(function (){
 
 	console.log("pop click");
 		$('.container').css({
-			'overflow' : 'hidden'
+			'overflow' : 'hidden',
+			'z-index' : '2'
 		});
 	});
 	$('.pop_bnlife .layClose').click(function(){
