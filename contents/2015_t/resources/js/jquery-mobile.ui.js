@@ -1561,3 +1561,16 @@ $('.bnlife .fullwidth .ui-pop-btn').click(function(){
 		$("html,body").scrollTop(popScrpos);
 	});
 });
+
+//20180724 적립금 수정
+$(".tab-term.ui-tab-btns li").click(function(){
+	var perId = $(this).index();
+	if(perId < 3){
+		$(this).parent().siblings(".accordion_wrap").removeClass("active");
+	}
+});
+$(".btn_period").click(function () {
+	var target = $(this).parent();
+	var obj = $(target).parent();
+	$(obj).siblings(".accordion_wrap").toggleClass("active");
+});
