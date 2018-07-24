@@ -1190,7 +1190,26 @@
 
 	</div>
   <!-- //2018-06-22 도서문화상품권 팝업 end -->
+  <!-- 2018-06-22 도서문화상품권 -->
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(".pin_form ul li .msg").on('click', function(){
+      $(this).hide().next().addClass('show');
+      $(this).hide().next().find('input:first').focus();
+    });
+    $('.pin_form ul li .pin_add input').on('keyup', function() {
 
+      $(this).val($(this).val().replace(/[^0-9]/g,""));
+      if($(this).val().length==$(this).attr('maxlength'))
+        $(this).next(':input').focus()
+    });
+    $(".pin_error .btn_return").on('click', function(){
+      $(this).parent().hide();
+      $(this).parent().parent().find(".re_input").show();
+    });
+  });
+  </script>
+  <!-- //2018-06-22 도서문화상품권 -->
   </div>
   <!-- end container -->
   <script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
@@ -1212,26 +1231,6 @@
   <script type="text/javascript" src="../../../../resources/js/comUtil.js"></script>
   <script type="text/javascript" src="../../../../resources/messages/ko_KR/message-common.js"></script>
 
-  <!-- 2018-06-22 도서문화상품권 -->
-  <script type="text/javascript">
-  $(document).ready(function () {
-    $(".pin_form ul li .msg").on('click', function(){
-      $(this).hide().next().addClass('show');
-      $(this).hide().next().find('input:first').focus();
-    });
-    $('.pin_form ul li .pin_add input').on('keyup', function() {
-
-      $(this).val($(this).val().replace(/[^0-9]/g,""));
-      if($(this).val().length==$(this).attr('maxlength'))
-        $(this).next(':input').focus()
-    });
-    $(".pin_error .btn_return").on('click', function(){
-      $(this).parent().hide();
-      $(this).parent().parent().find(".re_input").show();
-    });
-  });
-  </script>
-  <!-- //2018-06-22 도서문화상품권 -->
 </body>
 
 </html>
