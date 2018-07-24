@@ -1542,17 +1542,24 @@ $('.placeH_line').length && placeholder_line.init();
 
 // 도서문화상품권 팝업 2018-07-24
 $(window).scroll(function (){
+	scrpos = $(window).scrollTop();
+	//console.log(scrpos);
+});
 	$('.bnlife .fullwidth .ui-pop-btn').click(function(){
-		var height = $(document).scrollTop();
-		console.log(height);
-
-	console.log("pop click");
+		var popScrpos = scrpos;
 		$('.container').css({
 			'overflow' : 'hidden',
-			'z-index' : '2'
+			'height' : '100%',
+			'position' : 'fixed'
+		});
+		console.log('pop'+popScrpos);
+		$('.pop_bnlife .layClose').click(function(){
+			console.log('Close'+popScrpos);
+			$('.container').css({
+				'overflow' : '',
+				'height' : '',
+				'position' : ''
+			});
+			$("html,body").scrollTop(popScrpos);
 		});
 	});
-	$('.pop_bnlife .layClose').click(function(){
-		console.log("pop close");
-	});
-});
