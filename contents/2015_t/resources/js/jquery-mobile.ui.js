@@ -1539,3 +1539,19 @@ $('.placeH_line').length && placeholder_line.init();
 // 	});
 // });
 //E : 2018-03-27 추가
+
+// 도서문화상품권 팝업 2018-07-24
+$(window).scroll(function (){
+	$('.bnlife .fullwidth .ui-pop-btn').click(function(){
+		var height = $(document).scrollTop();
+		console.log(height);
+
+	console.log("pop click");
+		$('.container').css({
+			'overflow' : 'hidden'
+		});
+	});
+	$('.pop_bnlife .layClose').click(function(){
+		console.log("pop close");
+	});
+});
