@@ -1552,7 +1552,7 @@ $('.bnlife .fullwidth .ui-pop-btn').click(function(){
 		'position' : 'fixed'
 	});
 	console.log('pop'+popScrpos);
-	$('.pop_bnlife .layClose').click(function(){
+	$('.pop_bnlife .layClose,.pop_bnlife .btnClose').click(function(){
 		$('.container').css({
 			'overflow' : '',
 			'height' : '',
