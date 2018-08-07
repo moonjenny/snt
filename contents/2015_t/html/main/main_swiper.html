@@ -312,18 +312,6 @@
 					<div id="homeSlider" class="swipe">
 						<div class="swipe-wrap">
 							<!-- home -->
-							<!-- 2018-08-23 start -->
-							<div class="lnb_sub" id="lnb_sub">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
-									<li class="swiper-slide"><a href="#">하위매뉴2</a></li>
-									<li class="swiper-slide"><a href="#">하위매뉴3</a></li>
-									<li class="swiper-slide"><a href="#">하위매뉴4</a></li>
-									<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
-									<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								</ul>
-							</div>
-							<!-- 2018-08-23 end -->
 							<section class="mainContents" id="homeCont0">
 								<!-- top banner -->
 								<div class="topbanner">
@@ -1263,6 +1251,20 @@
 							</section>
 							<!-- 라임 -->
 							<section class="mainContents" id="homeCont2">
+							<!-- 2018-08-23 start -->
+							<div class="lnb_subbox">
+								<div class="lnb_sub" id="lnb_sub">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
+										<li class="swiper-slide"><a href="#">하위매뉴2</a></li>
+										<li class="swiper-slide"><a href="#">하위매뉴3</a></li>
+										<li class="swiper-slide"><a href="#">하위매뉴4</a></li>
+										<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
+										<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 2018-08-23 end -->
 								<!-- 상품 배너 -->
 								<div class="eventmain">
 									<ul class="limeBanner">
@@ -3121,10 +3123,10 @@
 			});
 
 			// 2018-08-23 메인 개편
-			if (jQuery('#lnb_sub').length != 0) {
-				var ban_loop = $('#lnb_sub .swiper-slide').length;
+			if (jQuery('.lnb_sub').length != 0) {
+				var ban_loop = $('.lnb_sub .swiper-slide').length;
 				ban_loop > 1 ? ban_loop = true : ban_loop = false;
-				var lnbSubSlide = new Swiper('#lnb_sub', {
+				var lnbSubSlide = new Swiper('.lnb_sub', {
 					slidesPerView: 3.5
 				});
 			}

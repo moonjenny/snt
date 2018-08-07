@@ -477,7 +477,8 @@ nav.gnb .sub_tit span {background:none;}
 .next_goods_wrap .goods_top .tv_link{color:#54546c;font-size:11px;display:inline-block;text-align:center;padding-top:22px;background:url(../../img/ico_main2.png) -98px 0 no-repeat;background-size:250px auto;float:right;width:45px;margin-top:10px;cursor:pointer;}
 
 /* 2018-08-23 메인 화면 개편 start */
-.lnb_sub{position:fixed;left:0;right:0;top:81px;z-index:100;background:#f7f7f7;overflow:hidden;}
+.lnb_subbox{/*position:fixed;left:0;right:0;top:0;margin-bottom:40px;z-index:100;*/height:40px;background:#f7f7f7;overflow:hidden;}
+.lnb_sub{}
 .lnb_sub ul{}
 .lnb_sub ul li{}
 .lnb_sub ul li a{display:block;padding:10px;}
