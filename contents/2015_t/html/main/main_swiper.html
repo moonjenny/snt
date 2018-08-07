@@ -326,7 +326,6 @@
 						<div class="lnb_sub" id="lnb_sub1">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
 							</ul>
 						</div>
 						<!-- 라임 : 하위메뉴 -->
@@ -353,17 +352,9 @@
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
-							</ul>
-						</div>
-						<!-- lnb6 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub6">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
-								<li class="swiper-slide"><a href="#">하위매뉴6</a></li>
+								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
+								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
+								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
 							</ul>
 						</div>
 					</div>
@@ -3176,11 +3167,17 @@
 					slidesPerView: 3.5
 				});
 			}
-			var mainLnbsubOn = jQuery(".gnb").find("li.current").attr("id");
-			console.log(mainLnbsubOn);
-			if (mainLnbsubOn == "lnb" + num) {
-				jQuery(".lnb_subbox").height(jQuery("#lnb_sub" + num).height());
-			}
+			var mainGnbId = $(".gnb_wrap .gnb .current").index();
+			$(".lnb_subbox .lnb_sub").hide();
+			$(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
+			$(".gnb_wrap .gnb li").click(function(){
+				gnbClickId = $(this).index();
+				console.log(gnbClickId);
+				$(".lnb_subbox .lnb_sub").hide();
+				$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
+
+			})
+
 		});
 
 
