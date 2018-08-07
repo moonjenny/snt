@@ -481,5 +481,5 @@ nav.gnb .sub_tit span {background:none;}
 .lnb_sub ul{}
 .lnb_sub ul li{}
 .lnb_sub ul li a{display:block;padding:10px;}
-
+.lnb_sub + .mainContents {padding-top:40px;}
 /* 2018-08-23 메인 화면 개편 end */
