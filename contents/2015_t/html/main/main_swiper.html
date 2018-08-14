@@ -312,7 +312,7 @@
 					<!-- 2018-08-23 start -->
 					<div class="lnb_subbox">
 						<!-- 홈 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub0">
+						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
@@ -323,23 +323,23 @@
 							</ul>
 						</div>
 						<!-- TV편성 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub1">
+						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
 							</ul>
 						</div>
 						<!-- 라임 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub2">
+						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴2</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴2</a></li>
 							</ul>
 						</div>
 						<!-- T는상품 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub3">
+						<div class="lnb_sub">
 						</div>
 						<!-- 이벤트 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub4">
+						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴4</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴4</a></li>
@@ -348,7 +348,7 @@
 							</ul>
 						</div>
 						<!-- 가정의달 게르마늄 특가전 : 하위메뉴 -->
-						<div class="lnb_sub" id="lnb_sub5">
+						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴5</a></li>
@@ -2905,6 +2905,8 @@
 						}
 						$("#homeSlider").height($(".mainContents").eq(index).height());
 						menuHandler.init('main', index);
+						// 2018-08-23 메인 개편 add
+						$(".lnb_subbox .lnb_sub").hide().eq(index).show();
 
 						if (index < 5) {
 							menuScroll.scrollTo(0, 0, 300);
@@ -3159,7 +3161,7 @@
 				popupCnt: "3"
 			});
 
-			// 2018-08-23 메인 개편
+			// 2018-08-23 메인 개편 start
 			if (jQuery('.lnb_sub').length != 0) {
 				var ban_loop = $('.lnb_sub .swiper-slide').length;
 				ban_loop > 1 ? ban_loop = true : ban_loop = false;
@@ -3172,11 +3174,12 @@
 			$(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
 			$(".gnb_wrap .gnb li").click(function(){
 				gnbClickId = $(this).index();
-				console.log(gnbClickId);
+				//console.log(gnbClickId);
 				$(".lnb_subbox .lnb_sub").hide();
 				$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
 
-			})
+			});
+			// 2018-08-23 메인 개편 end
 
 		});
 
