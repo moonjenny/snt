@@ -301,7 +301,7 @@
 						<ul>
 							<li id="lnb0" class="current"><a>홈</a></li>
 							<li id="lnb1"><a>TV편성</a></li>
-							<li id="lnb2"><a>라임</a></li>
+							<li id="lnb2"><a>오늘의 추천</a></li>
 							<li id="lnb3"><a>T는상품</a></li>
 							<li id="lnb4"><a>이벤트</a></li>
 							<li id="lnb5"><a>가정의달 게르마늄 특가전</a></li>
@@ -314,7 +314,7 @@
 						<!-- 홈 : 하위메뉴 -->
 						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
-								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
+								<li class="swiper-slide selected"><a href="#">하위매뉴0</a></li> <!-- 선택시 .selected -->
 								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
 								<li class="swiper-slide"><a href="#">하위매뉴0</a></li>
@@ -328,7 +328,7 @@
 								<li class="swiper-slide"><a href="#">하위매뉴1</a></li>
 							</ul>
 						</div>
-						<!-- 라임 : 하위메뉴 -->
+						<!-- 오늘의 추천 : 하위메뉴 -->
 						<div class="lnb_sub">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide"><a href="#">하위매뉴2</a></li>
@@ -393,7 +393,7 @@
 										<div class="goods_wide">
 											<div class="goods_img">
 												<img src="../../img/tmp/014.jpg" alt="" />
-												<span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>
+												<!-- 2018-08-23 삭제 <span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>-->
 												<span class="btn_play"><a></a></span>
 											</div>
 											<div class="goods_cont">
@@ -1300,9 +1300,9 @@
 									</ol>
 								</div>
 							</section>
-							<!-- 라임 -->
+							<!-- 라임 2018-08-23 삭제
 							<section class="mainContents" id="homeCont2">
-								<!-- 상품 배너 -->
+								<!-- 상품 배너
 								<div class="eventmain">
 									<ul class="limeBanner">
 										<li class="limeLeft"><a href="#"><img src="../../img/tmp/event_img6.png" alt="" /></a></li>
@@ -1315,8 +1315,246 @@
 										<li><a href="#"><img src="../../img/tmp/event_img11.png" alt="" /></a></li>
 									</ul>
 								</div>
-								<!-- //상품 배너 -->
+								<!-- //상품 배너
+							</section> -->
+							<!-- 오늘의 추천 2018-08-23 추가 start -->
+							<section class="mainContents" id="homeCont2">
+								<!-- top banner -->
+								<div class="topbanner">
+									<ul>
+										<li><a><img src="../../img/tmp/topbanner.jpg" alt="topbanner sample" /></a></li>
+									</ul>
+									<span class="closebanner"><a>닫기</a></span>
+								</div>
+								<!-- /top banner -->
+
+								<!-- 온에어 -->
+								<div class="onairGoods">
+									<!-- 동영상 -->
+									<!-- 2016-06-17 -->
+									<div class="vod_wrap" style="display:none">
+										<!-- 클래스 추가 : 기본모드 vod_wrap, 가로모드 vod_wrap full, 하단 축소 모드 vod_wrap small -->
+										<p class="ctr">
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</p>
+										<span class="blank pic"><img src="../../img/blank_vod.gif" alt="" /></span>
+									</div>
+									<!-- 동영상 //-->
+									<div class="onairGoodsIn">
+										<!-- 2016-06-17 : div 추가 -->
+										<div class="goods_wide">
+											<div class="goods_img">
+												<img src="../../img/tmp/014.jpg" alt="" />
+												<!-- 2018-08-23 삭제 <span class="btm"><img src="../../img/onair_img_btm.png" alt="" /></span>-->
+												<span class="btn_play"><a></a></span>
+											</div>
+											<div class="goods_cont">
+												<p class="goods_name01">필립스 아쿠아트리오 프로 FC7088</p>
+												<div class="goods">
+													<!-- 상품가격 -->
+													<div class="goods_price">
+														<!-- <p class="sell">
+														판매가 <em>76,200</em>원
+													</p>
+													<p class="sale">
+														<i>쇼핑엔티가</i> <em>10,766,000</em>원
+													</p> -->
+														<!-- 201806 가격정책 start -->
+														<div class="price_info01">
+															<i class="blind">할인율</i><span class="discount">10%</span>
+															<i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+															<i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+														</div>
+														<div class="price_info01">
+															<span class="price_shop">쇼핑엔티가</span>
+															<i class="blind">최종가</i><span class="price_tx01">10,766,000<span class="unit">원</span></span>
+															<i class="blind">정상가</i><span class="price_tx02">10,796,000원</span>
+														</div>
+														<!-- //201806 가격정책 end -->
+													</div>
+													<!-- //상품가격 -->
+													<!-- 혜택 -->
+													<div class="goods_benefit">
+														<p><span>사은품</span></p>
+														<p><span>무이자12</span></p>
+														<p><span>무료배송</span></p>
+													</div>
+													<!-- //혜택 -->
+													<!-- <div class="goods_benefit2">
+													<span class="rate"><em>20</em>%<span></span></span>
+													<span class="sale">일시불 할인</span>
+												</div> -->
+												</div>
+											</div>
+										</div>
+										<!-- 온에어 - 재생 및 재생시간 -->
+										<p class="time">
+											<span class="onair"><em>ON AIR</em></span>
+											<span>
+											남은시간 : <em>00:22:45</em>
+										</span>
+										</p>
+										<!-- <p class="time">
+										<span class="onair"><em>ON AIR</em></span>
+										<span id="time" enddate="2016/06/30 11:43:00" sysdate="2016/06/30 10:14:51" lefttime="">
+											남은시간 : <em class="leftTime"></em>
+										</span>
+									</p> -->
+										<!-- 온에어 - 재생 및 재생시간 //-->
+										<!-- buttons -->
+										<div class="btns_wrap btn2">
+											<span class="btn with_prd"><a href="#">함께하는 상품<em>2</em></a></span>
+											<span class="btn bgcolor4"><a href="#">구매하기</a></span>
+										</div>
+										<!-- /buttons -->
+										<!-- 함께파는 상품 -->
+										<div class="with_goods_wrap my_goods_wrap">
+											<ul class="goods_list">
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<!--201806 가격정책 start -->
+															<div class="price_info02">
+																<i class="blind">할인율</i><span class="discount">10%</span>
+																<i class="blind">정상가</i><span class="price_tx02">1,008,000원</span>
+																<i class="blind">최종가</i><span class="price_tx01">1,008,000<span class="unit">원</span></span>
+															</div>
+															<!-- //201806 가격정책 end -->
+														</div>
+														<!-- //상품가격 -->
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<!-- 201806 가격정책 start -->
+															<div class="price_info02">
+																<i class="blind">정상가</i><span class="price_tx02">1,008,000원</span>
+																<i class="blind">최종가</i><span class="price_tx01">1,008,000<span class="unit">원</span></span>
+															</div>
+															<!-- //201806 가격정책 end -->
+														</div>
+														<!-- //상품가격 -->
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<p class="counsel">상담 전용 상품입니다.</p>
+														</div>
+														<!-- //상품가격 -->
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+													</div>
+												</li>
+												<li>
+													<div class="goods">
+														<p class="soldout"><span><em>일시품절</em></span></p>
+														<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+														<div class="goods_name">무방부제 무발색제 </div>
+														<!-- 상품가격 -->
+														<div class="goods_price">
+															<!-- 201806 가격정책 start -->
+															<div class="price_info02">
+																<i class="blind">할인율</i><span class="discount">10%</span>
+																<i class="blind">정상가</i><span class="price_tx02">1,008,000원</span>
+																<i class="blind">최종가</i><span class="price_tx01">1,008,000<span class="unit">원</span></span>
+															</div>
+															<!-- //201806 가격정책 end -->
+														</div>
+														<!-- //상품가격 -->
+														<!-- 혜택 -->
+														<div class="goods_benefit">
+															<p><span>사은품</span></p>
+															<p><span>무이자12</span></p>
+															<p><span>무료배송</span></p>
+														</div>
+														<!-- //혜택 -->
+													</div>
+												</li>
+											</ul>
+											<span class="btn_close"></span>
+										</div>
+										<!-- 함께파는 상품 //-->
+									</div>
+								</div>
+								<!-- //온에어 -->
+
+								<!-- 롤링배너 -->
+								<div class="recom_slide">
+									<div id="ban-slide3" class="imgSlide">
+										<ul class="BannerList swiper-wrapper">
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
+											<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
+										</ul>
+    								<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								롤링배너 최대 10개 3초단위 롤링<br>
+								<!-- //롤링배너 -->
+
+								<!-- 기획전 -->
+								등록 개수만큼 노출
+								<div class="mainPrdList">
+									<ul>
+										<li><a href="#">mainPrdList</a></li>
+									</ul>
+								</div>
+								<!-- //기획전 -->
+
+								<!-- 카테고리 리스트 -->
+								카테고리 리스트 <br>
+								<!-- //카테고리 리스트 -->
+
+								<!-- 배너 + 상품 -->
+								배너 + 상품 상품 3개씩 스와이프 <br>
+								<!-- //배너 + 상품 -->
+
+								<!-- 상품 2열*2열(총4개) -->
+								상품 2열*2열(총4개) 스와이프 <br>
+								<!-- //상품 2열*2열(총4개) -->
+
+								<!-- 기획전(N개) -->
+								기획전(N개) <br>
+								<!-- //기획전(N개) -->
+
 							</section>
+							<!-- 오늘의 추천 2018-08-23 추가 end -->
 							<!-- T는상품 -->
 							<section class="mainContents" id="homeCont3">
 								<!-- top banner -->
@@ -3166,7 +3404,7 @@
 				var ban_loop = $('.lnb_sub .swiper-slide').length;
 				ban_loop > 1 ? ban_loop = true : ban_loop = false;
 				var lnbSubSlide = new Swiper('.lnb_sub', {
-					slidesPerView: 3.5
+					slidesPerView: 4.5
 				});
 			}
 			var mainGnbId = $(".gnb_wrap .gnb .current").index();
@@ -3179,6 +3417,27 @@
 				$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
 
 			});
+
+			if (jQuery('#ban-slide3').length != 0) {
+				var ban_loop = $('#ban-slide3 .swiper-slide').length;
+				ban_loop > 1 ? ban_loop = true : ban_loop = false;
+				var banSlideList3 = new Swiper('#ban-slide3', {
+					loop: true,
+					spaceBetween: 30,
+		      centeredSlides: true,
+		      autoplay: {
+		        delay: 3000,
+		        disableOnInteraction: false,
+		      },
+		      pagination: {
+    		    el: '.swiper-pagination',
+		        clickable: false,
+        		renderBullet: function (index, className) {
+          		return '<span class="' + className + '">' + (index + 1) + '</span>';
+        		},
+      		}
+				});
+			}
 			// 2018-08-23 메인 개편 end
 
 		});
