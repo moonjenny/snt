@@ -506,10 +506,8 @@ nav.gnb .sub_tit span {background:none;}
 .today_category ul li a span{display:block;margin:4px 0 0;font-size:12px;color:#6d6d6d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .today_category ul li.all .nav_aside{position:relative;display:block;top:inherit;left:inherit;height:auto;margin:0;}
 .today_category ul li.all .nav_aside span{width:auto;background:none;padding:0;}
-.today_ban_prd{margin:10px 0;}
-.today_ban_prd .top_ban img{width:100%;vertical-align:top;}
+.today_ban_prd{margin:10px 0;padding:31% 0 0;}
 .today_ban_prd .today_ban_slide{padding:0 15px 15px 0;margin-left:15px;overflow:hidden;}
-.today_ban_prd ul{}
 .today_ban_prd ul li{background:#fff;}
 .today_ban_prd ul li .goods_wide{margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;}
@@ -530,7 +528,6 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:65px;margin:0;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price [class^="price_info"] .discount{font-size:14px;}
 .main_evt_selbox{margin:10px 0 0;background:#fff;}
-.main_evt_selbox ul{}
 .main_evt_selbox ul:after{display:block;clear:both;content:'';}
 .main_evt_selbox ul li{float:left;width:33.33%;}
 .main_evt_selbox ul li a{display:block;height:30px;line-height:30px;margin:0 -1px -1px 0;padding:0 4px;border:1px solid #eaeaea;color:#6d6d6d;font-size:12px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
