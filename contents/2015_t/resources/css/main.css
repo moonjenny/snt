@@ -479,7 +479,7 @@ nav.gnb .sub_tit span {background:none;}
 
 /* 2018-08-23 메인 화면 개편 start */
 .lnb_subbox{overflow:hidden;margin:0 0 2px;}
-.lnb_sub{display:none;}
+.lnb_sub{}
 .lnb_sub ul{position:fixed;left:0;right:0;top:82px;height:36px;z-index:10;}
 .lnb_sub ul:before{clear:both;content:'';position:absolute;left:-150%;width:200%;height:36px;background:url(../../img/bg_gnb.png) 0 0;border-bottom:1px solid #d1d1d1;}
 .lnb_sub ul:after{clear:both;content:'';position:absolute;right:-150%;width:200%;height:36px;background:url(../../img/bg_gnb.png) 0 0;border-bottom:1px solid #d1d1d1;z-index:0;}
