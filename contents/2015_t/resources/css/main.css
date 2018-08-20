@@ -530,6 +530,6 @@ nav.gnb .sub_tit span {background:none;}
 .main_evt_selbox{margin:10px 0 0;background:#fff;}
 .main_evt_selbox ul:after{display:block;clear:both;content:'';}
 .main_evt_selbox ul li{float:left;width:33.33%;}
-.main_evt_selbox ul li a{display:block;height:30px;line-height:31px;margin:0 -1px -1px 0;padding:0 4px;border:1px solid #eaeaea;color:#6d6d6d;font-size:12px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.main_evt_selbox ul li a{display:block;height:30px;line-height:31px;margin:0 -1px -1px 0;padding:0 4px;border:1px solid #dedede;color:#6d6d6d;font-size:12px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .main_evt_selbox ul li.selected a{color:#fff;background:#54546c;}
 /* 2018-08-23 메인 화면 개편 end */
