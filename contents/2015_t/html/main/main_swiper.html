@@ -4086,16 +4086,16 @@
 				if (jQuery('#ban-slide3').length != 0) {
 					var banSlideList3 = new Swiper('#ban-slide3', {
 						loop: true,
-						spaceBetween: 30,
+						spaceBetween: 0,
 			      centeredSlides: true,
 			      autoplay: {
 			        delay: 3000,
 			        disableOnInteraction: false,
 			      },
 			      pagination: {
-	    		    el: '.swiper-pagination',
+	    		    el: '#ban-slide3 .swiper-pagination',
 			        clickable: false,
-	        		type: 'fraction'
+	        		type: 'fraction',
 	      		}
 					});
 					$(".swiper-control .recom_play").hide();
