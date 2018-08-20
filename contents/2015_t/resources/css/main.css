@@ -490,7 +490,7 @@ nav.gnb .sub_tit span {background:none;}
 .lnb_sub + .mainContents {padding-top:40px;}
 .recom_slide{overflow:hidden;}
 .recom_slide .imgSlide{position:relative;}
-.recom_slide .imgSlide .swiper-pagination{position:absolute;bottom:6px;left:15px;width:40px;height:20px;padding:0 20px 0 0;line-height:20px;font-size:10px;text-align:center;background:rgba(255, 255, 255, 0.6);border-radius:20px;z-index:10;font-size:10px;color:#868686;}
+.recom_slide .imgSlide .swiper-pagination{position:absolute;bottom:6px;left:15px;width:40px;height:20px;padding:0 20px 0 0;line-height:20px;font-size:10px;text-align:center;background:rgba(255, 255, 255, 0.6);border:1px solid rgba(74, 74, 89, 0.1);border-radius:20px;z-index:10;font-size:10px;color:#868686;}
 .recom_slide .imgSlide .swiper-pagination span{font-size:10px;color:#868686;}
 .recom_slide .imgSlide .swiper-control{position:absolute;bottom:6px;left:55px;width:19px;height:20px;border-left:1px solid rgba(74, 74, 89, 0.1);z-index:10;}
 .recom_slide .imgSlide .swiper-control span{display:block;height:20px;font-size:0;color:#fff;}
