@@ -514,8 +514,8 @@ nav.gnb .sub_tit span {background:none;}
 .today_ban_prd .today_ban_slide{padding:0 15px 15px 0;margin-left:15px;overflow:hidden;}
 .today_ban_prd ul li{background:#fff;}
 .today_ban_prd ul li .goods_wide{margin:0;padding:0;border-radius:0;box-shadow:none;}
-.today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;}
-.today_ban_prd ul li .goods_wide .goods_cont .goods_name02{font-size:13px;line-height:14px;height:28px;}
+.today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;height:50px;}
+.today_ban_prd ul li .goods_wide .goods_cont .goods_name02{font-size:13px;line-height:14px;max-height:28px;}
 .today_ban_prd ul li .goods_wide .goods_cont .goods_price [class^="price_info"],
 .today_ban_prd ul li .goods_wide .goods_cont .goods_price [class^="price_info"] .price_tx01{font-size:15px;}
 .today_recom_prd {background:#fff;}
