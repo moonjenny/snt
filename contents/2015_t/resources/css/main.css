@@ -359,11 +359,11 @@ nav.gnb .sub_tit span {background:none;}
 .onairGoods .onairGoodsIn{margin:10px 0;}
 .onairGoods .time{position:absolute;top:50%;left:50%;width:100px;text-align:center;margin:-52px 0 0 -50px;}
 .onairGoods .time .onair{display:inline-block;padding:0 6px;background:#fff;border-radius:20px;}
-.onairGoods .time .onair em{line-height:18px;font-size:12px;font-weight:bold;color:#e50278;text-shadow:none;}
+.onairGoods .time .onair em{line-height:18px;font-size:12px;font-weight:bold;color:#e50278;text-shadow:none;text-transform:uppercase}
 .onairGoods .time span{display:block;margin:2px 0 0;vertical-align:0;font-size:0;color:#fff;text-shadow:1px 1px rgba(0, 0, 0, 0.8);}
 .onairGoods .time span em{vertical-align:0px;font-size:18px;font-family:Helvetica,HelveticaNeue-Light;}
 .onairGoods .goods_wide{padding:0;margin:0;box-shadow:none;border-radius:0;overflow:hidden;}
-.onairGoods .goods_wide .goods_cont{padding:12px 15px;}
+.onairGoods .goods_wide .goods_cont{padding:10px 15px 12px;}
 .onairGoods .goods_wide .goods_img{overflow:hidden;position:relative;}
 .onairGoods .goods_wide .goods_img .btn_play{background:url(../../img/new_btn_play.png) right 0 no-repeat;background-size:54px auto;width:54px;height:54px;position:absolute;left:50%;top:50%;margin:-27px 0 0 -27px;}
 .onairGoods .goods_wide .goods_img .btm{position:absolute;bottom:0;left:0;height:35px;}
@@ -523,9 +523,9 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd .today_recom_slide li .goods_wide{float:left;width:50%;margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_img{width:auto;margin:0 5px;border:1px solid #ededed;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont{padding:0;margin:8px 5px 0;}
-.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_name02{font-size:14px;line-height:18px;height:40px;}
+.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_name02{font-size:14px;line-height:17px;height:34px;}
 .today_recom_prd .today_recom_slide li .goods_wide .price_info02 .price_tx01{font-size:17px;}
-.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:65px;margin:0;}
+.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:60px;margin:0;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price [class^="price_info"] .discount{font-size:14px;}
 .main_evt_selbox{margin:10px 0 0;background:#fff;}
 .main_evt_selbox ul:after{display:block;clear:both;content:'';}
