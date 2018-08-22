@@ -367,7 +367,7 @@ nav.gnb .sub_tit span {background:none;}
 .onairGoods .goods_wide .goods_img{overflow:hidden;position:relative;}
 .onairGoods .goods_wide .goods_img:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.25);}
 .onairGoods .goods_wide .goods_img .btn_play{background:url(../../img/new_btn_play.png) right 0 no-repeat;background-size:54px auto;width:54px;height:54px;position:absolute;left:50%;top:50%;margin:-27px 0 0 -27px;z-index:1;}
-.onairGoods .goods_wide .goods_img .btm{position:absolute;bottom:0;left:0;height:35px;}
+.onairGoods .goods_wide .goods_img .btm{display:none;position:absolute;bottom:0;left:0;height:35px;}
 .onairGoods .goods_wide .goods_img .btm img{height:35px;width:100%;}
 .onairGoods .btns_wrap {margin:0 !important;overflow:hidden;z-index:2}
 .onairGoods .btns_wrap span a {border-radius:0;margin:0;font-weight:bold;letter-spacing:-1px;border:none;line-height:19px;height:19px;font-size:14px;}
@@ -511,7 +511,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_category ul li.all .nav_aside{position:relative;display:block;top:inherit;left:inherit;height:auto;margin:0;}
 .today_category ul li.all .nav_aside span{width:auto;background:none;padding:0;}
 .today_ban_prd{margin:10px 0;padding:31% 0 0;}
-.today_ban_prd .today_ban_slide{padding:0 15px 15px 0;margin-left:15px;overflow:hidden;}
+.today_ban_prd .today_ban_slide{padding:0 15px 15px;overflow:hidden;}
 .today_ban_prd ul li{background:#fff;}
 .today_ban_prd ul li .goods_wide{margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;height:50px;}
@@ -521,8 +521,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd {background:#fff;}
 .today_recom_prd .top_tit{padding:15px 15px 10px;background:#fff;}
 .today_recom_prd .top_tit span{color:#3b3b3b;font-size:17px;font-weight:bold;}
-.today_recom_prd .today_recom_slide{padding:0 5px 0 0;margin-left:15px;overflow:hidden;}
-.today_recom_prd .today_recom_slide ul{margin-left:-5px;}
+.today_recom_prd .today_recom_slide{padding:0 5px 0 10px;overflow:hidden;}
 .today_recom_prd .today_recom_slide li:after{display:block;clear:both;content:''}
 .today_recom_prd .today_recom_slide li .goods_wide{float:left;width:50%;margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_img{width:auto;margin:0 5px;border:1px solid #ededed;}
