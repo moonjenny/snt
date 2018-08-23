@@ -159,7 +159,7 @@ span.wish.on em {background-position:-160px 0}
 .goods_list_wrap.album .goods_cont .goods .goods_price{margin-bottom:10px;}
 .goods_list_wrap.album .goods_cont .goods .goods_price i{display:none;}
 .goods_list_wrap.album .goods_cont .goods .goods_price .sell em{text-decoration:line-through;}
-.goods_list_wrap.album .goods_benefit{/*width:90%;min-width:90px; max-width:100px;bottom:0;left:0;position:absolute;*/margin-top:0;}
+.goods_list_wrap.album .goods_benefit{height:15px;overflow:hidden;margin-top:0;}
 .goods_list_wrap.album .goods_benefit .single{display:block;}
 .goods_list_wrap.album .goods_benefit p{margin-right:2px;margin-left:0;}
 .goods_list_wrap.album .goods_benefit p span{font-size:11px;padding-right:5px;padding-left:0;background:url(../../img/goods_list_dot.png)no-repeat right 6px;background-size:2px;}
