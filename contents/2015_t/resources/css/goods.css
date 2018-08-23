@@ -309,7 +309,6 @@ ul.goods_image li .goods .goods_price span:first-child {display:block;margin-top
 .priceInfo {margin:0;margin:0 15px;border-bottom:1px solid #ddd;margin-bottom:10px;background:#fff;}
 /*.priceInfo div {border-top:1px solid #ddd;}*/
 .priceInfo div.priceInfoIn {position:relative;overflow:hidden;margin:10px 0;}
-.priceInfo div.priceInfoIn .goods_benefit2{bottom:14px;}
 .priceInfo div.counselask {text-align:center;font-size:16px;font-weight:bold;color:#e50278;padding:21px 0 20px;display:none;}
 .priceInfo dl {overflow:hidden;font-size:12px;color:#7d7d7d;margin-top:2px;}
 .priceInfo dl dt {color:#7d7d7d;display:inline-block;/* padding-top:2px; */padding-right:2px;vertical-align:top;}
@@ -332,8 +331,8 @@ ul.goods_image li .goods .goods_price span:first-child {display:block;margin-top
 .priceInfo dl.sale dd .price + .btn_detail02.open a{background:url(../../img/ico_del_on.png) no-repeat left top;background-size:100% auto;}
 .priceInfo dl.sale dd .discount_txt{display:block;color:#3b3b3b;}
 /*2018-05-29 추가*/
-.priceInfoIn{display:table;}
-.priceInfoIn > *{display:table-cell;vertical-align:bottom;}
+/*2018-08-23 가격 정책 반영전으로 주석 처리함 .priceInfoIn{display:table;}
+.priceInfoIn > *{display:table-cell;vertical-align:bottom;}*/
 .priceInfoIn .discount{/*position:absolute;left:0;bottom:0;*/padding-right:5px;font-size:27px;color:#e50278;}
 .priceInfoIn [class^="price_shop"]{/*position:absolute;left:0;bottom:0;*/padding-right:5px;font-size:15px;color:#e50278;}
 .priceInfoIn .price_shop01{line-height:26px;}
