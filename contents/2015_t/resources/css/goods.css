@@ -25,7 +25,7 @@
 ul.list_view li a.list span {background-position:-15px -114px}
 ul.list_view li a.list.active span {background-position:-45px -114px}
 ul.list_view li a.image span {background-position:-75px -114px}
-ul.list_view li a.image.active span {background-position:-105px -114px} 
+ul.list_view li a.image.active span {background-position:-105px -114px}
 
 /*상품목록*/
 .colorContents{background:#e9e9e9;overflow:hidden;}
@@ -37,7 +37,7 @@ ul.list_view li a.image.active span {background-position:-105px -114px}
 .goods_wrap ul li .goods .goods_img, .goods_small .goods_img {background-color:#000;}
 .goods_wrap ul li .goods .goods_img img, .goods_small .goods_img img {opacity:0.99}
 
-.goods_wrap ul li .goods .goods_img {font-size:0;line-height:0;cursor:pointer}	
+.goods_wrap ul li .goods .goods_img {font-size:0;line-height:0;cursor:pointer}
 .goods_wrap ul li .goods .goods_img a {display:block;width:100%;height:100%}
 .goods_wrap ul li .goods .goods_name {max-height:42px;font-size:16px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;
 		white-space:normal;
@@ -90,13 +90,13 @@ ul.goods_list li .goods .soldout span {width:100px;height:100px;}
 ul.goods_list li .goods .soldout span::before {top:16px;left:16px;width:70px;height:70px;border-radius:35px;}
 ul.goods_list li .goods .soldout em {margin-top:45px;font-size:12px}
 /* 품절 : 리스트형 - 사이드바 오늘본상품, 연관상품, 편성표, 주문결제상품 : 70*70 */
-/* .history ul.goods_list li .goods .soldout,  */.relation ul.goods_list li .goods .soldout, 
+/* .history ul.goods_list li .goods .soldout,  */.relation ul.goods_list li .goods .soldout,
 .together_list.goods_list li .goods .soldout, ul.order_goods li .goods .soldout {width:70px;height:70px;}
-/* .history ul.goods_list li .goods .soldout span,  */.relation ul.goods_list li .goods .soldout span, 
+/* .history ul.goods_list li .goods .soldout span,  */.relation ul.goods_list li .goods .soldout span,
 .together_list.goods_list li .goods .soldout span, ul.order_goods li .goods .soldout span {width:70px;height:70px;}
-/* .history ul.goods_list li .goods .soldout span::before,  */.relation ul.goods_list li .goods .soldout span::before, 
+/* .history ul.goods_list li .goods .soldout span::before,  */.relation ul.goods_list li .goods .soldout span::before,
 .together_list.goods_list li .goods .soldout span::before, ul.order_goods li .goods .soldout span::before {top:10px;left:10px;width:50px;height:50px;border-radius:25px;}
-/* .history ul.goods_list li .goods .soldout em,  */.relation ul.goods_list li .goods .soldout em, 
+/* .history ul.goods_list li .goods .soldout em,  */.relation ul.goods_list li .goods .soldout em,
 .together_list.goods_list li .goods .soldout em, ul.order_goods li .goods .soldout span em {width:70px;margin-top:30px;font-size:11px}
 
 /* 품절 : 이미지형 : 100*100 메인, 상품목록, 검색 등 */
@@ -154,7 +154,7 @@ span.wish.on em {background-position:-160px 0}
 .goods_list_wrap.album .goods_wide_out:nth-child(odd) .goods_wide{margin-right:5px}
 .goods_list_wrap.album .goods_wide_out:nth-child(even) .goods_wide{margin-left:5px}
 .goods_list_wrap.album .goods_wide .goods_img{}
-.goods_list_wrap.album .goods_cont [class*="goods_name"]{height:34px;font-size:14px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;white-space:normal;line-height:16px;}
+.goods_list_wrap.album .goods_cont [class*="goods_name"]{font-size:14px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;cursor:pointer;white-space:normal;line-height:16px;}
 .goods_list_wrap.album .goods_cont .goods_name02{font-size:14px;}
 .goods_list_wrap.album .goods_cont .goods .goods_price{margin-bottom:10px;}
 .goods_list_wrap.album .goods_cont .goods .goods_price i{display:none;}
@@ -167,7 +167,7 @@ span.wish.on em {background-position:-160px 0}
 .goods_list_wrap.album .goods_benefit p:last-child span{background:none;}
 .goods_list_wrap.album .goods_benefit2 .sale{display:none;}
 .goods_list_wrap.album .goods_benefit2 .rate span{display:none;}
-.goods_list_wrap.album .goods_wide .goods_cont{padding:8px 0 0;}
+.goods_list_wrap.album .goods_wide .goods_cont{padding:8px 0 0;height:95px;}
 
 .goods_list_wrap .goods_wide .goods_img img.s {display:none;}
 .goods_list_wrap.album .goods_wide .goods_img img {display:none;}
@@ -250,7 +250,7 @@ ul.goods_image li .goods .goods_price span:first-child {display:block;margin-top
 .slideCircle span {overflow:hidden;display:inline-block;width:10px;height:10px;margin:0 3px;text-indent:-9999px;vertical-align:top;background-image:url(../../img/ico_goods.png);background-repeat:no-repeat;background-position:-200px -125px;background-size:250px auto;-webkit-background-size:250px auto;cursor:pointer}
 .slideCircle span.swiper-pagination-bullet-active {width:15px;background-position:-220px -125px}
 
-/*플래그*/	
+/*플래그*/
 
 /* .flag  {position:absolute;top:10px;left:10px;width:120px;}
 .flag p {margin-right:3px}
@@ -324,10 +324,10 @@ ul.goods_image li .goods .goods_price span:first-child {display:block;margin-top
 .priceInfo dl.sale dt em {vertical-align:0;font-size:11px;}
 .priceInfo dl.sale dt span{vertical-align:-1px;margin-right:1px;}
 .priceInfo dl.sale dd .price {color:#3b3b3b;vertical-align:1px;}
-.priceInfo dl.sale dd .price em {font-size:17px;font-weight:bold;color:#3b3b3b;vertical-align:-1px;} 
+.priceInfo dl.sale dd .price em {font-size:17px;font-weight:bold;color:#3b3b3b;vertical-align:-1px;}
 /*2018-03-06 추가*/
 .priceInfo dl.sale dd{padding-left:5px;}
-.priceInfo dl.sale dd .price + .btn_detail02 {margin-left:3px;display:inline-block;} 
+.priceInfo dl.sale dd .price + .btn_detail02 {margin-left:3px;display:inline-block;}
 .priceInfo dl.sale dd .price + .btn_detail02 a {display:block;width:18px;height:23px;background:url(../../img/ico_del_off.png) no-repeat left top;background-size:100% auto;}
 .priceInfo dl.sale dd .price + .btn_detail02.open a{background:url(../../img/ico_del_on.png) no-repeat left top;background-size:100% auto;}
 .priceInfo dl.sale dd .discount_txt{display:block;color:#3b3b3b;}
@@ -343,12 +343,12 @@ ul.goods_image li .goods .goods_price span:first-child {display:block;margin-top
 .priceInfoIn .price02 .price_text01{font-size:19px;font-weight:bold;}
 .priceInfoIn .price02 .price_text02{font-size:12px;}
 .priceInfoIn .price02 .unit{font-size:12px;vertical-align:-1px;}
-.priceInfoIn .price02 .btn_detail02 {margin-left:3px;display:inline-block;vertical-align:top;} 
+.priceInfoIn .price02 .btn_detail02 {margin-left:3px;display:inline-block;vertical-align:top;}
 .priceInfoIn .price02 .btn_detail02 a {display:block;width:18px;height:23px;background:url(../../img/ico_del_off.png) no-repeat left top;background-size:100% auto;}
 .priceInfoIn .price02 .btn_detail02.open a{background:url(../../img/ico_del_on.png) no-repeat left top;background-size:100% auto;}
 /*//2018-03-06 추가*/
-.priceInfo dl.discount dt {padding-right:7px;} 
-.priceInfo dl.discount dd .price + .btn_detail {display:inline-block;border:solid 1px #a1a1a1;margin-left:5px;font-size:11px;padding:3px 5px 1px;} 
+.priceInfo dl.discount dt {padding-right:7px;}
+.priceInfo dl.discount dd .price + .btn_detail {display:inline-block;border:solid 1px #a1a1a1;margin-left:5px;font-size:11px;padding:3px 5px 1px;}
 .priceInfo dl.discount dd .price + .btn_detail a {color:#363636;/* font-size:11px;padding:3px 5px 2px;display:inline-block; */}
 .priceInfo dl.discount dd .price + .btn_detail a:after{content:"";margin-left:4px;width:5px;height:7px;display:inline-block;background:url(../../img/ico_detail.png) no-repeat 0 -50px;background-size:250px auto;vertical-align:middle;}
 .priceInfo dl.discount dd .price + .btn_detail.open em{background-position:0 -70px}
@@ -612,7 +612,7 @@ span.status_inline em.complete {color:#e50278;border:1px solid #e50278}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price{padding-left:7px;padding-right:7px;height:40px;}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price p{color:#7d7d7d;overflow:hidden;text-align:right;font-size:11px;}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price em.st{float:left;}
-.goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price em.st i{font-style:normal;} 
+.goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price em.st i{font-style:normal;}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price em.price{vertical-align:-1px}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price p.sale em.st{color:#e50278;}
 .goods_wrap.relation_wrap dl.relation dd li div.goods .goods_price p.sale em.price{color:#111111;font-size:14px;font-weight:bold;}
