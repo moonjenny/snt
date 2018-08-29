@@ -3856,71 +3856,73 @@
 					popupCnt: "3"
 				});
 
-				// 2018-08-23 메인 개편 start
-				if (jQuery('.lnb_sub').length != 0) {
-					var ban_loop = $('.lnb_sub .swiper-slide').length;
-					ban_loop > 1 ? ban_loop = true : ban_loop = false;
-					var lnbSubSlide = new Swiper('.lnb_sub', {
-						slidesPerView: 'auto',
-			      spaceBetween: 0
-					});
-				}
-				//메인메뉴별 하위메뉴
-				var mainGnbId = $(".gnb_wrap .gnb .current").index();
-				$(".lnb_subbox .lnb_sub").hide();
-				$(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
-				$(".gnb_wrap .gnb li").click(function(){
-					gnbClickId = $(this).index();
+				// 2018-08-30 메인 개편 start
+				$(window).on('load resize',function(){
+					if (jQuery('.lnb_sub').length != 0) {
+						var ban_loop = $('.lnb_sub .swiper-slide').length;
+						ban_loop > 1 ? ban_loop = true : ban_loop = false;
+						var lnbSubSlide = new Swiper('.lnb_sub', {
+							slidesPerView: 'auto',
+				      spaceBetween: 0
+						});
+					}
+					//메인메뉴별 하위메뉴
+					var mainGnbId = $(".gnb_wrap .gnb .current").index();
 					$(".lnb_subbox .lnb_sub").hide();
-					$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
-				});
-				//롤링배너
-				if (jQuery('#ban-slide3').length != 0) {
-					var banSlideList3 = new Swiper('#ban-slide3', {
-						loop: true,
-						spaceBetween: 0,
-			      centeredSlides: true,
-						slidesPerView: 'auto', //2018-08-29 추가
-			      autoplay: {
-			        delay: 3000,
-			        disableOnInteraction: false,
-			      },
-			      pagination: {
-	    		    el: '#ban-slide3 .swiper-pagination',
-			        clickable: false,
-	        		type: 'fraction',
-	      		}
+					$(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
+					$(".gnb_wrap .gnb li").click(function(){
+						gnbClickId = $(this).index();
+						$(".lnb_subbox .lnb_sub").hide();
+						$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
 					});
-					$(".swiper-control .recom_play").hide();
-					$( ".swiper-control .recom_stop" ).click(function(){
-						banSlideList3.autoplay.stop();
-						$(".swiper-control .recom_stop").hide();
-						$(".swiper-control .recom_play").show();
-					});
-					$( ".swiper-control .recom_play" ).click(function(){
-						banSlideList3.autoplay.start();
+					//롤링배너
+					if (jQuery('#ban-slide3').length != 0) {
+						var banSlideList3 = new Swiper('#ban-slide3', {
+							loop: true,
+							spaceBetween: 0,
+				      centeredSlides: true,
+							slidesPerView: 'auto', //2018-08-29 추가
+				      autoplay: {
+				        delay: 3000,
+				        disableOnInteraction: false,
+				      },
+				      pagination: {
+		    		    el: '#ban-slide3 .swiper-pagination',
+				        clickable: false,
+		        		type: 'fraction',
+		      		}
+						});
 						$(".swiper-control .recom_play").hide();
-						$(".swiper-control .recom_stop").show();
-					});
-				}
-				//배너 +  상품 리스트
-				if (jQuery('.today_ban_slide').length != 0) {
-					var prd_loop = $('.today_ban_slide .swiper-slide').length;
-					prd_loop > 1 ? prd_loop = true : prd_loop = false;
-					var todayPrdSlide = new Swiper('.today_ban_slide', {
-						slidesPerView: 'auto', //2018-08-29 수정
-			      spaceBetween: 10
-					});
-				}
-				if (jQuery('.today_recom_slide').length != 0) {
-					var prd_loop = $('.today_recom_slide .swiper-slide').length;
-					prd_loop > 1 ? prd_loop = true : prd_loop = false;
-					var todayPrdSlide = new Swiper('.today_recom_slide', {
-						slidesPerView: 'auto', //2018-08-29 수정
-			      spaceBetween: 0
-					});
-				}
-				// 2018-08-23 메인 개편 end
+						$( ".swiper-control .recom_stop" ).click(function(){
+							banSlideList3.autoplay.stop();
+							$(".swiper-control .recom_stop").hide();
+							$(".swiper-control .recom_play").show();
+						});
+						$( ".swiper-control .recom_play" ).click(function(){
+							banSlideList3.autoplay.start();
+							$(".swiper-control .recom_play").hide();
+							$(".swiper-control .recom_stop").show();
+						});
+					}
+					//배너 +  상품 리스트
+					if (jQuery('.today_ban_slide').length != 0) {
+						var prd_loop = $('.today_ban_slide .swiper-slide').length;
+						prd_loop > 1 ? prd_loop = true : prd_loop = false;
+						var todayPrdSlide = new Swiper('.today_ban_slide', {
+							slidesPerView: 'auto', //2018-08-29 수정
+				      spaceBetween: 10
+						});
+					}
+					if (jQuery('.today_recom_slide').length != 0) {
+						var prd_loop = $('.today_recom_slide .swiper-slide').length;
+						prd_loop > 1 ? prd_loop = true : prd_loop = false;
+						var todayPrdSlide = new Swiper('.today_recom_slide', {
+							slidesPerView: 'auto', //2018-08-29 수정
+				      spaceBetween: 0
+						});
+					}
+					// 2018-08-30 메인 개편 end
+				});
 
 			});
 
