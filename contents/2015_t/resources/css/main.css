@@ -512,7 +512,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_category ul li.all .nav_aside span{width:auto;background:none;padding:0;}
 .today_ban_prd{margin:10px 0;padding:31% 0 0;}
 .today_ban_prd .today_ban_slide{padding:0 15px 15px;overflow:hidden;}
-.today_ban_prd ul li{background:#fff;}
+.today_ban_prd ul li{background:#fff;width:130px;}
 .today_ban_prd ul li .goods_wide{margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;height:50px;}
 .today_ban_prd ul li .goods_wide .goods_cont .goods_name02{font-size:13px;line-height:14px;max-height:28px;}
@@ -522,6 +522,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd .top_tit{padding:15px 15px 10px;background:#fff;}
 .today_recom_prd .top_tit span{color:#3b3b3b;font-size:17px;font-weight:bold;}
 .today_recom_prd .today_recom_slide{padding:0 5px 0 10px;overflow:hidden;}
+.today_recom_prd .today_recom_slide li{width:88%;}
 .today_recom_prd .today_recom_slide li:after{display:block;clear:both;content:''}
 .today_recom_prd .today_recom_slide li .goods_wide{float:left;width:50%;margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_img{width:auto;margin:0 5px;border:1px solid #ededed;}

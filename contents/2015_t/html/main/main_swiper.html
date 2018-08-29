@@ -3880,6 +3880,7 @@
 						loop: true,
 						spaceBetween: 0,
 			      centeredSlides: true,
+						slidesPerView: 'auto', //2018-08-29 추가
 			      autoplay: {
 			        delay: 3000,
 			        disableOnInteraction: false,
@@ -3907,7 +3908,7 @@
 					var prd_loop = $('.today_ban_slide .swiper-slide').length;
 					prd_loop > 1 ? prd_loop = true : prd_loop = false;
 					var todayPrdSlide = new Swiper('.today_ban_slide', {
-						slidesPerView: '2.5',
+						slidesPerView: 'auto', //2018-08-29 수정
 			      spaceBetween: 10
 					});
 				}
@@ -3915,7 +3916,7 @@
 					var prd_loop = $('.today_recom_slide .swiper-slide').length;
 					prd_loop > 1 ? prd_loop = true : prd_loop = false;
 					var todayPrdSlide = new Swiper('.today_recom_slide', {
-						slidesPerView: '1.1',
+						slidesPerView: 'auto', //2018-08-29 수정
 			      spaceBetween: 0
 					});
 				}
