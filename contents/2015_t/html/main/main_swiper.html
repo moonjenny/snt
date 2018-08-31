@@ -1516,13 +1516,6 @@
 												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
 												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
 												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
-												<li class="swiper-slide"><a href="#"><img src="../../img/tmp/ban-slide3.png" alt="ban sample"></a></li>
 											</ul>
 	    								<div class="swiper-pagination">
 	    								</div>
@@ -3890,6 +3883,10 @@
 			        clickable: false,
 	        		type: 'fraction',
 	      		}
+					});
+					//2018-08-31 추가
+					$(window).resize(function(){
+					  banSlideList3.reInit()
 					});
 					$(".swiper-control .recom_play").hide();
 					$( ".swiper-control .recom_stop" ).click(function(){
