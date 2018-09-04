@@ -316,9 +316,9 @@ nav.gnb .sub_tit span {background:none;}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods {min-height:70px;padding-left:80px;padding-bottom:0;}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_img img {width:70px;height:70px}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_benefit2 {right:0;bottom:0px;}
-.scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods_benefit p{margin-top:8px;}
+.scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods_benefit p{margin-top: 3px;}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods_benefit p span{font-size:11px;}
-.scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_name {max-height:35px;font-size:14px;}
+.scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_name {max-height:35px;font-size:14px;margin-bottom: 5px;}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_price {/* padding-top:1px;bottom:0; */}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_price span:first-child{/* margin-top:8px; */}
 .scdList ol li .goods_box dd .goods_wrap ul.goods_list.together_list li .goods .goods_price .discount{float:left;margin-right:5px;font-size:14px;color:#e50278;}
@@ -486,6 +486,7 @@ nav.gnb .sub_tit span {background:none;}
 .lnb_sub ul + .swiper-notification {display:block;width:100%;height:36px;margin-top:0;}
 .lnb_sub ul li{display:inline-block;width:auto;z-index:10;}
 .lnb_sub ul li a{display:block;line-height:16px;padding:10px;color:#3b3b3b;font-size:13px;font-weight:bold;}
+.lnb_sub ul li a:focus,
 .lnb_sub ul li.selected a{color:#e50278;}
 .lnb_sub + .mainContents {padding-top:40px;}
 .recom_slide{overflow:hidden;}
@@ -512,6 +513,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_category ul li.all .nav_aside span{width:auto;background:none;padding:0;}
 .today_ban_prd{margin:10px 0;padding:31% 0 0;}
 .today_ban_prd .today_ban_slide{padding:0 15px 15px;overflow:hidden;}
+.today_ban_prd .today_ban_slide .goods_price p.counsel{padding-top:0;font-size:12px;}
 .today_ban_prd ul li{background:#fff;width:130px;}
 .today_ban_prd ul li .goods_wide{margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_ban_prd ul li .goods_wide .goods_cont{padding:10px 8px 8px;height:50px;}
@@ -526,7 +528,7 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd .today_recom_slide li:after{display:block;clear:both;content:''}
 .today_recom_prd .today_recom_slide li .goods_wide{float:left;width:50%;margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_img{width:auto;margin:0 5px;border:1px solid #ededed;}
-.today_recom_prd .today_recom_slide li .goods_wide .goods_cont{padding:0;margin:8px 5px 0;min-height:85px;}
+.today_recom_prd .today_recom_slide li .goods_wide .goods_cont{padding:0;margin:8px 5px 0;height:85px;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_name02{font-size:14px;line-height:17px;max-height:34px;}
 .today_recom_prd .today_recom_slide li .goods_wide .price_info02 .price_tx01{font-size:17px;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:50px;margin:0;}
