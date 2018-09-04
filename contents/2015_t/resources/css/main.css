@@ -521,15 +521,15 @@ nav.gnb .sub_tit span {background:none;}
 .today_recom_prd {background:#fff;}
 .today_recom_prd .top_tit{padding:15px 15px 10px;background:#fff;}
 .today_recom_prd .top_tit span{color:#3b3b3b;font-size:17px;font-weight:bold;}
-.today_recom_prd .today_recom_slide{padding:0 5px 0 10px;overflow:hidden;}
+.today_recom_prd .today_recom_slide{padding:0 10px;overflow:hidden;}
 .today_recom_prd .today_recom_slide li{width:88%;}
 .today_recom_prd .today_recom_slide li:after{display:block;clear:both;content:''}
 .today_recom_prd .today_recom_slide li .goods_wide{float:left;width:50%;margin:0;padding:0;border-radius:0;box-shadow:none;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_img{width:auto;margin:0 5px;border:1px solid #ededed;}
-.today_recom_prd .today_recom_slide li .goods_wide .goods_cont{padding:0;margin:8px 5px 0;}
+.today_recom_prd .today_recom_slide li .goods_wide .goods_cont{padding:0;margin:8px 5px 0;min-height:90px;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_name02{font-size:14px;line-height:17px;max-height:34px;}
 .today_recom_prd .today_recom_slide li .goods_wide .price_info02 .price_tx01{font-size:17px;}
-.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:60px;margin:0;}
+.today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price{height:55px;margin:0;}
 .today_recom_prd .today_recom_slide li .goods_wide .goods_cont .goods_price [class^="price_info"] .discount{font-size:14px;}
 .main_evt_selbox{margin:10px 0 0;background:#fff;}
 .main_evt_selbox ul:after{display:block;clear:both;content:'';}
