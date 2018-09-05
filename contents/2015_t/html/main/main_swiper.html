@@ -3786,7 +3786,8 @@
 				var classById = $('#lnb2').attr('class');
 
 
-				if (hashName != undefined && hashName != (0 + 2)) {
+				/* 20180905 확인 부탁드려요 start */
+				if (hashName != undefined && hashName != (1 + 2)) {
 
 					hashName = Number(hashName);
 					//mainSwipe.slide(hashName, 200);
@@ -3795,13 +3796,14 @@
 						location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
 					}
 				} else {
-					hashName = Number(0 + 2);
+					hashName = Number(1 + 2);
 					//mainSwipe.slide(hashName, 200);
 					viewSwipeLimeMain();
 					if (isApp()) {
 						location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
 					}
 				}
+				/* 20180905 확인 부탁드려요 end */
 
 			};
 			//main swipe
