@@ -189,7 +189,7 @@
 /* .BannerList {margin-top:10px} */
 .BannerList li {width:100%;text-align:center;position:relative;}
 .BannerList li a {display:block;width:100%;font-size:0;text-align:center;}
-.BannerList li a img {width:100%;max-width:415px;}
+.BannerList li a img {width:100%;}
 .BannerList li a span {width:45px;height:46px;top:50%;left:50%;margin-top:-22px;margin-left:-23px;display:block;position:absolute;background:url(../../img/ico_main2.png) right 0 no-repeat;background-size:250px auto;}
 
 .BannerDetail {overflow:hidden}
