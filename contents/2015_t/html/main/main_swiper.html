@@ -2689,7 +2689,7 @@
 	<script type="text/javascript">
 	// DEBUG 여부를 확인하기 위한 설정.
 	var _debug = true;
-	//window.addEventListener('load', function(){window.scrollTo(0,1);});
+	window.addEventListener('load', function(){window.scrollTo(0,1);});
 
 	var version = new Date().getTime() / 1000;
 
@@ -3850,9 +3850,7 @@ $(document).ready(function(){
 
 });
 /* 2018-09-07 add */
-$( window ).resize( function() {
-	location.reload();
-});
+
 /* 2018-09-07 end */
 
 if(isApp()){
