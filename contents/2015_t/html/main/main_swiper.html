@@ -2687,1389 +2687,1338 @@
 	<script type="text/javascript" src="../../resources/js/jquery-mobile.ui.js"></script>
 	<script type="text/javascript" src="../../resources/js/loading.js"></script>
 	<script type="text/javascript">
-		// DEBUG 여부를 확인하기 위한 설정.
-		var _debug = true;
-		window.addEventListener('load', function() {
-			window.scrollTo(0, 1);
+	// DEBUG 여부를 확인하기 위한 설정.
+	var _debug = true;
+	window.addEventListener('load', function(){window.scrollTo(0,1);});
+
+	var version = new Date().getTime() / 1000;
+
+	var searchList = []; // 최근 검색어 쿠키 저장 리스트
+
+	var ie = (function(){
+		var undef,
+		v = 3,
+		div = document.createElement('div'),
+		all = div.getElementsByTagName('i');
+		while(
+			div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+			all[0]
+		);
+		return v > 4 ? v : undef;
+	}());
+
+	$LAB
+	.queueScript("/resources/js/mypage/jquery.number.min.js")
+	.queueScript(ie < 9 ? '/resources/js/mypage/html5.js' : '')
+	.queueScript(ie < 9 ? '/resources/js/mypage/jquery.xdr-transport.js' : '')
+	.queueScript("/resources/js/comUtil.js?"+version)
+
+
+	var commonAjax = function(target_url, target_data, target_dataType, target_method) {
+		return jQuery.ajax({
+			url : target_url,
+			type : target_method,
+			data : target_data,
+			dataType : target_dataType
 		});
+	};
 
-		var version = new Date().getTime() / 1000;
-
-		var searchList = []; // 최근 검색어 쿠키 저장 리스트
-
-		var ie = (function() {
-			var undef,
-				v = 3,
-				div = document.createElement('div'),
-				all = div.getElementsByTagName('i');
-			while (
-				div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
-				all[0]
-			);
-			return v > 4 ? v : undef;
-		}());
-
-		$LAB
-			.queueScript("../../../resources/js/mypage/jquery.number.min.js")
-			.queueScript(ie < 9 ? '../../../resources/js/mypage/html5.js' : '')
-			.queueScript(ie < 9 ? '../../../resources/js/mypage/jquery.xdr-transport.js' : '')
-			.queueScript("../../../resources/js/comUtil.js?" + version)
-
-
-		var commonAjax = function(target_url, target_data, target_dataType, target_method) {
-			return jQuery.ajax({
-				url: target_url,
-				type: target_method,
-				data: target_data,
-				dataType: target_dataType
-			});
-		};
-
-		var commonJsonAjax = function(target_url, target_data, target_dataType, target_method) {
-			return jQuery.ajax({
-				url: target_url,
-				type: target_method,
-				data: target_data,
-				dataType: target_dataType,
-				cache: false,
-				timeout: 30000,
-				contentType: "application/json;charset=UTF-8",
-				dataType: target_dataType,
-				data: JSON.stringify(target_data)
-			});
-		};
-
-		var commonJsonAjaxSync = function(target_url, target_data, target_dataType, target_method) {
-			return jQuery.ajax({
-				url: target_url,
-				type: target_method,
-				data: target_data,
-				dataType: target_dataType,
-				cache: false,
-				async: false,
-				timeout: 30000,
-				contentType: "application/json;charset=UTF-8",
-				dataType: target_dataType,
-				data: JSON.stringify(target_data)
-			});
-		};
-
-		function setMenuTop(height) {
-			//$('.gnb').css('top', Number(height));
-		}
-
-		// 앱 카테고리 사이드바 제어
-		function sideOpen() {
-			appCloseVideo();
-			sidebar.open('c');
-			retrieveCategoryBanner();
-			topBarHide();
-			appBarHide();
-		}
-
-		// 앱 검색바 제어
-		function searchOpen() {
-			appCloseVideo();
-			ui_search.viewSearchBar();
-			showSearch();
-			topBarHide();
-			appBarHide();
-			jQuery('#searchKeywordName').select();
-			jQuery('#searchKeywordName').focus();
-		}
-
-		// dim 상태 해제 시 앱 구현 바 복구
-		$(".dim, .sideClose").on('click', function() {
-			topBarShow();
-			appBarShow();
+	var commonJsonAjax = function(target_url, target_data, target_dataType, target_method) {
+		return jQuery.ajax({
+			url : target_url,
+			type : target_method,
+			data : target_data,
+			dataType : target_dataType,
+			cache:false,
+	        timeout : 30000,
+	        contentType : "application/json;charset=UTF-8",
+	        dataType : target_dataType,
+	        data: JSON.stringify(target_data)
 		});
+	};
 
-		//검색어 조회후 입력
-		commonAjax("/goods-search/recommKeyward", '', "json", "GET")
-			.done(function(data, textStatus, jqXHR) {
-				if (data.code == "200") {
-					var keywardArr = data.data;
-					if (keywardArr.length > 0) {
-						var randomVlaue = Math.floor(Math.random() * keywardArr.length);
-						var keywardBanner = keywardArr[randomVlaue];
-						var text = keywardBanner.textContents;
-						var link = keywardBanner.linkUrl;
-						jQuery('#searchKeywordName').attr('placeholder', text);
-						jQuery('#searchKeywordName').attr('link', link);
-					}
-				}
-			});
+	var commonJsonAjaxSync = function(target_url, target_data, target_dataType, target_method) {
+		return jQuery.ajax({
+			url : target_url,
+			type : target_method,
+			data : target_data,
+			dataType : target_dataType,
+			cache:false,
+			async: false,
+	        timeout : 30000,
+	        contentType : "application/json;charset=UTF-8",
+	        dataType : target_dataType,
+	        data: JSON.stringify(target_data)
+		});
+	};
 
-		function goSearch() {
-			var searchKeyword = jQuery('#searchKeywordName').val();
-			var pageNo = jQuery('#pageNo').val();
-			var query = jQuery('#query').val();
-			var url = "";
+	function setMenuTop(height) {
+		//$('.gnb').css('top', Number(height));
+	}
 
-			searchKeyword = searchKeyword.trim();
+	// 앱 카테고리 사이드바 제어
+	function sideOpen() {
+		appCloseVideo();
+		sidebar.open('c');
+		retrieveCategoryBanner();
+		topBarHide();
+		appBarHide();
+	}
 
-			var re = /[.~!@\#$%^&*\-=+|\\/:;?"`<>'_]/gi;
+	// 앱 검색바 제어
+	function searchOpen() {
+		appCloseVideo();
+		ui_search.viewSearchBar();
+		showSearch();
+		topBarHide();
+		appBarHide();
+		jQuery('#searchKeywordName').select();
+	    jQuery('#searchKeywordName').focus();
+	}
 
-			if (re.test(searchKeyword)) {
-				alert("특수문자는 입력할 수 없습니다.");
-				event.preventDefault();
-				return;
+	// dim 상태 해제 시 앱 구현 바 복구
+	$(".dim, .sideClose").on('click', function(){ topBarShow(); appBarShow(); });
+
+	//검색어 조회후 입력
+	commonAjax("/goods-search/recommKeyward", '', "json", "GET")
+	.done(function(data, textStatus, jqXHR){
+		if(data.code =="200"){
+			var keywardArr = data.data;
+			if(keywardArr.length>0){
+				var randomVlaue = Math.floor(Math.random() * keywardArr.length);
+				var keywardBanner = keywardArr[randomVlaue];
+				var text = keywardBanner.textContents;
+				var link = keywardBanner.linkUrl;
+				jQuery('#searchKeywordName').attr('placeholder', text);
+				jQuery('#searchKeywordName').attr('link', link);
 			}
+	    }
+	});
 
-			if (searchKeyword == null || searchKeyword == '') {
-				var linkUrl = jQuery('#searchKeywordName').attr('link');
-				if (linkUrl != null && linkUrl != '') {
-					window.location.href = "http://dev-m.shoppingntmall.com" + jQuery('#searchKeywordName').attr('link');
-				} else {
-					alert("검색어를 입력해주세요");
-					return;
-				}
-			} else {
-				if (comUtil.isEmpty(query)) {
-					url = "/goods-search/search/" + encodeURIComponent(searchKeyword);
-				} else {
-					url = "/goods-search/search/" + encodeURIComponent(searchKeyword) + "?query=" + query;
-				}
+	function goSearch(){
+		var searchKeyword = jQuery('#searchKeywordName').val();
+		var pageNo = jQuery('#pageNo').val();
+		var query = jQuery('#query').val();
+		var url = "";
+		var searchKeywordHardCode = "";
 
-				try {
-					if (jQuery.cookie('searchList').split(',').indexOf(searchKeyword) != -1) {} else {
-						searchList.push(searchKeyword);
-						jQuery.cookie('searchList', searchList, {
-							path: '/'
-						});
-					}
-				} catch (e) {
+		searchKeyword = searchKeyword.trim();
+		//하드코딩 추가 부분 START
+		searchKeywordHardCode = searchKeyword;
+	    searchKeywordHardCode = searchKeywordHardCode.replace(/ /gi, "");
 
-				}
+	    if(searchKeywordHardCode == "4월의쥬얼리" ||searchKeywordHardCode == "4월의주얼리"){
+	        window.location.href ="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2018030301?pageType=1";
+	        return;
+	    }
 
-				window.location.href = "http://dev-m.shoppingntmall.com" + url;
-			}
+	    //하드코딩 추가부분 END
+		var re = /[.~!@\#$%^&*\-=+|\\/:;?"`<>'_]/gi;
+
+	    if(re.test(searchKeyword)){
+	    	alert("특수문자는 입력할 수 없습니다.");
+			event.preventDefault();
+			return;
 		}
 
-		// 로그인을 체크한다.
-		function checkLogin(forwardUrl) {
-			if (confirm('로그인 후 이용 가능합니다.\n로그인페이지로 이동하시겠습니까?')) {
-				if (comUtil.isEmpty(forwardUrl)) {
-					window.location.replace('/member/login');
-				} else {
-					window.location.replace('/member/login?forwardUrl=' + encodeURIComponent(forwardUrl));
-				}
+		if (searchKeyword == null || searchKeyword == '' ) {
+			var linkUrl = jQuery('#searchKeywordName').attr('link');
+			if(linkUrl!= null && linkUrl !=''){
+				window.location.href =  "http://dev-m.shoppingntmall.com" +jQuery('#searchKeywordName').attr('link');
+			}else{
+	    		alert("검색어를 입력해주세요");
+	    		return;
 			}
-		}
+		} else {
+		    if(comUtil.isEmpty(query)){
+			    url = "/goods-search/search/"+ encodeURIComponent(searchKeyword);
+			}else{
+			    url = "/goods-search/search/"+ encodeURIComponent(searchKeyword)+ "?query="+query;
+			}
 
-		// 로그인을 체크한다.
-		function checkLoginAlert(forwardUrl) {
-			alert("로그인 후 이용 가능합니다.")
+			try{
+				if(jQuery.cookie('searchList').split(',').indexOf(searchKeyword) != -1){
+	    		}else{
+	    			searchList.push(searchKeyword);
+	    			jQuery.cookie('searchList', searchList, { path: '/' });
+	    		}
+			}catch(e){
+
+			}
+
+			window.location.href = "http://dev-m.shoppingntmall.com" + url;
+		}
+	}
+
+	// 로그인을 체크한다.
+	function checkLogin(forwardUrl) {
+		if (confirm('로그인 후 이용 가능합니다.\n로그인페이지로 이동하시겠습니까?')) {
 			if (comUtil.isEmpty(forwardUrl)) {
 				window.location.replace('/member/login');
-			} else {
+			}
+			else {
 				window.location.replace('/member/login?forwardUrl=' + encodeURIComponent(forwardUrl));
 			}
 		}
+	}
 
-		// 로그인을 체크한다.
-		function login(id) {
-			if (id != '' && id != undefined && id != null) {
-				window.location.replace('/member/login?memId=' + id);
-			} else {
-				window.location.replace('/member/login');
+	// 로그인을 체크한다.
+	function checkLoginAlert(forwardUrl) {
+	    alert("로그인 후 이용 가능합니다.")
+	    if (comUtil.isEmpty(forwardUrl)) {
+	        window.location.replace('/member/login');
+	    }
+	    else {
+	        window.location.replace('/member/login?forwardUrl=' + encodeURIComponent(forwardUrl));
+	    }
+	}
+
+	// 로그인을 체크한다.
+	function login(id) {
+		if(id != '' && id != undefined && id != null){
+			window.location.replace('/member/login?memId=' + id);
+		}else{
+			window.location.replace('/member/login');
+		}
+		//window.location.replace("/html/index.html#!/login");
+	}
+
+	function logout() {
+		if (confirm('로그아웃 하시겠습니까?')) {
+			window.location.replace("/member/logout");
+		}
+	}
+
+	function aLoginCheck(forwardUrl) {
+		var param = {};
+
+		if( forwardUrl ) {
+			param['forwardUrl'] = forwardUrl;
+		}
+
+		commonAjax('/member/login/check', param, 'json', 'post')
+		.done(function(data, textStatus, jqXHR) {
+			if( data.code == 200 ) {
+				window.location.replace(data.replaceUrl);
 			}
-			//window.location.replace("/html/index.html#!/login");
-		}
-
-		function logout() {
-			if (confirm('로그아웃 하시겠습니까?')) {
-				window.location.replace("/member/logout");
-			}
-		}
-
-		function aLoginCheck(forwardUrl) {
-			var param = {};
-
-			if (forwardUrl) {
-				param['forwardUrl'] = forwardUrl;
-			}
-
-			commonAjax('/member/login/check', param, 'json', 'post')
-				.done(function(data, textStatus, jqXHR) {
-					if (data.code == 200) {
-						window.location.replace(data.replaceUrl);
-					}
-				}).fail(function(jqXHR, textStatus, errorThrown) {
-					if (_debug) console.log("에러", "실패 : " + errorThrown);
-				});
-		}
-
-		function goCustMain() {
-			window.location = "http://dev-m.shoppingntmall.com/customer/main";
-		}
-
-		function goApp() {
-			var iOsAgent = "true";
-			var AndroidAgent = "false";
-			var AppFlag = "false";
-
-			if (AppFlag == "false") {
-				if (iOsAgent == "true") {
-					window.location.replace("https://itunes.apple.com/kr/app/syoping-ent/id1004806037?mt=8");
-				} else if (AndroidAgent == "true") {
-					// window.location.replace("http://play.google.com/store/apps/details?id=com.shoppingntmall.mcapp");
-					window.location.replace("market://details?id=com.shoppingntmall.mcapp");
-				} else {
-					alert("휴대폰에서 앱을 설치 해주십시오.");
-				}
-			} else {
-				// alert("쇼핑엔티 앱 \n 오픈 준비중입니다.\n 잠시만 기다려 주시기 바랍니다.");
-			}
-		}
-
-		function goTop() {
-			window.scrollTo(0, 1);
-		}
-
-		jQuery('input#searchKeywordName').on('keydown', function(e) {
-			if (13 == e.which) {
-				goSearch();
-			}
+		}).fail(function(jqXHR, textStatus, errorThrown) {
+			if( _debug ) console.log("에러", "실패 : " + errorThrown);
 		});
+	}
 
-		function isIOSWeb() {
-			var mobileKeyWords = new Array('iPhone', 'iPod', 'iPad');
-			var iosYn = 0;
-			for (var i = 0; i < mobileKeyWords.length; i++) {
-				//모바일 디바이스로 접속일때
-				if (navigator.userAgent.match(mobileKeyWords[i]) != null) {
-					iosYn = 1;
-				}
-			}
-			return iosYn;
-		}
+	function goCustMain() {
+	    window.location="http://dev-m.shoppingntmall.com/customer/main";
+	}
 
-		function isIOS() {
-			return /iP(hone|od|ad)/.test(navigator.userAgent);
-		}
+	function goApp() {
+		var iOsAgent = "false";
+		var AndroidAgent = "false";
+		var AppFlag = "false";
 
-		function isAndroid() {
-			return /(Android)/.test(navigator.userAgent);
-		}
-
-		function isApp() {
-			return /(shoppingntapp)/.test(navigator.userAgent);
-		}
-
-		function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate) {
-			var movieUrl = _url;
-
-			if (!confirm('실시간 방송을 시청하시려면, 3G/4G 환경에서는 사용자 요금에 따라 요금이 부가될 수 있습니다. 시청하시겠습니까?')) {
-				if (endDate) {
-					endDate = new Date(endDate);
-					var curDate = new Date();
-					var leftTime = (endDate - curDate) / 1000;
-					jQuery('#time').attr('leftTime', leftTime);
-				} else {
-					endDate = new Date();
-				}
-				return false;
-			}
-
-			if (endDate) {
-				endDate = new Date(endDate);
-				var curDate = new Date();
-				var leftTime = (endDate - curDate) / 1000;
-				jQuery('#time').attr('leftTime', leftTime);
+		if(AppFlag == "false"){
+			if(iOsAgent == "true") {
+				window.location.replace("https://itunes.apple.com/kr/app/syoping-ent/id1004806037?mt=8");
+			} else if(AndroidAgent == "true") {
+				// window.location.replace("http://play.google.com/store/apps/details?id=com.shoppingntmall.mcapp");
+				window.location.replace("market://details?id=com.shoppingntmall.mcapp");
 			} else {
-				endDate = new Date();
+				alert("휴대폰에서 앱을 설치 해주십시오.");
 			}
-
-			if (_url != "") {
-
-				var lbsParam = {
-					said: "LBSTEST",
-					asset_id: "10010",
-					zone: "HOT",
-					path: _url,
-					request_bit_rate: "S",
-					stream_count: "2",
-					ad_path: "none",
-					protocol: "HTTP",
-					otu_encoding: "0",
-					otu_expirementime: "120",
-					client_ip: "LBSTEST",
-					said: "0.0.0.0",
-					level: "0"
-				}
-				if (live) {
-					lbsParam.svc = "LIVE";
-				} else {
-					lbsParam.svc = "VOD";
-				}
-				commonAjax("/videoUrl", lbsParam, "json", "POST")
-					.done(function(data, textStatus, jqXHR) {
-						try {
-							var resultData = JSON.parse(data.data);
-							movieUrl = resultData.content[0].content_otu;
-							if (isApp()) {
-								live = live || "false";
-								var playParams = {
-									"src": movieUrl,
-									"live": live,
-									"linkUrl": (goodsCode != "" ? "/display/goods/" + goodsCode : ""),
-									"price": price,
-									"playerX": playerIdx,
-									"title": goodsName,
-									"endDate": endDate
-								};
-								window.location = "netplay://playVideo?q=" + JSON.stringify(playParams);
-							} else {
-								window.location = movieUrl;
-							}
-						} catch (e) {
-							alert('동영상이 존재하지 않습니다.');
-						}
-					}).fail(function(jqXHR, textStatus, errorThrown) {});
-				/*
-		if (isApp()) {
-						live = live || "false";
-						var playParams = {
-								"src" : movieUrl,
-								"live" : live,
-				"linkUrl" : ( goodsCode != "" ? "/display/goods/"+goodsCode : "" ),
-				"price" : price,
-				"playerX" : playerIdx,
-				"title" : goodsName,
-				"endDate" : endDate
-						};
-						window.location = "netplay://playVideo?q=" + JSON.stringify(playParams);
-			}else {
-						window.location = movieUrl;
-			}
-		*/
-
-			} else {
-				alert('동영상이 존재하지 않습니다.');
-			}
+		} else {
+		    // alert("쇼핑엔티 앱 \n 오픈 준비중입니다.\n 잠시만 기다려 주시기 바랍니다.");
 		}
+	}
 
-		function setupVideo(type, playerIdx, menuArr) {
+	function goTop(){
+	  window.scrollTo(0,1);
+	}
 
-			console.log(JSON.stringify(menuArr));
-			var r = 1;
-			var heightP = 0;
-
-			if (typeof endDate == "undefined") {
-				endDate = "0";
-			}
-
-			// 임시
-			if (isIOS() && !isApp()) return;
-
-			if (!isIOS()) {
-				r = window.devicePixelRatio;
-			}
-
-			if (type == "view") {
-				if (isIOS()) {
-					heightP = 80;
-				} else {
-					heightP = 80;
-				}
-			}
-
-			var setupParams = {
-				"default": {
-					"pmode": {
-						"x": "p",
-						"y": "p",
-						"w": "p",
-						"h": "p"
-					},
-					"position": {
-						"x": "0",
-						"y": "0",
-						"w": "1.0",
-						"h": "0"
-					},
-					"limit": {
-						"l": "0",
-						"r": "1.0",
-						"t": "0",
-						"b": "1.0"
-					},
-					"mmode": "true",
-					"dmode": "zoom",
-					"menu": {
-						"top": "true",
-						"middle": "false",
-						"bottom": "true",
-						"custom": "false"
-					}
-				},
-				"zoom": {
-					"pmode": {
-						"x": "r",
-						"y": "r",
-						"w": "r",
-						"h": "r"
-					},
-					"position": {
-						"x": "0.05",
-						"y": "0.12",
-						"w": "0.4",
-						"h": "0"
-					},
-					"rarea": {
-						"l": "0",
-						"r": "1.0",
-						"t": "0",
-						"b": "0.5"
-					},
-					"mmode": "true",
-					"dmode": "zoom",
-					"dtype": "down",
-					"menu": {
-						"top": "true",
-						"middle": "true",
-						"bottom": "true",
-						"custom": "true"
-					}
-				},
-				"full": {
-					"status": "true",
-					"mmode": "true",
-					"menu": {
-						"top": "false",
-						"middle": "true",
-						"bottom": "true",
-						"custom": "true"
-					}
-				},
-				"scroll": {
-					"attach": "true",
-					"limit": {
-						"l": "0",
-						"r": "1.0",
-						"t": "0",
-						"b": "1.0"
-					},
-					"position": {
-						"x": "0",
-						"y": String(Math.floor((heightP) * r))
-					}
-				}
-			};
-			var pramObj;
-			if (menuArr) {
-				pramObj = {
-					videoParam: setupParams,
-					mainmenuParam: menuArr
-				}
-			} else {
-				pramObj = {
-					videoParam: setupParams
-				}
-			}
-
-			if (iOsAgent) {
-				window.location = "netplay://setupVideo?q=" + JSON.stringify(setupParams) + "&main=" + JSON.stringify(menuArr);
-			} else {
-				window.location = "netplay://setupVideo?q=" + JSON.stringify(pramObj);
-			}
-		}
-
-		function sendPlayerViewStatus(status) {
-			var deem = jQuery('.deem_white');
-
-			if (deem.length > 0) {
-				if (status == "zoom" || status == "hide") {
-					deem.hide();
-				} else {
-					deem.show();
-				}
-			}
-		}
-
-		var locationParams = {
-			"linkUrl": window.location.pathname
-		};
-
-		// App ActionBar 숨김
-		function appBarHide() {
-			if (isApp()) {
-				try {
-					window.shoppingntapp.appActionBottomBarHide();
-				} catch (e) {}
-			}
-		}
-
-		// App ActionBar 노출(단 디폴트 액션바가 노출되는 상황 조건)
-		function appBarShow() {
-			if (isApp()) {
-				if (appActionVarDisplayYn()) {
-					try {
-						window.shoppingntapp.appActionBottomBarShow();
-					} catch (e) {}
-				}
-			}
-		}
-
-		// App HeaderBar 숨김
-		function topBarHide() {
-			if (isApp()) {
-				try {
-					if (isAndroid()) {
-						window.shoppingntapp.appActionTopBarHide();
-					} else {
-						window.location = "shoppingntapp://hideBar?q=" + JSON.stringify(locationParams);
-					}
-				} catch (e) {}
-			}
-		}
-
-		// App HeaderBar 노출
-		function topBarShow() {
-			if (isApp()) {
-				if (appActionVarDisplayYn()) {
-					try {
-						if (isAndroid()) {
-							window.shoppingntapp.appActionTopBarShow();
-						} else {
-							window.location = "shoppingntapp://showBar?q=" + JSON.stringify(locationParams);
-						}
-					} catch (e) {}
-				}
-			}
-		}
-
-		// 페이지 App ActionBar 기본 노출 여부
-		function appActionVarDisplayYn() {
-			// var checkUrlWords = new Array('/display/goods/', '/order/purchase/','/mypage/myPage','/member/login','/member/nm-order/exist-member','/member/find-id','/member/find-pw','/member/chagne-pw-regular','/member/nm-order','/member/join','/common/terms?win=pop','/common/policy/1','/common/policy/2','/common/policy/3');
-			var checkUrlWords = new Array('/display/goods/');
-			var defaultDisplayYn = 1;
-			var urlPath = window.location.pathname + window.location.search;
-			for (var i = 0; i < checkUrlWords.length; i++) {
-				if (urlPath.match(checkUrlWords[i]) != null) {
-					defaultDisplayYn = 0;
-				}
-			}
-			return defaultDisplayYn;
-		}
-
-		function showSearch() {
-			//jQuery.removeCookie('searchList', { path: '/' });
-			if (jQuery.cookie('searchList') == undefined || jQuery.cookie('searchList') == "") {
-				jQuery.cookie('searchList', searchList, {
-					path: '/'
-				});
-			} else {
-				searchList = jQuery.cookie('searchList').split(',');
-			}
-
-			jQuery("#searchList").html("").append('<dt>최근검색어</dt>');
-			if (searchList.length == 0) {
-				jQuery("#searchList").append('<dd><p id="searchResult0">최근 검색어 내역이 없습니다.</p></dd>');
-			} else {
-				var count = 1;
-				for (var x = searchList.length; x > 0; x--) {
-					if (count > 10) break;
-					jQuery("#searchList").append('<dd><a href="javascript: setSearchKeyword(\'' + searchList[x - 1] + '\');" id="searchResult1">' + searchList[x - 1] + '</a></dd>');
-					count++;
-				}
-			}
-
-			jQuery("#searchList").append('<dd><span class="btn size2 bgcolor8"><a>닫기</a></span></dd>');
-			jQuery(".search_list dl dd .btn a").on('click', function() {
-				topBarShow();
-				appBarShow();
-				ui_search.hideSearchBar();
-				float_header.side_close();
-				$('.wrap_inner').css('height', 'auto');
-				$('.floating_btn_top').show(); // 2016-06-30
-			});
-		}
-
-		function setSearchKeyword(keyword) {
-			jQuery('#searchKeywordName').val(keyword);
+	jQuery('input#searchKeywordName').on('keydown', function(e){
+		if (13 == e.which) {
 			goSearch();
 		}
+	});
 
-		// App 동영상 닫기
-		function appCloseVideo() {
-			if (isApp()) {
-				if (isAndroid()) {
-					try {
-						window.shoppingntapp.closeVideo();
-					} catch (e) {}
-				} else {
-					window.location = "netplay://closeVideo";
-				}
+	function isIOSWeb(){
+		var mobileKeyWords = new Array('iPhone', 'iPod','iPad');
+		var iosYn = 0;
+		for (var i = 0 ; i < mobileKeyWords.length ; i++){
+			//모바일 디바이스로 접속일때
+			if (navigator.userAgent.match(mobileKeyWords[i]) != null){
+				iosYn = 1;
 			}
 		}
+		return iosYn;
+	}
 
-		function sendAppTitleInfo() {
+	function isIOS(){
+	    return /iP(hone|od|ad)/.test(navigator.userAgent);
+	}
+	function isAndroid(){
+	    return /(Android)/.test(navigator.userAgent);
+	}
 
-			if (location.href.indexOf("index") < 0 && location.href.indexOf("goods-list") < 0 && location.href.indexOf("/display/goods/") < 0) {
-				var titleObj = {};
-				jQuery('.gnb.sub').hide();
-				titleObj.title = jQuery.trim(jQuery('.gnb.sub').find('h2').children('span').text());
-				if (isIOS()) {
-					titleObj.title = encodeURIComponent(jQuery.trim(titleObj.title));
-				}
-				if (jQuery('.gnb.sub').find('a').attr('href')) {
-					var backBtnUrl = "";
-					backBtnUrl = jQuery('.gnb.sub').find('a').attr('href');
-					if (backBtnUrl.substring(0, 1) == "/") {
-						titleObj.backBtn = encodeURIComponent("http://dev-m.shoppingntmall.com" + backBtnUrl);
-						//titleObj.backBtn = "http://dev-m.shoppingntmall.com"+backBtnUrl;
-					} else if (backBtnUrl == "javascript:;") {
-						titleObj.backBtn = "javascript:window.history.back();";
-					} else {
-						titleObj.backBtn = backBtnUrl;
-					}
-				} else {
-					titleObj.backBtn = "javascript:window.history.back();";
-				}
-				console.log(JSON.stringify(titleObj));
-				location.href = "shoppingntapp://setTitle?main=" + JSON.stringify(titleObj);
-			}
-		}
-		$(document).ready(function() {
-			if (isApp()) {
-				sendAppTitleInfo();
-			}
-		});
+	function isApp(){
+	    return /(shoppingntapp)/.test(navigator.userAgent);
+	}
 
-		function windowOpen(targetUrl) {
-			if (jQuery('main#policy').length > 0) {
-				jQuery('main#policy').remove();
-			}
-			commonAjax(targetUrl, '', "text", "GET")
-				.done(function(data, textStatus, jqXHR) {
-					jQuery(data).insertAfter('main#contents');
-					jQuery('main#contents').hide();
-					jQuery('main#policy').show();
-					scrollTo(0, 0);
-				});
-		}
+	function playVideo(_url, playerIdx, goodsCode, goodsName, live, price, endDate){
+	    var movieUrl = _url;
 
-		function appWindowOpen(targetUrl) {
-			if (isApp()) {
-				targetUrl = targetUrl.replace('https://', '');
-				targetUrl = targetUrl.replace('http://', '');
-				window.location = "shoppingntapp://openpc?" + targetUrl;
+		if(!confirm('실시간 방송을 시청하시려면, 3G/4G 환경에서는 사용자 요금에 따라 요금이 부가될 수 있습니다. 시청하시겠습니까?')){
+			if(endDate) {
+	    		endDate = new Date(endDate);
+	    	    var curDate = new Date();
+	    	    var leftTime = (endDate - curDate) / 1000;
+	    	    jQuery('#time').attr('leftTime', leftTime);
 			} else {
-				window.open(targetUrl, '_agree');
+	    		endDate = new Date();
+	    	}
+	        return false;
+	    }
+
+		if(endDate) {
+	    	endDate = new Date(endDate);
+	        var curDate = new Date();
+	        var leftTime = (endDate - curDate) / 1000;
+	        jQuery('#time').attr('leftTime', leftTime);
+		} else {
+			endDate = new Date();
+		}
+
+	    if(_url != ""){
+
+			var lbsParam = {
+				said				:"LBSTEST",
+				asset_id			:"10010",
+				zone				:"HOT",
+				path				:_url,
+				request_bit_rate	:"S",
+				stream_count		:"2",
+				ad_path				:"none",
+				protocol			:"HTTP",
+				otu_encoding		:"0",
+				otu_expirementime	:"120",
+				client_ip			:"LBSTEST",
+				said				:"0.0.0.0",
+				level				:"0"
+			}
+			if(live){
+				lbsParam.svc = "LIVE";
+			}else{
+				lbsParam.svc = "VOD";
+			}
+			commonAjax("/videoUrl", lbsParam, "json", "POST")
+				.done(function(data, textStatus, jqXHR) {
+	    			try{
+	    				var resultData = JSON.parse(data.data);
+	    				movieUrl = resultData.content[0].content_otu;
+	        			if (isApp()) {
+	                        live = live || "false";
+	                        var playParams = {
+	                            "src" : movieUrl,
+	                            "live" : live,
+	            				"linkUrl" : ( goodsCode != "" ? "/display/goods/"+goodsCode : "" ),
+	            				"price" : price,
+	            				"playerX" : playerIdx,
+	            				"title" : goodsName,
+	            				"endDate" : endDate
+	                        };
+	                        window.location = "netplay://playVideo?q=" + JSON.stringify(playParams);
+	                 	}else {
+	                        window.location = movieUrl;
+	                	}
+	    			}catch(e){
+	            		alert('동영상이 존재하지 않습니다.');
+	    			}
+	        	}).fail(function(jqXHR, textStatus, errorThrown) {
+	    	});
+			/*
+			if (isApp()) {
+	            live = live || "false";
+	            var playParams = {
+	                "src" : movieUrl,
+	                "live" : live,
+					"linkUrl" : ( goodsCode != "" ? "/display/goods/"+goodsCode : "" ),
+					"price" : price,
+					"playerX" : playerIdx,
+					"title" : goodsName,
+					"endDate" : endDate
+	            };
+	            window.location = "netplay://playVideo?q=" + JSON.stringify(playParams);
+	     	}else {
+	            window.location = movieUrl;
+	    	}
+			*/
+
+	    }else{
+			alert('동영상이 존재하지 않습니다.');
+	    }
+	}
+
+	function setupVideo(type, playerIdx, menuArr)
+	{
+
+	console.log(JSON.stringify(menuArr));
+	    var r = 1;
+	    var heightP = 0;
+
+		if(typeof endDate == "undefined") {
+			endDate = "0";
+		}
+
+	    // 임시
+	    if (isIOS() && !isApp()) return;
+
+	    if (!isIOS()) {
+	        r = window.devicePixelRatio;
+	    }
+
+	    if(type == "view"){
+	      if(isIOS()) {
+	          heightP = 80;
+	      } else {
+	          heightP = 80;
+	      }
+	    }
+
+	    var setupParams = {
+	        "default" : {
+	            "pmode" : {
+	                "x" :  "p",
+	                "y" :  "p",
+	                "w" :  "p",
+	                "h" :  "p"
+	            },
+	            "position" : {
+	                "x" :  "0",
+	                "y" :  "0",
+	                "w" :  "1.0",
+	                "h" :  "0"
+	            },
+	            "limit" : {
+	                "l" :  "0",
+	                "r" :  "1.0",
+	                "t" :  "0",
+	                "b" :  "1.0"
+	            },
+	            "mmode" : "true",
+	            "dmode" : "zoom",
+	            "menu" : {
+	                "top" : "true",
+	                "middle" : "false",
+	                "bottom" : "true",
+	                "custom" : "false"
+	            }
+	        },
+	        "zoom" : {
+	            "pmode" : {
+	                "x" :  "r",
+	                "y" :  "r",
+	                "w" :  "r",
+	                "h" :  "r"
+	            },
+	            "position" : {
+	                "x" :  "0.05",
+	                "y" :  "0.12",
+	                "w" :  "0.4",
+	                "h" :  "0"
+	            },
+	            "rarea" : {
+	                "l" :  "0",
+	                "r" :  "1.0",
+	                "t" :  "0",
+	                "b" :  "0.5"
+	            },
+	            "mmode" : "true",
+	            "dmode" : "zoom",
+	            "dtype" : "down",
+	            "menu" : {
+	                "top" : "true",
+	                "middle" : "true",
+	                "bottom" : "true",
+	                "custom" : "true"
+	            }
+	        },
+	        "full" : {
+	            "status" : "true",
+	            "mmode" : "true",
+	            "menu" : {
+	                "top" : "false",
+	                "middle" : "true",
+	                "bottom" : "true",
+	                "custom" : "true"
+	            }
+	        },
+	        "scroll" : {
+	            "attach" : "true",
+	            "limit" : {
+	                "l" :  "0",
+	                "r" :  "1.0",
+	                "t" :  "0",
+	                "b" :  "1.0"
+	            },
+	           "position" : {
+	               "x" :  "0",
+	               "y" :  String(Math.floor((heightP) * r))
+	           }
+	        }
+	    };
+		var pramObj;
+		if(menuArr){
+	    	pramObj = {
+	    		videoParam :setupParams,
+	    		mainmenuParam : menuArr
+	    	}
+		}else{
+	    	pramObj = {
+	    		videoParam :setupParams
+	    	}
+		}
+
+	    if(iOsAgent){
+	        window.location = "netplay://setupVideo?q=" + JSON.stringify(setupParams) + "&main=" + JSON.stringify(menuArr);
+		}else{
+	        window.location = "netplay://setupVideo?q=" + JSON.stringify(pramObj);
+		}
+	}
+
+	function sendPlayerViewStatus(status)
+	{
+	    var deem = jQuery('.deem_white');
+
+	    if(deem.length > 0){
+	        if(status == "zoom" || status == "hide"){
+	            deem.hide();
+	        }
+	        else{
+	            deem.show();
+	        }
+	    }
+	}
+
+	var locationParams = {
+		"linkUrl" : window.location.pathname
+	};
+
+	// App ActionBar 숨김
+	function appBarHide(){
+		if (isApp()) {
+			try{
+				window.shoppingntapp.appActionBottomBarHide();
+			}catch(e){}
+		}
+	}
+
+	// App ActionBar 노출(단 디폴트 액션바가 노출되는 상황 조건)
+	function appBarShow(){
+		if (isApp()) {
+			if(appActionVarDisplayYn()){
+				try{
+					window.shoppingntapp.appActionBottomBarShow();
+				}catch(e){}
+			}
+		}
+	}
+
+	// App HeaderBar 숨김
+	function topBarHide(){
+		if (isApp()) {
+			try{
+				if(isAndroid()) {
+					window.shoppingntapp.appActionTopBarHide();
+				} else {
+					window.location = "shoppingntapp://hideBar?q=" + JSON.stringify(locationParams);
+				}
+			}catch(e){}
+		}
+	}
+
+	// App HeaderBar 노출
+	function topBarShow(){
+		if (isApp()) {
+			if(appActionVarDisplayYn()){
+	    		try{
+	    			if(isAndroid()) {
+	    				window.shoppingntapp.appActionTopBarShow();
+	    			} else {
+	    				window.location = "shoppingntapp://showBar?q=" + JSON.stringify(locationParams);
+	    			}
+	    		}catch(e){}
+			}
+		}
+	}
+
+	// 페이지 App ActionBar 기본 노출 여부
+	function appActionVarDisplayYn(){
+		// var checkUrlWords = new Array('/display/goods/', '/order/purchase/','/mypage/myPage','/member/login','/member/nm-order/exist-member','/member/find-id','/member/find-pw','/member/chagne-pw-regular','/member/nm-order','/member/join','/common/terms?win=pop','/common/policy/1','/common/policy/2','/common/policy/3');
+		var checkUrlWords = new Array('/display/goods/' , '/comment/goodsPhotoZoom');
+		var defaultDisplayYn = 1;
+		var urlPath = window.location.pathname + window.location.search;
+		for (var i = 0 ; i < checkUrlWords.length ; i++){
+			if (urlPath.match(checkUrlWords[i]) != null){
+				defaultDisplayYn = 0;
+			}
+		}
+		return defaultDisplayYn;
+	}
+
+	function showSearch(){
+		//jQuery.removeCookie('searchList', { path: '/' });
+		if(jQuery.cookie('searchList')==undefined||jQuery.cookie('searchList')==""){
+			jQuery.cookie('searchList', searchList, { path: '/' });
+		}else{
+			searchList = jQuery.cookie('searchList').split(',');
+		}
+
+		jQuery("#searchList").html("").append('<dt>최근검색어</dt>');
+		if(searchList.length == 0){
+			jQuery("#searchList").append('<dd><p id="searchResult0">최근 검색어 내역이 없습니다.</p></dd>');
+		}else{
+			var count = 1;
+			for(var x = searchList.length; x > 0; x--){
+				if(count > 10) break;
+				jQuery("#searchList").append('<dd><a href="javascript: setSearchKeyword(\''+searchList[x-1]+'\');" id="searchResult1">'+searchList[x-1]+'</a></dd>');
+				count++;
 			}
 		}
 
-		function setDay() {
-			var year = jQuery("#birthYear").val();
-			var month = jQuery("#birthMonth").val();
-			var day = jQuery("#birthDate").val();
+		jQuery("#searchList").append('<dd><span class="btn size2 bgcolor8"><a>닫기</a></span></dd>');
+		jQuery(".search_list dl dd .btn a").on('click', function(){
+			topBarShow();
+			appBarShow();
+			ui_search.hideSearchBar();
+			float_header.side_close();
+			$('.wrap_inner').css('height', 'auto');
+			$('.floating_btn_top').show(); // 2016-06-30
+		});
+	}
 
-			var arrayMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	function setSearchKeyword(keyword){
+		jQuery('#searchKeywordName').val(keyword);
+		goSearch();
+	}
 
-			if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-				arrayMonth[1] = 29;
-			}
-
-			$("#birthDate option").remove();
-			for (var i = 0; i <= arrayMonth[month - 1]; i++) {
-				if (i == 0) {
-					$('#birthDate').append($("<option/>", {
-						value: '',
-						text: '선택(일)'
-					}));
-				} else {
-					if (i < 10) {
-						$('#birthDate').append($("<option/>", {
-							value: '0' + i,
-							text: i + '일'
-						}));
-					} else {
-						$('#birthDate').append($("<option/>", {
-							value: i,
-							text: i + '일'
-						}));
-					}
-				}
-			}
-
-			if (day != null && day != "") {
-				if (Number(day) > arrayMonth[month - 1]) {
-					$("#birthDate option:last").attr("selected", "selected");
-				} else {
-					$("#birthDate").val(day);
-				}
-			}
+	// App 동영상 닫기
+	function appCloseVideo() {
+		if(isApp()) {
+	    	if(isAndroid()) {
+	    		try{
+	    			window.shoppingntapp.closeVideo();
+	    		}catch(e){}
+	    	} else {
+	    		window.location = "netplay://closeVideo";
+	    	}
 		}
+	}
+
+	function sendAppTitleInfo(){
+		    var shost =window.location['host'];
+
+		//if(location.href.indexOf("index") <0 && location.href.indexOf("goods-list") <0 && location.href.indexOf("/display/goods/") <0 ){
+		if(shost.indexOf("index") <0 && shost.indexOf("/display/goods/") <0 ){
+	    	var titleObj = {};
+	    	jQuery('.gnb.sub').hide();
+	    	titleObj.title = jQuery.trim(jQuery('.gnb.sub').find('h2').children('span').text());
+			//if(isIOS()) {
+				titleObj.title = encodeURIComponent(jQuery.trim(titleObj.title));
+			//}
+			if(jQuery('.gnb.sub').find('a').attr('href')){
+				var backBtnUrl = "";
+				backBtnUrl = jQuery('.gnb.sub').find('a').attr('href');
+				if(backBtnUrl.substring(0,1) == "/"){
+						titleObj.backBtn = encodeURIComponent("http://dev-m.shoppingntmall.com"+backBtnUrl);
+						//titleObj.backBtn = "http://dev-m.shoppingntmall.com"+backBtnUrl;
+				}else if (backBtnUrl == "javascript:;"){
+					titleObj.backBtn = "javascript:window.history.back();";
+				}else{
+					titleObj.backBtn = backBtnUrl;
+				}
+			}else{
+				titleObj.backBtn = "javascript:window.history.back();";
+			}
+	    	console.log(JSON.stringify(titleObj));
+	    	location.href = "shoppingntapp://setTitle?main="+JSON.stringify(titleObj);
+		}
+	}
+	$(document).ready(function(){
+		if(isApp()){
+			sendAppTitleInfo();
+		}
+	});
+
+	function windowOpen(targetUrl) {
+		if(jQuery('main#policy').length>0){
+			jQuery('main#policy').remove();
+		}
+		commonAjax(targetUrl, '', "text", "GET")
+	    .done(function(data, textStatus, jqXHR){
+			jQuery(data).insertAfter('main#contents');
+			jQuery('main#contents').hide();
+			jQuery('main#policy').show();
+			scrollTo(0, 0);
+	    });
+	}
+
+	function appWindowOpen(targetUrl) {
+		if(isApp()) {
+			targetUrl = targetUrl.replace('https://', '');
+			targetUrl = targetUrl.replace('http://', '');
+			window.location = "shoppingntapp://openpc?"+targetUrl;
+		}
+		else {
+			window.open(targetUrl, '_agree');
+		}
+	}
+
+	function setDay() {
+	    var year        = jQuery("#birthYear").val();
+	    var month       = jQuery("#birthMonth").val();
+	    var day         = jQuery("#birthDate").val();
+
+	    var arrayMonth  = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+	    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+	        arrayMonth[1] = 29;
+	    }
+
+	    $("#birthDate option").remove();
+	    for (var i=0; i<=arrayMonth[month-1]; i++) {
+			if(i==0) {
+				$('#birthDate').append($("<option/>", {value: '', text: '선택(일)'}));
+			} else {
+				if(i < 10) {
+	        		$('#birthDate').append($("<option/>", {value: '0'+i, text: i+'일'}));
+				} else {
+					$('#birthDate').append($("<option/>", {value: i, text: i+'일'}));
+				}
+			}
+	    }
+
+	    if( day != null && day != "" ) {
+			if( Number(day) > arrayMonth[month-1] ) {
+	            $("#birthDate option:last").attr("selected", "selected");
+	        } else {
+	            $("#birthDate").val(day);
+	        }
+	    }
+	}
 	</script>
+
 	<script>
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-80829108-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80829108-1', 'auto');
+  ga('send', 'pageview');
+    </script>
 	<script type="text/javascript" src="../../../../resources/js/lib/jquery.timers.js"></script>
 	<script type="text/javascript" src="../../../../resources/js/popup.js"></script>
 
 	<script type="text/javascript">
-		// 메인에 라인 페이지가 존재할 때
-		var planCode = [];
-		planCode = ['90000019:2016060026'];
+var planCode = [];
 
-		var menuArr = new Array();
-		if (isApp()) {
-			var menuObj = {};
-			menuObj = {};
-			menuObj.name = "홈";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 0;
-			menuObj.mainYn = "0";
-			menuArr.push(menuObj);
-			menuObj = {};
-			menuObj.name = "TV 편성";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 1;
-			menuObj.mainYn = "0";
-			menuArr.push(menuObj);
-			menuObj = {};
-			menuObj.name = "테마   Shop";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 2;
-			menuObj.mainYn = "1";
-			menuArr.push(menuObj);
-			menuObj = {};
-			menuObj.name = "베스트";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 3;
-			menuObj.mainYn = "0";
-			menuArr.push(menuObj);
-			menuObj = {};
-			menuObj.name = "이벤트";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 4;
-			menuObj.mainYn = "0";
-			menuArr.push(menuObj);
-			menuObj = {};
-			menuObj.name = "나이키 기획전";
-			menuObj.name = menuObj.name.replace(/\&/g, "");
-			menuObj.name = menuObj.name.replace(/\#/g, "");
-			menuObj.name = menuObj.name.replace(/\?/g, "");
-			menuObj.name = menuObj.name.replace(/\=/g, "");
-			menuObj.index = 5;
-			menuObj.mainYn = "0";
-			menuArr.push(menuObj);
+var menuArr = new Array();
+if(isApp()){
+	var menuObj ={};
+						menuObj = {};
+    		menuObj.name = "홈";
+			menuObj.name = encodeURIComponent(menuObj.name)
+
+    		menuObj.index =0;
+    		                menuObj.mainYn = "0";
+                		menuArr.push(menuObj);
+								menuObj = {};
+    		menuObj.name = "TV 편성";
+			menuObj.name = encodeURIComponent(menuObj.name)
+
+    		menuObj.index =1;
+    		                menuObj.mainYn = "0";
+                		menuArr.push(menuObj);
+								menuObj = {};
+    		menuObj.name = "테마   Shop";
+			menuObj.name = encodeURIComponent(menuObj.name)
+
+    		menuObj.index =2;
+    		                menuObj.mainYn = "1";
+                		menuArr.push(menuObj);
+								menuObj = {};
+    		menuObj.name = "적립금 스토어";
+			menuObj.name = encodeURIComponent(menuObj.name)
+
+    		menuObj.index =3;
+    		                menuObj.mainYn = "0";
+                		menuArr.push(menuObj);
+								menuObj = {};
+    		menuObj.name = "이벤트";
+			menuObj.name = encodeURIComponent(menuObj.name)
+
+    		menuObj.index =4;
+    		                menuObj.mainYn = "0";
+                		menuArr.push(menuObj);
+			}
+
+
+var mainSwipe;
+$(document).ready(function(){
+	// 메인 화면은 loading indicator 사용 안함
+	jQuery.ajaxSetup({
+        beforeSend:function(){
+        },
+        complete:function(){
+        }
+    });
+
+	/* 퍼블리싱 스크립트 S */
+    var delta = 500;
+	var timer = null;
+	//var banSlideList = null;
+	//var eventSlideList =  null;
+
+	//if(jQuery('#ban-slide').length != 0){
+    	var eventSlideList =  new Swiper('#ban-slide', {
+    		slidesPerView: 'auto',
+    		centeredSlides: true,
+    		loop: true,
+    		pagination: '.slideCircle',
+    		paginationClickable: true
+    	});
+    //}
+
+    //if(jQuery('#ban-slide2').length!=0){
+    	var ban_loop = $('#ban-slide2 .swiper-slide').length;
+    		ban_loop > 1 ? ban_loop=true : ban_loop=false;
+    	var banSlideList = new Swiper('#ban-slide2', {
+    		slidesPerView: 'auto',
+    		centeredSlides: true,
+    		loop: ban_loop
+    	});
+    //}
+
+	setTimeout( function(){
+		$("#homeSlider").height($(".mainContents").eq($('.gnb ul li.current').index()).height());
+		mainSwipe_handler();
+		if(isApp()){
+    		setupVideo('view', '', menuArr);
+			//setupVideo 이후에 현재 페이지 값을 전달해야 함.
+			var hashLocation = location.hash;
+        	var hashSplit = hashLocation.split("#");
+        	var hashName = hashSplit[1];
+
+
+			if( hashName != undefined && hashName != (0 + 2)) {
+        		hashName = Number(hashName);
+    			setTimeout(function(){
+    				location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
+    			}, 100);
+        	}else{
+			    hashName = Number(0 + 2);
+    			setTimeout(function(){
+    				location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
+    			}, 100);
+			}
+    	}
+	},200);
+
+	$(window).on('load resize',function(){
+		var hashLocation = location.hash;
+    	var hashSplit = hashLocation.split("#");
+    	var hashName = hashSplit[1];
+
+
+		if( hashName != undefined && hashName != (0 + 2)) {
+    		hashName = Number(hashName);
+    	}else{
+		    hashName = Number(0 + 2);
 		}
 
+		//startSlideNum = hashName;
+		//startSlideNum = $('.gnb ul li.current').index();
+		//mainSwipe_handler();
+		setTimeout(function(){
+			$("#homeSlider").height($(".mainContents").eq(hashName).height());
+		}, 300);
+	})
+	/* 퍼블리싱 스크립트 E */
 
-		var mainSwipe;
-		$(document).ready(function() {
-			// 메인 화면은 loading indicator 사용 안함
-			jQuery.ajaxSetup({
-				beforeSend: function() {},
-				complete: function() {}
-			});
+	// main swipe
+	var startSlideNum = 0;
+	function mainSwipe_handler(){
+		var menuLength = $(".gnb").find("li").length;
 
-			/* 퍼블리싱 스크립트 S */
-			var delta = 500;
-			var timer = null;
-			//var banSlideList = null;
-			//var eventSlideList =  null;
+		if(mainSwipe){
+			mainSwipe.kill();
+		}
+    		mainSwipe = Swipe(document.getElementById('homeSlider'),{
+    			callback : function(index , elem){
 
-			if (jQuery('#ban-slide').length != 0) {
-				var eventSlideList = new Swiper('#ban-slide', {
-					slidesPerView: 'auto',
-					centeredSlides: true,
-					loop: true,
-					pagination: '.slideCircle',
-					paginationClickable: true
-				});
-			}
+				//alert("mainSwipe");
+				//alert(startSlideNum);
+    				if(isApp()){
+    					location.href = "shoppingntapp://setMainCategoryIndex?main="+index;
+    				}
+    				$("#homeSlider").height($(".mainContents").eq(index).height());
+    				menuHandler.init('main', index);
 
-			if (jQuery('#ban-slide2').length != 0) {
-				var ban_loop = $('#ban-slide2 .swiper-slide').length;
-				ban_loop > 1 ? ban_loop = true : ban_loop = false;
-				var banSlideList = new Swiper('#ban-slide2', {
-					slidesPerView: 'auto',
-					centeredSlides: true,
-					loop: ban_loop
-				});
-			}
+    				// 2018-08-23 메인 개편 add
+                    $(".lnb_subbox .lnb_sub").hide().eq(index).show();
+    				/*
+					if(index < 4){
+    					menuScroll.scrollTo(0, 0, 300);
+    				} else {
+    					menuScroll.scrollTo(menuScroll.maxScrollX / 2, 0, 0);
+    				}
+    				*/
+    				if (index == 1)	{
+    					 timer = setTimeout(function(){
+    					 	if(jQuery('.scdList').find('.tvOnair').length) {
+    							goOnair();
+    						}
+    						resizePage("1");
+    					}, 300);
+    				} else {
+    					$('html, body').scrollTop(0);
+    					$('html, body').animate({'scrollTop':'0'}, 200);
+    					clearTimeout(timer);
+    				}
 
-			//팝업롤링 2018-02-07 추가
-			$('.rollpop').slick({
-				dots: true,
-				infinite: true,
-				autoplay: true,
-				autoplaySpeed: 4000
-			});
-
-			setTimeout(function() {
-				$("#homeSlider").height($(".mainContents").eq($('.gnb ul li.current').index()).height());
-				mainSwipe_handler();
-				if (isApp()) {
-					setupVideo('view', '', menuArr);
-
-					//setupVideo 이후에 현재 페이지 값을 전달해야 함.
-					var hashLocation = location.hash;
-					var hashSplit = hashLocation.split("#");
-					var hashName = hashSplit[1];
-
-
-					if (hashName != undefined && hashName != (0 + 2)) {
-						hashName = Number(hashName);
-						setTimeout(function() {
-							location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
-						}, 100);
-					} else {
-						hashName = Number(0 + 2);
-						setTimeout(function() {
-							location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
-						}, 100);
-					}
-				}
-			}, 200);
-
-			$(window).on('load resize', function() {
-				var hashLocation = location.hash;
-				var hashSplit = hashLocation.split("#");
-				var hashName = hashSplit[1];
-
-
-				if (hashName != undefined && hashName != (0 + 2)) {
-					hashName = Number(hashName);
-				} else {
-					hashName = Number(0 + 2);
-				}
-
-				startSlideNum = hashName;
-				//startSlideNum = $('.gnb ul li.current').index();
-				mainSwipe_handler();
-				//swipeTrigger();
-				setTimeout(function() {
-					$("#homeSlider").height($(".mainContents").eq(startSlideNum).height());
-				}, 300);
-			})
-			/* 퍼블리싱 스크립트 E */
-
-			// main swipe
-			var startSlideNum = 0;
-
-			function mainSwipe_handler() {
-				var menuLength = $(".gnb").find("li").length;
-				if (mainSwipe) {
-					mainSwipe.kill();
-				}
-				mainSwipe = Swipe(document.getElementById('homeSlider'), {
-					callback: function(index, elem) {
-
-						//alert(index);
-						//alert(elem);
-						if (isApp()) {
-							location.href = "shoppingntapp://setMainCategoryIndex?main=" + index;
-						}
-						$("#homeSlider").height($(".mainContents").eq(index).height());
-						menuHandler.init('main', index);
-						// 2018-08-23 메인 개편 add
-						$(".lnb_subbox .lnb_sub").hide().eq(index).show();
-
-						if (index < 5) {
-							menuScroll.scrollTo(0, 0, 300);
-						} else {
-							menuScroll.scrollTo(menuScroll.maxScrollX, 0, 0);
+    				if( index == 1 || index == 2 || index == 3 ){
+					    var arr = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr = planCode[0].split(":");
 						}
 
-						if (index == 1) {
-							timer = setTimeout(function() {
-								if (jQuery('.scdList').find('.tvOnair').length) {
-									goOnair();
-								}
-								resizePage("1");
-							}, 300);
-						} else {
-							$('html, body').scrollTop(0);
-							$('html, body').animate({
-								'scrollTop': '0'
-							}, 200);
-							clearTimeout(timer);
+						if(arr[0] == "90000016"){
+						    viewSwipeLimeDetail(arr[0], 5)
+						}else if(arr[0] == "90000017"){
+						    viewSwipeLimeDetail(arr[0], 5)
+						}else{
+        				    viewSwipeLimeMain();
+						}
+        			}
+
+    				if( index == 2 || index == 3 || index == 4 ){
+					    var arr1 = [0,0,0,0];
+						var arr2 = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr1 = planCode[0].split(":");
+						}
+						if(typeof planCode[1] != "undefined"){
+						    arr2 = planCode[1].split(":");
 						}
 
-						if (index == 1 || index == 2 || index == 3) {
-							var arr = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr = planCode[0].split(":");
-							}
-
-							if (arr[0] == "90000016") {
-								viewSwipeLimeDetail(arr[0], 5)
-							} else if (arr[0] == "90000017") {
-								viewSwipeLimeDetail(arr[0], 5)
-							} else {
-								viewSwipeLimeMain();
-							}
+						if(arr1[0] == "90000016" && arr2[0] == "90000017"){
+						    viewSwipeLimeDetail(arr2[0], 6)
+						}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
+						    viewSwipeLimeMain();
+						}else{
+        				    viewSwipeRecomMain();
 						}
 
-						if (index == 2 || index == 3 || index == 4) {
-							var arr1 = [0, 0, 0, 0];
-							var arr2 = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr1 = planCode[0].split(":");
-							}
-							if (typeof planCode[1] != "undefined") {
-								arr2 = planCode[1].split(":");
-							}
+        			}
 
-							if (arr1[0] == "90000016" && arr2[0] == "90000017") {
-								viewSwipeLimeDetail(arr2[0], 6)
-							} else if (arr1[0] == "90000016" || arr1[0] == "90000017") {
-								viewSwipeLimeMain();
-							} else {
-								viewSwipeRecomMain();
-							}
+    				if( index == 3 || index == 4 || index == 5 ){
+					    var arr1 = [0,0,0,0];
+						var arr2 = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr1 = planCode[0].split(":");
+						}
+						if(typeof planCode[1] != "undefined"){
+						    arr2 = planCode[1].split(":");
+						}
+						if(arr1[0] == "90000016" && arr2[0] == "90000017"){
+						    viewSwipeLimeMain();
+						}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
+        				    viewSwipeRecomMain();
+						}else{
+						            						viewSwipeEventMain();
+        											}
 
+        			}
+
+					if( index == 4 || index == 5 || index == 6 ){
+
+					    var arr1 = [0,0,0,0];
+						var arr2 = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr1 = planCode[0].split(":");
+						}
+						if(typeof planCode[1] != "undefined"){
+						    arr2 = planCode[1].split(":");
 						}
 
-						if (index == 3 || index == 4 || index == 5) {
-							var arr1 = [0, 0, 0, 0];
-							var arr2 = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr1 = planCode[0].split(":");
-							}
-							if (typeof planCode[1] != "undefined") {
-								arr2 = planCode[1].split(":");
-							}
-							if (arr1[0] == "90000016" && arr2[0] == "90000017") {
-								viewSwipeLimeMain();
-							} else if (arr1[0] == "90000016" || arr1[0] == "90000017") {
-								viewSwipeRecomMain();
-							} else {
-								viewSwipeEventMain();
-							}
+						if(arr1[0] == "90000016" && arr2[0] == "90000017"){
+        				    viewSwipeRecomMain();
+						}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
+						            						viewSwipeEventMain();
+        											}else{
+        				    viewSwipeLimeDetail(arr1[0], 7);
+						}
+        			}
 
+					if( index == 5 || index == 6 || index == 7 ){
+
+					    var arr1 = [0,0,0,0];
+						var arr2 = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr1 = planCode[0].split(":");
+						}
+						if(typeof planCode[1] != "undefined"){
+						    arr2 = planCode[1].split(":");
 						}
 
-						if (index == 4 || index == 5 || index == 6) {
-
-							var arr1 = [0, 0, 0, 0];
-							var arr2 = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr1 = planCode[0].split(":");
-							}
-							if (typeof planCode[1] != "undefined") {
-								arr2 = planCode[1].split(":");
-							}
-
-							if (arr1[0] == "90000016" && arr2[0] == "90000017") {
-								viewSwipeRecomMain();
-							} else if (arr1[0] == "90000016" || arr1[0] == "90000017") {
-								viewSwipeEventMain();
-							} else {
-								viewSwipeLimeDetail(arr1[0], 7);
-							}
+						if(arr1[0] == "90000016" && arr2[0] == "90000017"){
+        				            						viewSwipeEventMain();
+        											}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
+        				        viewSwipeLimeDetail(arr2[0], 7);
+						}else{
+						    viewSwipeLimeDetail(arr2[0], 8);
 						}
+        			}
 
-						if (index == 5 || index == 6 || index == 7) {
-
-							var arr1 = [0, 0, 0, 0];
-							var arr2 = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr1 = planCode[0].split(":");
-							}
-							if (typeof planCode[1] != "undefined") {
-								arr2 = planCode[1].split(":");
-							}
-
-							if (arr1[0] == "90000016" && arr2[0] == "90000017") {
-								viewSwipeEventMain();
-							} else if (arr1[0] == "90000016" || arr1[0] == "90000017") {
-								viewSwipeLimeDetail(arr2[0], 7);
-							} else {
-								viewSwipeLimeDetail(arr2[0], 8);
-							}
+					if( index == 6 || index == 7 || index == 8 ){
+					    var arr1 = [0,0,0,0];
+						var arr2 = [0,0,0,0];
+						var arr3 = [0,0,0,0];
+						if(typeof planCode[0] != "undefined"){
+						    arr1 = planCode[0].split(":");
 						}
-
-						if (index == 6 || index == 7 || index == 8) {
-							var arr1 = [0, 0, 0, 0];
-							var arr2 = [0, 0, 0, 0];
-							var arr3 = [0, 0, 0, 0];
-							if (typeof planCode[0] != "undefined") {
-								arr1 = planCode[0].split(":");
-							}
-							if (typeof planCode[1] != "undefined") {
-								arr2 = planCode[1].split(":");
-							}
-							if (typeof planCode[2] != "undefined") {
-								arr3 = planCode[2].split(":");
-							}
-							if (arr1[0] == "90000016" && arr2[0] == "90000017") {
-								viewSwipeLimeDetail(arr3[0], 7);
-							} else if (arr1[0] == "90000016" || arr1[0] == "90000017") {
-								viewSwipeLimeDetail(arr3[0], 8);
-							} else {
-								viewSwipeLimeDetail(arr2[0], menuLength - 1);
-							}
+						if(typeof planCode[1] != "undefined"){
+						    arr2 = planCode[1].split(":");
 						}
-
-						if (menuLength == 9) {
-							if (index == 7 || index == 8 || index == 9) {
-								var arr4 = [0, 0, 0, 0];
-								if (typeof planCode[3] != "undefined") {
-									arr4 = planCode[3].split(":");
-								}
-
-								viewSwipeLimeDetail(arr4[0], menuLength - 1);
-							}
+						if(typeof planCode[2] != "undefined"){
+						    arr3 = planCode[2].split(":");
 						}
-
-						if (elem == undefined) index = "0";
-						window.location.replace('#' + index, '');
-
-						if (!iOsAgent) {
-							appCloseVideo();
+						if(arr1[0] == "90000016" && arr2[0] == "90000017"){
+        				    viewSwipeLimeDetail(arr3[0], 7);
+						}else if(arr1[0] == "90000016" || arr1[0] == "90000017"){
+						    viewSwipeLimeDetail(arr3[0], 8);
+						}else{
+						    viewSwipeLimeDetail(arr2[0], menuLength - 1);
 						}
-					},
-					startSlide: startSlideNum
-				});
-				if (menuLength == 5 || menuLength == 6 || menuLength == 7) {
-					//2018-02-08 주석처리
-					//$(".gnb").addClass('size5');
-					viewSwipeEventMain();
-				} else if (menuLength == 6 || menuLength == 7 || menuLength == 8) {
-					for (var i; i < planCode.length; i++) {
-						var arr = planCode[i].split(":");
-						if (arr[0] == "90000018") {
-							viewSwipeLimeDetail(arr[0], 7);
-						}
-					}
-				} else if (menuLength == 7 || menuLength == 8 || menuLength == 9) {
-					for (var i; i < planCode.length; i++) {
-						var arr = planCode[i].split(":");
-						if (arr[0] == "90000019") {
-							viewSwipeLimeDetail(arr[0], 7);
-						}
-					}
-				}
+        			}
 
-				$(".gnb").find("li").click(function() {
-					mainSwipe.slide($(this).index(), 200);
-					return false;
-				});
+    				if( menuLength == 9 ) {
+    					if( index == 7 || index == 8 || index == 9 ){
+						    var arr4 = [0,0,0,0];
+						    if(typeof planCode[3] != "undefined"){
+    						    arr4 = planCode[3].split(":");
+    						}
 
-				var hashLocation = location.hash;
-				var hashSplit = hashLocation.split("#");
-				var hashName = hashSplit[1];
-				var classById = $('#lnb2').attr('class');
+    						viewSwipeLimeDetail(arr4[0], menuLength - 1);
+            			}
+    				}
+
+    				if(elem == undefined) index = "0";
+        			window.location.replace('#'+index, '');
+
+        			if(!iOsAgent){
+    					appCloseVideo();
+    				}
+    			},
+    			startSlide : startSlideNum
+    		});
 
 
-				/* 20180905 확인 부탁드려요 start */
-				if (hashName != undefined && hashName != (1 + 2)) {
-
-					hashName = Number(hashName);
-					//mainSwipe.slide(hashName, 200);
-					$(".gnb").find("li").eq(hashName).trigger('click');
-					if (isApp()) {
-						location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
-					}
-				} else {
-					hashName = Number(1 + 2);
-					//mainSwipe.slide(hashName, 200);
-					viewSwipeLimeMain();
-					if (isApp()) {
-						location.href = "shoppingntapp://setMainCategoryIndex?main=" + hashName;
-					}
-				}
-				/* 20180905 확인 부탁드려요 end */
-
-			};
-			//main swipe
-			function swipeTrigger() {
-				$("#homeSlider").swipe({
-					swipe: function() {
-						//$("#homeSlider").text("You swiped " + direction + " with " + fingerCount + " fingers");
-						//mainSwipe_handler();
-					},
-					threshold: 250,
-					triggerOnTouchEnd: false
-				});
-			};
-
-			/*
-			jQuery('.btn.with_prd, .with_goods_wrap .btn_close').click(function(){
-				if( jQuery('.with_goods_wrap').hasClass('open') ){
-					jQuery('.with_goods_wrap').removeClass('open').hide();
-				} else {
-					jQuery('.with_goods_wrap').addClass('open').show()
-				}
-			});
-			*/
-
-			jQuery('#mainTogetherOpen,#mainTogetherClose').click(function() {
-				if (jQuery('#mainTogether').hasClass('open')) {
-					jQuery('#mainTogether').removeClass('open').hide();
-				} else {
-					jQuery('#mainTogether').addClass('open').show()
-				}
-			});
-
-			// 편성표 바로가기
-			jQuery(".tv_link").click(function() {
-				mainSwipe.slide(1, 200);
-				return false;
-			});
-
-			jQuery("#popup_wrap_0").popSnt({
-				popupBox: ".popup_box",
-				linkBanner: "#link_banner_0",
-				popupCloseButton: "#button_popup_close_0",
-				popupTodayCloseButton: "#button_today_close_0",
-				TodayClose: true,
-				cookieName: "popupCookie_0_20180206",
-				closeFlag: "1",
-				popupCnt: "3"
-			});
-
-			// 2018-08-23 메인 개편 start
-			if (jQuery('.lnb_sub').length != 0) {
-				var ban_loop = $('.lnb_sub .swiper-slide').length;
-				ban_loop > 1 ? ban_loop = true : ban_loop = false;
-				var lnbSubSlide = new Swiper('.lnb_sub', {
-					slidesPerView: 'auto',
-					spaceBetween: 0
-				});
-			}
-			//메인메뉴별 하위메뉴
-			var mainGnbId = $(".gnb_wrap .gnb .current").index();
-			$(".lnb_subbox .lnb_sub").hide();
-			$(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
-			$(".gnb_wrap .gnb li").click(function(){
-				gnbClickId = $(this).index();
-				$(".lnb_subbox .lnb_sub").hide();
-				$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
-			});
-			//롤링배너
-			$(window).resize(function(){
-			if (jQuery('#ban-slide3').length != 0) {
-				var banSlideList3 = new Swiper('#ban-slide3', {
-					loop: true,
-					spaceBetween: 0,
-					centeredSlides: true,
-					slidesPerView: '1', //2018-09-05 수정
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
-					pagination: {
-						el: '#ban-slide3 .swiper-pagination',
-						clickable: false,
-						type: 'fraction',
-					}
-				});
-				//2018-08-31 추가
-				/*$(window).resize(function(){
-					banSlideList3.reInit()
-				});*/
-				$(".swiper-control .recom_play").hide();
-				$( ".swiper-control .recom_stop" ).click(function(){
-					banSlideList3.autoplay.stop();
-					$(".swiper-control .recom_stop").hide();
-					$(".swiper-control .recom_play").show();
-				});
-				$( ".swiper-control .recom_play" ).click(function(){
-					banSlideList3.autoplay.start();
-					$(".swiper-control .recom_play").hide();
-					$(".swiper-control .recom_stop").show();
-				});
-			}
-			console.log("resize");
-		});
-			//배너 +  상품 리스트
-			if (jQuery('.today_ban_slide').length != 0) {
-				var prd_loop = $('.today_ban_slide .swiper-slide').length;
-				prd_loop > 1 ? prd_loop = true : prd_loop = false;
-				var todayPrdSlide = new Swiper('.today_ban_slide', {
-					slidesPerView: 'auto', //2018-08-29 수정
-					spaceBetween: 10
-				});
-			}
-			if (jQuery('.today_recom_slide').length != 0) {
-				var prd_loop = $('.today_recom_slide .swiper-slide').length;
-				prd_loop > 1 ? prd_loop = true : prd_loop = false;
-				var todayPrdSlide = new Swiper('.today_recom_slide', {
-					slidesPerView: 'auto', //2018-08-29 수정
-					spaceBetween: 0
-				});
-			}
-			// 2018-08-23 메인 개편 end
-
+		$(".gnb").find("li").click(function(){
+			mainSwipe.slide($(this).index(), 200);
+			return false;
 		});
 
+		var hashLocation = location.hash;
+    	var hashSplit = hashLocation.split("#");
+    	var hashName = hashSplit[1];
+		var classById = $('#lnb2').attr('class');
 
-		if (isApp()) {
-			jQuery('#topNav').hide();
+
+        if( hashName != undefined && hashName != (0 + 2)) {
+			hashName = Number(hashName);
+            mainSwipe.slide(hashName, 200);
+            //$(".gnb").find("li").eq(hashName).trigger('click');
+			if(isApp()){
+                location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
+            }
+        }else{
+            hashName = Number(0 + 2);
+			mainSwipe.slide(hashName, 200);
+            //viewSwipeLimeMain();
+			if(isApp()){
+                location.href = "shoppingntapp://setMainCategoryIndex?main="+hashName;
+            }
+        }
+
+	}
+
+	/*
+	jQuery('.btn.with_prd, .with_goods_wrap .btn_close').click(function(){
+		if( jQuery('.with_goods_wrap').hasClass('open') ){
+			jQuery('.with_goods_wrap').removeClass('open').hide();
+		} else {
+			jQuery('.with_goods_wrap').addClass('open').show()
 		}
+	});
+	*/
 
-		function changeMainIndex(index) {
-			mainSwipe.slide(index, 200);
-		}
+    jQuery('#mainTogetherOpen,#mainTogetherClose').click(function(){
+        if( jQuery('#mainTogether').hasClass('open') ){
+            jQuery('#mainTogether').removeClass('open').hide();
+        } else {
+            jQuery('#mainTogether').addClass('open').show()
+        }
+    });
 
-		function selectBroadCastList(fromDate) {
-			jQuery.ajax({
-				type: 'get',
-				url: '/broadcast/selectBroadCastList?fromDate=' + fromDate,
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont1').html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					setTimeout(function() {
-						resizePage("1");
+	// 편성표 바로가기
+	jQuery(".tv_link").click(function() {
+		mainSwipe.slide(1, 200);
+		return false;
+	});
 
-						if (jQuery('.scdList').find('.tvOnair').length) {
-							goOnair();
-						}
-					}, 300);
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
-		}
+    // 2018-08-23 메인 개편 start
+    if (jQuery('.lnb_sub').length != 0) {
+        var ban_loop = $('.lnb_sub .swiper-slide').length;
+        ban_loop > 1 ? ban_loop = true : ban_loop = false;
+        var lnbSubSlide = new Swiper('.lnb_sub', {
+            slidesPerView: 'auto',
+      spaceBetween: 0
+        });
+    }
+    //메인메뉴별 하위메뉴
+    var mainGnbId = $(".gnb_wrap .gnb .current").index();
+    $(".lnb_subbox .lnb_sub").hide();
+    $(".lnb_subbox .lnb_sub").eq(mainGnbId).show();
+    $(".gnb_wrap .gnb li").click(function(){
+        gnbClickId = $(this).index();
+        $(".lnb_subbox .lnb_sub").hide();
+        $(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
+    });
 
-		function viewSwipeLimeMain() {
-			if (jQuery('#homeCont2').html() != "&nbsp;") {
-				return;
-			}
+    //롤링배너
+    //if (jQuery('#ban-slide3').length != 0) {
+        var banSlideList3 = new Swiper('#ban-slide3', {
+            loop: true,
+            spaceBetween: 0,
+      centeredSlides: true,
+			slidesPerView: '1',
+			initialSlide: '1',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+            el: '#ban-slide3 .swiper-pagination',
+        clickable: false,
+            type: 'fraction',
+        }
+        });
+        $(".swiper-control .recom_play").hide();
+        $( ".swiper-control .recom_stop" ).click(function(){
+            banSlideList3.autoplay.stop();
+            $(".swiper-control .recom_stop").hide();
+            $(".swiper-control .recom_play").show();
+        });
+        $( ".swiper-control .recom_play" ).click(function(){
+            banSlideList3.autoplay.start();
+            $(".swiper-control .recom_play").hide();
+            $(".swiper-control .recom_stop").show();
+        });
+   // }
+    //배너 +  상품 리스트
+    //if (jQuery('.today_ban_slide').length != 0) {
+        var prd_loop = $('.today_ban_slide .swiper-slide').length;
+        prd_loop > 1 ? prd_loop = true : prd_loop = false;
+        var todayPrdSlide = new Swiper('.today_ban_slide', {
+            slidesPerView: '2.5',
+      spaceBetween: 10
+        });
+    //}
+    //if (jQuery('.today_recom_slide').length != 0) {
+        var prd_loop = $('.today_recom_slide .swiper-slide').length;
+        prd_loop > 1 ? prd_loop = true : prd_loop = false;
+        var todayPrdSlide = new Swiper('.today_recom_slide', {
+            slidesPerView: '1.1',
+      spaceBetween: 0
+        });
+    //}
 
-			jQuery.ajax({
-				type: 'get',
-				url: '/plan/swipeLimeMain',
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont2').html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					setTimeout('resizePage("2")', 300);
+			<!-- web -->
+				    	    			                jQuery("#popup_wrap_0").popSnt({popupBox : ".popup_box", linkBanner : "#link_banner_0", popupCloseButton : "#button_popup_close_0", popupTodayCloseButton : "#button_today_close_0", TodayClose : true, cookieName : "popupCookie_0_20180907", closeFlag : "1", popupCnt : "0" });
+										<!-- //web -->
 
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
-		}
 
-		function viewSwipeRecomMain() {
-			if (jQuery('#homeCont3').html() != "&nbsp;") {
-				return;
-			}
+});
+/* 2018-09-07 add */
+$( window ).resize( function() {
+	location.reload();
+});
+/* 2018-09-07 end */
 
-			jQuery.ajax({
-				type: 'get',
-				url: '/category/swipeRecommendMain',
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont3').html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					setTimeout('resizePage("3")', 300);
+if(isApp()){
+	jQuery('#topNav').hide();
+}
 
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
-		}
+function changeMainIndex(index){
+	mainSwipe.slide(index, 200);
+}
 
-		function viewSwipeEventMain() {
-			if (jQuery('#homeCont4').html() != "&nbsp;") {
-				return;
-			}
-
-			jQuery.ajax({
-				type: 'get',
-				url: '/plan/swipeEventMain',
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont4').html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					setTimeout('resizePage("4")', 300);
-
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
-		}
-
-		function viewSwipeEventDetail(planCode) {
-			if (jQuery('#homeCont4').html() != "&nbsp;") {
-				return;
-			}
-
-			jQuery.ajax({
-				type: 'get',
-				url: 'plan/event/swipeDetail/' + planCode,
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont4').html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					setTimeout('resizePage("4")', 300);
-
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
-		}
-
-		function viewSwipeLimeDetail(planCode, num) {
-			if (jQuery('#homeCont' + num).html() != "&nbsp;") {
-				return;
-			}
-			var param = new Object();
-			param['categoryCode'] = planCode;
-			/*
-		jQuery.ajax({
-				type: 'get',
-				url : '/plan/planshop/swipeDetail/'+planCode ,
+function selectBroadCastList(fromDate) {
+    jQuery.ajax({
+        type: 'get',
+        url : '/broadcast/selectBroadCastList?fromDate='+fromDate,
 		async: true,
-				dataType : "html",
-				success: function(data, textStatus, jqXHR) {
-						jQuery('#homeCont'+num).html(data);
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont1').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+			setTimeout(function(){
+				resizePage("1");
 
-				},
-				complete: function(data, textStatus, jqXHR) {
+			 	if(jQuery('.scdList').find('.tvOnair').length) {
+					goOnair();
+				}
+			}, 300);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+		}
+    });
+}
+
+function viewSwipeLimeMain() {
+	if( jQuery('#homeCont2').html() != "&nbsp;" ){
+		return;
+	}
+
+    jQuery.ajax({
+        type: 'get',
+        url : '/plan/swipeLimeMain' ,
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont2').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+			setTimeout('resizePage("2")', 300);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+		}
+    });
+}
+
+function viewSwipeRecomMain() {
+	if( jQuery('#homeCont3').html() != "&nbsp;" ) {
+		return;
+	}
+	/*
+    jQuery.ajax({
+        type: 'get',
+        url : '/category/swipeRecommendMain' ,
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont3').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+			setTimeout('resizePage("3")', 300);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+		}
+    });
+    */
+
+    var param = new Object();
+    param['categoryCode'] = "90000005";
+
+    jQuery.ajax({
+        type: 'get',
+        url : '/plan/swipeLimeMain',
+        data: param,
+        async: false,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont3').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+            setTimeout('resizePage("3")', 300);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+        }
+    });
+
+}
+
+function viewSwipeEventMain() {
+	if( jQuery('#homeCont4').html() != "&nbsp;" ){
+		return;
+	}
+
+    jQuery.ajax({
+        type: 'get',
+        url : '/plan/swipeEventMain' ,
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont4').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+			setTimeout('resizePage("4")', 300);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+		}
+    });
+}
+
+function viewSwipeEventDetail(planCode) {
+	if( jQuery('#homeCont4').html() != "&nbsp;" ){
+		return;
+	}
+
+    jQuery.ajax({
+        type: 'get',
+        url : 'plan/event/swipeDetail/'+planCode ,
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont4').html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+			setTimeout('resizePage("4")', 300);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+		}
+    });
+}
+
+function viewSwipeLimeDetail(planCode, num){
+	if( jQuery('#homeCont'+num).html() != "&nbsp;" ) {
+		return;
+	}
+	var param = new Object();
+	param['categoryCode'] = planCode;
+	/*
+    jQuery.ajax({
+        type: 'get',
+        url : '/plan/planshop/swipeDetail/'+planCode ,
+		async: true,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont'+num).html(data);
+
+        },
+        complete: function(data, textStatus, jqXHR) {
 			if(num == '5') {
 				setTimeout('resizePage("5")', 300);
 			} else if(num == '6'){
@@ -4080,210 +4029,609 @@
 				setTimeout('resizePage("8")', 300);
 			}
 
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-						alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
 		}
-		});
-		*/
+    });
+    */
 
-			jQuery.ajax({
-				type: 'get',
-				url: '/plan/swipeLimeMain',
-				data: param,
-				async: true,
-				dataType: "html",
-				success: function(data, textStatus, jqXHR) {
-					jQuery('#homeCont' + num).html(data);
-				},
-				complete: function(data, textStatus, jqXHR) {
-					if (num == '5') {
-						setTimeout('resizePage("5")', 300);
-					} else if (num == '6') {
-						setTimeout('resizePage("6")', 300);
-					} else if (num == '7') {
-						setTimeout('resizePage("7")', 300);
-					} else if (num == '8') {
-						setTimeout('resizePage("8")', 300);
-					}
+    jQuery.ajax({
+        type: 'get',
+        url : '/plan/swipeLimeMain',
+        data: param,
+        async: false,
+        dataType : "html",
+        success: function(data, textStatus, jqXHR) {
+            jQuery('#homeCont'+num).html(data);
+        },
+        complete: function(data, textStatus, jqXHR) {
+            if(num == '5') {
+                setTimeout('resizePage("5")', 300);
+            } else if(num == '6'){
+                setTimeout('resizePage("6")', 300);
+            } else if(num == '7'){
+                setTimeout('resizePage("7")', 300);
+            } else if(num == '8'){
+                setTimeout('resizePage("8")', 300);
+            }
 
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-				}
-			});
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+        }
+    });
 
-		}
+}
 
-		function resizePage(num) {
-			//var mainCategoryOn = jQuery(".gnb").find("li.current").index();
-			var mainCategoryOn = jQuery(".gnb").find("li.current").attr("id");
-			if (mainCategoryOn == "lnb" + num) {
-				jQuery("#homeSlider").height(jQuery("#homeCont" + num).height());
-			}
-		}
+function resizePage(num) {
+	//var mainCategoryOn = jQuery(".gnb").find("li.current").index();
+	var mainCategoryOn = jQuery(".gnb").find("li.current").attr("id");
+	if( mainCategoryOn == "lnb"+num ){
+		jQuery("#homeSlider").height(jQuery("#homeCont"+num).height());
+	}
+}
 
-		jQuery('#time').each(function() {
-			var jQthis = jQuery(this);
-			var endDate = new Date(jQthis.attr('endDate'));
-			var curDate = new Date();
-			var leftTime = (endDate - curDate) / 1000;
-			jQthis.attr('leftTime', leftTime);
-		});
+jQuery('#time').each(function(){
+    var jQthis  = jQuery(this);
+    var endDate = new Date(jQthis.attr('endDate'));
+    var curDate = new Date();
+    var leftTime = (endDate - curDate) / 1000;
+    jQthis.attr('leftTime', leftTime);
+});
 
-		jQuery(this).everyTime(1000, "countTimer", function() {
-			jQuery('#time').each(function() {
-				var jQthis = jQuery(this);
-				var leftTime = jQthis.attr('leftTime');
+jQuery(this).everyTime(1000, "countTimer", function(){
+    jQuery('#time').each(function(){
+        var jQthis = jQuery(this);
+        var leftTime = jQthis.attr('leftTime');
 
-				if (leftTime <= 0) {
-					timerClass('.leftTime', "00:00:00");
-				} else {
-					var leftHour = Math.floor(leftTime / 3600);
-					var leftMin = Math.floor(leftTime % 3600 / 60);
-					var leftSec = Math.floor(leftTime % 3600 % 60);
-					if (Math.floor(leftHour / 24) > 0) {
-						var leftDay = Math.floor(leftHour / 24);
-						leftHour = Math.floor(leftHour % 24);
-						timerClass(this, leftDay + "d" +
-							(leftHour < 10 ? "0" : "") + leftHour + ":" +
-							(leftMin < 10 ? "0" : "") + leftMin);
-					} else {
-						timerClass(this, (leftHour < 10 ? "0" : "") + leftHour + ":" +
-							(leftMin < 10 ? "0" : "") + leftMin + ":" +
-							(leftSec < 10 ? "0" : "") + leftSec);
-					}
-				}
-				leftTime = leftTime - 1;
+        if (leftTime <= 0) {
+            timerClass('.leftTime', "00:00:00");
+        } else {
+            var leftHour = Math.floor(leftTime / 3600);
+            var leftMin = Math.floor(leftTime % 3600 / 60);
+            var leftSec = Math.floor(leftTime % 3600 % 60);
+            if(Math.floor(leftHour/24) > 0){
+                var leftDay = Math.floor(leftHour / 24);
+                leftHour = Math.floor(leftHour % 24);
+                timerClass(this, leftDay + "d" +
+                                 (leftHour < 10 ? "0" : "") + leftHour + ":" +
+                                 (leftMin < 10 ? "0" : "") + leftMin);
+            }else{
+                timerClass(this, (leftHour < 10 ? "0" : "") + leftHour + ":" +
+                                 (leftMin < 10 ? "0" : "") + leftMin + ":" +
+                                 (leftSec < 10 ? "0" : "") + leftSec);
+            }
+        }
+        leftTime = leftTime - 1;
 
-				jQthis.attr('leftTime', leftTime);
-			});
-		});
+        jQthis.attr('leftTime', leftTime);
+    });
+});
 
-		function timerClass(obj, timeHtml) {
-			jQuery('.leftTime').html(timeHtml);
-		}
+function timerClass(obj, timeHtml){
+    jQuery('.leftTime').html(timeHtml);
+}
 
-		function goOnair() {
-			var onAirTarget = jQuery('.scdList').find('.tvOnair');
+function goOnair(){
+    var onAirTarget = jQuery('.scdList').find('.tvOnair');
 
-			var headerSize = 0;
-			if ($('.header').length) headerSize = $('.header').height();
+    var headerSize = 0;
+    if($('.header').length) headerSize = $('.header').height();
 
-			if (isApp() && isIOS()) {
-				headerSize = 40;
-			}
+	if(isApp() && isIOS()) {
+		headerSize = 40;
+	}
 
-			var loc = onAirTarget.offset().top - (headerSize + 50);
-			$('html, body').scrollTop(loc);
-		}
+	var loc = onAirTarget.offset().top - (headerSize + 50);
+    $('html, body').scrollTop(loc);
+}
 
-		ui_more.init(addlist);
+ui_more.init(addlist);
 
 
-		var totalCount = 100;
-		var loadingZoneCurrentPage = Number(jQuery('#goodsListLoadingZone').attr('currentpage'));
-		var rowsPerPage = 10;
-		var loadingZoneIsMoreData = (jQuery('#goodsListLoadingZone').attr('ismoredata') == "true");
-		var ajaxLoding = false;
-		var nextPage = 1;
+var totalCount              = 100;
+var loadingZoneCurrentPage  = Number(jQuery('#goodsListLoadingZone').attr('currentpage'));
+var rowsPerPage             = 10;
+var loadingZoneIsMoreData   = (jQuery('#goodsListLoadingZone').attr('ismoredata') == "true");
+var ajaxLoding              = false;
+var nextPage                = 1;
 
-		function addlist() {
-			var hashLocation = location.hash;
-			var hashSplit = hashLocation.split("#");
-			var hashName = hashSplit[1];
-			var classById = $('#lnb2').attr('class');
+jQuery('#swipeTogetherOpen,#swipeTogetherClose').click(function(){
+    if( jQuery('#swipeTogether').hasClass('open') ){
+        jQuery('#swipeTogether').removeClass('open').hide();
+    } else {
+        jQuery('#swipeTogether').addClass('open').show()
+    }
+});
 
-			//홈 더보기 실행
-			if (hashName == "0") {
-				if (loadingZoneIsMoreData && !ajaxLoding) {
+var limeTotalCount              = 100;
+var limeRowsPerPage             = 10;
+var limeAjaxLoding              = false;
+var limeNextPage                = 1;
+var limeLoadingZoneIsMoreData   = "";
 
-					loadingZoneCurrentPage++;
-					nextPage++;
-					ajaxLoding = true;
-					ui_loading.attachLoading(); //로딩이미지 block
-					// 라임관 더보기
-					var paramList = [];
-					paramList.push("pageNo=");
-					paramList.push(nextPage);
-					paramList.push("&rowsPerPage=");
-					paramList.push(rowsPerPage);
+            limeTotalCount = 0;
 
-					jQuery.ajax({
-						type: 'get',
-						url: '/index/more',
-						data: paramList.join(''),
-						dataType: "html",
-						success: function(data, textStatus, jqXHR) {
-							jQuery('#indexMore').append(data);
-							ajaxLoding = false;
-							ui_loading.detachLoading(); //로딩이미지 none
-						},
-						complete: function(data, textStatus, jqXHR) {
-							setTimeout('resizePage("0")', 300);
-						},
-						error: function(jqXHR, textStatus, errorThrown) {
-							ui_loading.detachLoading(); //로딩이미지 none
-							alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-						}
-					})
+function addlist(){
+	var hashLocation = location.hash;
+    var hashSplit = hashLocation.split("#");
+	var hashName = hashSplit[1];
+	var classById = $('#lnb2').attr('class');
+	var recommendId = $('#lnb3').attr('class');
+	var swipeLimeDetail = $('#lnb5').attr('class');
+	var swipeLimeDetail2 = $('#lnb6').attr('class');
+    var swipeLimeDetail3 = $('#lnb7').attr('class');
+	var swipeLimeDetail4 = $('#lnb8').attr('class');
 
-					loadingZoneIsMoreData = (totalCount / rowsPerPage > loadingZoneCurrentPage) ? true : false;
+	//홈 더보기 실행
+	if(hashName == "0"){
+                if (loadingZoneIsMoreData && !ajaxLoding)  {
 
-				}
+            loadingZoneCurrentPage++;
+            nextPage++;
+            ajaxLoding = true;
+            ui_loading.attachLoading();//로딩이미지 block
+            // 라임관 더보기
+            var paramList = [];
+            paramList.push("pageNo=");
+            paramList.push(nextPage);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage);
+            paramList.push("&checkCallInfo=");
+            paramList.push("indexCall");
 
-			} else if (classById == "current") {
-				var classById = $('#lnb2').attr('class');
-				var limeismoredata = "";
+            jQuery.ajax({
+                type: 'get',
+                url : '/index/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#indexMore').append(data);
+                    ajaxLoding = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                }, complete: function(data, textStatus, jqXHR) {
+        			setTimeout('resizePage("0")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
 
-				if (limeTotalCount > limeNextPage * limeRowsPerPage) {
-					limeismoredata = true;
-				} else {
-					limeismoredata = false;
-				}
+            loadingZoneIsMoreData = (totalCount/rowsPerPage > loadingZoneCurrentPage) ? true : false;
 
-				limeLoadingZoneIsMoreData = limeismoredata;
+        }
 
-				if (limeLoadingZoneIsMoreData && !limeAjaxLoding) {
+	}else if(classById == "current"){
+        var classById = $('#lnb2').attr('class');
 
-					//alert("limeLoadingZoneIsMoreData: "+limeLoadingZoneIsMoreData);
-					//alert("!limeAjaxLoding: "+ !limeAjaxLoding);
+	    var limeismoredata = "";
 
-					limeNextPage++;
-					limeAjaxLoding = true;
+		try {
+            limeTotalCount
+			limeNextPage
+			limeRowsPerPage
+        } catch(exception){
+            limeTotalCount = 0;
+            limeNextPage = 0;
+            limeRowsPerPage = 0;
+        }
 
-					ui_loading.attachLoading(); //로딩이미지 block
-					var paramList = [];
-					paramList.push("pageNo=");
-					paramList.push(limeNextPage);
-					paramList.push("&rowCnt=");
-					paramList.push(limeRowsPerPage);
+	    if(limeTotalCount > limeNextPage * limeRowsPerPage){
+	        limeismoredata = true;
+	    }else{
+	        limeismoredata = false;
+	    }
 
-					jQuery.ajax({
-						type: 'get',
-						url: '/plan/swipeLimeMain/more',
-						data: paramList.join(''),
-						dataType: "html",
-						success: function(data, textStatus, jqXHR) {
-							jQuery('#limeMore').append(data);
-							limeAjaxLoding = false;
-							ui_loading.detachLoading(); //로딩이미지 none
-						},
-						complete: function(data, textStatus, jqXHR) {
-							setTimeout('resizePage("2")', 300);
+	    limeLoadingZoneIsMoreData   = limeismoredata;
 
-						},
-						error: function(jqXHR, textStatus, errorThrown) {
-							ui_loading.detachLoading(); //로딩이미지 none
-							alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
-						}
-					})
-				}
+	    if (limeLoadingZoneIsMoreData && !limeAjaxLoding)  {
 
-			}
+		    //alert("limeLoadingZoneIsMoreData: "+limeLoadingZoneIsMoreData);
+		    //alert("!limeAjaxLoding: "+ !limeAjaxLoding);
 
-		}
-	</script>
+    	    limeNextPage++;
+    	    limeAjaxLoding = true;
+
+    	    ui_loading.attachLoading();//로딩이미지 block
+    	    var paramList = [];
+    	    paramList.push("pageNo=");
+    	    paramList.push(limeNextPage);
+    	    paramList.push("&rowCnt=");
+    	    paramList.push(limeRowsPerPage);
+
+    	    jQuery.ajax({
+    	        type: 'get',
+    	        url : '/plan/swipeLimeMain/more' ,
+    	        data : paramList.join(''),
+    	        dataType : "html",
+    	        success: function(data, textStatus, jqXHR) {
+    	            jQuery('#limeMore').append(data);
+    	            limeAjaxLoding = false;
+    	            ui_loading.detachLoading();//로딩이미지 none
+    	        },complete: function(data, textStatus, jqXHR) {
+    	            setTimeout('resizePage("2")', 300);
+
+    	        },
+    	        error: function(jqXHR, textStatus, errorThrown) {
+    	                    ui_loading.detachLoading();//로딩이미지 none
+    	                    alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+    	        }
+    	    })
+	    }
+
+	}else if(recommendId == "current"){
+	   /*
+        var recommendismoredata = "";
+
+        try {
+            recommendTotalCount
+            recommendNextPage
+            recommendRowsPerPage
+        } catch(exception){
+            recommendTotalCount = 0;
+            recommendNextPage = 0;
+            recommendRowsPerPage = 0;
+        }
+
+        if(recommendTotalCount > recommendNextPage * recommendRowsPerPage){
+            recommendismoredata = true;
+        }else{
+            recommendismoredata = false;
+        }
+
+        recommendLoadingZoneIsMoreData   = recommendismoredata;
+
+        if (recommendLoadingZoneIsMoreData && !recommendAjaxLoding)  {
+
+            recommendNextPage++;
+            recommendAjaxLoding = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("pageNo=");
+            paramList.push(recommendNextPage);
+            paramList.push("&rowCnt=");
+            paramList.push(recommendRowsPerPage);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/category/swipeRecommendMain/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#recommendMore').append(data);
+                    recommendAjaxLoding = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("3")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+         */
+
+        var planGoodsGb = "";
+        if($("#select_90000005 option:selected").val()!="" && $("#select_90000005 option:selected").val()!= undefined ){
+            planGoodsGb = $("#select_90000005 option:selected").val();
+        }
+        var ismoredata_90000005 = "";
+
+        try {
+            totalCount_90000005
+            nextPage_90000005
+            rowsPerPage_90000005
+        } catch(exception){
+            totalCount_90000005 = 0;
+            nextPage_90000005 = 0;
+            rowsPerPage_90000005 = 0;
+        }
+
+        if(totalCount_90000005 > nextPage_90000005 * rowsPerPage_90000005){
+            ismoredata_90000005 = true;
+        }else{
+            ismoredata_90000005 = false;
+        }
+
+        loadingZoneIsMoreData_90000005   = ismoredata_90000005;
+
+        if (loadingZoneIsMoreData_90000005 && !ajaxLoding_90000005)  {
+
+            nextPage_90000005++;
+            ajaxLoding_90000005 = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("currentPage=");
+            paramList.push(nextPage_90000005);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage_90000005);
+            paramList.push("&categoryCode=");
+            paramList.push("90000005");
+            paramList.push("&planGoodsGb=");
+            paramList.push(planGoodsGb);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/plan/swipeLimeDetail/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#limeGoods_90000005').append(data);
+                    ajaxLoding_90000005 = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("3")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+        }
+    }else if(swipeLimeDetail == "current"){
+
+        var planGoodsGb = "";
+        if($("#select_90000016 option:selected").val()!="" && $("#select_90000016 option:selected").val()!= undefined ){
+            planGoodsGb = $("#select_90000016 option:selected").val();
+        }
+        var ismoredata_90000016 = "";
+
+        try {
+            totalCount_90000016
+            nextPage_90000016
+            rowsPerPage_90000016
+        } catch(exception){
+            totalCount_90000016 = 0;
+            nextPage_90000016 = 0;
+            rowsPerPage_90000016 = 0;
+        }
+
+        if(totalCount_90000016 > nextPage_90000016 * rowsPerPage_90000016){
+            ismoredata_90000016 = true;
+        }else{
+            ismoredata_90000016 = false;
+        }
+
+        loadingZoneIsMoreData_90000016   = ismoredata_90000016;
+
+        if (loadingZoneIsMoreData_90000016 && !ajaxLoding_90000016)  {
+
+            nextPage_90000016++;
+            ajaxLoding_90000016 = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("currentPage=");
+            paramList.push(nextPage_90000016);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage_90000016);
+            paramList.push("&categoryCode=");
+            paramList.push("90000016");
+            paramList.push("&planGoodsGb=");
+            paramList.push(planGoodsGb);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/plan/swipeLimeDetail/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#limeGoods_90000016').append(data);
+                    ajaxLoding_90000016 = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("5")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+        }
+
+    }else if(swipeLimeDetail2 == "current"){
+
+        var planGoodsGb = "";
+        if($("#select_90000017 option:selected").val()!="" && $("#select_90000017 option:selected").val()!= undefined ){
+            planGoodsGb = $("#select_90000017 option:selected").val();
+        }
+        var ismoredata_90000017 = "";
+
+        try {
+            totalCount_90000017
+            nextPage_90000017
+            rowsPerPage_90000017
+        } catch(exception){
+            totalCount_90000017 = 0;
+            nextPage_90000017 = 0;
+            rowsPerPage_90000017 = 0;
+        }
+
+        if(totalCount_90000017 > nextPage_90000017 * rowsPerPage_90000017){
+            ismoredata_90000017 = true;
+        }else{
+            ismoredata_90000017 = false;
+        }
+
+        loadingZoneIsMoreData_90000017   = ismoredata_90000017;
+
+        if (loadingZoneIsMoreData_90000017 && !ajaxLoding_90000017)  {
+
+            nextPage_90000017++;
+            ajaxLoding_90000017 = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("currentPage=");
+            paramList.push(nextPage_90000017);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage_90000017);
+            paramList.push("&categoryCode=");
+            paramList.push("90000017");
+            paramList.push("&planGoodsGb=");
+            paramList.push(planGoodsGb);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/plan/swipeLimeDetail/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#limeGoods_90000017').append(data);
+                    ajaxLoding_90000017 = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("6")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+        }
+
+    }else if(swipeLimeDetail3 == "current"){
+
+        var planGoodsGb = "";
+        if($("#select_90000018 option:selected").val()!="" && $("#select_90000018 option:selected").val()!= undefined ){
+            planGoodsGb = $("#select_90000018 option:selected").val();
+        }
+        var ismoredata_90000018 = "";
+
+        try {
+            totalCount_90000018
+            nextPage_90000018
+            rowsPerPage_90000018
+        } catch(exception){
+            totalCount_90000018 = 0;
+            nextPage_90000018 = 0;
+            rowsPerPage_90000018 = 0;
+        }
+
+        if(totalCount_90000018 > nextPage_90000018 * rowsPerPage_90000018){
+            ismoredata_90000018 = true;
+        }else{
+            ismoredata_90000018 = false;
+        }
+
+        loadingZoneIsMoreData_90000018   = ismoredata_90000018;
+
+        if (loadingZoneIsMoreData_90000018 && !ajaxLoding_90000018)  {
+
+            nextPage_90000018++;
+            ajaxLoding_90000018 = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("currentPage=");
+            paramList.push(nextPage_90000018);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage_90000018);
+            paramList.push("&categoryCode=");
+            paramList.push("90000018");
+            paramList.push("&planGoodsGb=");
+            paramList.push(planGoodsGb);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/plan/swipeLimeDetail/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#limeGoods_90000018').append(data);
+                    ajaxLoding_90000018 = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("7")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+        }
+
+    }else if(swipeLimeDetail4 == "current"){
+
+        var planGoodsGb = "";
+        if($("#select_90000019 option:selected").val()!="" && $("#select_90000019 option:selected").val()!= undefined ){
+            planGoodsGb = $("#select_90000019 option:selected").val();
+        }
+        var ismoredata_90000019 = "";
+
+        try {
+            totalCount_90000019
+            nextPage_90000019
+            rowsPerPage_90000019
+        } catch(exception){
+            totalCount_90000019 = 0;
+            nextPage_90000019 = 0;
+            rowsPerPage_90000019 = 0;
+        }
+
+        if(totalCount_90000019 > nextPage_90000019 * rowsPerPage_90000019){
+            ismoredata_90000019 = true;
+        }else{
+            ismoredata_90000019 = false;
+        }
+
+        loadingZoneIsMoreData_90000019   = ismoredata_90000019;
+
+        if (loadingZoneIsMoreData_90000019 && !ajaxLoding_90000019)  {
+
+            nextPage_90000019++;
+            ajaxLoding_90000019 = true;
+
+            ui_loading.attachLoading();//로딩이미지 block
+            var paramList = [];
+            paramList.push("currentPage=");
+            paramList.push(nextPage_90000019);
+            paramList.push("&rowsPerPage=");
+            paramList.push(rowsPerPage_90000019);
+            paramList.push("&categoryCode=");
+            paramList.push("90000019");
+            paramList.push("&planGoodsGb=");
+            paramList.push(planGoodsGb);
+
+            jQuery.ajax({
+                type: 'get',
+                url : '/plan/swipeLimeDetail/more' ,
+                data : paramList.join(''),
+                dataType : "html",
+                success: function(data, textStatus, jqXHR) {
+                    jQuery('#limeGoods_90000019').append(data);
+                    ajaxLoding_90000019 = false;
+                    ui_loading.detachLoading();//로딩이미지 none
+                },complete: function(data, textStatus, jqXHR) {
+                    setTimeout('resizePage("8")', 300);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                            ui_loading.detachLoading();//로딩이미지 none
+                            alert("일시적인 장애가 발생했습니다. 잠시후에 다시 요청 하시기 바랍니다.");
+                }
+            })
+        }
+
+    }
+
+}
+
+</script>
+<div class="loading2_wrap" id="loadingImg" style="display:none;"><div class="loading2" style="position:fixed;left:936px;top:516px;z-index:1000;"><svg height="48" width="48" viewBox="0 0 120 120"><path d="m 41.351403,54.348877 c 0,0 -49.4783399,-12.652 -35.6966999,6.55192 C 19.436343,80.104717 93.314963,107.21615 110.03369,100.21236 126.75239,93.208587 86.311183,73.100937 86.311183,72.423147 c 0,-0.67778 4.29266,-62.5821903 4.29266,-62.5821903 0,0 -1.80744,-7.22973 -8.58529,-6.10008 -6.77786,1.12965 -40.66715,50.6080003 -40.66715,50.6080003 z" stroke-dasharray="550 550"></path></svg></div></div>
+<script type="text/javascript" id="">var CryptoJS=CryptoJS||function(h,u){var f={},v=f.lib={},n=function(){},k=v.Base={extend:function(a){n.prototype=this;var c=new n;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
+r=v.WordArray=k.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=u?c:4*a.length},toString:function(a){return(a||w).stringify(this)},concat:function(a){var c=this.words,d=a.words,b=this.sigBytes;a=a.sigBytes;this.clamp();if(b%4)for(var e=0;e<a;e++)c[b+e>>>2]|=(d[e>>>2]>>>24-e%4*8&255)<<24-(b+e)%4*8;else if(65535<d.length)for(e=0;e<a;e+=4)c[b+e>>>2]=d[e>>>2];else c.push.apply(c,d);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<32-
+c%4*8;a.length=h.ceil(c/4)},clone:function(){var a=k.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],d=0;d<a;d+=4)c.push(4294967296*h.random()|0);return new r.init(c,a)}}),x=f.enc={},w=x.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var d=[],b=0;b<a;b++){var e=c[b>>>2]>>>24-b%4*8&255;d.push((e>>>4).toString(16));d.push((e&15).toString(16))}return d.join("")},parse:function(a){for(var c=a.length,d=[],b=0;b<c;b+=2)d[b>>>3]|=parseInt(a.substr(b,2),16)<<
+24-b%8*4;return new r.init(d,c/2)}},l=x.Latin1={stringify:function(a){var c=a.words;a=a.sigBytes;for(var d=[],b=0;b<a;b++)d.push(String.fromCharCode(c[b>>>2]>>>24-b%4*8&255));return d.join("")},parse:function(a){for(var c=a.length,d=[],b=0;b<c;b++)d[b>>>2]|=(a.charCodeAt(b)&255)<<24-b%4*8;return new r.init(d,c)}},g=x.Utf8={stringify:function(a){try{return decodeURIComponent(escape(l.stringify(a)))}catch(c){throw Error("Malformed UTF-8 data");}},parse:function(a){return l.parse(unescape(encodeURIComponent(a)))}},
+z=v.BufferedBlockAlgorithm=k.extend({reset:function(){this._data=new r.init;this._nDataBytes=0},_append:function(a){"string"==typeof a&&(a=g.parse(a));this._data.concat(a);this._nDataBytes+=a.sigBytes},_process:function(a){var c=this._data,d=c.words,b=c.sigBytes,e=this.blockSize,f=b/(4*e);f=a?h.ceil(f):h.max((f|0)-this._minBufferSize,0);a=f*e;b=h.min(4*a,b);if(a){for(var p=0;p<a;p+=e)this._doProcessBlock(d,p);p=d.splice(0,a);c.sigBytes-=b}return new r.init(p,b)},clone:function(){var a=k.clone.call(this);
+a._data=this._data.clone();return a},_minBufferSize:0});v.Hasher=z.extend({cfg:k.extend(),init:function(a){this.cfg=this.cfg.extend(a);this.reset()},reset:function(){z.reset.call(this);this._doReset()},update:function(a){this._append(a);this._process();return this},finalize:function(a){a&&this._append(a);return this._doFinalize()},blockSize:16,_createHelper:function(a){return function(c,d){return(new a.init(d)).finalize(c)}},_createHmacHelper:function(a){return function(c,d){return(new y.HMAC.init(a,
+d)).finalize(c)}}});var y=f.algo={};return f}(Math);
+(function(h){var u=CryptoJS,f=u.lib,v=f.WordArray,n=f.Hasher;f=u.algo;for(var k=[],r=[],x=function(a){return 4294967296*(a-(a|0))|0},w=2,l=0;64>l;){a:{var g=w;for(var z=h.sqrt(g),y=2;y<=z;y++)if(!(g%y)){g=!1;break a}g=!0}g&&(8>l&&(k[l]=x(h.pow(w,.5))),r[l]=x(h.pow(w,1/3)),l++);w++}var a=[];f=f.SHA256=n.extend({_doReset:function(){this._hash=new v.init(k.slice(0))},_doProcessBlock:function(c,d){for(var b=this._hash.words,e=b[0],f=b[1],p=b[2],h=b[3],q=b[4],k=b[5],l=b[6],n=b[7],m=0;64>m;m++){if(16>m)a[m]=
+c[d+m]|0;else{var t=a[m-15],g=a[m-2];a[m]=((t<<25|t>>>7)^(t<<14|t>>>18)^t>>>3)+a[m-7]+((g<<15|g>>>17)^(g<<13|g>>>19)^g>>>10)+a[m-16]}t=n+((q<<26|q>>>6)^(q<<21|q>>>11)^(q<<7|q>>>25))+(q&k^~q&l)+r[m]+a[m];g=((e<<30|e>>>2)^(e<<19|e>>>13)^(e<<10|e>>>22))+(e&f^e&p^f&p);n=l;l=k;k=q;q=h+t|0;h=p;p=f;f=e;e=t+g|0}b[0]=b[0]+e|0;b[1]=b[1]+f|0;b[2]=b[2]+p|0;b[3]=b[3]+h|0;b[4]=b[4]+q|0;b[5]=b[5]+k|0;b[6]=b[6]+l|0;b[7]=b[7]+n|0},_doFinalize:function(){var a=this._data,d=a.words,b=8*this._nDataBytes,e=8*a.sigBytes;
+d[e>>>5]|=128<<24-e%32;d[(e+64>>>9<<4)+14]=h.floor(b/4294967296);d[(e+64>>>9<<4)+15]=b;a.sigBytes=4*d.length;this._process();return this._hash},clone:function(){var a=n.clone.call(this);a._hash=this._hash.clone();return a}});u.SHA256=n._createHelper(f);u.HmacSHA256=n._createHmacHelper(f)})(Math);</script>
 </body>
 
 </html>
