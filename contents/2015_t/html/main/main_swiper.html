@@ -3849,10 +3849,14 @@ $(document).ready(function(){
 
 
 });
+/* 2018-09-07 add */
+$(window).bind('resize', function() {
+     location.reload();
+});
+/* 2018-09-07 end */
 
 if(isApp()){
 	jQuery('#topNav').hide();
-	location.reload();/* 2018-09-07 add */
 }
 
 function changeMainIndex(index){
