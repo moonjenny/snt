@@ -2409,7 +2409,7 @@
 									<ul class="BannerList">
 										<li>
 											<a href="http://m.shoppingntmall.com/plan/event/swipeDetail/2018030305?pageType=1">
-											<img src="//img.shoppingntmall.com/banner/944/1000944.jpg" alt="" onerror="this.src=&quot;../../../../resources/img/empty/image_W.jpg&quot;">
+											<img src="../../img/tmp/014.jpg" alt="" onerror="this.src=&quot;../../../../resources/img/empty/image_W.jpg&quot;">
 										</a>
 										</li>
 									</ul>
@@ -3872,6 +3872,7 @@
 				$(".lnb_subbox .lnb_sub").eq(gnbClickId).show();
 			});
 			//롤링배너
+			$(window).resize(function(){
 			if (jQuery('#ban-slide3').length != 0) {
 				var banSlideList3 = new Swiper('#ban-slide3', {
 					loop: true,
@@ -3889,9 +3890,9 @@
 					}
 				});
 				//2018-08-31 추가
-				$(window).resize(function(){
+				/*$(window).resize(function(){
 					banSlideList3.reInit()
-				});
+				});*/
 				$(".swiper-control .recom_play").hide();
 				$( ".swiper-control .recom_stop" ).click(function(){
 					banSlideList3.autoplay.stop();
@@ -3904,6 +3905,8 @@
 					$(".swiper-control .recom_stop").show();
 				});
 			}
+			console.log("resize");
+		});
 			//배너 +  상품 리스트
 			if (jQuery('.today_ban_slide').length != 0) {
 				var prd_loop = $('.today_ban_slide .swiper-slide').length;
